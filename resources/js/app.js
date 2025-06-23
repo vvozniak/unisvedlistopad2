@@ -4,29 +4,51 @@ window.addEventListener("load", function () {
   let menu_toggle = document.querySelector("#primary-menu-toggle");
   let hamburger_icon = document.querySelector("#hamburger-icon");
   let close_icon = document.querySelector("#close-icon");
+  let menu_close_topright = document.querySelector("#menu-close-topright");
 
   // Set initial state explicitly to avoid CSS conflicts
   hamburger_icon.style.display = "inline-block";
   close_icon.style.display = "none";
+  if (menu_close_topright) menu_close_topright.classList.add("hidden");
+
+  function openMenu() {
+    main_navigation.classList.remove("hidden");
+    hamburger_icon.style.display = "none";
+    close_icon.style.display = "inline-block";
+    if (menu_close_topright) {
+      menu_close_topright.classList.remove("hidden");
+      menu_close_topright.className = "fixed top-10 right-10 z-[1000] lg:hidden";
+    }
+    document.body.classList.add("no-scroll");
+  }
+
+  function closeMenu() {
+    main_navigation.classList.add("hidden");
+    hamburger_icon.style.display = "inline-block";
+    close_icon.style.display = "none";
+    if (menu_close_topright) {
+      menu_close_topright.classList.add("hidden");
+      menu_close_topright.className = "fixed top-4 right-4 z-[1000] lg:hidden hidden";
+    }
+    document.body.classList.remove("no-scroll");
+  }
 
   menu_toggle.addEventListener("click", function (e) {
     e.preventDefault();
     const isMenuHidden = main_navigation.classList.contains("hidden");
-
     if (isMenuHidden) {
-      // open menu
-      main_navigation.classList.remove("hidden");
-      hamburger_icon.style.display = "none";
-      close_icon.style.display = "inline-block";
-      document.body.classList.add("no-scroll");
+      openMenu();
     } else {
-      // close menu
-      main_navigation.classList.add("hidden");
-      hamburger_icon.style.display = "inline-block";
-      close_icon.style.display = "none";
-      document.body.classList.remove("no-scroll");
+      closeMenu();
     }
   });
+
+  if (menu_close_topright) {
+    menu_close_topright.addEventListener("click", function (e) {
+      e.preventDefault();
+      closeMenu();
+    });
+  }
 
   main_navigation.addEventListener("click", function (e) {
     if (e.target === main_navigation) {
@@ -88,7 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Maciej 19.06 - pojawianie się paska i znikanie video na landingu
 document.addEventListener("DOMContentLoaded", function () {
-  const menu = document.getElementById("primary-menu") // Adjust selector if needed
+
+  const menu = document.getElementById("primary-menu-landing"); // Adjust selector if needed
   const video = document.getElementById("background-video");
   const logo = document.getElementsByClassName("custom-logo-landing")[0]; // Assuming there's only one logo element
 
@@ -100,7 +123,6 @@ document.addEventListener("DOMContentLoaded", function () {
   function handleScroll() {
     const scrollY = window.scrollY || window.pageYOffset;
     const trigger = window.innerHeight * 1.9;
-    // const trigger = (window.innerHeight);
 
     if (scrollY > trigger) {
       // Show menu

@@ -28,10 +28,16 @@
                     </svg>
                 </a>
             </div>
+            <!-- X icon in top right corner for closing menu -->
+            <button id="menu-close-topright" class="hidden fixed top-10 right-10 z-[1000] lg:hidden" aria-label="Close menu">
+                <svg class="w-8 h-8 text-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
         </div>
         <?php wp_nav_menu(
             array(
-                'container_id'    => 'primary-menu',
+                'container_id'    => 'primary-menu-landing',
                 'container_class' => 'hidden fixed inset-0 bg-black bg-opacity-90 z-[998] flex items-center justify-center lg:bg-transparent lg:relative lg:block lg:mt-0 lg:p-0',
                 'menu_class'      => 'flex flex-col text-center lg:flex-row lg:items-center lg:gap-0 text-light text-2xl lg:text-sm uppercase tracking-20',
                 'theme_location'  => 'primary',

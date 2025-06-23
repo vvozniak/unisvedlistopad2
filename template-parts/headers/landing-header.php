@@ -33,5 +33,5 @@
             </div>
         </div>
     </div>
-    <!-- <?php get_template_part('template-parts/headers/menu'); ?> -->
+    <?php get_template_part('template-parts/headers/menu'); ?>
 </header>

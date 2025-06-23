@@ -47,7 +47,7 @@
 					</div>
 				<?php endif; ?>
 
-				<?php //get_template_part('template-parts/headers/menu_not_landing') ?>
+				<?php get_template_part('template-parts/headers/menu_not_landing') ?>
 			</header>
 		<?php endif; ?>
 
