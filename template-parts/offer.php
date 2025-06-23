@@ -317,8 +317,8 @@ if ($offers->have_posts( )){
         <img src="<?php echo get_template_directory_uri(); ?>/assets/small_c.svg" alt="C shape" class="h-24 ml-4">
       </div>
       <p class="text-xl mb-4 ml-2 text-right"><?php echo get_field('podtytul1') ?></p>
-      <a href="#" id="toggle-offer-2" class="text-primary text-lg ml-2 text-right block">( CZYTAJ WIĘCEJ )</a>
-      <div id="offer-details-2" class="hidden mt-4 text-light">
+      <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary text-lg ml-2 text-right block">( CZYTAJ WIĘCEJ )</a>
+      <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-4 text-light">
         <h3 class="text-2xl font-bold text-primary">Dla kogo:</h3>
         <p class="mb-4"><?php echo get_field('dla_kogo1'); ?></p>
         <div class="w-24 h-px bg-primary my-4"></div>

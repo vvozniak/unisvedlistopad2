@@ -146,12 +146,12 @@ require_once get_template_directory() . '/template-parts/pills/pill_opinion.php'
           <h4 class="text-right text-[2.5rem] libre-baskerville-regular pe-4">Co mówią o nas:</h4>
         </div>
     </div>
-    <div class="my-12 w-full overflow-x-auto">
+    <div class="my-12 w-full overflow-x-auto opinions-scroll cursor-grab">
       <div class="flex gap-x-4 min-w-max pt-5">
       <?php 
         photo_oneside_pill('right', 'assets/pill_photo.jpg');
         pill_opinion(
-        '"Aleksandra jest bardzo zaangażowana i oddana swoim zadaniom oraz obowiązkom, co czyni ją matką chrzestną wielu projektów w Europie Północnej i Wschodniej. To dla mnie zaszczyt móc z nią współpracować.”', 
+        '"Aleksandra jest bardzo zaangażowana i oddana swoim zadaniom oraz obowiązkom, co czyni ją matką chrzestną wielu projektów w Europie Północnej i Wschodniej. To dla mnie zaszczyt móc z nią współpracować."', 
         'Piotr Pukaluk', 
         'Horisontalplan AB',
         'text-gray-100',
@@ -183,6 +183,8 @@ require_once get_template_directory() . '/template-parts/pills/pill_opinion.php'
     </div>
   </div>
 </section>
+
+
 
 <?php
 get_footer();

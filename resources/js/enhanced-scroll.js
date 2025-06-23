@@ -136,6 +136,11 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
     
+    // Add mobile detection to enhanced scroll functionality
+    function isMobile() {
+      return window.innerWidth < 782;
+    }
+    
     // Set up event listeners
     const wheelListener = (e) => handleWheel(e);
     const touchStartListener = (e) => handleTouchStart(e);
@@ -168,5 +173,15 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize
     updateScrollState();
+    
+    if (isMobile()) {
+      // Maybe disable custom scrolling on mobile or modify behavior
+      // For example:
+      scrollContent.style.transform = 'none'; // Reset transform
+      scrollContent.style.position = 'static'; // Use normal scrolling
+    } else {
+      // Apply desktop scrolling behavior
+      applyScroll();
+    }
   });
 });
