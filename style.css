@@ -1,0 +1,9 @@
+/*
+Theme Name: Unisved
+Author: ITM
+Version: 0.1.0
+*/
+
+.social-icon-link:hover img {
+  filter: url(#recolor-to-primary);
+}

@@ -1,0 +1,127 @@
+/* Fixed Side Scroll - Revised */
+.fixed-side-container {
+  display: flex;
+  width: 100%;
+  position: relative;
+  gap: 2rem;
+  padding: 4rem 0;
+  min-height: 50vh; /* Minimum height to ensure scrollable area */
+}
+
+/* Left side fixed, right side scrolls */
+.fixed-side-container[data-fixed-side="left"] {
+  flex-direction: row;
+}
+
+/* Right side fixed, left side scrolls */
+.fixed-side-container[data-fixed-side="right"] {
+  flex-direction: row-reverse;
+}
+
+/* Fixed content styling */
+.fixed-content {
+  width: 50%;
+  position: sticky;
+  top: 50vh; /* Center in viewport */
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 5;
+  height: fit-content;
+}
+
+/* Scrollable area container */
+.scrollable-wrapper {
+  width: 50%;
+  position: relative;
+  overflow: visible !important; /* Keep overflow visible */
+  height: auto;
+}
+
+/* Actual scrollable content */
+.scrollable-content {
+  position: relative;
+  transition: transform 0.2s cubic-bezier(0.075, 0.82, 0.165, 1); /* Smoother easing */
+  padding: 2rem 0;
+  transform: translateY(0); /* Initial position */
+}
+
+/* Ensure pill components have proper spacing */
+.scrollable-content > * {
+  margin-bottom: 2rem;
+}
+
+.scrollable-content > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Add visual indicator for the fixed element center point */
+.fixed-content::after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  right: -20px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  top: 50%;
+  pointer-events: none;
+  display: none; /* Hide by default, only show for debugging */
+}
+
+/* Only show visual indicators during development */
+.debug-mode .fixed-content::after {
+  display: block;
+}
+
+/* Card Stack Styles - Works with existing scroll-animation.js */
+.card-stack-container {
+  position: relative;
+}
+
+.card-item {
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-bottom: 100vh; /* Creates scroll space between cards */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.card-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Card sliding animation states */
+.card-item {
+  transform: translateY(-50%) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+.card-item.card-sliding {
+  transform: translateY(-50%) translateX(100px) scale(0.9);
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.card-item.card-active {
+  transform: translateY(-50%) scale(1.02);
+  z-index: 2;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card-item {
+    margin-bottom: 50vh;
+  }
+
+  .card-item.card-sliding {
+    transform: translateY(-50%) translateX(50px) scale(0.95);
+  }
+}
