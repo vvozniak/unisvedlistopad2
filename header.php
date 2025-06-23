@@ -20,6 +20,8 @@
 
 		<?php if (is_front_page()) : ?>
 			<?php get_template_part('template-parts/headers/landing-header'); ?>
+		<?php elseif (is_page_template('template-parts/custom-page.php')) : ?>
+			<?php get_template_part('template-parts/headers/menu_not_landing'); ?>
 		<?php elseif (is_page(8)) : ?>
 			<?php get_template_part('template-parts/headers/oferta-header'); ?>
 		<?php elseif (is_page(7)) : ?>
