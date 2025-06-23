@@ -276,8 +276,13 @@ header .hidden {
 
   /* Ensure pill containers fit mobile screens */
   .pill-container,
-  .pill-opinion-container,
   .pill-container-with-content {
     max-width: 100%;
+  }
+  .pill-opinion-container {
+    max-width: 275px !important;
+  }
+  .fixed-content{
+    display: none !important;
   }
 }

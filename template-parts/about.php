@@ -15,8 +15,16 @@ require_once get_template_directory() . '/template-parts/pills/pill_opinion.php'
 ?>
 <section class="bg-secondary pt-24 pb-12">
   <div class="container mx-auto">
+    <!-- jak działamy mobile -->
+    <div class="flex items-center justify-start w-full md:hidden">
+        <div class="flex items-center">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
+          <h4 class="text-light text-[2.2rem] libre-baskerville-regular">Jak działamy?</h4>
+        </div>
+      </div>
     <div class="fixed-side-container" data-fixed-side="left">
       <!-- Left side - heading (fixed) -->
+       <!-- jak działamy pc -->
       <div class="fixed-content">
         <div class="flex items-center">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
@@ -77,10 +85,10 @@ require_once get_template_directory() . '/template-parts/pills/pill_opinion.php'
 <section class="new-background-section slide bg-black bg-[url(https://unisved.nowa.net.pl/wp-content/uploads/2025/06/beautiful-shot-pier-sea-near-tree-forest-surrounded-by-high-mountains-norway-1.png)]  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12">
   <div class="absolute inset-0 bg-black opacity-50 rounded-t-[60px]"></div>
   <div class="container mx-auto flex  items-center justify-center h-full text-center text-white relative z-10">
-    <div class="my-8">
+    <div class="my-8 hidden md:block">
       <img src="http://unisved.nowa.net.pl/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto mb-6 w-80">
     </div>
-    <h2 class="text-4xl leading-tight mx-8 libre-baskerville-regular text-left">
+    <h2 class="text-[2rem] md:text-4xl leading-tight mx-8 libre-baskerville-regular text-left">
       Skontaktuj się z nami już dziś, <br>
       aby dowiedzieć się, jak możemy pomóc<br> 
       w rozwoju Twojego biznesu
@@ -149,7 +157,7 @@ require_once get_template_directory() . '/template-parts/pills/pill_opinion.php'
     <div class="my-12 w-full overflow-x-auto opinions-scroll cursor-grab">
       <div class="flex gap-x-4 min-w-max pt-5">
       <?php 
-        photo_oneside_pill('right', 'assets/pill_photo.jpg');
+        photo_oneside_pill('right', 'assets/pill_photo.jpg', 'assets/big_c.svg', 'pill-opinion-container');
         pill_opinion(
         '"Aleksandra jest bardzo zaangażowana i oddana swoim zadaniom oraz obowiązkom, co czyni ją matką chrzestną wielu projektów w Europie Północnej i Wschodniej. To dla mnie zaszczyt móc z nią współpracować."', 
         'Piotr Pukaluk', 

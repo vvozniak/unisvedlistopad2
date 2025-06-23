@@ -124,4 +124,7 @@
   .card-item.card-sliding {
     transform: translateY(-50%) translateX(50px) scale(0.95);
   }
+  .scrollable-wrapper{
+    width: 100% !important
+  }
 }
