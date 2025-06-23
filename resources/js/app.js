@@ -1,47 +1,58 @@
 // Navigation toggle
 window.addEventListener("load", function () {
-  let main_navigation = document.querySelector("#primary-menu");
+  // Support both landing and non-landing menus
+  let main_navigation = document.querySelector("#primary-menu-landing") || document.querySelector("#primary-menu");
   let menu_toggle = document.querySelector("#primary-menu-toggle");
   let hamburger_icon = document.querySelector("#hamburger-icon");
   let close_icon = document.querySelector("#close-icon");
   let menu_close_topright = document.querySelector("#menu-close-topright");
 
   // Set initial state explicitly to avoid CSS conflicts
-  hamburger_icon.style.display = "inline-block";
-  close_icon.style.display = "none";
+  if (hamburger_icon) hamburger_icon.style.display = "inline-block";
+  if (close_icon) close_icon.style.display = "none";
   if (menu_close_topright) menu_close_topright.classList.add("hidden");
 
   function openMenu() {
-    main_navigation.classList.remove("hidden");
-    hamburger_icon.style.display = "none";
-    close_icon.style.display = "inline-block";
+    if (main_navigation) main_navigation.classList.remove("hidden");
+    if (hamburger_icon) hamburger_icon.style.display = "none";
+    if (close_icon) close_icon.style.display = "inline-block";
     if (menu_close_topright) {
       menu_close_topright.classList.remove("hidden");
       menu_close_topright.className = "fixed top-10 right-10 z-[1000] lg:hidden";
     }
     document.body.classList.add("no-scroll");
+    // Always show logo when menu is open (for landing)
+    const logo = document.getElementsByClassName("custom-logo-landing")[0];
+    if (logo) logo.style.display = "";
   }
 
   function closeMenu() {
-    main_navigation.classList.add("hidden");
-    hamburger_icon.style.display = "inline-block";
-    close_icon.style.display = "none";
+    if (main_navigation) main_navigation.classList.add("hidden");
+    if (hamburger_icon) hamburger_icon.style.display = "inline-block";
+    if (close_icon) close_icon.style.display = "none";
     if (menu_close_topright) {
       menu_close_topright.classList.add("hidden");
       menu_close_topright.className = "fixed top-4 right-4 z-[1000] lg:hidden hidden";
     }
     document.body.classList.remove("no-scroll");
+    // Hide logo if menu is closed and scroll is at top (for landing)
+    const logo = document.getElementsByClassName("custom-logo-landing")[0];
+    const menu = document.getElementById("primary-menu-landing");
+    if (logo && menu && menu.classList.contains("hidden")) logo.style.display = "none";
   }
 
-  menu_toggle.addEventListener("click", function (e) {
-    e.preventDefault();
-    const isMenuHidden = main_navigation.classList.contains("hidden");
-    if (isMenuHidden) {
-      openMenu();
-    } else {
-      closeMenu();
-    }
-  });
+  if (menu_toggle) {
+    menu_toggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      if (!main_navigation) return;
+      const isMenuHidden = main_navigation.classList.contains("hidden");
+      if (isMenuHidden) {
+        openMenu();
+      } else {
+        closeMenu();
+      }
+    });
+  }
 
   if (menu_close_topright) {
     menu_close_topright.addEventListener("click", function (e) {
@@ -50,11 +61,13 @@ window.addEventListener("load", function () {
     });
   }
 
-  main_navigation.addEventListener("click", function (e) {
-    if (e.target === main_navigation) {
-      menu_toggle.click();
-    }
-  });
+  if (main_navigation) {
+    main_navigation.addEventListener("click", function (e) {
+      if (e.target === main_navigation && menu_toggle) {
+        menu_toggle.click();
+      }
+    });
+  }
 });
 // Background video handling
 document.addEventListener("DOMContentLoaded", () => {
@@ -115,35 +128,28 @@ document.addEventListener("DOMContentLoaded", function () {
   const video = document.getElementById("background-video");
   const logo = document.getElementsByClassName("custom-logo-landing")[0]; // Assuming there's only one logo element
 
-  // Find the menu element with .hidden class
-  let menuEl = null;
-  if (menu && menu.classList.contains("hidden")) menuEl = menu;
-  else menuEl = document.querySelector("header .hidden");
-
+  // Remove menu show/hide from scroll handler. Only affect video and logo.
   function handleScroll() {
     const scrollY = window.scrollY || window.pageYOffset;
     const trigger = window.innerHeight * 1.9;
+    const isDesktop = window.innerWidth >= 1024;
 
     if (scrollY > trigger) {
-      // Show menu
-      if (menuEl) {
-        menuEl.classList.remove("hidden");
-        menuEl.classList.add("fade-in-menu");
-      }
       // Hide video
       if (video) video.style.display = "none";
-      // Show logo
-      if (logo) logo.style.display = "";
-    } else {
-      // Hide menu
-      if (menuEl) {
-        menuEl.classList.add("hidden");
-        menuEl.classList.remove("fade-in-menu");
+      // Desktop: show menu with fade-in
+      if (isDesktop && menu) {
+        menu.classList.remove("hidden");
+        menu.classList.add("fade-in-menu");
       }
+    } else {
       // Show video
       if (video) video.style.display = "";
-      // Hide logo
-      if (logo) logo.style.display = "none";
+      // Desktop: hide menu
+      if (isDesktop && menu) {
+        menu.classList.add("hidden");
+        menu.classList.remove("fade-in-menu");
+      }
     }
   }
 

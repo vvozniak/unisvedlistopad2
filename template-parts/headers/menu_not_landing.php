@@ -1,4 +1,4 @@
-<div class="fixed top-0 left-0 w-screen z-[999]">
+<div class="fixed top-0 left-0 w-screen z-[999] md:px-18">
     <div class="lg:flex lg:items-center py-6 px-10">
         <div class="flex justify-between items-center">
             <div class="mr-8 custom-logo">
