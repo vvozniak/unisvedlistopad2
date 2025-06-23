@@ -88,9 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Maciej 19.06 - pojawianie się paska i znikanie video na landingu
 document.addEventListener("DOMContentLoaded", function () {
-  const menu = document.querySelector(
-    "header .menu, header nav, header .hidden"
-  ); // Adjust selector if needed
+  const menu = document.getElementById("primary-menu") // Adjust selector if needed
   const video = document.getElementById("background-video");
   const logo = document.getElementsByClassName("custom-logo-landing")[0]; // Assuming there's only one logo element
 
