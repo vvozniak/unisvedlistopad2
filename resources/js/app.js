@@ -1,12 +1,38 @@
 // Navigation toggle
 window.addEventListener("load", function () {
   let main_navigation = document.querySelector("#primary-menu");
-  document
-    .querySelector("#primary-menu-toggle")
-    .addEventListener("click", function (e) {
-      e.preventDefault();
-      main_navigation.classList.toggle("hidden");
-    });
+  let menu_toggle = document.querySelector("#primary-menu-toggle");
+  let hamburger_icon = document.querySelector("#hamburger-icon");
+  let close_icon = document.querySelector("#close-icon");
+
+  // Set initial state explicitly to avoid CSS conflicts
+  hamburger_icon.style.display = "inline-block";
+  close_icon.style.display = "none";
+
+  menu_toggle.addEventListener("click", function (e) {
+    e.preventDefault();
+    const isMenuHidden = main_navigation.classList.contains("hidden");
+
+    if (isMenuHidden) {
+      // open menu
+      main_navigation.classList.remove("hidden");
+      hamburger_icon.style.display = "none";
+      close_icon.style.display = "inline-block";
+      document.body.classList.add("no-scroll");
+    } else {
+      // close menu
+      main_navigation.classList.add("hidden");
+      hamburger_icon.style.display = "inline-block";
+      close_icon.style.display = "none";
+      document.body.classList.remove("no-scroll");
+    }
+  });
+
+  main_navigation.addEventListener("click", function (e) {
+    if (e.target === main_navigation) {
+      menu_toggle.click();
+    }
+  });
 });
 // Background video handling
 document.addEventListener("DOMContentLoaded", () => {
