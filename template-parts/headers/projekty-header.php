@@ -20,7 +20,7 @@
 
     <img src="<?php echo get_template_directory_uri(); ?>/assets/o_nas_svg2.svg" alt="brandowy element dekoracyjny 2" class="absolute z-10 top-[25vh] right-0 w-[7vw] h-auto object-cover">
 
-    <div class="absolute top-[35vh] left-[17vw] inset-0 flex flex-col items-center justify-start z-20 text-left px-4 w-2/3">
-        <h1 class="px-auto text-light text-[3rem] libre-baskerville-regular mb-[15vh]">Wspólnie przekroczyny<br>granice</h1>
+    <div class="absolute top-[30vh] md:top-[35vh] left-[0vw] md:left-[22vw] inset-0 flex flex-col items-center justify-start z-20 text-center md:text-left px-4 md:w-2/3">
+        <h1 class="px-auto text-light text-[3rem] libre-baskerville-regular mb-[15vh]">Wspólnie przekroczymy<br>granice</h1>
     </div>
 </header>
