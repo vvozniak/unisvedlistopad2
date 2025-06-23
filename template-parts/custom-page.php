@@ -7,9 +7,13 @@
 get_header();
 ?>
 
-<section class="bg-secondary h-[90vh]">
+<section class="bg-secondary h-[90vh] pt-32">
   <div class="mx-20 text-light">
-    <div>Podstrona na politykę czy kukisy itp?</div>
+    <?php
+    while (have_posts()) : the_post();
+      the_content();
+    endwhile;
+    ?>
   </div>
 </section>
 
