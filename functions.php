@@ -162,3 +162,16 @@ function unisved_enqueue_enhanced_scroll()
 	);
 }
 add_action('wp_enqueue_scripts', 'unisved_enqueue_enhanced_scroll');
+// Add this to your functions.php file
+function unisved_enqueue_drag_scroll() {
+    $version = wp_get_theme()->get('Version');
+
+    wp_enqueue_script(
+        'drag-scroll',
+        get_template_directory_uri() . '/resources/js/drag-scroll.js',
+        array(),
+        $version,
+        true
+    );
+}
+add_action('wp_enqueue_scripts', 'unisved_enqueue_drag_scroll');

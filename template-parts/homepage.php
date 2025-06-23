@@ -23,50 +23,49 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
       </div>
 
 
-      <!-- ODKOMENTOWAĆ TO!!!!!!!!!!!!!!!!! -->
-      <!-- <div class="scrollable-wrapper">
+      <div class="scrollable-wrapper">
         <div class="scrollable-content">
-           <?php
-            $post_id = get_the_ID();
-            $image_url = get_field('pill_image', $post_id);
+          <?php
+          $post_id = get_the_ID();
+          $image_url = get_field('pill_image', $post_id);
 
-            if ($image_url) {
-              photo_oneside_pill('right', $image_url);
-            }
-            text_with_c_pill(
-              'left',
-              get_field('pill_1_title', $post_id),
-              get_field('pill_1_content', $post_id),
-              'assets/big_c_right.svg',
-              'text-white'
-            );
+          if ($image_url) {
+            photo_oneside_pill('right', $image_url);
+          }
+          text_with_c_pill(
+            'left',
+            get_field('pill_1_title', $post_id),
+            get_field('pill_1_content', $post_id),
+            'assets/big_c_right.svg',
+            'text-white'
+          );
 
-            text_with_c_pill(
-              'right',
-              get_field('pill_2_title', $post_id),
-              get_field('pill_2_content', $post_id),
-              'assets/big_c.svg',
-              'text-white'
-            );
+          text_with_c_pill(
+            'right',
+            get_field('pill_2_title', $post_id),
+            get_field('pill_2_content', $post_id),
+            'assets/big_c.svg',
+            'text-white'
+          );
 
-            text_with_c_pill(
-              'left',
-              get_field('pill_3_title', $post_id),
-              get_field('pill_3_content', $post_id),
-              'assets/big_c_right.svg',
-              'text-white'
-            );
+          text_with_c_pill(
+            'left',
+            get_field('pill_3_title', $post_id),
+            get_field('pill_3_content', $post_id),
+            'assets/big_c_right.svg',
+            'text-white'
+          );
 
-            text_with_c_pill(
-              'right',
-              get_field('pill_4_title', $post_id),
-              get_field('pill_4_content', $post_id),
-              'assets/big_c.svg',
-              'text-white'
-            );
-            ?>
+          text_with_c_pill(
+            'right',
+            get_field('pill_4_title', $post_id),
+            get_field('pill_4_content', $post_id),
+            'assets/big_c.svg',
+            'text-white'
+          );
+          ?>
         </div>
-      </div> -->
+      </div>
     </div>
   </div>
 </section>
@@ -148,8 +147,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
         <h4 class="text-light text-[2.6rem] leading-none libre-baskerville-regular">Unisved <br> w pigułce</h4>
       </div>
       <div class="scrollable-wrapper">
-        <!-- ODKOMENTOWAĆ TO !!!!!!!!!!!!!!!!!! -->
-        <!-- <div class="scrollable-content">
+        <div class="scrollable-content">
           <?php
           $post_id = get_the_ID();
 
@@ -193,7 +191,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
             photo_oneside_pill('left', $image_pill);
           }
           ?>
-        </div> -->
+        </div>
       </div>
     </div>
   </div>

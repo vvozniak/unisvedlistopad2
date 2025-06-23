@@ -1,44 +1,47 @@
 article > *:not(.entry-content),
 .entry-content > * {
-    @apply mx-auto;
+  @apply mx-auto;
 }
 
-.entry-content, .block-editor-block-list__layout {
-    h1 {
-        @apply text-2xl;
+.entry-content,
+.block-editor-block-list__layout {
+  h1 {
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+
+  h3 {
+    @apply text-lg;
+  }
+
+  p,
+  ul,
+  ol {
+    a {
+      @apply text-blue-500 underline;
+
+      &:hover {
+        @apply no-underline;
+      }
     }
 
-    h2 {
-        @apply text-xl;
+    @apply mb-8;
+  }
+
+  ul:not(.block-editor-block-variation-picker__variations) {
+    li {
+      @apply list-disc list-inside;
     }
+  }
 
-    h3 {
-        @apply text-lg;
+  ol {
+    li {
+      @apply list-decimal list-inside;
     }
-
-    p, ul, ol {
-        a {
-            @apply text-blue-500 underline;
-
-            &:hover {
-                @apply no-underline;
-            }
-        }
-
-        @apply mb-8;
-    }
-
-    ul:not(.block-editor-block-variation-picker__variations) {
-        li {
-            @apply list-disc list-inside;
-        }
-    }
-
-    ol {
-        li {
-            @apply list-decimal list-inside;
-        }
-    }
+  }
 }
 
 /* CZCIONKI */
@@ -62,31 +65,35 @@ article > *:not(.entry-content),
 }
 
 .link_li a {
-    text-decoration: none !important;
-    
+  text-decoration: none !important;
 }
 
 .custom-overlay {
-     background-image: linear-gradient(0deg, rgba(16, 24, 32, 0.5), rgba(16, 24, 32, 0.5)),
-                       linear-gradient(180deg, rgba(16, 24, 32, 0) 28.09%, #101820 96.3%);
+  background-image: linear-gradient(
+      0deg,
+      rgba(16, 24, 32, 0.5),
+      rgba(16, 24, 32, 0.5)
+    ),
+    linear-gradient(180deg, rgba(16, 24, 32, 0) 28.09%, #101820 96.3%);
 }
 
 .tracking-20 {
   letter-spacing: 0.2em;
 }
 
-.pill-container, .pill-opinion-container {
-    aspect-ratio: 1.8 / 1;
-    /* background-color: #1a202c; */
-    width: 100%;
-    max-width: 600px;
-  }
+.pill-container,
+.pill-opinion-container {
+  aspect-ratio: 1.8 / 1;
+  /* background-color: #1a202c; */
+  width: 100%;
+  max-width: 600px;
+}
 
 .pill-container-with-content {
-    aspect-ratio: 1.8 / 1;
-    width: 100%;
-    max-width: 600px;
-  }
+  aspect-ratio: 1.8 / 1;
+  width: 100%;
+  max-width: 600px;
+}
 
 .mini-pill-container {
   aspect-ratio: 4 / 1;
@@ -95,7 +102,8 @@ article > *:not(.entry-content),
 }
 
 .social-icon-link:hover img {
-  filter: brightness(0) saturate(100%) invert(70%) sepia(62%) saturate(4355%) hue-rotate(359deg) brightness(101%) contrast(101%);
+  filter: brightness(0) saturate(100%) invert(70%) sepia(62%) saturate(4355%)
+    hue-rotate(359deg) brightness(101%) contrast(101%);
 }
 
 .stack-container {
@@ -195,19 +203,18 @@ article > *:not(.entry-content),
 }
 
 .scroll-area {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
-
 
 /* Maciej 19.06 - pojawianie się navbaru */
- .fade-in-menu {
-    opacity: 1 !important;
-    transition: opacity 0.5s ease;
+.fade-in-menu {
+  opacity: 1 !important;
+  transition: opacity 0.5s ease;
 }
 header .hidden {
-    opacity: 0 !important;
-    transition: opacity 0.5s ease;
+  opacity: 0 !important;
+  transition: opacity 0.5s ease;
 }
 
 /* Hide scrollbar but keep functionality */
@@ -216,6 +223,61 @@ header .hidden {
 }
 
 .my-12.w-full.overflow-x-auto {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Drag to scroll styles */
+.opinions-scroll {
+  cursor: grab;
+  scroll-behavior: smooth;
+}
+
+.opinions-scroll.active {
+  cursor: grabbing;
+  user-select: none;
+}
+
+/* Mobile styles for project.php */
+@media (max-width: 781px) {
+  /* Convert fixed-side containers to full-width on mobile */
+  .fixed-side-container {
+    display: block;
+    width: 100%;
+  }
+
+  /* Make fixed content position static on mobile */
+  .fixed-content {
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 3.5rem;
+  }
+
+  /* Center align text that was right-aligned */
+  .fixed-content .text-right {
+    text-align: center;
+  }
+
+  /* Adjust scrollable content for mobile */
+  .scrollable-wraper,
+  .scrollable-wrapper,
+  .scrollable-content {
+    width: 100%;
+  }
+
+  /* Fix C icon rotation and positioning */
+  .fixed-content img {
+    margin: 1rem 0;
+  }
+
+  /* Ensure pill containers fit mobile screens */
+  .pill-container,
+  .pill-opinion-container,
+  .pill-container-with-content {
+    max-width: 100%;
+  }
 }
