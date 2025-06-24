@@ -52,8 +52,8 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
 
       <div class="my-12 md:my-18">
         <?php
-        $post_id = get_the_ID(); 
-        $image_url = get_field('pill_image', $post_id); 
+        $post_id = get_the_ID();
+        $image_url = get_field('pill_image', $post_id);
 
         if ($image_url) {
           photo_oneside_pill('right', $image_url);
@@ -65,10 +65,10 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
   </div>
 </section>
 
-<section class="pb-12 relative z-40 bg-secondary text-white">
+<section class="pb-[20vh] relative z-40 bg-secondary text-white">
   <div class="container mx-auto bg-center rounded-t-[40px]]">
     <div class=" flex justify-end">
-        <?php photo_oneside_pill('right', 'assets/pill_photo.jpg'); ?>
+      <?php photo_oneside_pill('right', 'assets/pill_photo.jpg'); ?>
     </div>
   </div>
 </section>
