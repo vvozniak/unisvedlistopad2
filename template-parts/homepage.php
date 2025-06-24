@@ -14,15 +14,22 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
 
 <section class="bg-secondary py-12 relative">
   <div class="container mx-auto">
+    <!-- dlaczego my mobile -->
+    <div class="w-full items-center flex md:hidden">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
+      <h4 class="text-light text-[2.2rem] libre-baskerville-regular">Dlaczego my?</h4>
+    </div>
+    
     <div class="fixed-side-container" data-fixed-side="left">
       <!-- Left side - fixed content -->
 
+      <!-- dlaczego my PC -->
       <div class="fixed-content">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
         <h4 class="text-light text-[2.5rem] libre-baskerville-regular">Dlaczego my?</h4>
       </div>
 
-
+      <!-- Scrollable content -->
       <div class="scrollable-wrapper">
         <div class="scrollable-content">
           <?php
@@ -72,11 +79,11 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
 <!-- New section with rounded top corners that appears after scrolling -->
 <section class="new-background-section slide bg-black bg-[url(http://unisved.nowa.net.pl/wp-content/uploads/2025/06/2039da1d109140349f07fd17a8bf52a6a7e03a52-scaled.jpg)]  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12">
   <div class="absolute inset-0 bg-black opacity-50 rounded-t-[60px]"></div>
-  <div class="container mx-auto flex  items-center justify-center h-full text-center text-white relative z-10">
-    <div class="mb-8">
+  <div class="container mx-auto flex items-center justify-center h-full text-center text-white relative z-10">
+    <div class="md:mb-8">
       <img src="http://unisved.nowa.net.pl/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto lg:ml-10 mb-6 w-80">
     </div>
-    <h2 class="text-4xl md:text-6xl leading-tight mx-auto libre-baskerville-regular text-left">
+    <h2 class="text-3xl md:text-6xl leading-tight mx-auto px-3 md:px-0 libre-baskerville-regular text-left">
       Od Skandynawii po rynki<br>
       międzynarodowe.
     </h2>
@@ -85,8 +92,14 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
 
 <section class="py-12 relative z-30 bg-secondary text-white">
   <div class="container mx-auto bg-center rounded-t-[40px] min-h-[80vh] px-4">
-    <div class="fixed-side-container" data-fixed-side="right">
+    <!-- dlaczego skandywnawia mobile -->
+    <div class="w-full items-center flex md:hidden">
+      <h4 class="text-right text-[2.2rem] libre-baskerville-regular pe-2">Dlaczego<br>Skandynawia?</h4>
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180">
+    </div>
 
+    <div class="fixed-side-container" data-fixed-side="right">
+      <!-- dlaczego skandynawia PC -->
       <div class="fixed-content flex justify-end">
         <h4 class="text-right text-[2.5rem] libre-baskerville-regular pe-2">Dlaczego<br>Skandynawia?</h4>
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180">
@@ -141,7 +154,13 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
 </section>
 <section class="py-12 relative z-30 bg-secondary text-white">
   <div class="container mx-auto bg-center rounded-[40px] min-h-[100vh] space-y-16">
+    <!-- unisved w pigułce mobile -->
+    <div class="w-full items-center flex md:hidden mb-8">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
+        <h4 class="text-light text-[2.2rem] leading-none libre-baskerville-regular">Unisved <br> w pigułce</h4>
+    </div>
     <div class="fixed-side-container" data-fixed-side="left">
+      <!-- unisved w pigułce PC -->
       <div class="fixed-content">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
         <h4 class="text-light text-[2.6rem] leading-none libre-baskerville-regular">Unisved <br> w pigułce</h4>
@@ -198,9 +217,9 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
 </section>
 
 <section class="pt-12 relative z-30 bg-secondary text-white">
-  <div class="container flex w-full items-center mx-auto">
+  <div class="container flex flex-col md:flex-row w-full items-center mx-auto">
 
-    <div class="w-1/2">
+    <div class="md:w-1/2">
       <?php
       $post_id = get_the_ID();
       $image_pill_2 = get_field('pill_image_2', $post_id);
@@ -210,7 +229,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
       }
       ?>
     </div>
-    <div class="flex items-center mb-12 w-1/2 justify-end">
+    <div class="flex items-center mb-12 mt-12 md:mt-0 md:w-1/2 justify-end">
       <h2 class="text-[2.4rem] font-['Libre_Baskerville'] leading-tight pe-5">Jesteśmy tu, <br> by pomóc!</h2>
       <img src="<?php echo get_template_directory_uri(); ?>/assets/small_c.svg" alt="C" class="">
     </div>
@@ -221,7 +240,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
   <div class="container mx-auto">
     <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
       <!-- Left side - Photo -->
-      <div class="lg:w-1/2">
+      <div class="md:w-1/2">
         <?php
         $post_id = get_the_ID();
         $image_pill_3 = get_field('pill_image_3', $post_id);
@@ -233,7 +252,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
       </div>
 
       <!-- Right side - Text content -->
-      <div class="w-1/2 text-right flex flex-col items-end">
+      <div class="md:w-1/2 text-right flex flex-col items-end mx-10 md:mx-0 pb-10 md:pb-0">
         <h3 class="text-[2rem] libre-baskerville-regular mb-4">Aleksandra Gierdziejewska</h3>
         <hr class=" border-t-2 border-primary my-6 w-2/3">
         <p class="text-lg mb-8 tracking-widest">CEO & FOUNDER</p>

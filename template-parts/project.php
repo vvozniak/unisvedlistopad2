@@ -15,10 +15,10 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c.php';
   <div class="container mx-auto px-4">
     <div class="fixed-side-container" data-fixed-side="left">
     <div class="fixed-content items-center mb-12 md:mb-24">
-      <div class="flex flex-col md:flex-row md:items-start">
+      <div class="flex flex-col md:flex-row md:items-start libre-baskerville-regular">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="w-16 md:w-24 h-auto mr-0 md:mr-8"></img>
         <div>
-          <h1 class="text-xl md:text-5xl font-bold leading-tight text-center md:text-left">Horisontal Holding AB</h1>
+          <h1 class="text-xl md:text-4xl font-bold leading-tight text-center md:text-left">Horisontal Holding AB</h1>
           <p class="text-lg md:text-3xl mt-2 md:mt-4 text-center md:text-left">Skuteczny rozwój trzech firm w ramach jednego holdingu</p>
         </div>
       </div>
@@ -120,12 +120,12 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c.php';
     </div>
   </div>
     </section>
-    <section class="new-background-section slide  bg-[url(http://unisved2.local/wp-content/uploads/2025/06/beautiful-shot-pier-sea-near-tree-forest-surrounded-by-high-mountains-norway-1.png)]  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12">
+    <section class="new-background-section slide  bg-[url(https://unisved.nowa.net.pl/wp-content/uploads/2025/06/beautiful-shot-pier-sea-near-tree-forest-surrounded-by-high-mountains-norway-1.png)]  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12">
       <div class="container mx-auto flex  items-center justify-center h-full text-center text-white relative z-10">
-    <div class="my-8">
+    <div class="hidden md:block my-8">
       <img src="http://unisved.nowa.net.pl/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto mb-6 w-80">
     </div>
-    <h2 class="text-xl md:text-4xl leading-tight mx-8 libre-baskerville-regular text-left">
+    <h2 class="text-2xl md:text-4xl leading-tight mx-8 libre-baskerville-regular text-left">
       Skontaktuj się z nami już dziś, <br>
       aby dowiedzieć się, jak możemy pomóc<br> 
       w rozwoju Twojego biznesu
@@ -148,7 +148,17 @@ if ($projects->have_posts()) :
   $counter = 0;
   while ($projects->have_posts()) : $projects->the_post();
     if ($counter % 2 == 0) {?>
+    <div class="flex flex-row md:hidden">
+      <div class=" flex flex-row md:flex-row md:justify-end ">
+          <div class="flex flex-col items-center md:items-end justify-center text-center md:text-right w-[90vw]">
+            <h4 class="text-[1.2rem] md:text-[2.5rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo get_the_title(); ?></h4>
+            <p class="text-[1rem] md:text-[1.8rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo get_field('podtytul'); ?></p>
+          </div>
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="rotate-180 mt-4 md:mt-0 w-[15vw]">
+      </div>
+    </div>
      <div class="fixed-side-container" data-fixed-side="right">
+      
 
       <div class="fixed-content flex flex-col md:flex-row md:justify-end">
           <div class="flex flex-col items-center md:items-end justify-center text-center md:text-right">
@@ -172,6 +182,15 @@ if ($projects->have_posts()) :
     elseif ($counter % 2 == 1) {?>
 <section class="py-12 relative z-30 bg-secondary text-white">
   <div class="container mx-auto px-4">
+    <div class="flex flex-row md:hidden">
+      <div class=" flex flex-row md:flex-row md:justify-end ">
+          <div class="flex flex-col items-center md:items-end justify-center text-center md:text-right w-[90vw]">
+            <h4 class="text-[1.2rem] md:text-[2.5rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo get_the_title(); ?></h4>
+            <p class="text-[1rem] md:text-[1.8rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo get_field('podtytul'); ?></p>
+          </div>
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="rotate-180 mt-4 md:mt-0 w-[15vw]">
+      </div>
+    </div>
 <div class="fixed-side-container" data-fixed-side="left">
 
       <div class="fixed-content flex flex-col md:flex-row md:justify-start">
