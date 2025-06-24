@@ -12,6 +12,44 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill.php
 require_once get_template_directory() . '/template-parts/pills/icon_text_item.php';
 require_once get_template_directory() . '/template-parts/pills/pill_opinion.php';
 
+$scrolling_heading1 = get_field('scrolling_heading1');
+$scrolling_heading2 = get_field('scrolling_heading2');
+$scrolling_heading_sub = get_field('scrolling_heading_sub');
+
+$pill_title1 = get_field('pill_title1');
+$pill_text1 = get_field('pill_text1');
+$pill_title2 = get_field('pill_title2');
+$pill_text2 = get_field('pill_text2');
+$pill_title3 = get_field('pill_title3');
+$pill_text3 = get_field('pill_text3');
+$pill_title4 = get_field('pill_title4');
+$pill_text4 = get_field('pill_text4');
+$pill_title5 = get_field('pill_title5');
+$pill_text5 = get_field('pill_text5');
+$pill_photo = get_field('pill_photo');
+
+$pill_2_title1 = get_field('pill_2_title1');
+$pill_2_text1 = get_field('pill_2_text1');
+$pill_2_title2 = get_field('pill_2_title2');
+$pill_2_text2 = get_field('pill_2_text2');
+$pill_2_title3 = get_field('pill_2_title3');
+$pill_2_text3 = get_field('pill_2_text3');
+$pill_2_title4 = get_field('pill_2_title4');
+$pill_2_text4 = get_field('pill_2_text4');
+$pill_2_title5 = get_field('pill_2_title5');
+$pill_2_text5 = get_field('pill_2_text5');
+
+$text_on_baner = get_field('text_on_baner');
+
+$opinion_photo_pill = get_field('opinion_photo_pill');
+$opinion_text1 = get_field('opinion_text1');
+$opinion_text2 = get_field('opinion_text2');
+$opinion_text3 = get_field('opinion_text3');
+$opinion_text4 = get_field('opinion_text4');
+$opinion_signature1 = get_field('opinion_signature1');
+$opinion_signature2 = get_field('opinion_signature2');
+$opinion_signature3 = get_field('opinion_signature3');
+$opinion_signature4 = get_field('opinion_signature4');
 ?>
 <section class="bg-secondary pt-24 pb-12">
   <div class="container mx-auto">
@@ -19,7 +57,7 @@ require_once get_template_directory() . '/template-parts/pills/pill_opinion.php'
     <div class="flex items-center justify-start w-full md:hidden">
         <div class="flex items-center">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
-          <h4 class="text-light text-[2.2rem] libre-baskerville-regular">Jak działamy?</h4>
+          <h4 class="text-light text-[2.2rem] libre-baskerville-regular"><?php echo $scrolling_heading1; ?></h4>
         </div>
       </div>
     <div class="fixed-side-container" data-fixed-side="left">
@@ -28,7 +66,7 @@ require_once get_template_directory() . '/template-parts/pills/pill_opinion.php'
       <div class="fixed-content">
         <div class="flex items-center">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
-          <h4 class="text-light text-[2.4rem] libre-baskerville-regular">Jak działamy?</h4>
+          <h4 class="text-light text-[2.4rem] libre-baskerville-regular"><?php echo $scrolling_heading1; ?></h4>
         </div>
       </div>
 
@@ -41,40 +79,40 @@ require_once get_template_directory() . '/template-parts/pills/pill_opinion.php'
 
           text_with_c_pill(
             'left',
-            'Praktyczne wsparcie,<br>realne efekty',
-            'Nasze wsparcie to praktyczne działania, a nie tylko doradztwo. Pomagamy firmom wejść i działać na rynku skandynawskim lub polskim – bez zbędnych komplikacji.',
+             $pill_title1,
+             $pill_text1,
             'assets/big_c_right.svg',
             'text-white'
           );
           text_with_c_pill(
             'right',
-            'Analiza i dopasowanie strategii',
-            'Rozpoznajemy potrzeby firmy i dostosowujemy działania do konkretnego rynku.',
+            $pill_title2,
+            $pill_text2,
             'assets/big_c.svg',
             'text-white'
           );
           text_with_c_pill(
             'left',
-            'Obsługa administracyjna<br>i operacyjna',
-            'Przejmujemy formalności, rejestracje i kontakt z urzędami – Ty skupiasz się na biznesie.',
+            $pill_title3,
+            $pill_text3,
             'assets/big_c_right.svg',
             'text-white'
           );
           text_with_c_pill(
             'right',
-            'Lokalne wsparcie ekspertów',
-            'Zapewniamy dostęp do sprawdzonych doradców prawnych, księgowych i podatkowych.',
+            $pill_title4,
+            $pill_text4,
             'assets/big_c.svg',
             'text-white'
           );
           text_with_c_pill(
             'left',
-            'Koordynacja działań<br>i relacje biznesowe',
-            'Wspieramy Cię w prowadzeniu projektów i pomagamy nawiązać właściwe kontakty.',
+            $pill_title5,
+            $pill_text5,
             'assets/big_c_right.svg',
             'text-white'
           );
-          photo_oneside_pill('right', 'assets/pill_photo.jpg');
+          photo_oneside_pill('right', $pill_photo);
           ?>
         </div>
       </div>
@@ -89,9 +127,7 @@ require_once get_template_directory() . '/template-parts/pills/pill_opinion.php'
       <img src="http://unisved.nowa.net.pl/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto mb-6 w-80">
     </div>
     <h2 class="text-[2rem] md:text-4xl leading-tight mx-8 libre-baskerville-regular text-left">
-      Skontaktuj się z nami już dziś, <br>
-      aby dowiedzieć się, jak możemy pomóc<br> 
-      w rozwoju Twojego biznesu
+     <?php echo $text_on_baner; ?>
     </h2>
   </div>
 </section>
@@ -102,8 +138,8 @@ require_once get_template_directory() . '/template-parts/pills/pill_opinion.php'
 
       <div class="fixed-content flex justify-end">
           <div class="flex flex-col items-end justify-center text-right">
-            <h4 class="text-right text-[2.5rem] libre-baskerville-regular pe-4">Nasze wartośći</h4>
-            <p class="text-right text-[1.8rem] libre-baskerville-regular pe-4">- to, co nas deifniuje</p>
+            <h4 class="text-right text-[2.5rem] libre-baskerville-regular pe-4"><?php echo $scrolling_heading2; ?></h4>
+            <p class="text-right text-[1.8rem] libre-baskerville-regular pe-4"><?php echo $scrolling_heading_sub; ?></p>
           </div>
           <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180">
       </div>
@@ -115,28 +151,28 @@ require_once get_template_directory() . '/template-parts/pills/pill_opinion.php'
         $post_id = get_the_ID(); 
         icon_text_item(
           'partnerstwo.svg',
-          'Partnerstwo',
-          'Wierzymy w siłę relacji opartych na wzajemnym zaufaniu, szacunku i zaangażowaniu. Działamy ramię w ramię z naszymi klientami – jesteśmy nie tylko usługodawcą, ale realnym wsparciem.',
+          $pill_2_title1,
+          $pill_2_text1
         );
         icon_text_item(
           'przejrzystosc.svg',
-          'Przejrzystość',
-          'Komunikujemy się jasno i uczciwie. Transparentność w działaniach to fundament każdej naszej współpracy – bez ukrytych warunków, bez niejasności.'
+          $pill_2_title2,
+          $pill_2_text2
         );
         icon_text_item(
           'rozwoj.svg',
-          'Rozwój',
-          'Nie stoimy w miejscu – ani my, ani nasi klienci. Wspieramy firmy w rozwoju, bo sami też stale się doskonalimy.'
+          $pill_2_title3,
+          $pill_2_text3
         );
         icon_text_item(
           'zrozumienie.svg',
-          'Zrozumienie międzykulturowe',
-          'Znamy i szanujemy różnice między Polską a Skandynawią. Nasza rola to tłumaczyć, łączyć i ułatwiać współpracę – bez nieporozumień.'
+          $pill_2_title4,
+          $pill_2_text4
         );
          icon_text_item(
           'skutecznosc.svg',
-          'Sktueczność',
-          'Skupiamy się na realnych rezultatach. Działamy konkretnie i zadaniowo, tak by klienci widzieli efekty, a nie tylko proces.'
+          $pill_2_title5,
+          $pill_2_text5
         );
         ?>
       </div>
@@ -157,31 +193,31 @@ require_once get_template_directory() . '/template-parts/pills/pill_opinion.php'
     <div class="my-12 w-full overflow-x-auto opinions-scroll cursor-grab">
       <div class="flex gap-x-4 min-w-max pt-5">
       <?php 
-        photo_oneside_pill('right', 'assets/pill_photo.jpg', 'assets/big_c.svg', 'pill-opinion-container');
+        photo_oneside_pill('right', $opinion_photo_pill, 'assets/big_c.svg', 'pill-opinion-container');
         pill_opinion(
-        '"Aleksandra jest bardzo zaangażowana i oddana swoim zadaniom oraz obowiązkom, co czyni ją matką chrzestną wielu projektów w Europie Północnej i Wschodniej. To dla mnie zaszczyt móc z nią współpracować."', 
-        'Piotr Pukaluk', 
+        $opinion_text1, 
+        $opinion_signature1, 
         'Horisontalplan AB',
         'text-gray-100',
         'border-primary'
         );
         pill_opinion(
-        '"Aleksandra jest bardzo zaangażowana i oddana swoim zadaniom oraz obowiązkom, co czyni ją matką chrzestną wielu projektów w Europie Północnej i Wschodniej. To dla mnie zaszczyt móc z nią współpracować.”', 
-        'Piotr Pukaluk', 
+        $opinion_text2, 
+        $opinion_signature2, 
         'Horisontalplan AB',
         'text-gray-100',
         'border-primary'
         );
         pill_opinion(
-        '"Aleksandra jest bardzo zaangażowana i oddana swoim zadaniom oraz obowiązkom, co czyni ją matką chrzestną wielu projektów w Europie Północnej i Wschodniej. To dla mnie zaszczyt móc z nią współpracować.”', 
-        'Piotr Pukaluk', 
+        $opinion_text3, 
+        $opinion_signature3, 
         'Horisontalplan AB',
         'text-gray-100',
         'border-primary'
         );
         pill_opinion(
-        '"Aleksandra jest bardzo zaangażowana i oddana swoim zadaniom oraz obowiązkom, co czyni ją matką chrzestną wielu projektów w Europie Północnej i Wschodniej. To dla mnie zaszczyt móc z nią współpracować.”', 
-        'Piotr Pukaluk', 
+        $opinion_text4, 
+        $opinion_signature4, 
         'Horisontalplan AB',
         'text-gray-100',
         'border-primary'

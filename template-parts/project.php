@@ -7,6 +7,8 @@
 get_header();
 require_once get_template_directory() . '/template-parts/pills/photo_oneside.php';
 require_once get_template_directory() . '/template-parts/pills/text_with_c.php';
+require_once get_template_directory() . '/template-parts/pills/text_with_c_small.php';
+
 
 ?>
 
@@ -74,35 +76,35 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c.php';
 
           <div class="max-w-3xl mx-auto">
             <?php
-            text_with_c_pill(
+            text_with_c_pill_small(
               'right',
               '3 SPÓŁKI ZAREJESTROWANE I ROZWINIĘTE',
               'w mniej niż 3 lata',
               'assets/small_c.svg',
               'text-light'
             );
-            text_with_c_pill(
+            text_with_c_pill_small(
               'right',
               'PONAD 50',
               'zrealizowanych projektów',
               'assets/small_c.svg',
               'text-light'
             );
-            text_with_c_pill(
+            text_with_c_pill_small(
               'right',
               '120 + PRACOWNIKÓW',
               'zatrudnionych w strukturach holdingu',
               'assets/small_c.svg',
               'text-light'
             );
-            text_with_c_pill(
+            text_with_c_pill_small(
               'right',
               'ŚREDNI WZROST PRZYCHODÓW O PONAD 200%',
               'w ciągu ostatnich kilku lat',
               'assets/small_c.svg',
               'text-light'
             );
-            text_with_c_pill(
+            text_with_c_pill_small(
               'right',
               'OBECNOŚĆ NA 5 RYNKACH EUROPEJSKICH:',
               'Szwecja, Norwegia, Dania, Niemcy oraz Polska',

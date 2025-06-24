@@ -1,7 +1,9 @@
 // Navigation toggle
 window.addEventListener("load", function () {
   // Support both landing and non-landing menus
-  let main_navigation = document.querySelector("#primary-menu-landing") || document.querySelector("#primary-menu");
+  let main_navigation =
+    document.querySelector("#primary-menu-landing") ||
+    document.querySelector("#primary-menu");
   let menu_toggle = document.querySelector("#primary-menu-toggle");
   let hamburger_icon = document.querySelector("#hamburger-icon");
   let close_icon = document.querySelector("#close-icon");
@@ -18,7 +20,8 @@ window.addEventListener("load", function () {
     if (close_icon) close_icon.style.display = "inline-block";
     if (menu_close_topright) {
       menu_close_topright.classList.remove("hidden");
-      menu_close_topright.className = "fixed top-10 right-10 z-[1000] lg:hidden";
+      menu_close_topright.className =
+        "fixed top-10 right-10 z-[1000] lg:hidden";
     }
     document.body.classList.add("no-scroll");
     // Always show logo when menu is open (for landing)
@@ -32,13 +35,15 @@ window.addEventListener("load", function () {
     if (close_icon) close_icon.style.display = "none";
     if (menu_close_topright) {
       menu_close_topright.classList.add("hidden");
-      menu_close_topright.className = "fixed top-4 right-4 z-[1000] lg:hidden hidden";
+      menu_close_topright.className =
+        "fixed top-4 right-4 z-[1000] lg:hidden hidden";
     }
-    document.body.classList.remove("no-scroll");
-    // Hide logo if menu is closed and scroll is at top (for landing)
-    const logo = document.getElementsByClassName("custom-logo-landing")[0];
-    const menu = document.getElementById("primary-menu-landing");
-    if (logo && menu && menu.classList.contains("hidden")) logo.style.display = "none";
+    // document.body.classList.remove("no-scroll");
+    // // Hide logo if menu is closed and scroll is at top (for landing)
+    // const logo = document.getElementsByClassName("custom-logo-landing")[0];
+    // const menu = document.getElementById("primary-menu-landing");
+    // if (logo && menu && menu.classList.contains("hidden"))
+    //   logo.style.display = "none";
   }
 
   if (menu_toggle) {
@@ -123,7 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Maciej 19.06 - pojawianie się paska i znikanie video na landingu
 document.addEventListener("DOMContentLoaded", function () {
-
   const menu = document.getElementById("primary-menu-landing"); // Adjust selector if needed
   const video = document.getElementById("background-video");
   const logo = document.getElementsByClassName("custom-logo-landing")[0]; // Assuming there's only one logo element

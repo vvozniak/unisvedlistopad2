@@ -1,7 +1,7 @@
 <div class="fixed top-0 left-0 w-screen z-[999] md:px-18">
     <div class="lg:flex lg:items-center py-6 px-10">
         <div class="flex justify-between items-center">
-            <div class="mr-8 custom-logo-landing">
+            <div id="custom-logo-landing" class="mr-8 custom-logo-landing">
                 <?php if (has_custom_logo()) { ?>
                     <?php the_custom_logo(); ?>
                 <?php } else { ?>
@@ -47,3 +47,14 @@
         ); ?>
     </div>
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    <?php if (is_front_page()) : ?>
+    const customLogo = document.getElementById('custom-logo-landing');
+    if (customLogo && customLogo.style.display === 'none') {
+        customLogo.style.display = 'block';
+    }
+    <?php endif; ?>
+});
+        
+    </script>
