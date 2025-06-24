@@ -6,7 +6,7 @@
 
 <?php do_action('tailpress_content_after'); ?>
 
-<footer id="colophon" class="site-footer bg-dark pt-[10vh] rounded-t-[60px] -mt-[10vh] z-50 relative" role="contentinfo">
+<footer id="colophon" class="site-footer bg-dark pt-[10vh] rounded-t-[60px] -mt-[10vh] z-50" role="contentinfo">
 	<?php do_action('tailpress_footer'); ?>
 	<div class="flex flex-col md:flex-row justify-center md:justify-between items-center container mx-auto px-4 md:py-14 py-4 gap-4">
 		<?php
