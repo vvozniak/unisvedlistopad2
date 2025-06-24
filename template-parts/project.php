@@ -7,6 +7,8 @@
 get_header();
 require_once get_template_directory() . '/template-parts/pills/photo_oneside.php';
 require_once get_template_directory() . '/template-parts/pills/text_with_c.php';
+require_once get_template_directory() . '/template-parts/pills/text_with_c_small.php';
+
 
 ?>
 
@@ -74,35 +76,35 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c.php';
 
           <div class="max-w-3xl mx-auto">
             <?php
-            text_with_c_pill(
+            text_with_c_pill_small(
               'right',
               '3 SPÓŁKI ZAREJESTROWANE I ROZWINIĘTE',
               'w mniej niż 3 lata',
               'assets/small_c.svg',
               'text-light'
             );
-            text_with_c_pill(
+            text_with_c_pill_small(
               'right',
               '3 SPÓŁKI ZAREJESTROWANE I ROZWINIĘTE',
               'w mniej niż 3 lata',
               'assets/small_c.svg',
               'text-light'
             );
-            text_with_c_pill(
+            text_with_c_pill_small(
               'right',
               '3 SPÓŁKI ZAREJESTROWANE I ROZWINIĘTE',
               'w mniej niż 3 lata',
               'assets/small_c.svg',
               'text-light'
             );
-            text_with_c_pill(
+            text_with_c_pill_small(
               'right',
               '3 SPÓŁKI ZAREJESTROWANE I ROZWINIĘTE',
               'w mniej niż 3 lata',
               'assets/small_c.svg',
               'text-light'
             );
-            text_with_c_pill(
+            text_with_c_pill_small(
               'right',
               '3 SPÓŁKI ZAREJESTROWANE I ROZWINIĘTE',
               'w mniej niż 3 lata',
