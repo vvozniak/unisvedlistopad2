@@ -15,9 +15,21 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
 <!-- For the main heading section -->
 <section class="bg-secondary text-light py-12 md:py-24">
   <div class="container mx-auto px-4">
-    <div class="fixed-side-container" data-fixed-side="left">
+    <!-- Mobile-only heading -->
+    <div class="block md:hidden text-center mb-4">
+      <div class="flex justify-center items-center">
+        <div>
+          <h1 class="text-xl font-bold">Horisontal Holding AB</h1>
+          <p class="text-lg mt-2">Skuteczny rozwój trzech firm w ramach jednego holdingu</p>
+        </div>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="w-16 h-auto ml-4">
+      </div>
+    </div>
+
+    <!-- Hide this entire block on mobile -->
+    <div class="hidden md:block fixed-side-container" data-fixed-side="left">
       <div class="fixed-content items-center mb-12 md:mb-24">
-        <div class="flex flex-col md:flex-row md:items-start libre-baskerville-regular">
+        <div class="md:flex flex-col md:flex-row md:items-start libre-baskerville-regular block">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="w-16 md:w-24 h-auto mr-0 md:mr-8"></img>
           <div>
             <h1 class="text-xl md:text-4xl font-bold leading-tight text-center md:text-left">Horisontal Holding AB</h1>

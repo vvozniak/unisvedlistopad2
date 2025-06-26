@@ -197,28 +197,28 @@ $opinion_signature4 = get_field('opinion_signature4');
         pill_opinion(
         $opinion_text1, 
         $opinion_signature1, 
-        'Horisontalplan AB',
+        '',
         'text-gray-100',
         'border-primary'
         );
         pill_opinion(
         $opinion_text2, 
         $opinion_signature2, 
-        'Horisontalplan AB',
+        '',
         'text-gray-100',
         'border-primary'
         );
         pill_opinion(
         $opinion_text3, 
         $opinion_signature3, 
-        'Horisontalplan AB',
+        '',
         'text-gray-100',
         'border-primary'
         );
         pill_opinion(
         $opinion_text4, 
         $opinion_signature4, 
-        'Horisontalplan AB',
+        '',
         'text-gray-100',
         'border-primary'
         );

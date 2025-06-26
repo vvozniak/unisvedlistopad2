@@ -180,8 +180,17 @@ article > *:not(.entry-content),
 }
 
 .fixed-content {
+  /* Your intended fixed behavior */
+  background-attachment: fixed;
   display: flex;
   align-items: center;
+}
+
+/* Fallback for iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  .fixed-content {
+    background-attachment: scroll !important;
+  }
 }
 
 .scroll-area {
