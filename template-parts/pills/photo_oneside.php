@@ -18,11 +18,11 @@ function photo_oneside_pill($side = 'right', $photo = 'assets/pill_photo.jpg', $
   $c_image_src = get_template_directory_uri() . '/' . ltrim($c_image, '/');
 
   echo '
-  <div class="pill-container relative overflow-hidden rounded-full flex items-center justify-center ' . $custom_classes . '">
+  <div class="pill-container relative overflow-hidden rounded-full flex items-center justify-center bg-black ' . $custom_classes . '">
     <div class="absolute ' . $c_position . ' top-0 h-full z-10">
       <img src="' . $c_image_src . '" alt="" class="h-full ' . ($side === 'left' ? ' rotate-y-180' : '') . '">
     </div>
-    <img src="' . $photo_src . '" alt="" class="object-cover w-full h-full">
+    <img src="' . $photo_src . '" alt="" class="max-w-full max-h-full">
   </div>
   ';
 }

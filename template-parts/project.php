@@ -186,7 +186,7 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
                 <div class="text-lg" style="margin-bottom: 8rem;">
                   <p><?php echo the_content(); ?></p>
                 </div>
-                <?php photo_oneside_pill("left", get_the_post_thumbnail_url()) ?>
+                <?php photo_oneside_pill("right", get_the_post_thumbnail_url()) ?>
               </div>
             </div>
           </div>
@@ -218,7 +218,7 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
             <div class="text-lg" style="margin-bottom: 8rem;">
               <?php echo the_content(); ?>
             </div>
-            <?php photo_oneside_pill("right", get_the_post_thumbnail_url()); ?>
+            <?php photo_oneside_pill("left", get_the_post_thumbnail_url()); ?>
           </div>
         </div>
   <?php
