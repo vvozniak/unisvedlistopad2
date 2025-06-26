@@ -231,7 +231,7 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
   ?>
       </div>
   </section>
-
+  <div class="h-[20vh] bg-secondary relative z-40"></div>
   <?php
   get_footer();
   ?>
