@@ -51,7 +51,8 @@ $opinion_signature2 = get_field('opinion_signature2');
 $opinion_signature3 = get_field('opinion_signature3');
 $opinion_signature4 = get_field('opinion_signature4');
 ?>
-<section class="bg-secondary pt-24 pb-12">
+
+<section class="bg-secondary rounded-t-[60px] relative pt-24 pb-12">
   <div class="container mx-auto">
     <!-- jak działamy mobile -->
     <div class="flex items-center justify-start w-full md:hidden">
@@ -132,8 +133,8 @@ $opinion_signature4 = get_field('opinion_signature4');
   </div>
 </section>
 
-<section class="py-12 relative z-30 bg-secondary text-white">
-  <div class="container mx-auto bg-center rounded-t-[40px] min-h-[80vh] px-4">
+<section class="py-12 relative z-30 bg-secondary text-white rounded-t-[60px]">
+  <div class="container mx-auto bg-center rounded-t-[60px] min-h-[80vh] px-4">
     <div class="fixed-side-container" data-fixed-side="right">
 
       <div class="fixed-content flex justify-end">
@@ -183,14 +184,16 @@ $opinion_signature4 = get_field('opinion_signature4');
 </section>
 
 <section class="py-12 relative z-40 bg-secondary text-white">
-  <div class="container mx-auto bg-center rounded-t-[40px] min-h-[80vh] px-4">
+  <div class="container mx-auto bg-center rounded-t-[40px] min-h-[20vh] px-4">
     <div class=" flex justify-start">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="">
         <div class="ms-5 flex flex-col items-end justify-center text-right">
           <h4 class="text-right text-[2.5rem] libre-baskerville-regular pe-4">Co mówią o nas:</h4>
         </div>
     </div>
-    <div class="my-12 w-full overflow-x-auto opinions-scroll cursor-grab">
+    
+  </div>
+  <div class="my-12 w-full overflow-x-auto opinions-scroll cursor-grab mb-20 px-4 md:px-8">
       <div class="flex gap-x-4 min-w-max pt-5">
       <?php 
         photo_oneside_pill('right', $opinion_photo_pill, 'assets/big_c.svg', 'pill-opinion-container');
@@ -225,7 +228,6 @@ $opinion_signature4 = get_field('opinion_signature4');
       ?>
       </div>
     </div>
-  </div>
 </section>
 
 

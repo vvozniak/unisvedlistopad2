@@ -70,11 +70,10 @@ article > *:not(.entry-content),
 
 .custom-overlay {
   background-image: linear-gradient(
-      0deg,
-      rgba(16, 24, 32, 0.5),
-      rgba(16, 24, 32, 0.5)
-    ),
-    linear-gradient(180deg, rgba(16, 24, 32, 0) 28.09%, #101820 96.3%);
+    0deg,
+    rgba(16, 24, 32, 0.6),
+    rgba(16, 24, 32, 0.6)
+  );
 }
 
 .tracking-20 {

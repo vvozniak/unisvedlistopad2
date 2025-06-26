@@ -9,7 +9,7 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
 
 ?>
 
-<section class="bg-secondary text-light pb-12 px-4 sm:px-6 lg:px-8">
+<section class="bg-secondary relative text-light pb-12 px-4 sm:px-6 lg:px-8 rounded-t-[60px]">
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
     <div class="space-y-6 md:space-y-8">
       <div class="flex items-center space-x-3 md:space-x-4">
