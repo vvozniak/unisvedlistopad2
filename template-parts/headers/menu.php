@@ -48,13 +48,12 @@
     </div>
 </div>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    <?php if (is_front_page()) : ?>
-    const customLogo = document.getElementById('custom-logo-landing');
-    if (customLogo && customLogo.style.display === 'none') {
-        customLogo.style.display = 'block';
-    }
-    <?php endif; ?>
-});
-        
-    </script>
+    document.addEventListener('DOMContentLoaded', function() {
+        <?php if (is_front_page()) : ?>
+            const customLogo = document.getElementById('custom-logo-landing');
+            if (customLogo && customLogo.style.display === 'none') {
+                customLogo.style.display = 'block';
+            }
+        <?php endif; ?>
+    });
+</script>
