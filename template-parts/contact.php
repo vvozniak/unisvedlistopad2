@@ -10,7 +10,7 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
 ?>
 
 <section class="bg-secondary relative text-light pb-12 px-4 sm:px-6 lg:px-8 rounded-t-[60px]">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+  <div class="max-w-7xl mx-auto md:mx-28 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
     <div class="space-y-6 md:space-y-8">
       <div class="flex items-center space-x-3 md:space-x-4">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="w-12 h-12 md:w-auto md:h-auto">

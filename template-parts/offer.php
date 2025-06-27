@@ -230,7 +230,7 @@ if ($offers->have_posts( )){
     <div class="lg:w-1/3 text-light p-8 link_li">
       <div class="flex items-center mb-4">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class="h-24 mr-4">
-        <h2 class="text-4xl lg:text-5xl">UNISVED<br><?php echo get_the_title( ); ?></h2>
+        <h2 class="text-5xl">UNISVED<br><?php echo get_the_title( ); ?></h2>
       </div>
       <p class="text-xl mb-4 ml-2"><?php echo get_field('podtytul1') ?></p>
       <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary  text-lg ml-2">( CZYTAJ WIĘCEJ )</a>
@@ -263,7 +263,7 @@ if ($offers->have_posts( )){
     <div class="lg:w-1/3 text-light p-8 link_li">
       <div class="flex items-center mb-4">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class="h-24 mr-4">
-        <h2 class="text-4xl lg:text-5xl">UNISVED<br><?php echo get_the_title( ); ?></h2>
+        <h2 class="text-5xl">UNISVED<br><?php echo get_the_title( ); ?></h2>
       </div>
       <p class="text-xl mb-4 ml-2">Kompleksowy pakiet dla firm, które chcą całościowo i profesjonalnie wejść na rynek szwedzki</p>
       <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary  text-lg ml-2">( CZYTAJ WIĘCEJ )</a>
@@ -313,7 +313,7 @@ if ($offers->have_posts( )){
     </div>
     <div class="lg:w-1/3 text-light p-8 link_li">
       <div class="flex items-center mb-4">
-        <h2 class="text-4xl lg:text-5xl text-right">UNISVED<br><?php echo get_the_title( );?></h2>
+        <h2 class="text-5xl text-right">UNISVED<br><?php echo get_the_title( );?></h2>
         <img src="<?php echo get_template_directory_uri(); ?>/assets/small_c.svg" alt="C shape" class="h-24 ml-4">
       </div>
       <p class="text-xl mb-4 ml-2 text-right"><?php echo get_field('podtytul1') ?></p>
@@ -343,7 +343,7 @@ if ($offers->have_posts( )){
     <div class="lg:w-1/3 text-light p-8 link_li">
       <div class="flex items-center mb-4">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class="h-24 mr-4">
-        <h2 class="text-4xl lg:text-5xl">UNISVED<br><?php echo get_the_title( ); ?></h2>
+        <h2 class="text-5xl">UNISVED<br><?php echo get_the_title( ); ?></h2>
       </div>
       <p class="text-xl mb-4 ml-2">Kompleksowy pakiet dla firm, które chcą całościowo i profesjonalnie wejść na rynek szwedzki</p>
       <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary  text-lg ml-2">( CZYTAJ WIĘCEJ )</a>
@@ -397,12 +397,12 @@ if ($offers->have_posts( )){
     </h2>
   </div>
 </section>
-<section class="py-12 relative z-30 bg-secondary text-white rounded-t-[60px]">
-  <div class="container mx-auto bg-center rounded-[40px] min-h-[100vh] space-y-16 mt-20">
+<section class="py-12 relative z-30 bg-secondary overflow-hidden w-full text-white rounded-t-[60px]">
+  <div class="container mx-auto bg-center overflow-hidden rounded-[40px] min-h-[100vh] space-y-16 mt-20">
     <?php 
     double_c_pill_horizontal(
-            "Możliwość łączenia pakietów",
-           "Oferujemy dopasowane pakiety usług dla przedsiębiorstw, które chcą rozpocząć działalność, zrealizować projekt, skutecznie sprzedawać i budować swoją pozycję w Szwecji. Każdy projekt jest inny.<br>
+            "Możliwość  łączenia <br> pakietów",
+           "Oferujemy dopasowane pakiety usług dla przedsiębiorstw, które chcą rozpocząć działalność, zrealizować projekt, skutecznie sprzedawać i budować swoją pozycję w Szwecji. Każdy projekt jest inny.<br><br>
 Dlatego oferujemy możliwość łączenia wybranych pakietów lub stworzenia indywidualnej propozycji szytej na miarę. Skontaktuj się z nami, aby dopasować zakres usług do swoich celów w Szwecji.",
             'assets/big_c.svg',
             'assets/big_c_right.svg',

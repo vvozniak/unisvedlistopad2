@@ -53,7 +53,7 @@ $opinion_signature4 = get_field('opinion_signature4');
 ?>
 
 <section class="bg-secondary rounded-t-[60px] relative pt-24 pb-12">
-  <div class="container mx-auto">
+  <div class="container mx-auto md:mx-28">
     <!-- jak działamy mobile -->
     <div class="flex items-center justify-start w-full md:hidden">
         <div class="flex items-center">
@@ -67,7 +67,7 @@ $opinion_signature4 = get_field('opinion_signature4');
       <div class="fixed-content">
         <div class="flex items-center">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
-          <h4 class="text-light text-[2.4rem] libre-baskerville-regular"><?php echo $scrolling_heading1; ?></h4>
+          <h4 class="text-light text-[3rem] libre-baskerville-regular"><?php echo $scrolling_heading1; ?></h4>
         </div>
       </div>
 
@@ -134,13 +134,13 @@ $opinion_signature4 = get_field('opinion_signature4');
 </section>
 
 <section class="py-12 relative z-30 bg-secondary text-white rounded-t-[60px]">
-  <div class="container mx-auto bg-center rounded-t-[60px] min-h-[80vh] px-4">
+  <div class="container mx-auto md:mx-28 bg-center rounded-t-[60px] min-h-[80vh] px-4">
     <div class="fixed-side-container" data-fixed-side="right">
 
       <div class="fixed-content flex justify-end">
           <div class="flex flex-col items-end justify-center text-right">
-            <h4 class="text-right text-[2.5rem] libre-baskerville-regular pe-4"><?php echo $scrolling_heading2; ?></h4>
-            <p class="text-right text-[1.8rem] libre-baskerville-regular pe-4"><?php echo $scrolling_heading_sub; ?></p>
+            <h4 class="text-right text-[2.5rem] md:text-[3rem] libre-baskerville-regular pe-4"><?php echo $scrolling_heading2; ?></h4>
+            <p class="text-right text-[1.8rem] md:text-[2.1rem] libre-baskerville-regular pe-4"><?php echo $scrolling_heading_sub; ?></p>
           </div>
           <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180">
       </div>
@@ -184,11 +184,11 @@ $opinion_signature4 = get_field('opinion_signature4');
 </section>
 
 <section class="py-12 relative z-40 bg-secondary text-white">
-  <div class="container mx-auto bg-center rounded-t-[40px] min-h-[20vh] px-4">
+  <div class="container mx-auto md:mx-28 bg-center rounded-t-[40px] min-h-[20vh] px-4">
     <div class=" flex justify-start">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="">
-        <div class="ms-5 flex flex-col items-end justify-center text-right">
-          <h4 class="text-right text-[2.5rem] libre-baskerville-regular pe-4">Co mówią o nas:</h4>
+        <div class="ms-5 flex flex-col items-end justify-center  text-right">
+          <h4 class="text-right text-[2.5rem] md:text-[3rem] libre-baskerville-regular pe-4">Co mówią o nas:</h4>
         </div>
     </div>
     

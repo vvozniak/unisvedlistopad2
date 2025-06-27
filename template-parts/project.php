@@ -14,7 +14,7 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
 
 <!-- For the main heading section -->
 <section class="bg-secondary relative rounded-t-[60px] text-light py-12 md:py-24">
-  <div class="container mx-auto px-4">
+  <div class="container mx-auto md:mx-28 px-4">
     <div class="fixed-side-container" data-fixed-side="left">
     <div class="fixed-content items-center mb-12 md:mb-24">
       <div class="flex flex-col md:flex-row md:items-start libre-baskerville-regular">
@@ -150,11 +150,11 @@ if ($projects->have_posts()) :
   $counter = 0;
   while ($projects->have_posts()) : $projects->the_post();
     if ($counter % 2 == 0) {?>
-    <div class="flex flex-row md:hidden">
+    <div class="flex flex-row md:hidden ">
       <div class=" flex flex-row md:flex-row md:justify-end ">
           <div class="flex flex-col items-center md:items-end justify-center text-center md:text-right w-[90vw]">
-            <h4 class="text-[1.2rem] md:text-[2.5rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo get_the_title(); ?></h4>
-            <p class="text-[1rem] md:text-[1.8rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo get_field('podtytul'); ?></p>
+            <h4 class="text-[1.2rem] md:text-[3rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo get_the_title(); ?></h4>
+            <p class="text-[1rem] md:text-[2.1rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo get_field('podtytul'); ?></p>
           </div>
           <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="rotate-180 mt-4 md:mt-0 w-[15vw]">
       </div>
@@ -162,10 +162,10 @@ if ($projects->have_posts()) :
      <div class="fixed-side-container" data-fixed-side="right">
       
 
-      <div class="fixed-content flex flex-col md:flex-row md:justify-end">
+      <div class="fixed-content flex flex-col md:mx-28 md:flex-row md:justify-end">
           <div class="flex flex-col items-center md:items-end justify-center text-center md:text-right">
-            <h4 class="text-[1.2rem] md:text-[2.5rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo get_the_title(); ?></h4>
-            <p class="text-[1rem] md:text-[1.8rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo get_field('podtytul'); ?></p>
+            <h4 class="text-[1.2rem] md:text-[3rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo get_the_title(); ?></h4>
+            <p class="text-[1rem] md:text-[2.1rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo get_field('podtytul'); ?></p>
           </div>
           <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="rotate-180 mt-4 md:mt-0">
       </div>
@@ -187,8 +187,8 @@ if ($projects->have_posts()) :
     <div class="flex flex-row md:hidden">
       <div class=" flex flex-row md:flex-row md:justify-end ">
           <div class="flex flex-col items-center md:items-end justify-center text-center md:text-right w-[90vw]">
-            <h4 class="text-[1.2rem] md:text-[2.5rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo get_the_title(); ?></h4>
-            <p class="text-[1rem] md:text-[1.8rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo get_field('podtytul'); ?></p>
+            <h4 class="text-[1.2rem] md:text-[3rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo get_the_title(); ?></h4>
+            <p class="text-[1rem] md:text-[2.1rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo get_field('podtytul'); ?></p>
           </div>
           <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="rotate-180 mt-4 md:mt-0 w-[15vw]">
       </div>
@@ -198,8 +198,8 @@ if ($projects->have_posts()) :
       <div class="fixed-content flex flex-col md:flex-row md:justify-start">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mt-4 md:mt-0">
         <div class="flex flex-col items-center md:items-start justify-center text-center md:text-left">
-          <h4 class="text-[1.2rem] md:text-[2.5rem] libre-baskerville-regular ps-0 md:ps-4"><?php echo get_the_title(); ?></h4>
-          <p class="text-[1rem] md:text-[1.8rem] libre-baskerville-regular ps-0 md:ps-4"><?php echo get_field('podtytul'); ?></p>
+          <h4 class="text-[1.2rem] md:text-[3rem] libre-baskerville-regular ps-0 md:ps-4"><?php echo get_the_title(); ?></h4>
+          <p class="text-[1rem] md:text-[2.1rem] libre-baskerville-regular ps-0 md:ps-4"><?php echo get_field('podtytul'); ?></p>
         </div>
       </div>
       <div class="scrollable-wraper">

@@ -14,11 +14,11 @@ function double_c_pill($heading = '5 rynków europejskich', $subtext = 'NA KTÓR
   $theme_uri = get_template_directory_uri();
 
   echo '
-  <div class="pill-container-with-content relative overflow-hidden rounded-full">
+  <div class="pill-container-with-content relative overflow-hidden rounded-full" style="margin-bottom: 7rem;">
     <!-- Text content in the middle -->
     <div class="relative z-20 flex flex-col items-center justify-center text-center ' . $text_color . ' h-full">
-      <h2 class="text-[2rem] md:text-[3rem] font-bold mb-1 libre-baskerville-regular">' .$heading . '</h2>
-      <p class="text-[0.6rem] md:text-sm tracking-wider uppercase inter-regular">' . $subtext . '</p>
+      <h2 class="text-[2rem] md:text-[3rem]/12 font-bold mb-3  libre-baskerville-regular">' .$heading . '</h2>
+      <p class="text-[0.6rem] md:text-sm tracking-wider uppercase inter-regular ">' . $subtext . '</p>
     </div>
     
     <!-- Left C shape -->

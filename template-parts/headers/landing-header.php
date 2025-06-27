@@ -1,4 +1,4 @@
-<header class="relative h-[180vh] md:h-[200vh] overflow-hidden bg-secondary">
+<header class="relative h-[180vh] md:h-[200vh] overflow-hidden bg-secondary overflow-x-hidden ">
     <div class="absolute inset-0 custom-overlay z-10"></div>
     <img src="<?php echo get_template_directory_uri(); ?>/assets/header.svg" class="absolute inset-0 z-10 top-[75vh] right-0 left-auto w-[10vw] h-auto object-cover">
     <?php
@@ -10,7 +10,7 @@
     <?php if (!$bool_video) { ?>
         <img id="image" src="<?php echo esc_url($bg_img); ?>" class="absolute inset-0 w-full h-full object-cover z-0"></img>
     <?php } else { ?>
-        <img id="placeholder" class="fixed inset-0 w-full h-screen object-cover z-0" src="<?php echo esc_url($placeholder); ?>" alt="Video placeholder">
+        <img id="placeholder" class="fixed inset-0 w-full h-screen object-cover overflow-hidden z-0" src="<?php echo esc_url($placeholder); ?>" alt="Video placeholder">
         <video id="background-video" style="display:none" class="fixed inset-0 w-full h-screen object-cover z-0" autoplay muted loop playsinline>
             <source src="<?php echo esc_url($video); ?>" type="video/mp4" />
         </video>

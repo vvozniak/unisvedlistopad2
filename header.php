@@ -10,7 +10,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class('bg-light text-gray-900 antialiased'); ?>>
+<body <?php body_class('bg-light text-gray-900 antialiased overflow-x-hidden'); ?>>
 
 	<?php do_action('tailpress_site_before'); ?>
 
