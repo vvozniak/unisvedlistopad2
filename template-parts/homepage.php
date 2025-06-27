@@ -13,7 +13,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
 ?>
 
 <section class="bg-secondary py-12 rounded-t-[60px] relative">
-  <div class="container mx-auto">
+  <div class="container mx-auto xl:ml-28 ">
     <!-- dlaczego my mobile -->
     <div class="w-full items-center flex md:hidden">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
@@ -24,9 +24,9 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
       <!-- Left side - fixed content -->
 
       <!-- dlaczego my PC -->
-      <div class="fixed-content">
+      <div class="fixed-content max-w-[400px]">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
-        <h4 class="text-light text-[2.5rem] libre-baskerville-regular">Dlaczego my?</h4>
+        <h4 class="text-light text-[3rem] libre-baskerville-regular">Dlaczego my?</h4>
       </div>
 
       <!-- Scrollable content -->
@@ -101,7 +101,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
     <div class="fixed-side-container" data-fixed-side="right">
       <!-- dlaczego skandynawia PC -->
       <div class="fixed-content flex justify-end ">
-        <h4 class="text-right text-[2.5rem] libre-baskerville-regular pe-2">Dlaczego<br>Skandynawia?</h4>
+        <h4 class="text-right text-[3rem] libre-baskerville-regular pe-2">Dlaczego<br>Skandynawia?</h4>
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180">
 
       </div>
@@ -163,7 +163,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
       <!-- unisved w pigułce PC -->
       <div class="fixed-content">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
-        <h4 class="text-light text-[2.6rem] leading-none libre-baskerville-regular">Unisved <br> w pigułce</h4>
+        <h4 class="text-light text-[3rem] leading-none libre-baskerville-regular">Unisved <br> w pigułce</h4>
       </div>
       <div class="scrollable-wrapper">
         <div class="scrollable-content">
