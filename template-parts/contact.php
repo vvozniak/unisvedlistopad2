@@ -25,27 +25,27 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
     </div>
 
     <!-- Right Column -->
-    <div class="space-y-6 md:space-y-8">
-      <div class="text-center md:text-right space-y-2 link_li text-lg md:text-xl">
+    <div class="space-y-6 md:space-y-25 max-w-max">
+      <div class="text-center md:text-left space-y-2 link_li text-lg md:text-xl">
         <p><a href="tel:+48602142949" class="">+48 602 142 949</a></p>
         <p><a href="tel:+46704415690" class="">+46 704 415 690</a></p>
         <p><a href="mailto:ALEKSANDRA@UNISVED.EU" class="">ALEKSANDRA@UNISVED.EU</a></p>
       </div>
 
-      <div class="flex flex-wrap justify-center md:justify-end space-x-4 py-4 border-t border-b border-primary">
+      <div class="flex flex-wrap justify-center  space-x-20 py-4 border-t-3 border-b-3 border-primary">
         <!-- Replace with actual SVG icons or font icons -->
-        <a href="#" class="social-icon-link p-1">
+        <a href="#" class="social-icon-link p-5">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/facebook.svg" alt="Facebook" class="h-6 w-6 md:h-auto md:w-auto">
         </a>
-        <a href="#" class="social-icon-link p-1">
+        <a href="#" class="social-icon-link p-5">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/linkedin.svg" alt="LinkedIn" class="h-6 w-6 md:h-auto md:w-auto">
         </a>
-        <a href="#" class="social-icon-link p-1">
+        <a href="#" class="social-icon-link p-5">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/insta.svg" alt="Instagram" class="h-6 w-6 md:h-auto md:w-auto">
         </a>
       </div>
 
-      <div class="text-center md:text-right space-y-1 text-light text-lg md:text-xl">
+      <div class="text-center md:text-left space-y-1 text-light text-lg md:text-xl">
         <p>NIP: 583 244 62 23</p>
         <p>SARNIA 4, 83-047 PIEKŁO DOLNE</p>
       </div>
