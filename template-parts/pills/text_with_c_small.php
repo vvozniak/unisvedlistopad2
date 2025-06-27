@@ -23,14 +23,14 @@ if (!function_exists('text_with_c_pill_small')) {
     echo '
   <div class="pill-container relative  rounded-full my-4">
     <div class="relative overflow-hidden z-20  ' . $text_color . ' flex flex-col justify-center h-full py-6 px-8 bottom-[-10vh] md:bottom-0">
-      <h2 class="' . $text_alignment . ' tracking-20 text-[0.8rem] md:text-[1.2rem] font-bold mb-2 libre-baskerville-regular uppercase">' . $heading . '</h2>
-      <p class="' . $text_alignment . ' text-[0.7rem] md:text-base inter-regular">' . esc_html($subtext) . '</p>
+      <h2 class="' . $text_alignment . ' tracking-15 text-[0.8rem] md:text-[1.750rem] font-bold mb-2 libre-baskerville-regular uppercase">' . $heading . '</h2>
+      <p class="' . $text_alignment . ' text-[1.250rem] md:text-base inter-regular">' . esc_html($subtext) . '</p>
     </div>
     <div class="absolute ' . $c_position . ' top-21 z-10">
       <img src="' . $theme_uri . '/' . $c_image . '" alt="" class="h-full w-auto object-cover">
     </div>
   </div>
-  <div class="h-[5vh]"></div>
+  <div class="h-[5vh] block md:hidden"></div>
   ';
   }
 }
