@@ -101,8 +101,8 @@ article > *:not(.entry-content),
 }
 
 .social-icon-link:hover img {
-  filter: brightness(0) saturate(100%) invert(70%) sepia(62%) saturate(4355%)
-    hue-rotate(359deg) brightness(101%) contrast(101%);
+  filter: brightness(0) saturate(100%) invert(72%) sepia(87%) saturate(1095%)
+    hue-rotate(348deg) brightness(103%) contrast(104%);
 }
 
 .stack-container {
@@ -179,8 +179,17 @@ article > *:not(.entry-content),
 }
 
 .fixed-content {
+  /* Your intended fixed behavior */
+  background-attachment: fixed;
   display: flex;
   align-items: center;
+}
+
+/* Fallback for iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  .fixed-content {
+    background-attachment: scroll !important;
+  }
 }
 
 .scroll-area {
@@ -284,6 +293,10 @@ header .hidden {
   .fixed-content {
     display: none !important;
   }
+}
+
+.current-menu-item > a {
+  @apply font-bold;
 }
 html,
 body {

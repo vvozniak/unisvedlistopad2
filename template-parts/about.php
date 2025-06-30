@@ -56,18 +56,18 @@ $opinion_signature4 = get_field('opinion_signature4');
   <div class="container mx-auto md:mx-28">
     <!-- jak działamy mobile -->
     <div class="flex items-center justify-start w-full md:hidden">
-        <div class="flex items-center">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
-          <h4 class="text-light text-[2.2rem] libre-baskerville-regular"><?php echo $scrolling_heading1; ?></h4>
-        </div>
+      <div class="flex items-center">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
+        <h4 class="text-light text-[2.2rem] libre-baskerville-regular"><?php echo $scrolling_heading1; ?></h4>
       </div>
+    </div>
     <div class="fixed-side-container" data-fixed-side="left">
       <!-- Left side - heading (fixed) -->
-       <!-- jak działamy pc -->
+      <!-- jak działamy pc -->
       <div class="fixed-content">
         <div class="flex items-center">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
-          <h4 class="text-light text-[3rem] libre-baskerville-regular"><?php echo $scrolling_heading1; ?></h4>
+          <h4 class="text-light text-[55px] libre-baskerville-regular"><?php echo $scrolling_heading1; ?></h4>
         </div>
       </div>
 
@@ -80,8 +80,8 @@ $opinion_signature4 = get_field('opinion_signature4');
 
           text_with_c_pill(
             'left',
-             $pill_title1,
-             $pill_text1,
+            $pill_title1,
+            $pill_text1,
             'assets/big_c_right.svg',
             'text-white'
           );
@@ -128,7 +128,7 @@ $opinion_signature4 = get_field('opinion_signature4');
       <img src="http://unisved.nowa.net.pl/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto mb-6 w-80">
     </div>
     <h2 class="text-[2rem] md:text-4xl leading-tight mx-8 libre-baskerville-regular text-left">
-     <?php echo $text_on_baner; ?>
+      <?php echo $text_on_baner; ?>
     </h2>
   </div>
 </section>
@@ -144,40 +144,40 @@ $opinion_signature4 = get_field('opinion_signature4');
           </div>
           <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180">
       </div>
-      
+
       <div class="scrollable-wrapper">
         <div class="scrollable-content">
-       <div>
-        <?php
-        $post_id = get_the_ID(); 
-        icon_text_item(
-          'partnerstwo.svg',
-          $pill_2_title1,
-          $pill_2_text1
-        );
-        icon_text_item(
-          'przejrzystosc.svg',
-          $pill_2_title2,
-          $pill_2_text2
-        );
-        icon_text_item(
-          'rozwoj.svg',
-          $pill_2_title3,
-          $pill_2_text3
-        );
-        icon_text_item(
-          'zrozumienie.svg',
-          $pill_2_title4,
-          $pill_2_text4
-        );
-         icon_text_item(
-          'skutecznosc.svg',
-          $pill_2_title5,
-          $pill_2_text5
-        );
-        ?>
-      </div>
-      </div>
+          <div>
+            <?php
+            $post_id = get_the_ID();
+            icon_text_item(
+              'partnerstwo.svg',
+              $pill_2_title1,
+              $pill_2_text1
+            );
+            icon_text_item(
+              'przejrzystosc.svg',
+              $pill_2_title2,
+              $pill_2_text2
+            );
+            icon_text_item(
+              'rozwoj.svg',
+              $pill_2_title3,
+              $pill_2_text3
+            );
+            icon_text_item(
+              'zrozumienie.svg',
+              $pill_2_title4,
+              $pill_2_text4
+            );
+            icon_text_item(
+              'skutecznosc.svg',
+              $pill_2_title5,
+              $pill_2_text5
+            );
+            ?>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -195,35 +195,35 @@ $opinion_signature4 = get_field('opinion_signature4');
   </div>
   <div class="my-12 w-full overflow-x-auto opinions-scroll cursor-grab mb-20 px-4 md:px-8">
       <div class="flex gap-x-4 min-w-max pt-5">
-      <?php 
+        <?php
         photo_oneside_pill('right', $opinion_photo_pill, 'assets/big_c.svg', 'pill-opinion-container');
         pill_opinion(
-        $opinion_text1, 
-        $opinion_signature1, 
-        'Horisontalplan AB',
-        'text-gray-100',
-        'border-primary'
+          $opinion_text1,
+          $opinion_signature1,
+          '',
+          'text-gray-100',
+          'border-primary'
         );
         pill_opinion(
-        $opinion_text2, 
-        $opinion_signature2, 
-        'Horisontalplan AB',
-        'text-gray-100',
-        'border-primary'
+          $opinion_text2,
+          $opinion_signature2,
+          '',
+          'text-gray-100',
+          'border-primary'
         );
         pill_opinion(
-        $opinion_text3, 
-        $opinion_signature3, 
-        'Horisontalplan AB',
-        'text-gray-100',
-        'border-primary'
+          $opinion_text3,
+          $opinion_signature3,
+          '',
+          'text-gray-100',
+          'border-primary'
         );
         pill_opinion(
-        $opinion_text4, 
-        $opinion_signature4, 
-        'Horisontalplan AB',
-        'text-gray-100',
-        'border-primary'
+          $opinion_text4,
+          $opinion_signature4,
+          '',
+          'text-gray-100',
+          'border-primary'
         );
       ?>
       </div>

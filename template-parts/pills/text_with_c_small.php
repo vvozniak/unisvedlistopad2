@@ -20,11 +20,22 @@ if (!function_exists('text_with_c_pill_small')) {
     // Get the theme URI for image paths
     $theme_uri = get_template_directory_uri();
 
+    //   echo '
+    // <div class="relative rounded-full my-4 h-40">
+    //   <div class="z-10 ' . $text_color . ' flex flex-col justify-start h-full py-6 px-8">
+    //     <h2 class="' . $text_alignment . ' tracking-15 text-[0.8rem] md:text-[1.750rem] font-bold mb-2 libre-baskerville-regular uppercase">' . $heading . '</h2>
+    //     <p class="' . $text_alignment . ' text-[1.250rem] md:text-base inter-regular">' . esc_html($subtext) . '</p>
+    //   </div>
+    //   <div class="absolute ' . $c_position . ' bottom-5 z-0">
+    //     <img src="' . $theme_uri . '/' . $c_image . '" alt="" class=" w-auto">
+    //   </div>
+    // </div>
+    // ';
     echo '
   <div class="pill-container relative max-h-[200px]  rounded-full ">
-    <div class="relative overflow-hidden z-20 ' . $text_color . ' flex flex-col justify-center h-full  px-8">
-      <h2 class="' . $text_alignment . ' tracking-20 text-[0.8rem] md:text-[1.8rem] font-bold mb-2 libre-baskerville-regular uppercase">' . $heading . '</h2>
-      <p class="' . $text_alignment . ' text-[1.3rem] md:text-base inter-regular">' . esc_html($subtext) . '</p>
+    <div class="relative overflow-hidden z-20 ' . $text_color . ' flex flex-col justify-center h-full  pl-8">
+      <h2 class="' . $text_alignment . ' tracking-2 text-[0.8rem] md:text-[1.750rem] font-bold mb-2 libre-baskerville-regular uppercase">' . $heading . '</h2>
+      <p class="' . $text_alignment . ' text-[1.250rem] md:text-base inter-regular">' . esc_html($subtext) . '</p>
     </div>
     <div class="absolute ' . $c_position . ' top-5 z-10">
       <img src="' . $theme_uri . '/' . $c_image . '" alt="" class="h-full w-auto object-cover">

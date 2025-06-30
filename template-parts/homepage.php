@@ -19,7 +19,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
       <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
       <h4 class="text-light text-[2.2rem] libre-baskerville-regular">Dlaczego my?</h4>
     </div>
-    
+
     <div class="fixed-side-container" data-fixed-side="left">
       <!-- Left side - fixed content -->
 
@@ -156,8 +156,8 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
   <div class="container mx-auto bg-center rounded-[40px] min-h-[100vh] space-y-16 mt-20">
     <!-- unisved w pigułce mobile -->
     <div class="w-full items-center flex md:hidden mb-8">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
-        <h4 class="text-light text-[2.2rem] leading-none libre-baskerville-regular">Unisved <br> w pigułce</h4>
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
+      <h4 class="text-light text-[2.2rem] leading-none libre-baskerville-regular">Unisved <br> w pigułce</h4>
     </div>
     <div class="fixed-side-container" data-fixed-side="left">
       <!-- unisved w pigułce PC -->
@@ -236,7 +236,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
   </div>
 </section>
 
-<section class="relative z-30 bg-secondary text-white py-12">
+<section class="relative z-30 bg-secondary text-white pt-12 pb-[20vh]">
   <div class="container mx-auto">
     <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
       <!-- Left side - Photo -->
