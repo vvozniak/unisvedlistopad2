@@ -121,13 +121,13 @@ $opinion_signature4 = get_field('opinion_signature4');
   </div>
 </section>
 
-<section class="new-background-section slide bg-black bg-[url(https://unisved.nowa.net.pl/wp-content/uploads/2025/06/beautiful-shot-pier-sea-near-tree-forest-surrounded-by-high-mountains-norway-1.png)]  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12">
+<section class="new-background-section slide bg-black bg-[url(https://unisved.nowa.net.pl/wp-content/uploads/2025/06/9b1e55547612e809b9e0511f275c20e7567c36d6-scaled.jpg)]  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12">
   <div class="absolute inset-0 bg-black opacity-50 rounded-t-[60px]"></div>
   <div class="container mx-auto flex  items-center justify-center h-full text-center text-white relative z-10">
     <div class="my-8 hidden md:block">
       <img src="http://unisved.nowa.net.pl/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto mb-6 w-80">
     </div>
-    <h2 class="text-[2rem] md:text-4xl leading-tight mx-8 libre-baskerville-regular text-left">
+    <h2 class="text-[2rem] md:text-[3.5rem] leading-tight mx-8 libre-baskerville-regular text-left">
       <?php echo $text_on_baner; ?>
     </h2>
   </div>
