@@ -53,7 +53,7 @@ $opinion_signature4 = get_field('opinion_signature4');
 ?>
 
 <section class="bg-secondary rounded-t-[60px] relative pt-24 pb-12">
-  <div class="container mx-auto md:mx-28">
+  <div class="container mx-auto md:ml-28">
     <!-- jak działamy mobile -->
     <div class="flex items-center justify-start w-full md:hidden">
       <div class="flex items-center">
@@ -64,7 +64,7 @@ $opinion_signature4 = get_field('opinion_signature4');
     <div class="fixed-side-container" data-fixed-side="left">
       <!-- Left side - heading (fixed) -->
       <!-- jak działamy pc -->
-      <div class="fixed-content">
+      <div class="fixed-content shrink-0">
         <div class="flex items-center">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
           <h4 class="text-light text-[55px] libre-baskerville-regular"><?php echo $scrolling_heading1; ?></h4>
@@ -72,7 +72,8 @@ $opinion_signature4 = get_field('opinion_signature4');
       </div>
 
       <!-- Right side - scrollable content -->
-      <div class="scrollable-wrapper">
+       <div class="spacer flex-grow min-w-[1rem]    2xl:min-w-[5rem]"></div>
+      <div class="scrollable-wrapper shrink-0 mr-auto ">
         <div class="scrollable-content">
           <?php
 

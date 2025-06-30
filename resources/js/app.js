@@ -135,28 +135,46 @@ document.addEventListener("DOMContentLoaded", function () {
   // Remove menu show/hide from scroll handler. Only affect video and logo.
   function handleScroll() {
     const scrollY = window.scrollY || window.pageYOffset;
-    const trigger = window.innerHeight * 1.9;
+    const trigger = window.innerHeight * 0.8; // Show after scrolling 80% of viewport
     const isDesktop = window.innerWidth >= 1024;
 
+    // Debug info
+    console.log("Menu element exists:", menu !== null);
+    console.log("Is desktop:", isDesktop);
+    console.log("Current classes:", menu ? menu.className : "N/A");
+    console.log("Scroll position:", scrollY);
+    console.log("Trigger threshold:", trigger);
+    console.log("Condition met:", scrollY > trigger);
+    console.log("Document height:", document.body.scrollHeight);
+    console.log(
+      "Is scrollable enough:",
+      document.body.scrollHeight > trigger + window.innerHeight
+    );
+
     if (scrollY > trigger) {
-      // Hide video
       if (video) video.style.display = "none";
-      // Desktop: show menu with fade-in
       if (isDesktop && menu) {
+        console.log("Attempting to show menu");
         menu.classList.remove("hidden");
         menu.classList.add("fade-in-menu");
+        // Force visibility with inline style as backup
+        menu.style.display = "block";
+        console.log("After change:", menu.className);
       }
     } else {
       // Show video
       if (video) video.style.display = "";
       // Desktop: hide menu
       if (isDesktop && menu) {
-        menu.classList.add("hidden");
-        menu.classList.remove("fade-in-menu");
+        // menu.classList.add("hidden");
+        // menu.classList.remove("fade-in-menu");
       }
     }
   }
 
-  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("scroll", handleScroll, {
+    passive: true,
+    capture: true,
+  });
   handleScroll(); // Initial check
 });

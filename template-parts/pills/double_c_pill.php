@@ -14,21 +14,21 @@ function double_c_pill($heading = '5 rynków europejskich', $subtext = 'NA KTÓR
   $theme_uri = get_template_directory_uri();
 
   echo '
-  <div class="pill-container-with-content relative overflow-hidden rounded-full" style="margin-bottom: 7rem;">
+  <div class="pill-container-with-content relative  rounded-full" style="margin-bottom: 7rem;">
     <!-- Text content in the middle -->
-    <div class="relative z-20 flex flex-col items-center justify-center text-center ' . $text_color . ' h-full">
+    <div class="relative z-20 flex flex-col items-center justify-center text-center ' . $text_color . ' h-full min-h-[400px]">
       <h2 class="text-[2rem] md:text-[3rem]/12 font-bold mb-3  libre-baskerville-regular">' .$heading . '</h2>
       <p class="text-[0.6rem] md:text-sm tracking-wider uppercase inter-regular ">' . $subtext . '</p>
     </div>
     
     <!-- Left C shape -->
-    <div class="absolute left-0 top-0 h-full z-10">
-      <img src="' . $theme_uri . '/' . $left_c_image . '" alt="" class="h-full">
+    <div class="absolute left-0 lg:-left-15 top-0 h-full z-10 min-h-[400px]">
+      <img src="' . $theme_uri . '/' . $left_c_image . '" alt="" class="h-full min-h-[400px]">
     </div>
     
     <!-- Right C shape -->
-    <div class="absolute right-0 top-0 h-full z-10">
-      <img src="' . $theme_uri . '/' . $right_c_image . '" alt="" class="h-full">
+    <div class="absolute right-0 lg:-right-15 top-0 h-full z-10">
+      <img src="' . $theme_uri . '/' . $right_c_image . '" alt="" class="h-full min-h-[400px]">
     </div>
   </div>';
 }

@@ -8,6 +8,7 @@ get_header();
 require_once get_template_directory() . '/template-parts/pills/photo_oneside.php';
 require_once get_template_directory() . '/template-parts/pills/double_c_pill_horizontal.php';
 ?>
+<div class="bg-secondary relative">
 <?php
 $offers =  new WP_Query(array(
   'post_type' => 'oferta',
@@ -22,7 +23,7 @@ if ($offers->have_posts()) {
     if ($counter % 2 == 0) {
       if (get_field('szablon_1_wlwyl') == true) {
 ?>
-        <section class="bg-secondary py-20 mb-10">
+        <section class="bg-secondary py-20 mb-10 relative">
           <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-center">
             <div class="lg:w-1/3 text-light p-8 link_li">
               <div class="flex items-center mb-4">
@@ -54,7 +55,7 @@ if ($offers->have_posts()) {
         </section>
       <?php } elseif (get_field('szablon_2_wlwyl') == true) {
       ?>
-        <section class="bg-secondary py-20 pb-[20vh]">
+        <section class="bg-secondary py-20 pb-[20vh] relative">
           <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-center">
             <div class="lg:w-1/3 text-light p-8 link_li">
               <div class="flex items-center mb-4">
@@ -96,7 +97,7 @@ if ($offers->have_posts()) {
     } elseif ($counter % 2 == 1) {
       if (get_field('szablon_1_wlwyl') == true) {
       ?>
-        <section class="bg-secondary py-20 mb-10">
+        <section class="bg-secondary py-20 mb-10 relative">
           <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-center">
             <div class="lg:w-1/2 mt-8 lg:mt-0">
               <div class="relative">
@@ -130,7 +131,7 @@ if ($offers->have_posts()) {
       <?php
       } elseif (get_field('szablon_2_wlwyl') == true) {
       ?>
-        <section class="bg-secondary py-20 mb-10">
+        <section class="bg-secondary py-20 mb-10 relative">
           <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-center">
             <div class="lg:w-1/3 text-light p-8 link_li">
               <div class="flex items-center mb-4">
@@ -219,6 +220,7 @@ Dlatego oferujemy możliwość łączenia wybranych pakietów lub stworzenia in
     }
   }
 </script>
+</div>
 <?php
 get_footer();
 ?>
