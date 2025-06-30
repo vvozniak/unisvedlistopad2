@@ -18,11 +18,11 @@ function icon_text_item($icon_path, $title, $subtitle, $icon_alt = '', $classes 
   echo '
   <div class="flex items-center mb-10">
     <div class="mr-6 flex-shrink-0">
-      <img src="' . esc_url($full_icon_path) . '" alt="' . esc_attr($alt_text) . '" class="' . esc_attr($classes) . ' w-[13vw] h-auto object-contai me-5">
+      <img src="' . esc_url($full_icon_path) . '" alt="' . esc_attr($alt_text) . '" class="' . esc_attr($classes) . ' w-[13vw] h-auto object-contain me-5">
     </div>
     <div>
-      <h3 class="text-[1.2rem] md:text-[1.8rem] font-bold text-light libre-baskerville-regular mb-1">' . esc_html($title) . '</h3>
-      <p class="text-[0.8rem] text-light inter-regular">' . esc_html($subtitle) . '</p>
+      <h3 class="text-[1.4rem] md:text-[1.8rem] font-bold text-light libre-baskerville-regular mb-1 min-w-[450px]">' . esc_html($title) . '</h3>
+      <p class="text-[1rem] text-light inter-regular">' . esc_html($subtitle) . '</p>
     </div>
   </div>
   <div class="h-[5vh]"></div>

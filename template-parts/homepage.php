@@ -12,8 +12,8 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill.php
 require_once get_template_directory() . '/template-parts/pills/icon_text_item.php';
 ?>
 
-<section class="bg-secondary py-12 relative">
-  <div class="container mx-auto">
+<section class="bg-secondary py-12 rounded-t-[60px] relative">
+  <div class="container mx-auto xl:ml-28 ">
     <!-- dlaczego my mobile -->
     <div class="w-full items-center flex md:hidden">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
@@ -24,9 +24,9 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
       <!-- Left side - fixed content -->
 
       <!-- dlaczego my PC -->
-      <div class="fixed-content">
+      <div class="fixed-content max-w-[400px]">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
-        <h4 class="text-light text-[2.5rem] libre-baskerville-regular">Dlaczego my?</h4>
+        <h4 class="text-light text-[3rem] libre-baskerville-regular">Dlaczego my?</h4>
       </div>
 
       <!-- Scrollable content -->
@@ -83,25 +83,25 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
     <div class="md:mb-8">
       <img src="http://unisved.nowa.net.pl/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto lg:ml-10 mb-6 w-80">
     </div>
-    <h2 class="text-3xl md:text-6xl leading-tight mx-auto px-3 md:px-0 libre-baskerville-regular text-left">
+    <h2 class="text-3xl md:text-7xl leading-tight mx-auto px-3 md:px-0 md:pl-16 libre-baskerville-regular text-left">
       Od Skandynawii po rynki<br>
       międzynarodowe.
     </h2>
   </div>
 </section>
 
-<section class="py-12 relative z-30 bg-secondary text-white">
-  <div class="container mx-auto bg-center rounded-t-[40px] min-h-[80vh] px-4">
+<section class="py-12 relative z-30 bg-secondary text-white rounded-t-[60px]">
+  <div class="container mx-auto bg-center rounded-t-[40px] min-h-[80vh] px-4 mt-20">
     <!-- dlaczego skandywnawia mobile -->
-    <div class="w-full items-center flex md:hidden">
+    <div class="w-full items-center flex md:hidden ">
       <h4 class="text-right text-[2.2rem] libre-baskerville-regular pe-2">Dlaczego<br>Skandynawia?</h4>
       <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180">
     </div>
 
     <div class="fixed-side-container" data-fixed-side="right">
       <!-- dlaczego skandynawia PC -->
-      <div class="fixed-content flex justify-end">
-        <h4 class="text-right text-[2.5rem] libre-baskerville-regular pe-2">Dlaczego<br>Skandynawia?</h4>
+      <div class="fixed-content flex justify-end ">
+        <h4 class="text-right text-[3rem] libre-baskerville-regular pe-2">Dlaczego<br>Skandynawia?</h4>
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180">
 
       </div>
@@ -152,8 +152,8 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
   </div>
 
 </section>
-<section class="py-12 relative z-30 bg-secondary text-white">
-  <div class="container mx-auto bg-center rounded-[40px] min-h-[100vh] space-y-16">
+<section class="py-12 relative z-30 bg-secondary text-white rounded-t-[60px]">
+  <div class="container mx-auto bg-center rounded-[40px] min-h-[100vh] space-y-16 mt-20">
     <!-- unisved w pigułce mobile -->
     <div class="w-full items-center flex md:hidden mb-8">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
@@ -163,7 +163,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
       <!-- unisved w pigułce PC -->
       <div class="fixed-content">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
-        <h4 class="text-light text-[2.6rem] leading-none libre-baskerville-regular">Unisved <br> w pigułce</h4>
+        <h4 class="text-light text-[3rem] leading-none libre-baskerville-regular">Unisved <br> w pigułce</h4>
       </div>
       <div class="scrollable-wrapper">
         <div class="scrollable-content">

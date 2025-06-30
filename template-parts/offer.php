@@ -6,7 +6,7 @@
 
 get_header();
 require_once get_template_directory() . '/template-parts/pills/photo_oneside.php';
-
+require_once get_template_directory() . '/template-parts/pills/double_c_pill_horizontal.php';
 ?>
 <?php
 $offers =  new WP_Query(array(
@@ -174,6 +174,33 @@ if ($offers->have_posts()) {
 }
 
 ?>
+<section class="new-background-section slide bg-black bg-[url(http://unisved2.local/wp-content/uploads/2025/06/7f552ee8caf604bbd62f57eef089c83d7b250042-1-scaled.jpg)]  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12">
+  <div class="absolute inset-0 bg-black opacity-50 rounded-t-[60px]"></div>
+  <div class="container mx-auto flex items-center justify-center h-full text-center text-white relative z-10">
+    <div class="md:mb-8">
+      <img src="http://unisved.nowa.net.pl/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto lg:ml-10 mb-6 w-80">
+    </div>
+    <h2 class="text-3xl md:text-7xl leading-tight mx-auto px-3 md:px-0 md:pl-16 libre-baskerville-regular text-left">
+      Osiągnij sukces <br>
+      na globalnej scenie!
+    </h2>
+  </div>
+</section>
+<section class="py-12 relative z-30 bg-secondary overflow-hidden w-full text-white rounded-t-[60px]">
+  <div class="container mx-auto bg-center overflow-hidden rounded-[40px] min-h-[100vh] space-y-16 mt-20">
+    <?php 
+    double_c_pill_horizontal(
+            "Możliwość  łączenia <br> pakietów",
+           "Oferujemy dopasowane pakiety usług dla przedsiębiorstw, które chcą rozpocząć działalność, zrealizować projekt, skutecznie sprzedawać i budować swoją pozycję w Szwecji. Każdy projekt jest inny.<br><br>
+Dlatego oferujemy możliwość łączenia wybranych pakietów lub stworzenia indywidualnej propozycji szytej na miarę. Skontaktuj się z nami, aby dopasować zakres usług do swoich celów w Szwecji.",
+            'assets/big_c.svg',
+            'assets/big_c_right.svg',
+            'text-white'
+          );
+    ?>
+    </div>
+</section>
+
 <script>
   for (let i = 1; i <= <?php echo $counter; ?>; i++) {
     const toggleLink = document.getElementById(`toggle-offer-${i}`);

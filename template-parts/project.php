@@ -226,8 +226,8 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
       <div class="flex flex-row md:hidden">
         <div class=" flex flex-row md:flex-row md:justify-end ">
           <div class="flex flex-col items-center md:items-end justify-center text-center md:text-right w-[90vw]">
-            <h4 class="text-[1.2rem] md:text-[2.5rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo get_the_title(); ?></h4>
-            <p class="text-[1rem] md:text-[1.8rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo get_field('podtytul'); ?></p>
+            <h4 class="text-[1.2rem] md:text-[3rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo get_the_title(); ?></h4>
+            <p class="text-[1rem] md:text-[2.1rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo get_field('podtytul'); ?></p>
           </div>
           <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="rotate-180 mt-4 md:mt-0 w-[15vw]">
         </div>
