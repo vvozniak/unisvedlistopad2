@@ -138,11 +138,11 @@ $opinion_signature4 = get_field('opinion_signature4');
     <div class="fixed-side-container" data-fixed-side="right">
 
       <div class="fixed-content flex justify-end">
-          <div class="flex flex-col items-end justify-center text-right">
-            <h4 class="text-right text-[2.5rem] md:text-[3rem] libre-baskerville-regular pe-4"><?php echo $scrolling_heading2; ?></h4>
-            <p class="text-right text-[1.8rem] md:text-[2.1rem] libre-baskerville-regular pe-4"><?php echo $scrolling_heading_sub; ?></p>
-          </div>
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180">
+        <div class="flex flex-col items-end justify-center text-right">
+          <h4 class="text-right text-[2.5rem] md:text-[3rem] libre-baskerville-regular pe-4"><?php echo $scrolling_heading2; ?></h4>
+          <p class="text-right text-[1.8rem] md:text-[2.1rem] libre-baskerville-regular pe-4"><?php echo $scrolling_heading_sub; ?></p>
+        </div>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180">
       </div>
 
       <div class="scrollable-wrapper">
@@ -186,48 +186,48 @@ $opinion_signature4 = get_field('opinion_signature4');
 <section class="py-12 relative z-40 bg-secondary text-white">
   <div class="container mx-auto md:mx-28 bg-center rounded-t-[40px] min-h-[20vh] px-4">
     <div class=" flex justify-start">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="">
-        <div class="ms-5 flex flex-col items-end justify-center  text-right">
-          <h4 class="text-right text-[2.5rem] md:text-[3rem] libre-baskerville-regular pe-4">Co mówią o nas:</h4>
-        </div>
-    </div>
-    
-  </div>
-  <div class="my-12 w-full overflow-x-auto opinions-scroll cursor-grab mb-20 px-4 md:px-8">
-      <div class="flex gap-x-4 min-w-max pt-5">
-        <?php
-        photo_oneside_pill('right', $opinion_photo_pill, 'assets/big_c.svg', 'pill-opinion-container');
-        pill_opinion(
-          $opinion_text1,
-          $opinion_signature1,
-          '',
-          'text-gray-100',
-          'border-primary'
-        );
-        pill_opinion(
-          $opinion_text2,
-          $opinion_signature2,
-          '',
-          'text-gray-100',
-          'border-primary'
-        );
-        pill_opinion(
-          $opinion_text3,
-          $opinion_signature3,
-          '',
-          'text-gray-100',
-          'border-primary'
-        );
-        pill_opinion(
-          $opinion_text4,
-          $opinion_signature4,
-          '',
-          'text-gray-100',
-          'border-primary'
-        );
-      ?>
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="">
+      <div class="ms-5 flex flex-col items-end justify-center  text-right">
+        <h4 class="text-right text-[2.5rem] md:text-[3rem] libre-baskerville-regular pe-4">Co mówią o nas:</h4>
       </div>
     </div>
+
+  </div>
+  <div class="my-12 w-full overflow-x-auto opinions-scroll cursor-grab mb-20 px-4 md:px-8">
+    <div class="flex gap-x-4 min-w-max pt-5">
+      <?php
+      photo_oneside_pill('right', $opinion_photo_pill, 'assets/big_c.svg', 'pill-opinion-container');
+      pill_opinion(
+        $opinion_text1,
+        $opinion_signature1,
+        '',
+        'text-gray-100',
+        'border-primary'
+      );
+      pill_opinion(
+        $opinion_text2,
+        $opinion_signature2,
+        '',
+        'text-gray-100',
+        'border-primary'
+      );
+      pill_opinion(
+        $opinion_text3,
+        $opinion_signature3,
+        '',
+        'text-gray-100',
+        'border-primary'
+      );
+      pill_opinion(
+        $opinion_text4,
+        $opinion_signature4,
+        '',
+        'text-gray-100',
+        'border-primary'
+      );
+      ?>
+    </div>
+  </div>
 </section>
 
 
