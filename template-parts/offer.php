@@ -17,14 +17,14 @@ $offers =  new WP_Query(array(
   'order' => 'ASC'
 ));
 if ($offers->have_posts()) {
-  $counter = 8; // do zmiany po tym jak wszystkie oferty bedą postami
+  $counter = 0; // do zmiany po tym jak wszystkie oferty bedą postami
   while ($offers->have_posts()) {
     $offers->the_post();
     if ($counter % 2 == 0) {
       if (get_field('szablon_1_wlwyl') == true) {
 ?>
         <section class="bg-secondary py-20 mb-10 relative">
-          <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-center">
+          <div class="container mx-auto 2xl:mx-28 2xl:gap-150 px-6 flex flex-col lg:flex-row items-center justify-between">
             <div class="lg:w-1/3 text-light p-8 link_li">
               <div class="flex items-center mb-4">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class=" mr-4">
@@ -45,7 +45,7 @@ if ($offers->have_posts()) {
                 <p><?php echo get_field('efekt1'); ?></p>
               </div>
             </div>
-            <div class="lg:w-1/2 mt-8 lg:mt-0">
+            <div class="lg:w-1/2 mt-8 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
               <div class="relative">
                 <?php
                 photo_oneside_pill('right', 'assets/pill_photo.jpg'); ?>
@@ -56,7 +56,7 @@ if ($offers->have_posts()) {
       <?php } elseif (get_field('szablon_2_wlwyl') == true) {
       ?>
         <section class="bg-secondary py-20 pb-[20vh] relative">
-          <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-center">
+          <div class="container mx-auto px-6 2xl:mx-28 2xl:gap-150 flex flex-col lg:flex-row items-center justify-between">
             <div class="lg:w-1/3 text-light p-8 link_li">
               <div class="flex items-center mb-4">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class=" mr-4">
@@ -83,7 +83,7 @@ if ($offers->have_posts()) {
 
               </div>
             </div>
-            <div class="lg:w-1/2 mt-8 lg:mt-0">
+            <div class="lg:w-1/2 mt-8 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
               <div class="relative">
                 <?php
                 photo_oneside_pill('right', 'assets/pill_photo.jpg'); ?>
@@ -98,17 +98,17 @@ if ($offers->have_posts()) {
       if (get_field('szablon_1_wlwyl') == true) {
       ?>
         <section class="bg-secondary py-20 mb-10 relative">
-          <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-center">
-            <div class="lg:w-1/2 mt-8 lg:mt-0">
+          <div class="container   mx-auto 2xl:mx-28 px-6 flex flex-col lg:flex-row items-center justify-between">
+            <div class="lg:w-1/2 mt-8 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
               <div class="relative">
                 <?php
                 photo_oneside_pill('left', 'assets/pill_photo.jpg'); ?>
               </div>
             </div>
             <div class="lg:w-1/3 text-light p-8 link_li">
-              <div class="flex items-center mb-4">
-                <h2 class="text-4xl lg:text-[55px] libre-baskerville-regular text-right">UNISVED<br><?php echo get_the_title(); ?></h2>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/small_c.svg" alt="C shape" class=" ml-4">
+              <div class="flex items-center mb-4 justify-end">
+                <h2 class="text-4xl lg:text-[55px] libre-baskerville-regular text-right max-w-[400px]">UNISVED<br><?php echo get_the_title(); ?></h2>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/small_c.svg" alt="C shape" class="ml-4 flex-shrink-0">
               </div>
               <p class="text-xl mb-4 ml-2 text-right"><?php echo get_field('podtytul1') ?></p>
               <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary tracking-20 text-[16px] ml-2 text-right block">( CZYTAJ WIĘCEJ )</a>
@@ -132,7 +132,7 @@ if ($offers->have_posts()) {
       } elseif (get_field('szablon_2_wlwyl') == true) {
       ?>
         <section class="bg-secondary py-20 mb-10 relative">
-          <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-center">
+          <div class="container 2xl:gap-150 mx-auto 2xl:mx-28 px-6 flex flex-col lg:flex-row items-center justify-between">
             <div class="lg:w-1/3 text-light p-8 link_li">
               <div class="flex items-center mb-4">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class=" mr-4">
@@ -158,7 +158,7 @@ if ($offers->have_posts()) {
 
               </div>
             </div>
-            <div class="lg:w-1/2 mt-8 lg:mt-0 ">
+            <div class="lg:w-1/2 mt-8 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
               <div class="relative">
                 <?php
                 photo_oneside_pill('left', 'assets/pill_photo.jpg'); ?>
@@ -175,7 +175,7 @@ if ($offers->have_posts()) {
 }
 
 ?>
-<section class="new-background-section slide bg-black bg-[url(http://unisved2.local/wp-content/uploads/2025/06/7f552ee8caf604bbd62f57eef089c83d7b250042-1-scaled.jpg)]  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12">
+<section class="new-background-section slide bg-black bg-[url(http://unisved2.local/wp-content/uploads/2025/06/7f552ee8caf604bbd62f57eef089c83d7b250042-scaled.jpg)]  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12">
   <div class="absolute inset-0 bg-black opacity-50 rounded-t-[60px]"></div>
   <div class="container mx-auto flex items-center justify-center h-full text-center text-white relative z-10">
     <div class="md:mb-8">

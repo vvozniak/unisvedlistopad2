@@ -52,7 +52,7 @@ $opinion_signature3 = get_field('opinion_signature3');
 $opinion_signature4 = get_field('opinion_signature4');
 ?>
 
-<section class="bg-secondary rounded-t-[60px] relative pt-24 pb-12">
+<section class="bg-secondary rounded-t-[60px] -mt-[3vh] relative pt-24 pb-12 z-20">
   <div class="container mx-auto md:ml-28">
     <!-- jak działamy mobile -->
     <div class="flex items-center justify-start w-full md:hidden">
@@ -134,7 +134,7 @@ $opinion_signature4 = get_field('opinion_signature4');
   </div>
 </section>
 
-<section class="py-12 relative z-30 bg-secondary text-white rounded-t-[60px]">
+<section class="py-12 relative z-30 bg-secondary text-white rounded-t-[60px] ">
   <div class="container mx-auto md:mx-28 bg-center rounded-t-[60px] min-h-[80vh] px-4">
     <div class="fixed-side-container" data-fixed-side="right">
 
@@ -184,8 +184,10 @@ $opinion_signature4 = get_field('opinion_signature4');
   </div>
 </section>
 
-<section class="py-12 relative z-40 bg-secondary text-white">
-  <div class="container mx-auto md:mx-28 bg-center rounded-t-[40px] min-h-[20vh] px-4">
+<section class="py-12 -mt-12 relative z-40 bg-secondary text-white" style="isolation: isolate;">
+  <!-- Add this div to ensure complete background coverage -->
+  <div class="absolute inset-0 bg-secondary w-full h-full"></div>
+  <div class="container mx-auto md:mx-28 bg-center rounded-t-[40px] min-h-[20vh] px-4 relative">
     <div class=" flex justify-start">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="">
       <div class="ms-5 flex flex-col items-end justify-center  text-right">
@@ -194,7 +196,7 @@ $opinion_signature4 = get_field('opinion_signature4');
     </div>
 
   </div>
-  <div class="my-12 w-full overflow-x-auto opinions-scroll cursor-grab mb-20 px-4 md:px-8">
+  <div class="my-12 pb-12 w-full overflow-x-auto opinions-scroll cursor-grab mb-20 px-4 md:px-8">
     <div class="flex gap-x-4 min-w-max pt-5">
       <?php
       photo_oneside_pill('right', $opinion_photo_pill, 'assets/big_c.svg', 'pill-opinion-container');

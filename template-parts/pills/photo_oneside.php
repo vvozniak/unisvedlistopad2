@@ -22,7 +22,9 @@ function photo_oneside_pill($side = 'right', $photo = 'assets/pill_photo.jpg', $
     <div class="absolute ' . $c_position . ' top-0 h-full z-10">
       <img src="' . $c_image_src . '" alt="" class="h-full ' . ($side === 'left' ? ' rotate-y-180' : '') . '">
     </div>
-    <img src="' . $photo_src . '" alt="" class="w-full h-full object-contain">
+    <img src="' . $photo_src . '" alt="" class="w-full  h-full object-cover">
   </div>
+
+  
   ';
 }

@@ -13,8 +13,8 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
 ?>
 
 <!-- For the main heading section -->
-<section class="bg-secondary text-light py-12 md:py-24 relative">
-  <div class="container mx-auto px-4">
+<section class="bg-secondary text-light py-12 md:py-24 relative rounded-t-[60px] -mt-[3vh] z-20">
+  <div class="container ml-28 px-4">
     <!-- Mobile-only heading -->
     <div class="block md:hidden text-center mb-4">
       <div class="flex justify-center items-center">
@@ -27,8 +27,8 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
     </div>
 
     <!-- Hide this entire block on mobile -->
-    <div class="hidden md:block fixed-side-container" data-fixed-side="left">
-      <div class="fixed-content items-center mb-12 md:mb-24">
+    <div class="hidden md:block  fixed-side-container" data-fixed-side="left">
+      <div class="fixed-content shrink-0 items-center mb-12 md:mb-24">
         <div class="md:flex flex-col md:flex-row md:items-start libre-baskerville-regular block">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="w-16 md:w-24 h-auto mr-0 md:mr-8"></img>
           <div>
@@ -37,7 +37,8 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
           </div>
         </div>
       </div>
-      <div class="scrollable-wrapper">
+      <div class="speacer 2xl:mr-100"></div>
+      <div class="scrollable-wrapper shrink-0">
         <div class="scrollable-content">
           <div class="text-[20px]" style="margin-bottom: 12.5rem;">
             <p>W ciągu ostatnich kilku lat Unisved skutecznie wsparło rozwój Horisontal Holding AB, budując od podstaw trzy uzupełniające się firmy działające w sektorze budowlanym i inżynieryjnym. Nasze działania objęły pełne wsparcie – od rejestracji firm i aspektów prawnych, przez budowę struktur i wdrożenie systemów zarządzania, po strategię sprzedaży, pozyskiwanie klientów i optymalizację procesów dostosowanych do rynków skandynawskich.</p>
@@ -175,7 +176,7 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
   </div>
 </section>
 <section class="py-12 relative z-30 bg-secondary text-white">
-  <div class="container mx-auto px-4">
+  <div class="container mx-auto 2xl:ml-28 px-4">
 
     <?php
     $projects = new WP_Query(array(
@@ -209,6 +210,7 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
               </div>
               <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="rotate-180 mt-4 md:mt-0">
             </div>
+            
             <div class="scrollable-wraper">
               <div class="scrollable-content">
                 <div class="text-lg" style="margin-bottom: 8rem;">
@@ -222,7 +224,7 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
 <?php
         } elseif ($counter % 2 == 1) { ?>
   <section class="py-12 relative z-30 bg-secondary text-white">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4 2xl:ml-28">
       <div class="flex flex-row md:hidden">
         <div class=" flex flex-row md:flex-row md:justify-end ">
           <div class="flex flex-col items-center md:items-end justify-center text-center md:text-right w-[90vw]">

@@ -9,7 +9,7 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
 
 ?>
 
-<section class="bg-secondary relative text-light pb-12 px-4 sm:px-6 lg:px-8 rounded-t-[60px] md:pt-[35vh]">
+<section class="bg-secondary relative text-light pb-12 px-4 sm:px-6 lg:px-8 rounded-t-[60px] md:pt-[35vh] -mt-[3vh] z-20">
   <div class="max-w-7xl mx-auto md:mx-28 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
     <div class="space-y-6 md:space-y-8">
       <div class="flex items-center space-x-3 md:space-x-4 mt-[10vh] md:mt-0">
@@ -67,7 +67,7 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
 
 <section class="pb-[20vh] relative z-40 bg-secondary text-white mt-[-1vh]">
   <div class="container mx-auto bg-center rounded-t-[40px]]">
-    <div class=" flex justify-end">
+    <div class=" flex justify-end 2xl:mr-35">
       <?php photo_oneside_pill('right', 'assets/pill_photo.jpg'); ?>
     </div>
   </div>

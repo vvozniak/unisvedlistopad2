@@ -12,8 +12,8 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill.php
 require_once get_template_directory() . '/template-parts/pills/icon_text_item.php';
 ?>
 
-<section class="bg-secondary py-12 rounded-t-[60px] relative">
-  <div class="container mx-auto xl:ml-28">
+<section class="bg-secondary py-12 rounded-t-[60px] relative -mt-[10vh] z-20">
+  <div class="container 2xl:ml-38 xl:ml-28">
     <!-- dlaczego my mobile -->
     <div class="w-full items-center flex md:hidden">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
@@ -30,7 +30,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
       </div>
       
       <!-- Increased spacer width -->
-      <div class="spacer flex-grow min-w-[1rem]    2xl:min-w-[15rem]"></div>
+      <div class="spacer flex-grow min-w-[1rem]  mr-auto  2xl:min-w-[30rem]"></div>
       
       <!-- Scrollable content with additional left padding -->
       <div class="scrollable-wrapper flex-shrink-0 mr-auto">
@@ -77,6 +77,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
         </div>
       </div>
     </div>
+    <div class="min-h-[10vh]"></div>
   </div>
 </section>
 <!-- New section with rounded top corners that appears after scrolling -->
@@ -101,15 +102,15 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
       <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180">
     </div>
 
-    <div class="fixed-side-container" data-fixed-side="right">
+    <div class="fixed-side-container ml-28" data-fixed-side="right">
       <!-- dlaczego skandynawia PC -->
       <div class="fixed-content flex justify-end ">
-        <h4 class="text-right text-[3rem] libre-baskerville-regular pe-2">Dlaczego<br>Skandynawia?</h4>
+        <h4 class="text-right text-[3rem] libre-baskerville-regular pe-2 shrink-0">Dlaczego<br>Skandynawia?</h4>
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180">
 
       </div>
-
-      <div class="scrollable-wrapper">
+        <div class="spacer flex-grow min-w-[1rem]  mr-auto  2xl:min-w-[30rem]"></div>
+      <div class="scrollable-wrapper shrink-0">
         <div class="scrollable-content">
           <div>
             <?php
@@ -156,7 +157,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
 
 </section>
 <section class="py-12 relative z-30 bg-secondary text-white rounded-t-[60px]">
-  <div class="container mx-auto bg-center rounded-[40px] min-h-[100vh] space-y-16 mt-20 xl:ml-28">
+  <div class="container mx-auto bg-center rounded-[40px] min-h-[100vh] space-y-16 mt-20 2xl:ml-38 xl:ml-28">
     <!-- unisved w pigułce mobile -->
     <div class="w-full items-center flex md:hidden mb-8">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
