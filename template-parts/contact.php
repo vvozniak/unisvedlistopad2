@@ -9,7 +9,7 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
 
 ?>
 
-<section class="bg-secondary relative text-light pb-12 px-4 sm:px-6 lg:px-8 rounded-t-[60px]">
+<section class="bg-secondary relative text-light pb-12 px-4 sm:px-6 lg:px-8 rounded-t-[60px] md:pt-[35vh]">
   <div class="max-w-7xl mx-auto md:mx-28 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
     <div class="space-y-6 md:space-y-8">
       <div class="flex items-center space-x-3 md:space-x-4">
@@ -25,7 +25,7 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
     </div>
 
     <!-- Right Column -->
-    <div class="space-y-6 md:space-y-25 max-w-max">
+    <div class="space-y-6 md:space-y-25 max-w-max md:ml-[10vh]">
       <div class="text-center md:text-left space-y-2 link_li text-lg md:text-xl">
         <p><a href="tel:+48602142949" class="">+48 602 142 949</a></p>
         <p><a href="tel:+46704415690" class="">+46 704 415 690</a></p>
