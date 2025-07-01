@@ -25,7 +25,7 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
     </div>
 
     <!-- Right Column -->
-    <div class="space-y-6 md:space-y-25 max-w-max">
+    <div class="space-y-6 md:space-y-25 max-w-max md:ml-[10vh]">
       <div class="text-center md:text-left space-y-2 link_li text-lg md:text-xl">
         <p><a href="tel:+48602142949" class="">+48 602 142 949</a></p>
         <p><a href="tel:+46704415690" class="">+46 704 415 690</a></p>
