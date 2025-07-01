@@ -13,7 +13,7 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
 ?>
 
 <!-- For the main heading section -->
-<section class="bg-secondary text-light py-12 md:py-24">
+<section class="bg-secondary text-light py-12 md:py-24 relative">
   <div class="container mx-auto px-4">
     <!-- Mobile-only heading -->
     <div class="block md:hidden text-center mb-4">

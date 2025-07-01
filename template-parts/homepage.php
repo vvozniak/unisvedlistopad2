@@ -13,7 +13,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
 ?>
 
 <section class="bg-secondary py-12 rounded-t-[60px] relative">
-  <div class="container mx-auto xl:ml-28 ">
+  <div class="container mx-auto xl:ml-28">
     <!-- dlaczego my mobile -->
     <div class="w-full items-center flex md:hidden">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
@@ -24,13 +24,16 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
       <!-- Left side - fixed content -->
 
       <!-- dlaczego my PC -->
-      <div class="fixed-content max-w-[400px]">
+      <div class="fixed-content max-w-[400px] flex-shrink-0">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
         <h4 class="text-light text-[3rem] libre-baskerville-regular">Dlaczego my?</h4>
       </div>
-
-      <!-- Scrollable content -->
-      <div class="scrollable-wrapper">
+      
+      <!-- Increased spacer width -->
+      <div class="spacer flex-grow min-w-[1rem]    2xl:min-w-[15rem]"></div>
+      
+      <!-- Scrollable content with additional left padding -->
+      <div class="scrollable-wrapper flex-shrink-0 mr-auto">
         <div class="scrollable-content">
           <?php
           $post_id = get_the_ID();
@@ -83,7 +86,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
     <div class="md:mb-8">
       <img src="http://unisved.nowa.net.pl/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto lg:ml-10 mb-6 w-80">
     </div>
-    <h2 class="text-3xl md:text-7xl leading-tight mx-auto px-3 md:px-0 md:pl-16 libre-baskerville-regular text-left">
+    <h2 class="text-3xl md:text-7xl leading-tight mx-auto px-3 md:px-0 md:pl-2 libre-baskerville-regular text-left text-pretty">
       Od Skandynawii po rynki<br>
       międzynarodowe.
     </h2>
@@ -91,7 +94,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
 </section>
 
 <section class="py-12 relative z-30 bg-secondary text-white rounded-t-[60px]">
-  <div class="container mx-auto bg-center rounded-t-[40px] min-h-[80vh] px-4 mt-20">
+  <div class="container mx-auto bg-center rounded-t-[40px] min-h-[80vh] px-4 mt-20 ">
     <!-- dlaczego skandywnawia mobile -->
     <div class="w-full items-center flex md:hidden ">
       <h4 class="text-right text-[2.2rem] libre-baskerville-regular pe-2">Dlaczego<br>Skandynawia?</h4>
@@ -153,7 +156,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
 
 </section>
 <section class="py-12 relative z-30 bg-secondary text-white rounded-t-[60px]">
-  <div class="container mx-auto bg-center rounded-[40px] min-h-[100vh] space-y-16 mt-20">
+  <div class="container mx-auto bg-center rounded-[40px] min-h-[100vh] space-y-16 mt-20 xl:ml-28">
     <!-- unisved w pigułce mobile -->
     <div class="w-full items-center flex md:hidden mb-8">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
@@ -161,11 +164,13 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
     </div>
     <div class="fixed-side-container" data-fixed-side="left">
       <!-- unisved w pigułce PC -->
-      <div class="fixed-content">
+      <div class="fixed-content shrink-0">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
-        <h4 class="text-light text-[3rem] leading-none libre-baskerville-regular">Unisved <br> w pigułce</h4>
+        <h4 class="text-light text-[3rem] leading-none libre-baskerville-regular ">Unisved <br> w pigułce</h4>
       </div>
-      <div class="scrollable-wrapper">
+      <!-- Increased spacer width -->
+      <div class="spacer flex-grow min-w-[1rem]    2xl:min-w-[15rem]"></div>
+      <div class="scrollable-wrapper shrink-0 mr-auto">
         <div class="scrollable-content">
           <?php
           $post_id = get_the_ID();

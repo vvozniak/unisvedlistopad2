@@ -21,12 +21,13 @@ if (!function_exists('text_with_c_pill')) {
     $theme_uri = get_template_directory_uri();
 
     echo '
-  <div class="pill-container relative overflow-hidden rounded-full mt-[5vh] my-4">
+    <div class="h-[10vh]"></div>
+  <div class="pill-container relative  rounded-full my-4">
     <div class="relative z-20 ' . $text_color . ' flex flex-col justify-center h-full py-6 px-8">
       <h2 class="' . $text_alignment . ' tracking-[0.02em] text-[0.8rem] md:text-[1.8rem] font-bold mb-2 libre-baskerville-regular uppercase">' . $heading . '</h2>
       <p class="' . $text_alignment . ' text-[1.3rem] md:text-base inter-regular">' . esc_html($subtext) . '</p>
     </div>
-    <div class="absolute ' . $c_position . ' top-0  z-10">
+    <div class="absolute ' . $c_position . ' -top-10  z-10">
       <img src="' . $theme_uri . '/' . $c_image . '" alt="" class="h-full w-auto object-cover">
     </div>
   </div>

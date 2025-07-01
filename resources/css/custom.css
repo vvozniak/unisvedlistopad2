@@ -74,6 +74,7 @@ article > *:not(.entry-content),
     rgba(16, 24, 32, 0.6),
     rgba(16, 24, 32, 0.6)
   );
+  mix-blend-mode: multiply;
 }
 
 .tracking-20 {
@@ -298,6 +299,7 @@ header .hidden {
 .current-menu-item > a {
   @apply font-bold;
 }
+
 html,
 body {
   width: 100%;
