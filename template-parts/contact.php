@@ -12,11 +12,11 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
 <section class="bg-secondary relative text-light pb-12 px-4 sm:px-6 lg:px-8 rounded-t-[60px] md:pt-[35vh]">
   <div class="max-w-7xl mx-auto md:mx-28 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
     <div class="space-y-6 md:space-y-8">
-      <div class="flex items-center space-x-3 md:space-x-4">
+      <div class="flex items-center space-x-3 md:space-x-4 mt-[10vh] md:mt-0">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="w-12 h-12 md:w-auto md:h-auto">
         <div>
-          <h1 class="text-4xl md:text-[55px] libre-baskerville-regular">Aleksandra</h1>
-          <h1 class="text-4xl md:text-[55px] libre-baskerville-regular">Gierdziejewska</h1>
+          <h1 class="text-4xl md:text-5xl lg:text-[52px] libre-baskerville-regular">Aleksandra</h1>
+          <h1 class="text-4xl md:text-5xl lg:text-[52px] libre-baskerville-regular">Gierdziejewska</h1>
           <p class="text-lg md:text-xl">CEO & FOUNDER</p>
         </div>
       </div>
@@ -32,7 +32,7 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
         <p><a href="mailto:ALEKSANDRA@UNISVED.EU" class="">ALEKSANDRA@UNISVED.EU</a></p>
       </div>
 
-      <div class="flex flex-wrap justify-center  space-x-20 py-4 border-t-3 border-b-3 border-primary">
+      <div class="flex justify-center  space-x-20 py-4 border-t-3 border-b-3 border-primary">
         <!-- Replace with actual SVG icons or font icons -->
         <a href="#" class="social-icon-link p-5">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/facebook.svg" alt="Facebook" class="h-6 w-6 md:h-auto md:w-auto">
