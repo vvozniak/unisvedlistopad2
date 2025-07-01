@@ -188,18 +188,18 @@ if ($offers->have_posts()) {
   </div>
 </section>
 <section class="py-12 relative z-30 bg-secondary overflow-hidden w-full text-white rounded-t-[60px]">
-  <div class="container mx-auto bg-center overflow-hidden rounded-[40px] min-h-[100vh] space-y-16 mt-20">
-    <?php 
+  <div class="container mx-auto bg-center overflow-hidden rounded-[40px] min-h-[65vh] space-y-16 my-20 pt-5">
+    <?php
     double_c_pill_horizontal(
-            "Możliwość  łączenia <br> pakietów",
-           "Oferujemy dopasowane pakiety usług dla przedsiębiorstw, które chcą rozpocząć działalność, zrealizować projekt, skutecznie sprzedawać i budować swoją pozycję w Szwecji. Każdy projekt jest inny.<br><br>
+      "Możliwość <br> łączenia  pakietów",
+      "Oferujemy dopasowane pakiety usług dla przedsiębiorstw, które chcą rozpocząć działalność, zrealizować projekt, skutecznie sprzedawać i budować swoją pozycję w Szwecji. Każdy projekt jest inny.<br><br>
 Dlatego oferujemy możliwość łączenia wybranych pakietów lub stworzenia indywidualnej propozycji szytej na miarę. Skontaktuj się z nami, aby dopasować zakres usług do swoich celów w Szwecji.",
-            'assets/big_c.svg',
-            'assets/big_c_right.svg',
-            'text-white'
-          );
+      'assets/big_c.svg',
+      'assets/big_c_right.svg',
+      'text-white'
+    );
     ?>
-    </div>
+  </div>
 </section>
 
 <script>
