@@ -53,7 +53,7 @@ $opinion_signature4 = get_field('opinion_signature4');
 ?>
 
 <section class="bg-secondary rounded-t-[60px] -mt-[3vh] relative pt-24 pb-12 z-20">
-  <div class="container mx-auto md:ml-28">
+  <div class=" md:ml-28">
     <!-- jak działamy mobile -->
     <div class="flex items-center justify-start w-full md:hidden">
       <div class="flex items-center">
@@ -61,7 +61,7 @@ $opinion_signature4 = get_field('opinion_signature4');
         <h4 class="text-light text-[2.2rem] libre-baskerville-regular"><?php echo $scrolling_heading1; ?></h4>
       </div>
     </div>
-    <div class="fixed-side-container" data-fixed-side="left">
+    <div class="fixed-side-container md:mr-64" data-fixed-side="left">
       <!-- Left side - heading (fixed) -->
       <!-- jak działamy pc -->
       <div class="fixed-content shrink-0">
@@ -114,6 +114,9 @@ $opinion_signature4 = get_field('opinion_signature4');
             'assets/big_c_right.svg',
             'text-white'
           );
+          ?>
+          <div class="h-[5vh]"></div>
+          <?php
           photo_oneside_pill('right', $pill_photo);
           ?>
         </div>
@@ -122,11 +125,11 @@ $opinion_signature4 = get_field('opinion_signature4');
   </div>
 </section>
 
-<section class="new-background-section slide bg-black bg-[url(https://unisved.nowa.net.pl/wp-content/uploads/2025/06/9b1e55547612e809b9e0511f275c20e7567c36d6-scaled.jpg)]  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12">
+<section class="new-background-section slide bg-black bg-[url(http://unisved.local/wp-content/uploads/2025/07/9b1e55547612e809b9e0511f275c20e7567c36d6-scaled.jpg)]  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12">
   <div class="absolute inset-0 bg-black opacity-50 rounded-t-[60px]"></div>
   <div class="container mx-auto flex  items-center justify-center h-full text-center text-white relative z-10">
     <div class="my-8 hidden md:block">
-      <img src="http://unisved.nowa.net.pl/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto mb-6 w-80">
+      <img src="http://unisved.local/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto mb-6 w-80">
     </div>
     <h2 class="text-[2rem] md:text-[3.5rem] leading-tight mx-8 libre-baskerville-regular text-left">
       <?php echo $text_on_baner; ?>
@@ -135,7 +138,7 @@ $opinion_signature4 = get_field('opinion_signature4');
 </section>
 
 <section class="py-12 relative z-30 bg-secondary text-white rounded-t-[60px] ">
-  <div class="container mx-auto md:mx-28 bg-center rounded-t-[60px] min-h-[80vh] px-4">
+  <div class="md:ms-48 md:me-28 bg-center rounded-t-[60px] min-h-[80vh] px-4">
     <div class="fixed-side-container" data-fixed-side="right">
 
       <div class="fixed-content flex justify-end">

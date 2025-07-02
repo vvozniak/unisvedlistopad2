@@ -179,7 +179,7 @@ if ($offers->have_posts()) {
   <div class="absolute inset-0 bg-black opacity-50 rounded-t-[60px]"></div>
   <div class="container mx-auto flex items-center justify-center h-full text-center text-white relative z-10">
     <div class="md:mb-8">
-      <img src="http://unisved.nowa.net.pl/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto lg:ml-10 mb-6 w-80">
+      <img src="http://unisved.local/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto lg:ml-10 mb-6 w-80">
     </div>
     <h2 class="text-3xl md:text-7xl leading-tight mx-auto px-3 md:px-0 md:pl-16 libre-baskerville-regular text-left">
       Osiągnij sukces <br>

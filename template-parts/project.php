@@ -14,7 +14,7 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
 
 <!-- For the main heading section -->
 <section class="bg-secondary text-light py-12 md:py-24 relative rounded-t-[60px] -mt-[3vh] z-20">
-  <div class="container ml-28 px-4">
+  <div class=" ml-28 px-4">
     <!-- Mobile-only heading -->
     <div class="block md:hidden text-center mb-4">
       <div class="flex justify-center items-center">
@@ -27,7 +27,7 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
     </div>
 
     <!-- Hide this entire block on mobile -->
-    <div class="hidden md:block  fixed-side-container" data-fixed-side="left">
+    <div class="hidden md:flex  fixed-side-container  justify-end w-full" data-fixed-side="left">
       <div class="fixed-content shrink-0 items-center mb-12 md:mb-24">
         <div class="md:flex flex-col md:flex-row md:items-start libre-baskerville-regular block">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="w-16 md:w-24 h-auto mr-0 md:mr-8"></img>
@@ -37,8 +37,8 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
           </div>
         </div>
       </div>
-      <div class="speacer 2xl:mr-100"></div>
-      <div class="scrollable-wrapper shrink-0">
+      <!-- <div class="speacer 2xl:mr-100"></div> -->
+      <div class="scrollable-wrapper shrink-0 md:pr-64">
         <div class="scrollable-content">
           <div class="text-[20px]" style="margin-bottom: 12.5rem;">
             <p>W ciągu ostatnich kilku lat Unisved skutecznie wsparło rozwój Horisontal Holding AB, budując od podstaw trzy uzupełniające się firmy działające w sektorze budowlanym i inżynieryjnym. Nasze działania objęły pełne wsparcie – od rejestracji firm i aspektów prawnych, przez budowę struktur i wdrożenie systemów zarządzania, po strategię sprzedaży, pozyskiwanie klientów i optymalizację procesów dostosowanych do rynków skandynawskich.</p>
@@ -163,10 +163,10 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
     </div>
   </div>
 </section>
-<section class="new-background-section slide  bg-[url(https://unisved.nowa.net.pl/wp-content/uploads/2025/06/beautiful-shot-pier-sea-near-tree-forest-surrounded-by-high-mountains-norway-1.png)]  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12">
-  <div class="container mx-auto flex  items-center justify-center h-full text-center text-white relative z-10">
+<section class="new-background-section slide  bg-[url(https://unisved.local/wp-content/uploads/2025/06/beautiful-shot-pier-sea-near-tree-forest-surrounded-by-high-mountains-norway-1.png)]  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12">
+  <div class="flex  items-center justify-end h-full w-full text-center text-white relative z-10">
     <div class="hidden md:block my-8">
-      <img src="http://unisved.nowa.net.pl/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto mb-6 w-80">
+      <img src="http://unisved.local/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto mb-6 w-80">
     </div>
     <h2 class="text-2xl md:text-4xl leading-tight mx-8 libre-baskerville-regular text-left">
       Skontaktuj się z nami już dziś, <br>
@@ -176,7 +176,7 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
   </div>
 </section>
 <section class="py-12 relative z-30 bg-secondary text-white">
-  <div class="container mx-auto 2xl:ml-28 px-4">
+  <div class=" 2xl:ml-28 px-4">
 
     <?php
     $projects = new WP_Query(array(

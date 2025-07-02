@@ -1,7 +1,8 @@
 /* Fixed Side Scroll - Revised */
 .fixed-side-container {
   display: flex;
-  width: 100%;
+  justify-content: space-between;
+  max-width: 100%;
   position: relative;
   gap: 2rem;
   padding: 4rem 0;
@@ -20,7 +21,7 @@
 
 /* Fixed content styling */
 .fixed-content {
-  width: 50%;
+  max-width: 50%;
   position: sticky;
   top: 50vh; /* Center in viewport */
   transform: translateY(-50%);
@@ -32,7 +33,7 @@
 
 /* Scrollable area container */
 .scrollable-wrapper {
-  width: 50%;
+  max-width: 50%;
   position: relative;
   overflow: visible !important; /* Keep overflow visible */
   height: auto;

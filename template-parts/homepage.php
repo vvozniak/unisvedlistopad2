@@ -13,7 +13,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
 ?>
 
 <section class="bg-secondary py-12 rounded-t-[60px] relative -mt-[10vh] z-20">
-  <div class="container 2xl:ml-38 xl:ml-28">
+  <div class=" xl:ml-28 w-screen">
     <!-- dlaczego my mobile -->
     <div class="w-full items-center flex md:hidden">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
@@ -24,16 +24,16 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
       <!-- Left side - fixed content -->
 
       <!-- dlaczego my PC -->
-      <div class="fixed-content max-w-[400px] flex-shrink-0">
+      <div class="fixed-content flex-shrink-0">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
         <h4 class="text-light text-[3rem] libre-baskerville-regular">Dlaczego my?</h4>
       </div>
       
       <!-- Increased spacer width -->
-      <div class="spacer flex-grow min-w-[1rem]  mr-auto  2xl:min-w-[30rem]"></div>
+      <!-- <div class="spacer flex-grow min-w-[1rem]  mr-auto  2xl:min-w-[30rem]"></div> -->
       
       <!-- Scrollable content with additional left padding -->
-      <div class="scrollable-wrapper flex-shrink-0 mr-auto">
+      <div class="scrollable-wrapper flex-shrink-0 md:mr-64">
         <div class="scrollable-content">
           <?php
           $post_id = get_the_ID();
@@ -81,13 +81,13 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
   </div>
 </section>
 <!-- New section with rounded top corners that appears after scrolling -->
-<section class="new-background-section slide bg-black bg-[url(http://unisved.nowa.net.pl/wp-content/uploads/2025/06/2039da1d109140349f07fd17a8bf52a6a7e03a52-scaled.jpg)]  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12">
+<section class="new-background-section slide bg-black bg-[url(http://unisved.local/wp-content/uploads/2025/06/2039da1d109140349f07fd17a8bf52a6a7e03a52-scaled.jpg)]  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12">
   <div class="absolute inset-0 bg-black opacity-50 rounded-t-[60px]"></div>
-  <div class="container mx-auto flex items-center justify-center h-full text-center text-white relative z-10">
-    <div class="md:mb-8">
-      <img src="http://unisved.nowa.net.pl/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto lg:ml-10 mb-6 w-80">
+  <div class=" flex items-center justify-center h-full w-screen text-center text-white relative z-10 md:pb-10">
+    <div class="md:mr-8">
+      <img src="http://unisved.local/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto lg:ml-10 mb-6 w-80">
     </div>
-    <h2 class="text-3xl md:text-7xl leading-tight mx-auto px-3 md:px-0 md:pl-2 libre-baskerville-regular text-left text-pretty">
+    <h2 class="text-3xl md:text-7xl leading-tight px-3 md:px-0 md:pl-2 libre-baskerville-regular text-left text-pretty">
       Od Skandynawii po rynki<br>
       międzynarodowe.
     </h2>
@@ -95,7 +95,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
 </section>
 
 <section class="py-12 relative z-30 bg-secondary text-white rounded-t-[60px]">
-  <div class="container mx-auto bg-center rounded-t-[40px] min-h-[80vh] px-4 mt-20 ">
+  <div class=" bg-center rounded-t-[40px] min-h-[80vh] px-4 mt-20 ">
     <!-- dlaczego skandywnawia mobile -->
     <div class="w-full items-center flex md:hidden ">
       <h4 class="text-right text-[2.2rem] libre-baskerville-regular pe-2">Dlaczego<br>Skandynawia?</h4>
@@ -104,12 +104,12 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
 
     <div class="fixed-side-container ml-28" data-fixed-side="right">
       <!-- dlaczego skandynawia PC -->
-      <div class="fixed-content flex justify-end ">
+      <div class="fixed-content flex justify-end md:mr-64">
         <h4 class="text-right text-[3rem] libre-baskerville-regular pe-2 shrink-0">Dlaczego<br>Skandynawia?</h4>
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180">
 
       </div>
-        <div class="spacer flex-grow min-w-[1rem]  mr-auto  2xl:min-w-[30rem]"></div>
+        <!-- <div class="spacer flex-grow min-w-[1rem]  mr-auto  2xl:min-w-[30rem]"></div> -->
       <div class="scrollable-wrapper shrink-0">
         <div class="scrollable-content">
           <div>
@@ -144,34 +144,31 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
     </div>
   </div>
 </section>
-<section class="new-background-section slide bg-black bg-[url(http://unisved.nowa.net.pl/wp-content/uploads/2025/06/ff43581d96bce748ee60811861ca062f1fd29e08.jpg)] bg-cover rounded-t-[60px] -mt-[10vh] relative z-30 py-12">
+<section class="new-background-section slide bg-black bg-[url(http://unisved.local/wp-content/uploads/2025/06/ff43581d96bce748ee60811861ca062f1fd29e08.jpg)] bg-cover rounded-t-[60px] -mt-[10vh] relative z-30 py-12">
   <div class="absolute inset-0 bg-black opacity-50 rounded-t-[60px]"></div>
   <div class="container mx-auto flex  items-center justify-center h-full text-center text-white relative z-10">
-    <div class="mb-8">
-
-    </div>
-    <h2 class="text-4xl md:text-6xl leading-tight mx-auto libre-baskerville-regular text-left">
+    <h2 class="text-4xl md:text-7xl leading-tight mx-auto libre-baskerville-regular text-left mt-16">
       Wspólnie<br>przekroczymy granice!
     </h2>
   </div>
 
 </section>
 <section class="py-12 relative z-30 bg-secondary text-white rounded-t-[60px]">
-  <div class="container mx-auto bg-center rounded-[40px] min-h-[100vh] space-y-16 mt-20 2xl:ml-38 xl:ml-28">
+  <div class=" bg-center rounded-[40px] min-h-[100vh] space-y-16 mt-20 xl:ml-28">
     <!-- unisved w pigułce mobile -->
     <div class="w-full items-center flex md:hidden mb-8">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
       <h4 class="text-light text-[2.2rem] leading-none libre-baskerville-regular">Unisved <br> w pigułce</h4>
     </div>
-    <div class="fixed-side-container" data-fixed-side="left">
+    <div class="fixed-side-container md:mr-64" data-fixed-side="left">
       <!-- unisved w pigułce PC -->
       <div class="fixed-content shrink-0">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
         <h4 class="text-light text-[3rem] leading-none libre-baskerville-regular ">Unisved <br> w pigułce</h4>
       </div>
       <!-- Increased spacer width -->
-      <div class="spacer flex-grow min-w-[1rem]    2xl:min-w-[15rem]"></div>
-      <div class="scrollable-wrapper shrink-0 mr-auto">
+      <!-- <div class="spacer flex-grow min-w-[1rem]    2xl:min-w-[15rem]"></div> -->
+      <div class="scrollable-wrapper shrink-0">
         <div class="scrollable-content">
           <?php
           $post_id = get_the_ID();
@@ -222,8 +219,8 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
   </div>
 </section>
 
-<section class="pt-12 relative z-30 bg-secondary text-white">
-  <div class="container flex flex-col md:flex-row w-full items-center mx-auto">
+<section class="pt-12 relative z-30 bg-secondary text-white mt-[-10px]">
+  <div class="xl:ps-[10vw] xl:pe-[12vw] flex flex-col md:flex-row w-full items-center">
 
     <div class="md:w-1/2">
       <?php
@@ -242,11 +239,11 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
   </div>
 </section>
 
-<section class="relative z-30 bg-secondary text-white pt-12 pb-[20vh]">
-  <div class="container mx-auto">
+<section class="relative z-30 bg-secondary text-white pt-12 pb-[20vh] md:mt-[-5px]">
+  <div class="xl:px-[10vw]">
     <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
       <!-- Left side - Photo -->
-      <div class="md:w-1/2">
+      <div class="">
         <?php
         $post_id = get_the_ID();
         $image_pill_3 = get_field('pill_image_3', $post_id);
@@ -258,7 +255,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
       </div>
 
       <!-- Right side - Text content -->
-      <div class="md:w-1/2 text-right flex flex-col items-end mx-10 md:mx-0 pb-10 md:pb-0">
+      <div class="md:w-1/2 text-right flex flex-col items-end md:mx-0 pb-10 md:pb-0">
         <h3 class="text-[2rem] libre-baskerville-regular mb-4">Aleksandra Gierdziejewska</h3>
         <hr class=" border-t-2 border-primary my-6 w-2/3">
         <p class="text-lg mb-8 tracking-widest">CEO & FOUNDER</p>

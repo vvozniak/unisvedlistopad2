@@ -24,8 +24,8 @@ if (!function_exists('text_with_c_pill')) {
     <div class="h-[10vh]"></div>
   <div class="pill-container relative  rounded-full my-4">
     <div class="relative z-20 ' . $text_color . ' flex flex-col justify-center h-full py-6 px-8">
-      <h2 class="' . $text_alignment . ' tracking-[0.02em] text-[0.8rem] md:text-[1.8rem] font-bold mb-2 libre-baskerville-regular uppercase">' . $heading . '</h2>
-      <p class="' . $text_alignment . ' text-[1.3rem] md:text-base inter-regular">' . esc_html($subtext) . '</p>
+      <h2 class="' . $text_alignment . ' tracking-[0.02em] text-[0.8rem] md:text-[1.6rem] font-bold mb-2 libre-baskerville-regular uppercase">' . $heading . '</h2>
+      <p class="' . $text_alignment . ' text-[1.3rem] md:text-[1.1rem] inter-regular">' . esc_html($subtext) . '</p>
     </div>
     <div class="absolute ' . $c_position . ' -top-10  z-10">
       <img src="' . $theme_uri . '/' . $c_image . '" alt="" class="h-full w-auto object-cover">
