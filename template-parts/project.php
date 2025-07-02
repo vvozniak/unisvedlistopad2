@@ -30,44 +30,44 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
     <div class="hidden md:flex  fixed-side-container  justify-end w-full" data-fixed-side="left">
       <div class="fixed-content shrink-0 items-center mb-12 md:mb-24">
         <div class="md:flex flex-col md:flex-row md:items-start libre-baskerville-regular block">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="w-16 md:w-24 h-auto mr-0 md:mr-8"></img>
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="w-[1vw] md:w-24 h-auto mr-0 md:mr-8"></img>
           <div>
-            <h1 class="text-xl md:text-[55px]  leading-tight text-center md:text-left libre-baskerville-regular">Horisontal Holding AB</h1>
-            <p class="text-lg md:text-[40px] mt-2 md:mt-4 text-center md:text-left">Skuteczny rozwój trzech firm w ramach jednego holdingu</p>
+            <h1 class="text-[3vw] leading-tight text-center md:text-left libre-baskerville-regular">Horisontal <br> Holding AB</h1>
+            <p class="text-[2vw] mt-2 md:mt-4 text-center md:text-left">Skuteczny rozwój trzech firm <br>w ramach jednego holdingu</p>
           </div>
         </div>
       </div>
       <!-- <div class="speacer 2xl:mr-100"></div> -->
-      <div class="scrollable-wrapper shrink-0 md:pr-64">
+      <div class="scrollable-wrapper shrink-0 md:pr-20 2xl:pr-64">
         <div class="scrollable-content">
-          <div class="text-[20px]" style="margin-bottom: 12.5rem;">
+          <div class="text-[1.2vw]" style="margin-bottom: 12.5rem;">
             <p>W ciągu ostatnich kilku lat Unisved skutecznie wsparło rozwój Horisontal Holding AB, budując od podstaw trzy uzupełniające się firmy działające w sektorze budowlanym i inżynieryjnym. Nasze działania objęły pełne wsparcie – od rejestracji firm i aspektów prawnych, przez budowę struktur i wdrożenie systemów zarządzania, po strategię sprzedaży, pozyskiwanie klientów i optymalizację procesów dostosowanych do rynków skandynawskich.</p>
           </div>
 
 
 
           <div>
-            <h2 class="text-2xl md:text-[40px] libre-baskerville-regular mb-8">Firmy wchodzące w skład holdingu:</h2>
+            <h2 class="text-[2.2vw] libre-baskerville-regular mb-8">Firmy wchodzące <br>w skład holdingu:</h2>
             <ul class="space-y-6">
               <li class="flex items-start">
-                <div class="w-7 h-7 bg-primary rounded-full mt-4 mr-6 flex-shrink-0"></div>
+                <div class="2xl:w-7 2xl:h-7 md:w-5 md:h-5 bg-primary rounded-full mt-4 mr-6 flex-shrink-0"></div>
                 <div>
-                  <p class="font-bold text-lg md:text-[40px] libre-baskerville-regular ">Horisontalplan AB (2018)</p>
-                  <p class="text-[20px]">geodezja, pomiary inżynieryjne dla sektora budowlanego</p>
+                  <p class="font-bold text-[1.9vw] libre-baskerville-regular ">Horisontalplan AB (2018)</p>
+                  <p class="text-[1.1vw]">geodezja, pomiary inżynieryjne dla sektora budowlanego</p>
                 </div>
               </li>
               <li class="flex items-start">
-                <div class="w-7 h-7 bg-primary rounded-full mt-4 mr-6 flex-shrink-0"></div>
+                <div class="2xl:w-7 2xl:h-7 md:w-5 md:h-5 bg-primary rounded-full mt-4 mr-6 flex-shrink-0"></div>
                 <div>
-                  <p class="font-bold text-lg md:text-[40px] libre-baskerville-regular">Horisontal AB (2020)</p>
-                  <p class="text-[20px]">budownictwo, projekty infrastrukturalne i drogowe</p>
+                  <p class="font-bold text-[1.9vw] libre-baskerville-regular">Horisontal AB (2020)</p>
+                  <p class="text-[1.1vw]">budownictwo, projekty infrastrukturalne i drogowe</p>
                 </div>
               </li>
               <li class="flex items-start">
-                <div class="w-7 h-7 bg-primary rounded-full mt-4 mr-6 flex-shrink-0"></div>
+                <div class="2xl:w-7 2xl:h-7 md:w-5 md:h-5 bg-primary rounded-full mt-4 mr-6 flex-shrink-0"></div>
                 <div>
-                  <p class="font-bold text-lg md:text-[40px] libre-baskerville-regular">SMP Bygg (2021)</p>
-                  <p class="text-[20px]">prace taborowe i zbrojeniowe dla infrastruktury</p>
+                  <p class="font-bold text-[1.9vw] libre-baskerville-regular">SMP Bygg (2021)</p>
+                  <p class="text-[1.1vw]">prace taborowe i zbrojeniowe dla infrastruktury</p>
                 </div>
               </li>
             </ul>
@@ -111,7 +111,7 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
 
           <div class="text-center mb-16">
             <div class="border-t-2 border-primary w-full max-w-[33rem] mx-auto"></div>
-            <h2 class="text-4xl py-14 text-primary libre-baskerville-regular">Efekty mówią same za siebie:</h2>
+            <h2 class="text-[1.9vw] py-14 text-primary libre-baskerville-regular">Efekty mówią same za siebie:</h2>
             <div class="border-t-2 border-primary w-full max-w-[33rem] mx-auto"></div>
           </div>
 
@@ -163,12 +163,12 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
     </div>
   </div>
 </section>
-<section class="new-background-section slide  bg-[url(https://unisved.local/wp-content/uploads/2025/06/beautiful-shot-pier-sea-near-tree-forest-surrounded-by-high-mountains-norway-1.png)]  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12">
-  <div class="flex  items-center justify-end h-full w-full text-center text-white relative z-10">
+<section class="new-background-section slide  bg-[url(http://unisved.local/wp-content/uploads/2025/06/beautiful-shot-pier-sea-near-tree-forest-surrounded-by-high-mountains-norway-1.png)]  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12">
+  <div class="flex  items-center justify-center h-full w-full text-center text-white relative z-10">
     <div class="hidden md:block my-8">
       <img src="http://unisved.local/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto mb-6 w-80">
     </div>
-    <h2 class="text-2xl md:text-4xl leading-tight mx-8 libre-baskerville-regular text-left">
+    <h2 class="text-[2vw] leading-tight mx-8 libre-baskerville-regular text-left">
       Skontaktuj się z nami już dziś, <br>
       aby dowiedzieć się, jak możemy pomóc<br>
       w rozwoju Twojego biznesu
@@ -210,7 +210,7 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
               </div>
               <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="rotate-180 mt-4 md:mt-0">
             </div>
-            
+
             <div class="scrollable-wraper">
               <div class="scrollable-content">
                 <div class="text-lg" style="margin-bottom: 8rem;">

@@ -9,217 +9,217 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
 require_once get_template_directory() . '/template-parts/pills/double_c_pill_horizontal.php';
 ?>
 <div class="bg-secondary relative">
-<?php
-$offers =  new WP_Query(array(
-  'post_type' => 'oferta',
-  'posts_per_page' => -1,
-  'orderby' => 'menu_order',
-  'order' => 'ASC'
-));
-if ($offers->have_posts()) {
-  $counter = 0; // do zmiany po tym jak wszystkie oferty bedą postami
-  while ($offers->have_posts()) {
-    $offers->the_post();
-    if ($counter % 2 == 0) {
-      if (get_field('szablon_1_wlwyl') == true) {
-?>
-        <section class="bg-secondary py-20 mb-10 relative">
-          <div class="container mx-auto 2xl:mx-28 2xl:gap-150 px-6 flex flex-col lg:flex-row items-center justify-between">
-            <div class="lg:w-1/3 text-light p-8 link_li">
-              <div class="flex items-center mb-4">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class=" mr-4">
-                <h2 class="text-4xl lg:text-[55px] libre-baskerville-regular">UNISVED<br><?php echo get_the_title(); ?></h2>
+  <?php
+  $offers =  new WP_Query(array(
+    'post_type' => 'oferta',
+    'posts_per_page' => -1,
+    'orderby' => 'menu_order',
+    'order' => 'ASC'
+  ));
+  if ($offers->have_posts()) {
+    $counter = 0; // do zmiany po tym jak wszystkie oferty bedą postami
+    while ($offers->have_posts()) {
+      $offers->the_post();
+      if ($counter % 2 == 0) {
+        if (get_field('szablon_1_wlwyl') == true) {
+  ?>
+          <section class="bg-secondary py-20 mb-10 relative">
+            <div class="container  ml-28 mr-64 2xl:gap-150 px-6 flex flex-col lg:flex-row items-center justify-between">
+              <div class="lg:w-1/3 text-light p-8 link_li">
+                <div class="flex items-center mb-4">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class=" mr-4">
+                  <h2 class="text-[3vw] libre-baskerville-regular">UNISVED<br><?php echo get_the_title(); ?></h2>
+                </div>
+                <p class="text-xl mb-4 ml-2"><?php echo get_field('podtytul1') ?></p>
+                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary tracking-20 text-[16px] ml-2">( CZYTAJ WIĘCEJ )</a>
+                <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-4 text-light">
+                  <h3 class="text-2xl font-bold text-primary">Dla kogo:</h3>
+                  <p class="mb-4"><?php echo get_field('dla_kogo1'); ?></p>
+                  <div class="w-24 h-px bg-primary my-4"></div>
+                  <h3 class="text-2xl font-bold text-primary">Zakres usług:</h3>
+                  <ul class="list-disc list-inside mb-4 marker:text-primary">
+                    <?php echo get_field('zakres_uslug1'); ?>
+                  </ul>
+                  <div class="w-24 h-px bg-primary my-4"></div>
+                  <h3 class="text-2xl font-bold text-primary">Efekt:</h3>
+                  <p><?php echo get_field('efekt1'); ?></p>
+                </div>
               </div>
-              <p class="text-xl mb-4 ml-2"><?php echo get_field('podtytul1') ?></p>
-              <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary tracking-20 text-[16px] ml-2">( CZYTAJ WIĘCEJ )</a>
-              <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-4 text-light">
-                <h3 class="text-2xl font-bold text-primary">Dla kogo:</h3>
-                <p class="mb-4"><?php echo get_field('dla_kogo1'); ?></p>
-                <div class="w-24 h-px bg-primary my-4"></div>
-                <h3 class="text-2xl font-bold text-primary">Zakres usług:</h3>
-                <ul class="list-disc list-inside mb-4 marker:text-primary">
-                  <?php echo get_field('zakres_uslug1'); ?>
-                </ul>
-                <div class="w-24 h-px bg-primary my-4"></div>
-                <h3 class="text-2xl font-bold text-primary">Efekt:</h3>
-                <p><?php echo get_field('efekt1'); ?></p>
-              </div>
-            </div>
-            <div class="lg:w-1/2 mt-8 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
-              <div class="relative">
-                <?php
-                photo_oneside_pill('right', 'assets/pill_photo.jpg'); ?>
-              </div>
-            </div>
-          </div>
-        </section>
-      <?php } elseif (get_field('szablon_2_wlwyl') == true) {
-      ?>
-        <section class="bg-secondary py-20 pb-[20vh] relative">
-          <div class="container mx-auto px-6 2xl:mx-28 2xl:gap-150 flex flex-col lg:flex-row items-center justify-between">
-            <div class="lg:w-1/3 text-light p-8 link_li">
-              <div class="flex items-center mb-4">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class=" mr-4">
-                <h2 class="text-4xl lg:text-[55px] libre-baskerville-regular">UNISVED<br><?php echo get_the_title(); ?></h2>
-              </div>
-              <p class="text-xl mb-4 ml-2">Kompleksowy pakiet dla firm, które chcą całościowo i profesjonalnie wejść na rynek szwedzki</p>
-              <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary  tracking-20 text-[16px] ml-2">( CZYTAJ WIĘCEJ )</a>
-              <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-4 text-light">
-                <h3 class="text-2xl font-bold text-primary">Dla kogo:</h3>
-                <p class="mb-4"><?php echo get_field('dla_kogo2'); ?></p>
-                <div class="w-24 h-px bg-primary my-4"></div>
-                <h3 class="text-2xl font-bold text-primary">W skład pakietu wchodzi:</h3>
-                <ul class="list-disc list-inside mb-4 marker:text-primary">
-                  <?php echo get_field('sklad'); ?>
-                </ul>
-                <div class="w-24 h-px bg-primary my-4"></div>
-                <h3 class="text-2xl font-bold text-primary">Cena i szczegóły:</h3>
-                <p><?php echo get_field('cena_i_szczegoly'); ?></p>
-                <div class="w-24 h-px bg-primary my-4"></div>
-
-                <h3 class="text-2xl font-bold text-primary">Możliwość łączenia pakietów</h3>
-                <p><?php echo get_field('mozliwosc_laczenia_pakietow'); ?></p>
-                <br>
-
+              <div class="lg:w-1/2 mt-8 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
+                <div class="relative">
+                  <?php
+                  photo_oneside_pill('right', 'assets/pill_photo.jpg'); ?>
+                </div>
               </div>
             </div>
-            <div class="lg:w-1/2 mt-8 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
-              <div class="relative">
-                <?php
-                photo_oneside_pill('right', 'assets/pill_photo.jpg'); ?>
+          </section>
+        <?php } elseif (get_field('szablon_2_wlwyl') == true) {
+        ?>
+          <section class="bg-secondary py-20 pb-[20vh] relative">
+            <div class="container  px-6 ml-28 mr-64 2xl:gap-150 flex flex-col lg:flex-row items-center justify-between">
+              <div class="lg:w-1/3 text-light p-8 link_li">
+                <div class="flex items-center mb-4">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class=" mr-4">
+                  <h2 class="text-[3vw] libre-baskerville-regular">UNISVED<br><?php echo get_the_title(); ?></h2>
+                </div>
+                <p class="text-xl mb-4 ml-2">Kompleksowy pakiet dla firm, które chcą całościowo i profesjonalnie wejść na rynek szwedzki</p>
+                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary  tracking-20 text-[16px] ml-2">( CZYTAJ WIĘCEJ )</a>
+                <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-4 text-light">
+                  <h3 class="text-2xl font-bold text-primary">Dla kogo:</h3>
+                  <p class="mb-4"><?php echo get_field('dla_kogo2'); ?></p>
+                  <div class="w-24 h-px bg-primary my-4"></div>
+                  <h3 class="text-2xl font-bold text-primary">W skład pakietu wchodzi:</h3>
+                  <ul class="list-disc list-inside mb-4 marker:text-primary">
+                    <?php echo get_field('sklad'); ?>
+                  </ul>
+                  <div class="w-24 h-px bg-primary my-4"></div>
+                  <h3 class="text-2xl font-bold text-primary">Cena i szczegóły:</h3>
+                  <p><?php echo get_field('cena_i_szczegoly'); ?></p>
+                  <div class="w-24 h-px bg-primary my-4"></div>
+
+                  <h3 class="text-2xl font-bold text-primary">Możliwość łączenia pakietów</h3>
+                  <p><?php echo get_field('mozliwosc_laczenia_pakietow'); ?></p>
+                  <br>
+
+                </div>
+              </div>
+              <div class="lg:w-1/2 mt-8 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
+                <div class="relative">
+                  <?php
+                  photo_oneside_pill('right', 'assets/pill_photo.jpg'); ?>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-      <?php
-      }
-      $counter++;
-    } elseif ($counter % 2 == 1) {
-      if (get_field('szablon_1_wlwyl') == true) {
-      ?>
-        <section class="bg-secondary py-20 mb-10 relative">
-          <div class="container   mx-auto 2xl:mx-28 px-6 flex flex-col lg:flex-row items-center justify-between">
-            <div class="lg:w-1/2 mt-8 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
-              <div class="relative">
-                <?php
-                photo_oneside_pill('left', 'assets/pill_photo.jpg'); ?>
-              </div>
-            </div>
-            <div class="lg:w-1/3 text-light p-8 link_li">
-              <div class="flex items-center mb-4 justify-end">
-                <h2 class="text-4xl lg:text-[55px] libre-baskerville-regular text-right max-w-[400px]">UNISVED<br><?php echo get_the_title(); ?></h2>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/small_c.svg" alt="C shape" class="ml-4 flex-shrink-0">
-              </div>
-              <p class="text-xl mb-4 ml-2 text-right"><?php echo get_field('podtytul1') ?></p>
-              <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary tracking-20 text-[16px] ml-2 text-right block">( CZYTAJ WIĘCEJ )</a>
-              <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-4 text-light">
-                <h3 class="text-2xl font-bold text-primary">Dla kogo:</h3>
-                <p class="mb-4"><?php echo get_field('dla_kogo1'); ?></p>
-                <div class="w-24 h-px bg-primary my-4"></div>
-                <h3 class="text-2xl font-bold text-primary">Zakres usług:</h3>
-                <ul class="list-disc list-inside mb-4 marker:text-primary">
-                  <?php echo get_field('zakres_uslug1'); ?>
-                </ul>
-                <div class="w-24 h-px bg-primary my-4"></div>
-                <h3 class="text-2xl font-bold text-primary">Efekt:</h3>
-                <p><?php echo get_field('efekt1'); ?></p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-      <?php
-      } elseif (get_field('szablon_2_wlwyl') == true) {
-      ?>
-        <section class="bg-secondary py-20 mb-10 relative">
-          <div class="container 2xl:gap-150 mx-auto 2xl:mx-28 px-6 flex flex-col lg:flex-row items-center justify-between">
-            <div class="lg:w-1/3 text-light p-8 link_li">
-              <div class="flex items-center mb-4">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class=" mr-4">
-                <h2 class="text-4xl lg:text-[55px] libre-baskerville-regular">UNISVED<br><?php echo get_the_title(); ?></h2>
-              </div>
-              <p class="text-xl mb-4 ml-2">Kompleksowy pakiet dla firm, które chcą całościowo i profesjonalnie wejść na rynek szwedzki</p>
-              <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary  tracking-20 text-[16px] ml-2">( CZYTAJ WIĘCEJ )</a>
-              <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-4 text-light">
-                <h3 class="text-2xl font-bold text-primary">Dla kogo:</h3>
-                <p class="mb-4"><?php echo get_field('dla_kogo2'); ?></p>
-                <div class="w-24 h-px bg-primary my-4"></div>
-                <h3 class="text-2xl font-bold text-primary">W skład pakietu wchodzi:</h3>
-                <ul class="list-disc list-inside mb-4 marker:text-primary">
-                  <?php echo get_field('sklad'); ?>
-                </ul>
-                <div class="w-24 h-px bg-primary my-4"></div>
-                <h3 class="text-2xl font-bold text-primary">Cena i szczegóły:</h3>
-                <p><?php echo get_field('cena_i_szczegoly'); ?></p>
-                <div class="w-24 h-px bg-primary my-4"></div>
-
-                <h3 class="text-2xl font-bold text-primary">Możliwość łączenia pakietów</h3>
-                <p><?php echo get_field('mozliwosc_laczenia_pakietow'); ?></p>
-
-              </div>
-            </div>
-            <div class="lg:w-1/2 mt-8 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
-              <div class="relative">
-                <?php
-                photo_oneside_pill('left', 'assets/pill_photo.jpg'); ?>
-              </div>
-            </div>
-          </div>
-        </section>
-<?php
-      }
-
-      $counter++;
-    }
-  }
-}
-
-?>
-<section class="new-background-section slide bg-black bg-[url(http://unisved2.local/wp-content/uploads/2025/06/7f552ee8caf604bbd62f57eef089c83d7b250042-scaled.jpg)]  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12">
-  <div class="absolute inset-0 bg-black opacity-50 rounded-t-[60px]"></div>
-  <div class="container mx-auto flex items-center justify-center h-full text-center text-white relative z-10">
-    <div class="md:mb-8">
-      <img src="http://unisved.local/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto lg:ml-10 mb-6 w-80">
-    </div>
-    <h2 class="text-3xl md:text-7xl leading-tight mx-auto px-3 md:px-0 md:pl-16 libre-baskerville-regular text-left">
-      Osiągnij sukces <br>
-      na globalnej scenie!
-    </h2>
-  </div>
-</section>
-<section class="py-12 relative z-30 bg-secondary overflow-hidden w-full text-white rounded-t-[60px]">
-  <div class="container mx-auto bg-center overflow-hidden rounded-[40px] min-h-[65vh] space-y-16 my-20 pt-5">
-    <?php
-    double_c_pill_horizontal(
-      "Możliwość <br> łączenia  pakietów",
-      "Oferujemy dopasowane pakiety usług dla przedsiębiorstw, które chcą rozpocząć działalność, zrealizować projekt, skutecznie sprzedawać i budować swoją pozycję w Szwecji. Każdy projekt jest inny.<br><br>
-Dlatego oferujemy możliwość łączenia wybranych pakietów lub stworzenia indywidualnej propozycji szytej na miarę. Skontaktuj się z nami, aby dopasować zakres usług do swoich celów w Szwecji.",
-      'assets/big_c.svg',
-      'assets/big_c_right.svg',
-      'text-white'
-    );
-    ?>
-  </div>
-</section>
-
-<script>
-  for (let i = 1; i <= <?php echo $counter; ?>; i++) {
-    const toggleLink = document.getElementById(`toggle-offer-${i}`);
-    const detailsDiv = document.getElementById(`offer-details-${i}`);
-
-    if (toggleLink && detailsDiv) {
-      toggleLink.addEventListener("click", (e) => {
-        e.preventDefault();
-        const isHidden = detailsDiv.classList.toggle("hidden");
-        if (isHidden) {
-          toggleLink.textContent = "( CZYTAJ WIĘCEJ )";
-        } else {
-          toggleLink.textContent = "( SCHOWAJ )";
+          </section>
+        <?php
         }
-      });
+        $counter++;
+      } elseif ($counter % 2 == 1) {
+        if (get_field('szablon_1_wlwyl') == true) {
+        ?>
+          <section class="bg-secondary py-20 mb-10 relative">
+            <div class="    mr-28 ml-64  px-6 flex flex-col lg:flex-row items-center justify-between">
+              <div class="lg:w-1/2 mt-8 lg:mt-0 2xl:max-w-full 2xl:min-h-full">
+                <div class="relative">
+                  <?php
+                  photo_oneside_pill('left', 'assets/pill_photo.jpg'); ?>
+                </div>
+              </div>
+              <div class=" text-light p-8 link_li">
+                <div class="flex items-center mb-4 justify-end">
+                  <h2 class="text-[3vw] libre-baskerville-regular text-right">UNISVED<br><?php echo get_the_title(); ?></h2>
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/small_c.svg" alt="C shape" class="ml-4 flex-shrink-0">
+                </div>
+                <p class="text-xl mb-4 ml-2 text-right"><?php echo get_field('podtytul1') ?></p>
+                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary tracking-20 text-[16px] ml-2 text-right block">( CZYTAJ WIĘCEJ )</a>
+                <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-4 text-light">
+                  <h3 class="text-2xl font-bold text-primary">Dla kogo:</h3>
+                  <p class="mb-4"><?php echo get_field('dla_kogo1'); ?></p>
+                  <div class="w-24 h-px bg-primary my-4"></div>
+                  <h3 class="text-2xl font-bold text-primary">Zakres usług:</h3>
+                  <ul class="list-disc list-inside mb-4 marker:text-primary">
+                    <?php echo get_field('zakres_uslug1'); ?>
+                  </ul>
+                  <div class="w-24 h-px bg-primary my-4"></div>
+                  <h3 class="text-2xl font-bold text-primary">Efekt:</h3>
+                  <p><?php echo get_field('efekt1'); ?></p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        <?php
+        } elseif (get_field('szablon_2_wlwyl') == true) {
+        ?>
+          <section class="bg-secondary py-20 mb-10 relative">
+            <div class="container 2xl:gap-150 mr-28 ml-64 px-6 flex flex-col lg:flex-row items-center justify-between">
+              <div class="lg:w-1/3 text-light p-8 link_li">
+                <div class="flex items-center mb-4">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class=" mr-4">
+                  <h2 class="text-[3vw] libre-baskerville-regular">UNISVED<br><?php echo get_the_title(); ?></h2>
+                </div>
+                <p class="text-xl mb-4 ml-2">Kompleksowy pakiet dla firm, które chcą całościowo i profesjonalnie wejść na rynek szwedzki</p>
+                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary  tracking-20 text-[16px] ml-2">( CZYTAJ WIĘCEJ )</a>
+                <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-4 text-light">
+                  <h3 class="text-2xl font-bold text-primary">Dla kogo:</h3>
+                  <p class="mb-4"><?php echo get_field('dla_kogo2'); ?></p>
+                  <div class="w-24 h-px bg-primary my-4"></div>
+                  <h3 class="text-2xl font-bold text-primary">W skład pakietu wchodzi:</h3>
+                  <ul class="list-disc list-inside mb-4 marker:text-primary">
+                    <?php echo get_field('sklad'); ?>
+                  </ul>
+                  <div class="w-24 h-px bg-primary my-4"></div>
+                  <h3 class="text-2xl font-bold text-primary">Cena i szczegóły:</h3>
+                  <p><?php echo get_field('cena_i_szczegoly'); ?></p>
+                  <div class="w-24 h-px bg-primary my-4"></div>
+
+                  <h3 class="text-2xl font-bold text-primary">Możliwość łączenia pakietów</h3>
+                  <p><?php echo get_field('mozliwosc_laczenia_pakietow'); ?></p>
+
+                </div>
+              </div>
+              <div class="lg:w-1/2 mt-8 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
+                <div class="relative">
+                  <?php
+                  photo_oneside_pill('left', 'assets/pill_photo.jpg'); ?>
+                </div>
+              </div>
+            </div>
+          </section>
+  <?php
+        }
+
+        $counter++;
+      }
     }
   }
-</script>
+
+  ?>
+  <section class="new-background-section slide bg-black bg-[url(http://unisved.local/wp-content/uploads/2025/06/7f552ee8caf604bbd62f57eef089c83d7b250042-scaled.jpg)]  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12">
+    <div class="absolute inset-0 bg-black opacity-50 rounded-t-[60px]"></div>
+    <div class="container mx-auto flex items-center justify-center h-full text-center text-white relative z-10">
+      <div class="md:mb-8">
+        <img src="http://unisved.local/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto lg:ml-10 mb-6 w-[20vw]">
+      </div>
+      <h2 class="text-[4vw] leading-tight mx-auto px-3 md:px-0 md:pl-16 libre-baskerville-regular text-left">
+        Osiągnij sukces <br>
+        na globalnej scenie!
+      </h2>
+    </div>
+  </section>
+  <section class="py-12 relative z-30 bg-secondary overflow-hidden w-full text-white rounded-t-[60px]">
+    <div class="container mx-auto bg-center overflow-hidden rounded-[40px] min-h-[65vh] space-y-16 my-20 pt-5">
+      <?php
+      double_c_pill_horizontal(
+        "Możliwość <br> łączenia  pakietów",
+        "Oferujemy dopasowane pakiety usług dla przedsiębiorstw, które chcą rozpocząć działalność, zrealizować projekt, skutecznie sprzedawać i budować swoją pozycję w Szwecji. Każdy projekt jest inny.<br><br>
+Dlatego oferujemy możliwość łączenia wybranych pakietów lub stworzenia indywidualnej propozycji szytej na miarę. Skontaktuj się z nami, aby dopasować zakres usług do swoich celów w Szwecji.",
+        'assets/big_c.svg',
+        'assets/big_c_right.svg',
+        'text-white'
+      );
+      ?>
+    </div>
+  </section>
+
+  <script>
+    for (let i = 1; i <= <?php echo $counter; ?>; i++) {
+      const toggleLink = document.getElementById(`toggle-offer-${i}`);
+      const detailsDiv = document.getElementById(`offer-details-${i}`);
+
+      if (toggleLink && detailsDiv) {
+        toggleLink.addEventListener("click", (e) => {
+          e.preventDefault();
+          const isHidden = detailsDiv.classList.toggle("hidden");
+          if (isHidden) {
+            toggleLink.textContent = "( CZYTAJ WIĘCEJ )";
+          } else {
+            toggleLink.textContent = "( SCHOWAJ )";
+          }
+        });
+      }
+    }
+  </script>
 </div>
 <?php
 get_footer();

@@ -34,11 +34,11 @@ if (!function_exists('text_with_c_pill_small')) {
     echo '
   <div class="pill-container relative max-h-[200px]  rounded-full ">
     <div class="relative overflow-hidden z-20 ' . $text_color . ' flex flex-col justify-center h-full  pl-8">
-      <h2 class="' . $text_alignment . ' tracking-2 text-[0.8rem] md:text-[1.750rem] font-bold mb-2 libre-baskerville-regular uppercase">' . $heading . '</h2>
-      <p class="' . $text_alignment . ' text-[1.250rem] md:text-base inter-regular">' . esc_html($subtext) . '</p>
+      <h2 class="' . $text_alignment . ' tracking-2 text-[1.4vw] font-bold mb-2 libre-baskerville-regular uppercase">' . $heading . '</h2>
+      <p class="' . $text_alignment . ' text-[1vw] inter-regular">' . esc_html($subtext) . '</p>
     </div>
-    <div class="absolute ' . $c_position . ' top-5 z-10">
-      <img src="' . $theme_uri . '/' . $c_image . '" alt="" class="h-full w-auto object-cover">
+    <div class="absolute ' . $c_position . ' 2xl:top-5 z-10 md:top-10">
+      <img src="' . $theme_uri . '/' . $c_image . '" alt="" class="h-full w-[4vw] object-cover">
     </div>
   </div>
   

@@ -72,7 +72,7 @@ $opinion_signature4 = get_field('opinion_signature4');
       </div>
 
       <!-- Right side - scrollable content -->
-       <div class="spacer flex-grow min-w-[1rem]    2xl:min-w-[5rem]"></div>
+      <div class="spacer flex-grow min-w-[1rem]  rounded-t-[60px]  2xl:min-w-[5rem]"></div>
       <div class="scrollable-wrapper shrink-0 mr-auto ">
         <div class="scrollable-content">
           <?php
@@ -125,28 +125,28 @@ $opinion_signature4 = get_field('opinion_signature4');
   </div>
 </section>
 
-<section class="new-background-section slide bg-black bg-[url(http://unisved.local/wp-content/uploads/2025/07/9b1e55547612e809b9e0511f275c20e7567c36d6-scaled.jpg)]  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12">
-  <div class="absolute inset-0 bg-black opacity-50 rounded-t-[60px]"></div>
-  <div class="container mx-auto flex  items-center justify-center h-full text-center text-white relative z-10">
+<section class="new-background-section rounded-t-[60px] slide bg-black bg-[url(http://unisved.local/wp-content/uploads/2025/07/9b1e55547612e809b9e0511f275c20e7567c36d6-scaled.jpg)]  bg-cover  -mt-[10vh] relative z-1 py-12">
+  <div class="absolute inset-0 bg-black opacity-50 "></div>
+  <div class="container  flex  items-center justify-center h-full text-center text-white relative z-10">
     <div class="my-8 hidden md:block">
-      <img src="http://unisved.local/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto mb-6 w-80">
+      <img src="http://unisved.local/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto mb-6 w-[33vw]">
     </div>
-    <h2 class="text-[2rem] md:text-[3.5rem] leading-tight mx-8 libre-baskerville-regular text-left">
+    <h2 class="text-[2.4vw] leading-tight mx-8 libre-baskerville-regular text-left">
       <?php echo $text_on_baner; ?>
     </h2>
   </div>
 </section>
 
 <section class="py-12 relative z-30 bg-secondary text-white rounded-t-[60px] ">
-  <div class="md:ms-48 md:me-28 bg-center rounded-t-[60px] min-h-[80vh] px-4">
+  <div class=" md:ms-20 2xl:ms-48 md:me-28 bg-center rounded-t-[60px] min-h-[80vh] px-4">
     <div class="fixed-side-container" data-fixed-side="right">
 
       <div class="fixed-content flex justify-end">
         <div class="flex flex-col items-end justify-center text-right">
-          <h4 class="text-right text-[2.5rem] md:text-[3rem] libre-baskerville-regular pe-4"><?php echo $scrolling_heading2; ?></h4>
+          <h4 class="text-right text-[3vw] libre-baskerville-regular pe-4"><?php echo $scrolling_heading2; ?></h4>
           <p class="text-right text-[1.8rem] md:text-[2.1rem] libre-baskerville-regular pe-4"><?php echo $scrolling_heading_sub; ?></p>
         </div>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180 w-[4vw]">
       </div>
 
       <div class="scrollable-wrapper">
