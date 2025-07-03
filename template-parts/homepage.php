@@ -81,11 +81,11 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
   </div>
 </section>
 <!-- New section with rounded top corners that appears after scrolling -->
-<section class="new-background-section slide bg-black bg-[url(http://unisved.local/wp-content/uploads/2025/06/2039da1d109140349f07fd17a8bf52a6a7e03a52-scaled.jpg)]  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12">
+<section class="new-background-section slide bg-black  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12" style="background-image: url('https://unisved.nowa.net.pl/wp-content/uploads/2025/06/2039da1d109140349f07fd17a8bf52a6a7e03a52-scaled.jpg')">
   <div class="absolute inset-0 bg-black opacity-50 rounded-t-[60px]"></div>
   <div class=" flex items-center justify-center h-full w-screen text-center text-white relative z-10 md:pb-10">
     <div class="md:mr-8">
-      <img src="http://unisved.local/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto lg:ml-10 mb-6 w-80">
+      <img src="https://unisved.nowa.net.pl/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto lg:ml-10 mb-6 w-80">
     </div>
     <h2 class="text-[4vw] leading-tight px-3 md:px-0 md:pl-2 libre-baskerville-regular text-left text-pretty">
       Od Skandynawii po rynki<br>
@@ -131,7 +131,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
               'otwartosc.svg',
               get_field('icon_3_title', $post_id),
               get_field('icon_3_content', $post_id)
-            );
+            ); 
             icon_text_item(
               'przyjazne.svg',
               get_field('icon_4_title', $post_id),
@@ -144,7 +144,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
     </div>
   </div>
 </section>
-<section class="new-background-section slide bg-black bg-[url(http://unisved.local/wp-content/uploads/2025/06/ff43581d96bce748ee60811861ca062f1fd29e08.jpg)] bg-cover rounded-t-[60px] -mt-[10vh] relative z-30 py-12">
+<section class="new-background-section slide bg-black bg-cover rounded-t-[60px] -mt-[10vh] relative z-30 py-12" style="background-image: url('https://unisved.nowa.net.pl/wp-content/uploads/2025/06/ff43581d96bce748ee60811861ca062f1fd29e08.jpg')">
   <div class="absolute inset-0 bg-black opacity-50 rounded-t-[60px]"></div>
   <div class="container mx-auto flex  items-center justify-center h-full text-center text-white relative z-10">
     <h2 class="text-[4vw] leading-tight mx-auto libre-baskerville-regular text-left mt-16">

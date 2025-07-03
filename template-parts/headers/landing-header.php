@@ -1,4 +1,4 @@
-<header class="relative h-[180vh] md:h-[200vh] 2xl:h-[180vh] overflow-hidden bg-secondary overflow-x-hidden ">
+<header class="relative h-[180vh] md:h-[200vh] overflow-hidden bg-secondary overflow-x-hidden ">
     <div class="absolute inset-0 custom-overlay z-10"></div>
     <img src="<?php echo get_template_directory_uri(); ?>/assets/header.svg" class="absolute inset-0 z-10 top-[75vh] right-0 left-auto w-[10vw] h-auto object-cover">
     <?php

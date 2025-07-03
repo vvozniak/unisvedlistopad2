@@ -163,10 +163,10 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
     </div>
   </div>
 </section>
-<section class="new-background-section slide  bg-[url(http://unisved.local/wp-content/uploads/2025/06/beautiful-shot-pier-sea-near-tree-forest-surrounded-by-high-mountains-norway-1.png)]  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12">
+<section class="new-background-section slide  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12" style="background-image: url('https://unisved.nowa.net.pl/wp-content/uploads/2025/06/beautiful-shot-pier-sea-near-tree-forest-surrounded-by-high-mountains-norway-1.png')">
   <div class="flex  items-center justify-center h-full w-full text-center text-white relative z-10">
     <div class="hidden md:block my-8">
-      <img src="http://unisved.local/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto mb-6 w-80">
+      <img src="https://unisved.nowa.net.pl/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto mb-6 w-80">
     </div>
     <h2 class="text-[2vw] leading-tight mx-8 libre-baskerville-regular text-left">
       Skontaktuj się z nami już dziś, <br>
