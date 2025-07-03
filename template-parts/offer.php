@@ -23,8 +23,8 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
       if ($counter % 2 == 0) {
         if (get_field('szablon_1_wlwyl') == true) {
   ?>
-          <section class="bg-secondary py-20 mb-10 relative">
-            <div class="container  ml-28 mr-64 2xl:gap-150 px-6 flex flex-col lg:flex-row items-center justify-between">
+          <section class="bg-secondary py-20 mb-10 relative ">
+            <div class="  ml-28 mr-64 2xl:gap-150 px-6 flex flex-col lg:flex-row items-center justify-between">
               <div class="lg:w-1/3 text-light p-8 link_li">
                 <div class="flex items-center mb-4">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class=" mr-4">
@@ -45,7 +45,7 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
                   <p><?php echo get_field('efekt1'); ?></p>
                 </div>
               </div>
-              <div class="lg:w-1/2 mt-8 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
+              <div class="lg:w-1/2 md:min-w-[450px] mt-8 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
                 <div class="relative">
                   <?php
                   photo_oneside_pill('right', 'assets/pill_photo.jpg'); ?>
@@ -56,7 +56,7 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
         <?php } elseif (get_field('szablon_2_wlwyl') == true) {
         ?>
           <section class="bg-secondary py-20 pb-[20vh] relative">
-            <div class="container  px-6 ml-28 mr-64 2xl:gap-150 flex flex-col lg:flex-row items-center justify-between">
+            <div class="  px-6 ml-28 mr-64 2xl:gap-150 flex flex-col lg:flex-row items-center justify-between">
               <div class="lg:w-1/3 text-light p-8 link_li">
                 <div class="flex items-center mb-4">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class=" mr-4">
@@ -83,7 +83,7 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
 
                 </div>
               </div>
-              <div class="lg:w-1/2 mt-8 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
+              <div class="lg:w-1/2 min-w-[450px] mt-8 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
                 <div class="relative">
                   <?php
                   photo_oneside_pill('right', 'assets/pill_photo.jpg'); ?>
@@ -99,7 +99,7 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
         ?>
           <section class="bg-secondary py-20 mb-10 relative">
             <div class="    mr-28 ml-64  px-6 flex flex-col lg:flex-row items-center justify-between">
-              <div class="lg:w-1/2 mt-8 lg:mt-0 2xl:max-w-full 2xl:min-h-full">
+              <div class="lg:w-1/2 min-w-[450px] mt-8 lg:mt-0 2xl:max-w-full 2xl:min-h-full">
                 <div class="relative">
                   <?php
                   photo_oneside_pill('left', 'assets/pill_photo.jpg'); ?>
@@ -132,13 +132,13 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
         } elseif (get_field('szablon_2_wlwyl') == true) {
         ?>
           <section class="bg-secondary py-20 mb-10 relative">
-            <div class="container 2xl:gap-150 mr-28 ml-64 px-6 flex flex-col lg:flex-row items-center justify-between">
-              <div class="lg:w-1/3 text-light p-8 link_li">
+            <div class=" 2xl:gap-150 mr-28 ml-64 px-6 flex flex-col lg:flex-row items-center justify-between">
+              <div class="lg:w-1/3 2xl:w-1/2 text-light p-8 link_li">
                 <div class="flex items-center mb-4">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class=" mr-4">
                   <h2 class="text-[3vw] libre-baskerville-regular">UNISVED<br><?php echo get_the_title(); ?></h2>
                 </div>
-                <p class="text-xl mb-4 ml-2">Kompleksowy pakiet dla firm, które chcą całościowo i profesjonalnie wejść na rynek szwedzki</p>
+                <p class="text-xl  mb-4 ml-2">Kompleksowy pakiet dla firm, które chcą całościowo i profesjonalnie wejść na rynek szwedzki</p>
                 <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary  tracking-20 text-[16px] ml-2">( CZYTAJ WIĘCEJ )</a>
                 <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-4 text-light">
                   <h3 class="text-2xl font-bold text-primary">Dla kogo:</h3>
@@ -158,7 +158,7 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
 
                 </div>
               </div>
-              <div class="lg:w-1/2 mt-8 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
+              <div class="lg:w-1/2 min-w-[450px] mt-8 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
                 <div class="relative">
                   <?php
                   photo_oneside_pill('left', 'assets/pill_photo.jpg'); ?>

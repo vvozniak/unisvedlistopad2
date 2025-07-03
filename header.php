@@ -6,6 +6,9 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
 	<?php wp_head(); ?>
 </head>
@@ -34,14 +37,14 @@
 			<header class="relative h-[120vh] overflow-hidden text-light">
 				<div class="absolute inset-0 -inset-y-9  custom-overlay z-10"></div>
 				<?php
-					$other_page_header_bg = get_field("other_page_header_bg_image");
-					$other_page_header_bg_url = '';
-					if (is_array($other_page_header_bg) && isset($other_page_header_bg['url'])) {
-						$other_page_header_bg_url = $other_page_header_bg['url'];
-					} elseif (is_string($other_page_header_bg)) {
-						$other_page_header_bg_url = $other_page_header_bg;
-					}
-					if ($other_page_header_bg_url) : ?>
+				$other_page_header_bg = get_field("other_page_header_bg_image");
+				$other_page_header_bg_url = '';
+				if (is_array($other_page_header_bg) && isset($other_page_header_bg['url'])) {
+					$other_page_header_bg_url = $other_page_header_bg['url'];
+				} elseif (is_string($other_page_header_bg)) {
+					$other_page_header_bg_url = $other_page_header_bg;
+				}
+				if ($other_page_header_bg_url) : ?>
 					<div class="absolute inset-0 z-0">
 						<img src="<?php echo esc_url($other_page_header_bg_url); ?>" alt="<?php echo esc_attr(is_array($other_page_header_bg) && isset($other_page_header_bg['alt']) ? $other_page_header_bg['alt'] : ''); ?>" class="w-full h-full object-cover ">
 					</div>

@@ -50,10 +50,17 @@ $opinion_signature1 = get_field('opinion_signature1');
 $opinion_signature2 = get_field('opinion_signature2');
 $opinion_signature3 = get_field('opinion_signature3');
 $opinion_signature4 = get_field('opinion_signature4');
-?>
 
+$slide_bg = get_field('slide_bg');
+?>
+<style>
+  .icon-text-pill-p {
+    white-space: pre-line;
+    text-wrap: wrap;
+  }
+</style>
 <section class="bg-secondary rounded-t-[60px] -mt-[3vh] relative pt-24 pb-12 z-20">
-  <div class=" md:ml-28">
+  <div class=" xl:ml-28 w-screen">
     <!-- jak działamy mobile -->
     <div class="flex items-center justify-start w-full md:hidden">
       <div class="flex items-center">
@@ -61,10 +68,10 @@ $opinion_signature4 = get_field('opinion_signature4');
         <h4 class="text-light text-[2.2rem] libre-baskerville-regular"><?php echo $scrolling_heading1; ?></h4>
       </div>
     </div>
-    <div class="fixed-side-container md:mr-64" data-fixed-side="left">
+    <div class="fixed-side-container" data-fixed-side="left">
       <!-- Left side - heading (fixed) -->
       <!-- jak działamy pc -->
-      <div class="fixed-content shrink-0">
+      <div class="fixed-content flex-shrink-0">
         <div class="flex items-center">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
           <h4 class="text-light text-[55px] libre-baskerville-regular"><?php echo $scrolling_heading1; ?></h4>
@@ -72,8 +79,8 @@ $opinion_signature4 = get_field('opinion_signature4');
       </div>
 
       <!-- Right side - scrollable content -->
-      <div class="spacer flex-grow min-w-[1rem]  rounded-t-[60px]  2xl:min-w-[5rem]"></div>
-      <div class="scrollable-wrapper shrink-0 mr-auto ">
+
+      <div class="scrollable-wrapper flex-shrink-0 md:mr-64">
         <div class="scrollable-content">
           <?php
 
@@ -125,7 +132,7 @@ $opinion_signature4 = get_field('opinion_signature4');
   </div>
 </section>
 
-<section class="new-background-section rounded-t-[60px] slide bg-black bg-cover  -mt-[10vh] relative z-1 py-12" style="background-image: url('https://unisved.nowa.net.pl/wp-content/uploads/2025/07/9b1e55547612e809b9e0511f275c20e7567c36d6-scaled.jpg')">
+<section class="new-background-section rounded-t-[60px] slide bg-black bg-cover  -mt-[10vh] relative z-1 py-12" style="background-image: url('<?php echo $slide_bg ?>')">
   <div class="absolute inset-0 bg-black opacity-50 "></div>
   <div class="container  flex  items-center justify-center h-full text-center text-white relative z-10">
     <div class="my-8 hidden md:block">
@@ -143,8 +150,8 @@ $opinion_signature4 = get_field('opinion_signature4');
 
       <div class="fixed-content flex justify-end">
         <div class="flex flex-col items-end justify-center text-right">
-          <h4 class="text-right text-[3vw] libre-baskerville-regular pe-4"><?php echo $scrolling_heading2; ?></h4>
-          <p class="text-right text-[1.8rem] md:text-[2.1rem] libre-baskerville-regular pe-4"><?php echo $scrolling_heading_sub; ?></p>
+          <h4 class="text-right text-[2.88vw] libre-baskerville-regular pe-4"><?php echo $scrolling_heading2; ?></h4>
+          <p class="text-right text-[1.8rem] md:text-[2.1vw] libre-baskerville-regular pe-4"><?php echo $scrolling_heading_sub; ?></p>
         </div>
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180 w-[4vw]">
       </div>
@@ -199,7 +206,7 @@ $opinion_signature4 = get_field('opinion_signature4');
     </div>
 
   </div>
-  <div class="my-12 pb-12 w-full overflow-x-auto opinions-scroll cursor-grab mb-20 px-4 md:px-8">
+  <div class="my-12 pb-12 w-full overflow-x-auto opinions-scroll cursor-grab mb-20 px-4 md:pl-47">
     <div class="flex gap-x-4 min-w-max pt-5">
       <?php
       photo_oneside_pill('right', $opinion_photo_pill, 'assets/big_c.svg', 'pill-opinion-container');

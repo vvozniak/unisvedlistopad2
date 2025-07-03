@@ -14,7 +14,7 @@ if (!function_exists('text_with_c_pill')) {
   {
     // IMPORTANT: The 'side' parameter specifies where the TEXT appears, not the C shape
     // C shape should be on the opposite side from the text
-    $c_position = ($side === 'left') ? 'right-0' : 'left-0';
+    $c_position = ($side === 'left') ? 'md:-right-10' : 'md:-left-10';
     $text_alignment = ($side === 'left') ? 'text-left pr-16' : 'text-left pl-16';
 
     // Get the theme URI for image paths
@@ -22,13 +22,13 @@ if (!function_exists('text_with_c_pill')) {
 
     echo '
     <div class="h-[10vh]"></div>
-  <div class="pill-container relative  rounded-full my-4">
+  <div class="pill-container relative  rounded-full my-4 ">
     <div class="relative z-20 ' . $text_color . ' flex flex-col justify-center h-full py-6 px-8">
-      <h2 class="' . $text_alignment . ' tracking-[0.02em] text-[0.8rem] md:text-[1.6rem] font-bold mb-2 libre-baskerville-regular uppercase">' . $heading . '</h2>
-      <p class="' . $text_alignment . ' text-[1.3rem] md:text-[1.1rem] inter-regular">' . esc_html($subtext) . '</p>
+      <h2 class="h2pill ' . $text_alignment . ' tracking-[0.1em] text-[0.8vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">' . $heading . '</h2>
+      <p class="' . $text_alignment . ' text-[1.3rem] md:text-[1.05vw] inter-regular">' . esc_html($subtext) . '</p>
     </div>
     <div class="absolute ' . $c_position . ' -top-10  z-10">
-      <img src="' . $theme_uri . '/' . $c_image . '" alt="" class="h-full w-auto object-cover">
+      <img src="' . $theme_uri . '/' . $c_image . '" alt="" class="h-full md:w-auto w-1/3 object-cover">
     </div>
   </div>
   

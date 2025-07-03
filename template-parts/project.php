@@ -9,7 +9,7 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
 require_once get_template_directory() . '/template-parts/pills/text_with_c.php';
 require_once get_template_directory() . '/template-parts/pills/text_with_c_small.php';
 
-
+$slide_bg = get_field('slide_bg');
 ?>
 
 <!-- For the main heading section -->
@@ -163,12 +163,12 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
     </div>
   </div>
 </section>
-<section class="new-background-section slide  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12" style="background-image: url('https://unisved.nowa.net.pl/wp-content/uploads/2025/06/beautiful-shot-pier-sea-near-tree-forest-surrounded-by-high-mountains-norway-1.png')">
+<section class="new-background-section slide  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12" style="background-image: url('<?php echo $slide_bg ?>')">
   <div class="flex  items-center justify-center h-full w-full text-center text-white relative z-10">
     <div class="hidden md:block my-8">
       <img src="https://unisved.nowa.net.pl/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto mb-6 w-80">
     </div>
-    <h2 class="text-[2vw] leading-tight mx-8 libre-baskerville-regular text-left">
+    <h2 class="text-[2.4vw] leading-tight mx-8 libre-baskerville-regular text-left">
       Skontaktuj się z nami już dziś, <br>
       aby dowiedzieć się, jak możemy pomóc<br>
       w rozwoju Twojego biznesu
@@ -176,7 +176,7 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
   </div>
 </section>
 <section class="py-12 relative z-30 bg-secondary text-white">
-  <div class=" 2xl:ml-28 px-4">
+  <div class=" 2xl:ml-28 lg:ml-20 px-4 mr-20">
 
     <?php
     $projects = new WP_Query(array(
@@ -224,7 +224,7 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
 <?php
         } elseif ($counter % 2 == 1) { ?>
   <section class="py-12 relative z-30 bg-secondary text-white">
-    <div class="container mx-auto px-4 2xl:ml-28">
+    <div class=" px-4 2xl:ml-28 lg:ml-20 mr-20">
       <div class="flex flex-row md:hidden">
         <div class=" flex flex-row md:flex-row md:justify-end ">
           <div class="flex flex-col items-center md:items-end justify-center text-center md:text-right w-[90vw]">

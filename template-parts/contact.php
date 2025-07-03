@@ -66,7 +66,7 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
 </section>
 
 <section class="pb-[20vh] relative z-40 bg-secondary text-white mt-[-1vh]">
-  <div class="container mx-auto bg-center rounded-t-[40px]]">
+  <div class=" mx-auto bg-center rounded-t-[40px]]">
     <div class=" flex justify-end 2xl:mr-35">
       <?php photo_oneside_pill('right', 'assets/pill_photo.jpg'); ?>
     </div>

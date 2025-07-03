@@ -19,9 +19,9 @@
 			array(
 				'container_id'    => 'footer-nav',
 				'container_class' => '',
-				'menu_class'      => 'flex flex-col md:flex-row text-white text-sm md:text-base text-center ',
+				'menu_class'      => 'flex flex-col md:flex-row text-white text-sm md:text-[0.73vw] text-center  ',
 				'theme_location'  => 'footer',
-				'li_class'        => 'inter-regular tracking-wider link_li flex justify-center items-center my-2  md:after:content-["|"] md:after:mx-4 md:after:text-white md:last:after:content-none',
+				'li_class'        => 'inter-regular tracking-[0.2em] link_li flex justify-center items-center my-2  md:after:content-["|"] md:after:mx-4 md:after:text-white md:last:after:content-none',
 				'fallback_cb'     => false,
 			)
 		);
