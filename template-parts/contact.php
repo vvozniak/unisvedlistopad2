@@ -20,28 +20,28 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
           <p class="text-lg md:text-xl">CEO & FOUNDER</p>
         </div>
       </div>
-      <div class="pt-10 md:pt-20">
+      <div class=" md:pt-20">
       </div>
     </div>
 
     <!-- Right Column -->
-    <div class="space-y-6 md:space-y-25 max-w-max md:ml-[10vh]">
+    <div class="space-y-6 md:space-y-25 max-w-[460px] md:ml-[10vh]">
       <div class="text-center md:text-left space-y-2 link_li text-lg md:text-xl">
         <p><a href="tel:+48602142949" class="">+48 602 142 949</a></p>
         <p><a href="tel:+46704415690" class="">+46 704 415 690</a></p>
         <p><a href="mailto:ALEKSANDRA@UNISVED.EU" class="">ALEKSANDRA@UNISVED.EU</a></p>
       </div>
 
-      <div class="flex justify-center  space-x-20 py-4 border-t-3 border-b-3 border-primary">
+      <div class="flex justify-center  md:space-x-20 py-4 border-t-3 border-b-3 border-primary">
         <!-- Replace with actual SVG icons or font icons -->
         <a href="#" class="social-icon-link p-5">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/facebook.svg" alt="Facebook" class="h-6 w-6 md:h-auto md:w-auto">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/facebook.svg" alt="Facebook" class="h-10 w-10 md:h-auto md:w-auto">
         </a>
         <a href="#" class="social-icon-link p-5">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/linkedin.svg" alt="LinkedIn" class="h-6 w-6 md:h-auto md:w-auto">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/linkedin.svg" alt="LinkedIn" class="h-10 w-10 md:h-auto md:w-auto">
         </a>
         <a href="#" class="social-icon-link p-5">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/insta.svg" alt="Instagram" class="h-6 w-6 md:h-auto md:w-auto">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/insta.svg" alt="Instagram" class="h-10 w-10 md:h-auto md:w-auto">
         </a>
       </div>
 
@@ -60,17 +60,17 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
         }
         ?>
       </div>
-
+      <div class=" bg-center rounded-t-[40px]] min-w-[100%]">
+        <div class=" flex justify-center ">
+          <?php photo_oneside_pill('right', 'assets/pill_photo.jpg'); ?>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="pb-[20vh] relative z-40 bg-secondary text-white mt-[-1vh]">
-  <div class=" mx-auto bg-center rounded-t-[40px]]">
-    <div class=" flex justify-end 2xl:mr-35">
-      <?php photo_oneside_pill('right', 'assets/pill_photo.jpg'); ?>
-    </div>
-  </div>
+
 </section>
 
 <?php

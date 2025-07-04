@@ -62,13 +62,13 @@ $slide_bg = get_field('slide_bg');
 <section class="bg-secondary rounded-t-[60px] -mt-[3vh] relative pt-24 pb-12 z-20">
   <div class=" xl:ml-28 w-screen">
     <!-- jak działamy mobile -->
-    <div class="flex items-center justify-start w-full md:hidden">
+    <div class="flex items-center justify-start w-full md:hidden ml-8 md:ml-0 ">
       <div class="flex items-center">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
-        <h4 class="text-light text-[2.2rem] libre-baskerville-regular"><?php echo $scrolling_heading1; ?></h4>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5 h-[20vw] md:h-auto">
+        <h4 class="text-light text-[6vw] libre-baskerville-regular"><?php echo $scrolling_heading1; ?></h4>
       </div>
     </div>
-    <div class="fixed-side-container" data-fixed-side="left">
+    <div class="fixed-side-container ml-15 md:ml-0" data-fixed-side="left">
       <!-- Left side - heading (fixed) -->
       <!-- jak działamy pc -->
       <div class="fixed-content flex-shrink-0">
@@ -138,7 +138,7 @@ $slide_bg = get_field('slide_bg');
     <div class="my-8 hidden md:block">
       <img src="https://unisved.nowa.net.pl/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto mb-6 w-[33vw]">
     </div>
-    <h2 class="text-[2.4vw] leading-tight mx-8 libre-baskerville-regular text-left">
+    <h2 class="md:text-[2.4vw] text-[8vw] leading-tight mx-8 libre-baskerville-regular text-left">
       <?php echo $text_on_baner; ?>
     </h2>
   </div>
@@ -146,7 +146,15 @@ $slide_bg = get_field('slide_bg');
 
 <section class="py-12 relative z-30 bg-secondary text-white rounded-t-[60px] ">
   <div class=" md:ms-20 2xl:ms-48 md:me-28 bg-center rounded-t-[60px] min-h-[80vh] px-4">
-    <div class="fixed-side-container" data-fixed-side="right">
+    <div class="w-full items-center flex md:hidden ml-10 ">
+      <div class="flex-col">
+        <h4 class="text-right text-[2rem] libre-baskerville-regular pe-2"><?php echo $scrolling_heading2; ?></h4>
+        <p class="text-right text-[1.2rem] md:text-[2.1vw] libre-baskerville-regular pe-4"><?php echo $scrolling_heading_sub; ?></p>
+      </div>
+
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180 w-6">
+    </div>
+    <div class="fixed-side-container" data-fixed-side="md:right">
 
       <div class="fixed-content flex justify-end">
         <div class="flex flex-col items-end justify-center text-right">
@@ -156,7 +164,7 @@ $slide_bg = get_field('slide_bg');
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180 w-[4vw]">
       </div>
 
-      <div class="scrollable-wrapper">
+      <div class="scrollable-wrapper text-wrap ml-10 md:ml-0">
         <div class="scrollable-content">
           <div>
             <?php

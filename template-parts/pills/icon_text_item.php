@@ -17,12 +17,12 @@ function icon_text_item($icon_path, $title, $subtitle, $icon_alt = '', $classes 
 
   echo '
   <div class="flex items-center mb-10">
-    <div class="mr-6 flex-shrink-0">
+    <div class="md:mr-6 flex-shrink-0">
       <img src="' . esc_url($full_icon_path) . '" alt="' . esc_attr($alt_text) . '" class="' . esc_attr($classes) . ' w-[13vw] h-auto object-contain me-5">
     </div>
     <div class="max-w-[500px]">
-      <h3 class="icon-text-pill-h3 tracking-widest text-[1.46vw] font-bold text-light libre-baskerville-regular mb-1 min-w-[450px]">' . esc_html($title) . '</h3>
-      <p class="icon-text-pill-p text-[1vw] md:text-[1.08vw] text-light inter-regular">' . esc_html($subtitle) . '</p>
+      <h3 class="icon-text-pill-h3 tracking-widest text-[3vw] md:text-[1.46vw] font-bold text-light libre-baskerville-regular mb-1 min-w-[200px] md:min-w-[450px]">' . esc_html($title) . '</h3>
+      <p class="icon-text-pill-p text-[2.7vw] md:text-[1.08vw] text-light inter-regular">' . esc_html($subtitle) . '</p>
     </div>
   </div>
   <div class="h-[5vh]"></div>

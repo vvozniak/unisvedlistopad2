@@ -12,9 +12,18 @@ require_once get_template_directory() . '/template-parts/pills/text_with_c_small
 $slide_bg = get_field('slide_bg');
 ?>
 
+<style>
+  @media (max-width:768px) {
+    .mobile-full-width {
+      max-width: 100%;
+
+    }
+  }
+</style>
+
 <!-- For the main heading section -->
 <section class="bg-secondary text-light py-12 md:py-24 relative rounded-t-[60px] -mt-[3vh] z-20">
-  <div class=" ml-28 px-4">
+  <div class=" md:ml-28 px-4">
     <!-- Mobile-only heading -->
     <div class="block md:hidden text-center mb-4">
       <div class="flex justify-center items-center">
@@ -27,7 +36,7 @@ $slide_bg = get_field('slide_bg');
     </div>
 
     <!-- Hide this entire block on mobile -->
-    <div class="hidden md:flex  fixed-side-container  justify-end w-full" data-fixed-side="left">
+    <div class="hidden md:flex  fixed-side-container  justify-end w-full" data-fixed-side="md:left">
       <div class="fixed-content shrink-0 items-center mb-12 md:mb-24">
         <div class="md:flex flex-col md:flex-row md:items-start libre-baskerville-regular block">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="w-[1vw] md:w-24 h-auto mr-0 md:mr-8"></img>
@@ -38,36 +47,36 @@ $slide_bg = get_field('slide_bg');
         </div>
       </div>
       <!-- <div class="speacer 2xl:mr-100"></div> -->
-      <div class="scrollable-wrapper shrink-0 md:pr-20 2xl:pr-64">
+      <div class=" scrollable-wrapper mobile-full-width  shrink-0 md:pr-20 2xl:pr-64">
         <div class="scrollable-content">
-          <div class="text-[1.2vw]" style="margin-bottom: 12.5rem;">
+          <div class="md:text-[1.2vw] text-[6vw]" style="margin-bottom: 12.5rem;">
             <p>W ciągu ostatnich kilku lat Unisved skutecznie wsparło rozwój Horisontal Holding AB, budując od podstaw trzy uzupełniające się firmy działające w sektorze budowlanym i inżynieryjnym. Nasze działania objęły pełne wsparcie – od rejestracji firm i aspektów prawnych, przez budowę struktur i wdrożenie systemów zarządzania, po strategię sprzedaży, pozyskiwanie klientów i optymalizację procesów dostosowanych do rynków skandynawskich.</p>
           </div>
 
 
 
           <div>
-            <h2 class="text-[2.2vw] libre-baskerville-regular mb-8">Firmy wchodzące <br>w skład holdingu:</h2>
+            <h2 class="text-[8vw] md:text-[2.2vw] libre-baskerville-regular mb-8">Firmy wchodzące <br>w skład holdingu:</h2>
             <ul class="space-y-6">
               <li class="flex items-start">
                 <div class="2xl:w-7 2xl:h-7 md:w-5 md:h-5 bg-primary rounded-full mt-4 mr-6 flex-shrink-0"></div>
                 <div>
-                  <p class="font-bold text-[1.9vw] libre-baskerville-regular ">Horisontalplan AB (2018)</p>
-                  <p class="text-[1.1vw]">geodezja, pomiary inżynieryjne dla sektora budowlanego</p>
+                  <p class="font-bold md:text-[1.9vw] libre-baskerville-regular ">Horisontalplan AB (2018)</p>
+                  <p class=" md:text-[1.1vw]">geodezja, pomiary inżynieryjne dla sektora budowlanego</p>
                 </div>
               </li>
               <li class="flex items-start">
                 <div class="2xl:w-7 2xl:h-7 md:w-5 md:h-5 bg-primary rounded-full mt-4 mr-6 flex-shrink-0"></div>
                 <div>
-                  <p class="font-bold text-[1.9vw] libre-baskerville-regular">Horisontal AB (2020)</p>
-                  <p class="text-[1.1vw]">budownictwo, projekty infrastrukturalne i drogowe</p>
+                  <p class="font-bold  md:text-[1.9vw] libre-baskerville-regular">Horisontal AB (2020)</p>
+                  <p class=" md:text-[1.1vw]">budownictwo, projekty infrastrukturalne i drogowe</p>
                 </div>
               </li>
               <li class="flex items-start">
                 <div class="2xl:w-7 2xl:h-7 md:w-5 md:h-5 bg-primary rounded-full mt-4 mr-6 flex-shrink-0"></div>
                 <div>
-                  <p class="font-bold text-[1.9vw] libre-baskerville-regular">SMP Bygg (2021)</p>
-                  <p class="text-[1.1vw]">prace taborowe i zbrojeniowe dla infrastruktury</p>
+                  <p class="font-bold  md:text-[1.9vw] libre-baskerville-regular">SMP Bygg (2021)</p>
+                  <p class=" md:text-[1.1vw]">prace taborowe i zbrojeniowe dla infrastruktury</p>
                 </div>
               </li>
             </ul>
@@ -111,7 +120,7 @@ $slide_bg = get_field('slide_bg');
 
           <div class="text-center mb-16">
             <div class="border-t-2 border-primary w-full max-w-[33rem] mx-auto"></div>
-            <h2 class="text-[1.9vw] py-14 text-primary libre-baskerville-regular">Efekty mówią same za siebie:</h2>
+            <h2 class="md:text-[1.9vw] py-14 text-primary libre-baskerville-regular">Efekty mówią same za siebie:</h2>
             <div class="border-t-2 border-primary w-full max-w-[33rem] mx-auto"></div>
           </div>
 
@@ -168,7 +177,7 @@ $slide_bg = get_field('slide_bg');
     <div class="hidden md:block my-8">
       <img src="https://unisved.nowa.net.pl/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto mb-6 w-80">
     </div>
-    <h2 class="text-[2.4vw] leading-tight mx-8 libre-baskerville-regular text-left">
+    <h2 class="text-[5.2vw] md:text-[2.4vw] leading-tight mx-8 libre-baskerville-regular text-left">
       Skontaktuj się z nami już dziś, <br>
       aby dowiedzieć się, jak możemy pomóc<br>
       w rozwoju Twojego biznesu
@@ -176,7 +185,7 @@ $slide_bg = get_field('slide_bg');
   </div>
 </section>
 <section class="py-12 relative z-30 bg-secondary text-white">
-  <div class=" 2xl:ml-28 lg:ml-20 px-4 mr-20">
+  <div class=" 2xl:ml-28 lg:ml-20 px-4 md:mr-20">
 
     <?php
     $projects = new WP_Query(array(
@@ -224,7 +233,7 @@ $slide_bg = get_field('slide_bg');
 <?php
         } elseif ($counter % 2 == 1) { ?>
   <section class="py-12 relative z-30 bg-secondary text-white">
-    <div class=" px-4 2xl:ml-28 lg:ml-20 mr-20">
+    <div class=" px-4 2xl:ml-28 lg:ml-20 md:mr-20">
       <div class="flex flex-row md:hidden">
         <div class=" flex flex-row md:flex-row md:justify-end ">
           <div class="flex flex-col items-center md:items-end justify-center text-center md:text-right w-[90vw]">

@@ -14,6 +14,7 @@ window.addEventListener("load", function () {
   if (close_icon) close_icon.style.display = "none";
   if (menu_close_topright) menu_close_topright.classList.add("hidden");
 
+  if (main_navigation) main_navigation.classList.add("hidden");
   function openMenu() {
     if (main_navigation) main_navigation.classList.remove("hidden");
     if (hamburger_icon) hamburger_icon.style.display = "none";
@@ -132,24 +133,26 @@ document.addEventListener("DOMContentLoaded", function () {
   const video = document.getElementById("background-video");
   const logo = document.getElementsByClassName("custom-logo-landing")[0]; // Assuming there's only one logo element
 
+if (menu) menu.classList.add("hidden");
+
   // Remove menu show/hide from scroll handler. Only affect video and logo.
   function handleScroll() {
     const scrollY = window.scrollY || window.pageYOffset;
     const trigger = window.innerHeight * 0.8; // Show after scrolling 80% of viewport
     const isDesktop = window.innerWidth >= 1024;
 
-    // Debug info
-    console.log("Menu element exists:", menu !== null);
-    console.log("Is desktop:", isDesktop);
-    console.log("Current classes:", menu ? menu.className : "N/A");
-    console.log("Scroll position:", scrollY);
-    console.log("Trigger threshold:", trigger);
-    console.log("Condition met:", scrollY > trigger);
-    console.log("Document height:", document.body.scrollHeight);
-    console.log(
-      "Is scrollable enough:",
-      document.body.scrollHeight > trigger + window.innerHeight
-    );
+    // // Debug info
+    // console.log("Menu element exists:", menu !== null);
+    // console.log("Is desktop:", isDesktop);
+    // console.log("Current classes:", menu ? menu.className : "N/A");
+    // console.log("Scroll position:", scrollY);
+    // console.log("Trigger threshold:", trigger);
+    // console.log("Condition met:", scrollY > trigger);
+    // console.log("Document height:", document.body.scrollHeight);
+    // console.log(
+    //   "Is scrollable enough:",
+    //   document.body.scrollHeight > trigger + window.innerHeight
+    // );
 
     if (scrollY > trigger) {
       if (video) video.style.display = "none";
@@ -176,5 +179,5 @@ document.addEventListener("DOMContentLoaded", function () {
     passive: true,
     capture: true,
   });
-  handleScroll(); // Initial check
+ // handleScroll(); // Initial check
 });

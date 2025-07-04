@@ -12,15 +12,29 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill.php
 require_once get_template_directory() . '/template-parts/pills/icon_text_item.php';
 ?>
 <style>
-  .h2pill {
+  @media (min-width:768px) {
+    .h2pill {
 
-    white-space: nowrap;
+      white-space: nowrap;
+      text-wrap: nowrap;
 
+    }
+
+    .icon-text-pill-p {
+      text-wrap: balance;
+    }
   }
 
-  .icon-text-pill-p {
-    text-wrap: balance;
+  @media (max-width:768px) {
+    .h2pill {
+
+      text-wrap: wrap;
+      font-size: 1.8vh;
+
+    }
   }
+
+
 
   /* .icon-text-pill-h3 {
     white-space: pre-line;
@@ -47,7 +61,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
       <!-- <div class="spacer flex-grow min-w-[1rem]  mr-auto  2xl:min-w-[30rem]"></div> -->
 
       <!-- Scrollable content with additional left padding -->
-      <div class="scrollable-wrapper flex-shrink-0 md:mr-64">
+      <div class="scrollable-wrapper flex-shrink-0 md:mr-64 ml-8 md:ml-0">
         <div class="scrollable-content">
           <?php
           $post_id = get_the_ID();
@@ -99,9 +113,9 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
   <div class="absolute inset-0 bg-black opacity-50 rounded-t-[60px]"></div>
   <div class=" flex items-center justify-center h-full w-screen text-center text-white relative z-10 md:pb-10">
     <div class="md:mr-8">
-      <img src="https://unisved.nowa.net.pl/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto lg:ml-10 mb-6 w-80">
+      <img src="https://unisved.nowa.net.pl/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="hidden md:block 2xl:mx-auto lg:ml-10 mb-6 w-80">
     </div>
-    <h2 class="text-[4.167vw] leading-tight px-3 md:px-0 md:pl-2 libre-baskerville-regular text-left text-pretty">
+    <h2 class="text-[7vw] md:text-[4.167vw] leading-tight px-3 md:px-0 md:pl-2 libre-baskerville-regular text-left text-pretty">
       Od Skandynawii po rynki<br>
       międzynarodowe.
     </h2>
@@ -111,12 +125,12 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
 <section class="py-12 relative z-30 bg-secondary text-white rounded-t-[60px]">
   <div class=" bg-center rounded-t-[40px] min-h-[80vh] px-4 mt-20 ">
     <!-- dlaczego skandywnawia mobile -->
-    <div class="w-full items-center flex md:hidden ">
-      <h4 class="text-right text-[2vw] libre-baskerville-regular pe-2">Dlaczego<br>Skandynawia?</h4>
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180">
+    <div class="w-full items-center flex md:hidden ml-10 ">
+      <h4 class="text-right text-[2rem] libre-baskerville-regular pe-2">Dlaczego<br>Skandynawia?</h4>
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180 w-6">
     </div>
 
-    <div class="fixed-side-container ml-28" data-fixed-side="right">
+    <div class="fixed-side-container md:ml-28" data-fixed-side="md:right">
       <!-- dlaczego skandynawia PC -->
       <div class="fixed-content flex justify-end md:mr-40 2xl:mr-50">
         <h4 class="text-right text-[3vw] libre-baskerville-regular pe-2 shrink-0">Dlaczego<br>Skandynawia?</h4>
@@ -124,7 +138,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
 
       </div>
       <!-- <div class="spacer flex-grow min-w-[1rem]  mr-auto  2xl:min-w-[30rem]"></div> -->
-      <div class="scrollable-wrapper shrink-0 2xl:ml-28">
+      <div class="scrollable-wrapper shrink-0 2xl:ml-28 md:ml-0 ml-8">
         <div class="scrollable-content">
           <div>
             <?php
@@ -134,7 +148,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
               get_field('icon_1_title', $post_id),
               get_field('icon_1_content', $post_id),
               'alt text for gospodarka',
-              'hidden md:block'
+              ''
             );
             icon_text_item(
               'innowacyjnosc.svg',
@@ -161,7 +175,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
 <section class="new-background-section slide bg-black bg-cover rounded-t-[60px] -mt-[10vh] relative z-30 py-12" style="background-image: url('https://unisved.nowa.net.pl/wp-content/uploads/2025/06/ff43581d96bce748ee60811861ca062f1fd29e08.jpg')">
   <div class="absolute inset-0 bg-black opacity-50 rounded-t-[60px]"></div>
   <div class="container mx-auto flex  items-center justify-center h-full text-center text-white relative z-10">
-    <h2 class="text-[4.167vw] leading-tight mx-auto libre-baskerville-regular text-left mt-16">
+    <h2 class="text-[7vw] md:text-[4.167vw] leading-tight mx-auto libre-baskerville-regular text-left mt-16">
       Wspólnie<br>przekroczymy granice!
     </h2>
   </div>
@@ -170,11 +184,11 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
 <section class="py-12 relative z-30 bg-secondary text-white rounded-t-[60px]">
   <div class=" bg-center rounded-[40px] min-h-[100vh] space-y-16 mt-20 xl:ml-28">
     <!-- unisved w pigułce mobile -->
-    <div class="w-full items-center flex md:hidden mb-8">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
-      <h4 class="text-light text-[2.2rem] leading-none libre-baskerville-regular">Unisved <br> w pigułce</h4>
+    <div class="w-full items-center flex md:hidden mb-8 ml-10">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5 h-[20vw] md:h-auto">
+      <h4 class="text-light text-[2rem] leading-none libre-baskerville-regular">Unisved <br> w pigułce</h4>
     </div>
-    <div class="fixed-side-container md:mr-40 2xl:mr-64" data-fixed-side="left">
+    <div class="fixed-side-container md:mr-40 2xl:mr-64 justify-center" data-fixed-side="md:left">
       <!-- unisved w pigułce PC -->
       <div class="fixed-content shrink-0">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
@@ -182,7 +196,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
       </div>
       <!-- Increased spacer width -->
       <!-- <div class="spacer flex-grow min-w-[1rem]    2xl:min-w-[15rem]"></div> -->
-      <div class="scrollable-wrapper shrink-0">
+      <div class="scrollable-wrapper shrink-0 md:mx-0 mx-auto">
         <div class="scrollable-content">
           <?php
           $post_id = get_the_ID();
@@ -270,13 +284,13 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
 
       <!-- Right side - Text content -->
       <div class="md:w-1/2 text-right flex flex-col items-end md:mx-0 pb-10 md:pb-0">
-        <h3 class="text-[2.3vw] libre-baskerville-regular mb-4">Aleksandra Gierdziejewska</h3>
+        <h3 class="text-[6vw] md:text-[2.3vw] libre-baskerville-regular mb-4">Aleksandra Gierdziejewska</h3>
         <hr class=" border-t-2 border-primary my-6 w-2/3">
-        <p class="text-[1.3vw] mb-8 tracking-widest">CEO & FOUNDER</p>
+        <p class="md:text-[1.3vw] mb-8 tracking-widest">CEO & FOUNDER</p>
         <div class="space-y-2">
-          <p class="text-[1.3vw] tracking-wider">+48 602 142 949</p>
-          <p class="text-[1.3vw] tracking-wider">+46 704 415 690</p>
-          <p class="text-[1.3vw] uppercase tracking-wider">ALEKSANDRA@UNISVED.EU</p>
+          <p class="md:text-[1.3vw] tracking-wider">+48 602 142 949</p>
+          <p class="md:text-[1.3vw] tracking-wider">+46 704 415 690</p>
+          <p class="md:text-[1.3vw] uppercase tracking-wider">ALEKSANDRA@UNISVED.EU</p>
         </div>
       </div>
     </div>
