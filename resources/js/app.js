@@ -13,8 +13,11 @@ window.addEventListener("load", function () {
   if (hamburger_icon) hamburger_icon.style.display = "inline-block";
   if (close_icon) close_icon.style.display = "none";
   if (menu_close_topright) menu_close_topright.classList.add("hidden");
+  // Add this: Ensure menu is hidden initially on mobile
+  if (main_navigation && window.innerWidth > 1024) {
+    main_navigation.classList.remove("hidden");
+  }
 
-  //if (main_navigation) main_navigation.classList.add("hidden");
   function openMenu() {
     if (main_navigation) main_navigation.classList.remove("hidden");
     if (hamburger_icon) hamburger_icon.style.display = "none";
@@ -74,6 +77,23 @@ window.addEventListener("load", function () {
       }
     });
   }
+
+  // Add resize handler at the end of the load event listener
+  window.addEventListener("resize", function () {
+    if (!main_navigation) return;
+
+    const currentWidth = window.innerWidth;
+
+    if (currentWidth > 1024) {
+      // Desktop: remove hidden class
+      main_navigation.classList.remove("hidden");
+    } else {
+      // Mobile: add hidden class if not already present
+      if (!main_navigation.classList.contains("hidden")) {
+        main_navigation.classList.add("hidden");
+      }
+    }
+  });
 });
 // Background video handling
 document.addEventListener("DOMContentLoaded", () => {
@@ -133,51 +153,48 @@ document.addEventListener("DOMContentLoaded", function () {
   const video = document.getElementById("background-video");
   const logo = document.getElementsByClassName("custom-logo-landing")[0]; // Assuming there's only one logo element
 
-//if (menu) menu.classList.add("hidden");
+  if (menu) {
+    let lastScrollY = window.scrollY;
+    let ticking = false;
 
-  // Remove menu show/hide from scroll handler. Only affect video and logo.
-  function handleScroll() {
-    const scrollY = window.scrollY || window.pageYOffset;
-    const trigger = window.innerHeight * 0.8; // Show after scrolling 80% of viewport
-    const isDesktop = window.innerWidth >= 1024;
+    function updateMenuVisibility() {
+      const scrollY = window.scrollY;
+      const isDesktop = window.innerWidth > 1024;
+      const trigger = 100; // Adjust this value based on when you want to hide/show the menu
 
-    // // Debug info
-    // console.log("Menu element exists:", menu !== null);
-    // console.log("Is desktop:", isDesktop);
-    // console.log("Current classes:", menu ? menu.className : "N/A");
-    // console.log("Scroll position:", scrollY);
-    // console.log("Trigger threshold:", trigger);
-    // console.log("Condition met:", scrollY > trigger);
-    // console.log("Document height:", document.body.scrollHeight);
-    // console.log(
-    //   "Is scrollable enough:",
-    //   document.body.scrollHeight > trigger + window.innerHeight
-    // );
-
-    if (scrollY > trigger) {
-      if (video) video.style.display = "none";
-      if (isDesktop && menu) {
-        console.log("Attempting to show menu");
-        menu.classList.remove("hidden");
-        menu.classList.add("fade-in-menu");
-        // Force visibility with inline style as backup
-        menu.style.display = "block";
-        console.log("After change:", menu.className);
+      if (scrollY > trigger) {
+        // Scrolling down
+        if (video) video.style.display = "none";
+        if (isDesktop && menu) {
+          console.log("Attempting to show menu");
+          menu.classList.remove("hidden");
+          menu.classList.add("fade-in-menu");
+          // Force visibility with inline style as backup
+          menu.style.display = "block";
+          console.log("After change:", menu.className);
+        }
+      } else {
+        // Show video
+        if (video) video.style.display = "";
+        // Desktop: hide menu
+        if (isDesktop && menu) {
+          // menu.classList.add("hidden");
+          // menu.classList.remove("fade-in-menu");
+        }
       }
-    } else {
-      // Show video
-      if (video) video.style.display = "";
-      // Desktop: hide menu
-      if (isDesktop && menu) {
-        // menu.classList.add("hidden");
-        // menu.classList.remove("fade-in-menu");
-      }
+
+      lastScrollY = scrollY;
+      ticking = false;
     }
-  }
 
-  window.addEventListener("scroll", handleScroll, {
-    passive: true,
-    capture: true,
-  });
- handleScroll(); // Initial check
+    window.addEventListener("scroll", function () {
+      lastScrollY = window.scrollY;
+      if (!ticking) {
+        window.requestAnimationFrame(updateMenuVisibility);
+        ticking = true;
+      }
+    });
+  }
 });
+
+

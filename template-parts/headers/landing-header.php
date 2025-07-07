@@ -1,6 +1,6 @@
 <header class="relative h-[180vh] md:h-[210vh] overflow-hidden bg-secondary overflow-x-hidden ">
     <div class="absolute inset-0 custom-overlay z-10"></div>
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/header.svg" class="hidden md:block absolute inset-0 z-10 top-[75vh] right-0 left-auto w-[10vw] h-auto object-cover">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/header.svg" class=" absolute inset-0 z-10 top-[75vh] right-0 left-auto w-[10vw] h-auto object-cover">
     <?php
     $bg_img = get_field("bg_img", 24);
     $placeholder = get_field("placeholder", 24);
@@ -19,7 +19,7 @@
     <?php
     $image_header = get_field("logo_header", 24);
     if ($image_header) {
-        echo '<img src="' . esc_url($image_header) . '" alt="Header Logo" class="absolute inset-0 z-10 top-[40vh] md:top-[45vh] left-[15vw] md:left-[34vw] lg:w-[30vw] md:w-[45vw] w-[70vw]">';
+        echo '<img src="' . esc_url($image_header) . '" alt="Header Logo" class="absolute inset-0 z-999 top-[40vh] md:top-[45vh] left-[15vw] md:left-[34vw] lg:w-[30vw] md:w-[45vw] w-[70vw]">';
     }
     ?>
     <div class="absolute top-[100vh]  left-[5vw] md:left-[17vw] inset-0 flex flex-col items-start justify-start z-20 text-left px-4 md:w-2/3">

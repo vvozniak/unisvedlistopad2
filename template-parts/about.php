@@ -156,13 +156,7 @@ $slide_bg = get_field('slide_bg');
     </div>
     <div class="fixed-side-container" data-fixed-side="md:right">
 
-      <div class="fixed-content flex justify-end">
-        <div class="flex flex-col items-end justify-center text-right">
-          <h4 class="text-right text-[2.88vw] libre-baskerville-regular pe-4"><?php echo $scrolling_heading2; ?></h4>
-          <p class="text-right text-[1.8rem] md:text-[2.1vw] libre-baskerville-regular pe-4"><?php echo $scrolling_heading_sub; ?></p>
-        </div>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180 w-[4vw]">
-      </div>
+
 
       <div class="scrollable-wrapper text-wrap ml-10 md:ml-0">
         <div class="scrollable-content">
@@ -196,7 +190,16 @@ $slide_bg = get_field('slide_bg');
             );
             ?>
           </div>
+
         </div>
+
+      </div>
+      <div class="fixed-content flex justify-end">
+        <div class="flex flex-col items-end justify-center text-right">
+          <h4 class="text-right text-[2.88vw] libre-baskerville-regular pe-4"><?php echo $scrolling_heading2; ?></h4>
+          <p class="text-right text-[1.8rem] md:text-[2.1vw] libre-baskerville-regular pe-4"><?php echo $scrolling_heading_sub; ?></p>
+        </div>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180 w-[4vw]">
       </div>
     </div>
   </div>

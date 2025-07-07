@@ -32,7 +32,7 @@ if (!function_exists('text_with_c_pill_small')) {
     // </div>
     // ';
     echo '
-  <div class="pill-container relative max-h-[200px]  rounded-full ">
+  <div class=" pill_c_con_s relative max-h-[200px]  rounded-full ">
     <div class="relative overflow-hidden z-20 ' . $text_color . ' flex flex-col justify-center h-full  pl-8">
       <h2 class="' . $text_alignment . ' tracking-2 md:text-[1.4vw] font-bold mb-2 libre-baskerville-regular uppercase">' . $heading . '</h2>
       <p class="' . $text_alignment . ' md:text-[1vw] inter-regular">' . esc_html($subtext) . '</p>

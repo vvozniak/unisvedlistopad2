@@ -160,7 +160,9 @@ $slide_bg = get_field('slide_bg');
               'Szwecja, Norwegia, Dania, Niemcy oraz Polska',
               'assets/small_c.svg',
               'text-light'
-            );
+            ); ?>
+            <div class="h-[10vh]"></div>
+            <?php
             photo_oneside_pill('right', 'assets/project-pill-photo.png');
             ?>
           </div>

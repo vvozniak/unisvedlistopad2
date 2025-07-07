@@ -9,6 +9,12 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
 
 ?>
 
+<style>
+  /* .pill-photo-oneside {
+    
+  } */
+</style>
+
 <section class="bg-secondary relative text-light pb-12 px-4 sm:px-6 lg:px-8 rounded-t-[60px] md:pt-[35vh] -mt-[3vh] z-20">
   <div class=" md:mx-28 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
     <div class="space-y-6 md:space-y-8">
@@ -50,21 +56,19 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
         <p>SARNIA 4, 83-047 PIEKŁO DOLNE</p>
       </div>
 
-      <div class="my-12 md:my-18">
-        <?php
-        $post_id = get_the_ID();
-        $image_url = get_field('pill_image', $post_id);
 
-        if ($image_url) {
-          photo_oneside_pill('right', $image_url);
-        }
-        ?>
-      </div>
-      <div class=" bg-center rounded-t-[40px]] min-w-[100%]">
-        <div class=" flex justify-center ">
-          <?php photo_oneside_pill('right', 'assets/pill_photo.jpg'); ?>
-        </div>
-      </div>
+
+    </div>
+    <div class="space-y-6 md:space-y-8 md:block hidden"></div>
+    <div class="my-12 md:my-18 overflow-visible max-w-[700px] min-w-[300px] xl:min-w-[460px] 2xl:min-w-[700px] justify-start">
+      <?php
+      $post_id = get_the_ID();
+      $image_url = get_field('pill_image', $post_id);
+
+      if ($image_url) {
+        photo_oneside_pill('right', $image_url);
+      }
+      ?>
     </div>
   </div>
 </section>

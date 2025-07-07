@@ -32,7 +32,24 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
       font-size: 1.8vh;
 
     }
+
+    .pill-photo-oneside {
+      min-width: 379.5px;
+      margin-right: 2rem;
+
+
+    }
+
+    .pill_c_con {
+
+      margin-left: 3rem;
+    }
+
+    .pill-container-with-content {
+      margin-left: 5rem;
+    }
   }
+
 
 
 
@@ -43,9 +60,9 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
   } */
 </style>
 <section class="bg-secondary py-12 rounded-t-[60px] relative -mt-[10vh] z-20">
-  <div class=" ml-10 xl:ml-28 w-screen">
+  <div class=" ml-0 xl:ml-28 w-screen">
     <!-- dlaczego my mobile -->
-    <div class="w-full items-center flex md:hidden">
+    <div class="ml-10 md:ml-0 w-full items-center flex md:hidden">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5 w-6">
       <h4 class="text-light text-[2rem] libre-baskerville-regular">Dlaczego my?</h4>
     </div>
@@ -63,7 +80,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
       <!-- <div class="spacer flex-grow min-w-[1rem]  mr-auto  2xl:min-w-[30rem]"></div> -->
 
       <!-- Scrollable content with additional left padding -->
-      <div class="scrollable-wrapper flex-shrink-0 md:mr-64 ml-8 md:ml-0">
+      <div class="scrollable-wrapper flex-shrink-0 md:mr-64  md:ml-0">
         <div class="scrollable-content">
 
           <?php
@@ -135,14 +152,9 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
     </div>
 
     <div class="fixed-side-container md:ml-28" data-fixed-side="md:right">
-      <!-- dlaczego skandynawia PC -->
-      <div class="fixed-content flex justify-end md:mr-40 2xl:mr-50">
-        <h4 class="text-right text-[3vw] libre-baskerville-regular pe-2 shrink-0">Dlaczego<br>Skandynawia?</h4>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180 w-[4vw]">
 
-      </div>
       <!-- <div class="spacer flex-grow min-w-[1rem]  mr-auto  2xl:min-w-[30rem]"></div> -->
-      <div class="scrollable-wrapper shrink-0 2xl:ml-28 md:ml-0 ml-8">
+      <div class="scrollable-wrapper shrink-0 2xl:ml-28 md:ml-0 ml:10 xl:mr-8">
         <div class="scrollable-content">
           <div>
             <?php
@@ -173,6 +185,13 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
           </div>
         </div>
       </div>
+      <!-- dlaczego skandynawia PC -->
+      <div class="fixed-content flex justify-end md:mr-40 2xl:mr-50">
+        <h4 class="text-right text-[3vw] libre-baskerville-regular pe-2 shrink-0">Dlaczego<br>Skandynawia?</h4>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180 w-[4vw]">
+
+      </div>
+
     </div>
   </div>
 </section>
@@ -200,7 +219,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
       </div>
       <!-- Increased spacer width -->
       <!-- <div class="spacer flex-grow min-w-[1rem]    2xl:min-w-[15rem]"></div> -->
-      <div class="scrollable-wrapper shrink-0 md:mx-0 mx-auto">
+      <div class="scrollable-wrapper shrink-0 md:mx-0">
         <div class="scrollable-content">
           <?php
           $post_id = get_the_ID();

@@ -1,6 +1,6 @@
 <?php get_template_part('template-parts/headers/menu_not_landing') ?>
 
-<header class="relative h-[180vh] md:h-[120vh]  text-light">
+<header class="relative h-[180vh] md:h-[140vh] 2xl:h-[120vh]  text-light">
     <div class="absolute inset-0 custom-overlay z-10"></div>
     <?php
     $other_page_header_bg = get_field("other_page_header_bg_image");
