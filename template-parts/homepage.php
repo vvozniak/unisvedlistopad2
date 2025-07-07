@@ -36,6 +36,8 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
 
 
 
+
+
   /* .icon-text-pill-h3 {
     white-space: pre-line;
   } */
@@ -63,6 +65,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
       <!-- Scrollable content with additional left padding -->
       <div class="scrollable-wrapper flex-shrink-0 md:mr-64 ml-8 md:ml-0">
         <div class="scrollable-content">
+
           <?php
           $post_id = get_the_ID();
           $image_url = get_field('pill_image', $post_id);
@@ -70,6 +73,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
           if ($image_url) {
             photo_oneside_pill('right', $image_url);
           }
+
           text_with_c_pill(
             'left',
             get_field('pill_1_title', $post_id),

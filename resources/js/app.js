@@ -14,7 +14,7 @@ window.addEventListener("load", function () {
   if (close_icon) close_icon.style.display = "none";
   if (menu_close_topright) menu_close_topright.classList.add("hidden");
 
-  if (main_navigation) main_navigation.classList.add("hidden");
+  //if (main_navigation) main_navigation.classList.add("hidden");
   function openMenu() {
     if (main_navigation) main_navigation.classList.remove("hidden");
     if (hamburger_icon) hamburger_icon.style.display = "none";
@@ -39,8 +39,8 @@ window.addEventListener("load", function () {
       menu_close_topright.className =
         "fixed top-4 right-4 z-[1000] lg:hidden hidden";
     }
-    // document.body.classList.remove("no-scroll");
-    // // Hide logo if menu is closed and scroll is at top (for landing)
+    document.body.classList.remove("no-scroll");
+    // Hide logo if menu is closed and scroll is at top (for landing)
     // const logo = document.getElementsByClassName("custom-logo-landing")[0];
     // const menu = document.getElementById("primary-menu-landing");
     // if (logo && menu && menu.classList.contains("hidden"))
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const video = document.getElementById("background-video");
   const logo = document.getElementsByClassName("custom-logo-landing")[0]; // Assuming there's only one logo element
 
-if (menu) menu.classList.add("hidden");
+//if (menu) menu.classList.add("hidden");
 
   // Remove menu show/hide from scroll handler. Only affect video and logo.
   function handleScroll() {
@@ -179,5 +179,5 @@ if (menu) menu.classList.add("hidden");
     passive: true,
     capture: true,
   });
- // handleScroll(); // Initial check
+ handleScroll(); // Initial check
 });
