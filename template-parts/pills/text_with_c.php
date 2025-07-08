@@ -14,7 +14,7 @@ if (!function_exists('text_with_c_pill')) {
   {
     // IMPORTANT: The 'side' parameter specifies where the TEXT appears, not the C shape
     // C shape should be on the opposite side from the text
-    $c_position = ($side === 'left') ? '2xl:-right-10 md:-right-5 -right-40 -top-10' : 'left-0 2xl:-left-10 -top-10';
+    $c_position = ($side === 'left') ? '2xl:-right-10 md:-right-5 -right-40 2xl:-top-10 md:top-10' : 'left-0 2xl:-left-10 -top-10';
     $text_alignment = ($side === 'left') ? 'text-left md:pr-16 ' : 'text-left md:pl-16 pl-20';
     $text_spaceing = ($side === 'left') ? 'md:pl-25' : 'md:pr-25';
 
@@ -29,7 +29,7 @@ if (!function_exists('text_with_c_pill')) {
       <p class="text_c_p ' . $text_alignment . ' text-[2.3vw] md:text-[1.05vw] inter-regular">' . esc_html($subtext) . '</p>
     </div>
     <div class="pill_c_img absolute ' . $c_position . ' md:-top-10  z-10">
-      <img src="' . $theme_uri . '/' . $c_image . '" alt="" class="h-full md:w-auto w-1/2 object-cover">
+      <img src="' . $theme_uri . '/' . $c_image . '" alt="" class="h-full 2xl:w-auto w-1/2 md:w-2/3 object-cover">
     </div>
   </div>
   
