@@ -73,8 +73,8 @@ $slide_bg = get_field('slide_bg');
       <!-- jak działamy pc -->
       <div class="fixed-content flex-shrink-0">
         <div class="flex items-center">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
-          <h4 class="text-light text-[55px] libre-baskerville-regular"><?php echo $scrolling_heading1; ?></h4>
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5 md:w-[4vw] 2xl:w-max">
+          <h4 class="text-light md:text-[2.5rem] 2xl:text-[3rem] libre-baskerville-regular"><?php echo $scrolling_heading1; ?></h4>
         </div>
       </div>
 

@@ -86,7 +86,7 @@ article > *:not(.entry-content),
   aspect-ratio: 1.8 / 1;
   /* background-color: #1a202c; */
   width: 100%;
-  max-width: 700px;
+  max-width: 600px;
 }
 
 .pill_c_con {

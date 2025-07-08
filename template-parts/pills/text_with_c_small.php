@@ -15,7 +15,7 @@ if (!function_exists('text_with_c_pill_small')) {
     // IMPORTANT: The 'side' parameter specifies where the TEXT appears, not the C shape
     // C shape should be on the opposite side from the text
     $c_position = ($side === 'left') ? 'right-0' : 'left-0';
-    $text_alignment = ($side === 'left') ? 'text-left pr-16' : 'text-left pl-16';
+    $text_alignment = ($side === 'left') ? 'text-left pr-16' : 'text-left md:pl-12 2xl:pl-20';
 
     // Get the theme URI for image paths
     $theme_uri = get_template_directory_uri();

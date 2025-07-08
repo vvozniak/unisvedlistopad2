@@ -33,26 +33,28 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
                                                                                                     endif; ?>">UNISVED<br><?php echo get_the_title(); ?></h2>
 
                 </div>
-                <p class="text-xl mb-4 ml-23 2xl:text-nowrap"><?php echo get_field('podtytul1') ?></p>
+                <p class="text-xl mb-4 ml-23 2xl:text-nowrap inter-regular"><?php echo get_field('podtytul1') ?></p>
                 <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary tracking-20 text-[16px] ml-23">( CZYTAJ WIĘCEJ )</a>
-                <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-4 text-light">
-                  <h3 class="text-2xl font-bold text-primary">Dla kogo:</h3>
-                  <p class="mb-4"><?php echo get_field('dla_kogo1'); ?></p>
-                  <div class="w-24 h-px bg-primary my-4"></div>
-                  <h3 class="text-2xl font-bold text-primary">Zakres usług:</h3>
-                  <ul class="list-disc list-inside mb-4 marker:text-primary">
-                    <?php echo get_field('zakres_uslug1'); ?>
-                  </ul>
-                  <div class="w-24 h-px bg-primary my-4"></div>
-                  <h3 class="text-2xl font-bold text-primary">Efekt:</h3>
-                  <p><?php echo get_field('efekt1'); ?></p>
+              </div>
+              <div class="lg:w-1/2 md:min-w-[450px] mt-10 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
+                <div class="relative">
+                  <?php photo_oneside_pill('right', get_the_post_thumbnail_url()); ?>
                 </div>
               </div>
-              <div class="lg:w-1/2 md:min-w-[450px] mt-8 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
-                <div class="relative">
-                  <?php
-                  photo_oneside_pill('right', get_the_post_thumbnail_url()); ?>
-                </div>
+            </div>
+            <!-- Move the expandable content outside the flex container and position it under the right pill -->
+            <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-10 text-light px-6 md:ml-16 md:mr-32 flex justify-end ">
+              <div class=" w-1/3 md:min-w-[450px]">
+                <h3 class="text-2xl font-bold text-primary mb-10 libre-baskerville-regular">Dla kogo:</h3>
+                <p class="mb-4 text-wrap inter-regular"><?php echo get_field('dla_kogo1'); ?></p>
+                <div class="w-[100%] h-px bg-primary my-8"></div>
+                <h3 class="text-2xl font-bold text-primary mb-10 libre-baskerville-regular">Zakres usług:</h3>
+                <ul class="list-disc list-inside mb-4 marker:text-primary inter-regular">
+                  <?php echo get_field('zakres_uslug1'); ?>
+                </ul>
+                <div class="w-[100%] h-px bg-primary my-8 "></div>
+                <h3 class="text-2xl font-bold text-primary mb-10 libre-baskerville-regular">Efekt:</h3>
+                <p class="text-wrap inter-regular"><?php echo get_field('efekt1'); ?></p>
               </div>
             </div>
           </section>
@@ -67,32 +69,31 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class=" mr-4">
                   <h2 class="text-[1.4rem] md:text-[2.87vw]   libre-baskerville-regular text-pretty">UNISVED<br> <?php echo get_the_title(); ?></h2>
                 </div>
-                <p class="2xl:text-xl text-[1.45vw] mb-4 ml-24 2xl:whitespace-pre whitespace-wrap"><?php echo get_field('podtytul2') ?></p>
+                <p class="2xl:text-xl text-[1.45vw] mb-4 ml-24 2xl:whitespace-pre whitespace-wrap inter-regular"><?php echo get_field('podtytul2') ?></p>
                 <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary  tracking-20 text-[16px] ml-24">( CZYTAJ WIĘCEJ )</a>
-                <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-4 text-light">
-                  <h3 class="text-2xl font-bold text-primary">Dla kogo:</h3>
-                  <p class="mb-4"><?php echo get_field('dla_kogo2'); ?></p>
-                  <div class="w-24 h-px bg-primary my-4"></div>
-                  <h3 class="text-2xl font-bold text-primary">W skład pakietu wchodzi:</h3>
-                  <ul class="list-disc list-inside mb-4 marker:text-primary">
-                    <?php echo get_field('sklad'); ?>
-                  </ul>
-                  <div class="w-24 h-px bg-primary my-4"></div>
-                  <h3 class="text-2xl font-bold text-primary">Cena i szczegóły:</h3>
-                  <p><?php echo get_field('cena_i_szczegoly'); ?></p>
-                  <div class="w-24 h-px bg-primary my-4"></div>
-
-                  <h3 class="text-2xl font-bold text-primary">Możliwość łączenia pakietów</h3>
-                  <p><?php echo get_field('mozliwosc_laczenia_pakietow'); ?></p>
-                  <br>
-
-                </div>
               </div>
               <div class="lg:w-1/2 md:min-w-[450px] mt-8 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
                 <div class="relative">
-                  <?php
-                  photo_oneside_pill('right', get_the_post_thumbnail_url()); ?>
+                  <?php photo_oneside_pill('right', get_the_post_thumbnail_url()); ?>
                 </div>
+              </div>
+            </div>
+            <!-- Move the expandable content outside the flex container and position it under the right pill -->
+            <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-10 text-light px-6 md:ml-16 md:mr-64 flex justify-end">
+              <div class="w-1/3 md:min-w-[450px]">
+                <h3 class="text-2xl font-bold text-primary">Dla kogo:</h3>
+                <p class="mb-4 inter-regular"><?php echo get_field('dla_kogo2'); ?></p>
+                <div class="w-24 h-px bg-primary my-4"></div>
+                <h3 class="text-2xl font-bold text-primary">W skład pakietu wchodzi:</h3>
+                <ul class="list-disc list-inside mb-4 marker:text-primary inter-regular">
+                  <?php echo get_field('sklad'); ?>
+                </ul>
+                <div class="w-24 h-px bg-primary my-4"></div>
+                <h3 class="text-2xl font-bold text-primary">Cena i szczegóły:</h3>
+                <p class="inter-regular"><?php echo get_field('cena_i_szczegoly'); ?></p>
+                <div class="w-24 h-px bg-primary my-4 "></div>
+                <h3 class="text-2xl font-bold text-primary">Możliwość łączenia pakietów</h3>
+                <p class="inter-regular"><?php echo get_field('mozliwosc_laczenia_pakietow'); ?></p>
               </div>
             </div>
           </section>
@@ -104,32 +105,33 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
         ?>
           <section class="bg-secondary py-20 mb-10 relative">
             <div class="    md:mr-16 md:ml-64  px-6 flex flex-col lg:flex-row items-center justify-between">
-              <div class="lg:w-1/2 md:min-w-[450px] mt-8 lg:mt-0 2xl:max-w-full 2xl:min-h-full ">
+              <div class="w-1/2 md:min-w-[450px] mt-8 lg:mt-0 2xl:max-w-full 2xl:min-h-full">
                 <div class="relative">
                   <?php
                   photo_oneside_pill('left', get_the_post_thumbnail_url()); ?>
                 </div>
               </div>
-              <div class=" text-light p-8 link_li">
+              <div class="text-light p-8 link_li">
                 <div class="flex items-center mb-4 justify-end">
                   <h2 class="text-[1.4rem] md:text-[2.87vw] libre-baskerville-regular text-right text-balance">UNISVED<br><?php echo get_the_title(); ?></h2>
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/small_c.svg" alt="C shape" class="ml-4 flex-shrink-0">
                 </div>
-                <p class="text-xl mb-4 mr-23 text-right 2xl:text-nowrap text-wrap"><?php echo get_field('podtytul1') ?></p>
+                <p class="text-xl mb-4 mr-23 text-right 2xl:text-nowrap text-wrap inter-regular"><?php echo get_field('podtytul1') ?></p>
                 <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary tracking-20 text-[16px] mr-24 text-right block">( CZYTAJ WIĘCEJ )</a>
-                <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-4 text-light">
-                  <h3 class="text-2xl font-bold text-primary">Dla kogo:</h3>
-                  <p class="mb-4"><?php echo get_field('dla_kogo1'); ?></p>
-                  <div class="w-24 h-px bg-primary my-4"></div>
-                  <h3 class="text-2xl font-bold text-primary">Zakres usług:</h3>
-                  <ul class="list-disc list-inside mb-4 marker:text-primary">
-                    <?php echo get_field('zakres_uslug1'); ?>
-                  </ul>
-                  <div class="w-24 h-px bg-primary my-4"></div>
-                  <h3 class="text-2xl font-bold text-primary">Efekt:</h3>
-                  <p><?php echo get_field('efekt1'); ?></p>
-                </div>
               </div>
+            </div>
+            <!-- Move the expandable content outside the flex container -->
+            <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-10 text-light px-6 md:mr-16 md:ml-64 w-1/3">
+              <h3 class="text-2xl font-bold mb-10 text-primary">Dla kogo:</h3>
+              <p class="mb-4 text-wrap inter-regular"><?php echo get_field('dla_kogo1'); ?></p>
+              <div class="w-[100%] h-px bg-primary my-8"></div>
+              <h3 class="text-2xl font-bold text-primary mb-10">Zakres usług:</h3>
+              <ul class="list-disc list-inside mb-4 marker:text-primary inter-regular">
+                <?php echo get_field('zakres_uslug1'); ?>
+              </ul>
+              <div class="w-[100%] h-px bg-primary my-8"></div>
+              <h3 class="text-2xl font-bold text-primary mb-10">Efekt:</h3>
+              <p class="text-wrap inter-regular"><?php echo get_field('efekt1'); ?></p>
             </div>
           </section>
 
@@ -145,24 +147,23 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
                   <h2 class="text-[1.4rem] md:text-[2.87vw] libre-baskerville-regular text-balance <?php if (strlen(get_the_title()) > 9): echo 'lg:min-w-[430px] 2xl:min-w-[500px] ';
                                                                                                     endif; ?>">UNISVED<br><?php echo get_the_title(); ?></h2>
                 </div>
-                <p class="2xl:text-xl text-[1.5vw]  mb-4 mr-23 2xl:whitespace-pre whitespace-wrap"><?php echo get_field('podtytul2') ?></p>
+                <p class="2xl:text-xl text-[1.5vw]  mb-4 mr-23 2xl:whitespace-pre whitespace-wrap inter-regular"><?php echo get_field('podtytul2') ?></p>
                 <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary  tracking-20 text-[16px] mr-23">( CZYTAJ WIĘCEJ )</a>
                 <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-4 text-light">
                   <h3 class="text-2xl font-bold text-primary">Dla kogo:</h3>
-                  <p class="mb-4"><?php echo get_field('dla_kogo2'); ?></p>
+                  <p class="mb-4 inter-regular"><?php echo get_field('dla_kogo2'); ?></p>
                   <div class="w-24 h-px bg-primary my-4"></div>
                   <h3 class="text-2xl font-bold text-primary">W skład pakietu wchodzi:</h3>
-                  <ul class="list-disc list-inside mb-4 marker:text-primary">
+                  <ul class="list-disc list-inside mb-4 marker:text-primary inter-regular">
                     <?php echo get_field('sklad'); ?>
                   </ul>
                   <div class="w-24 h-px bg-primary my-4"></div>
                   <h3 class="text-2xl font-bold text-primary">Cena i szczegóły:</h3>
-                  <p><?php echo get_field('cena_i_szczegoly'); ?></p>
+                  <p class="inter-regular"><?php echo get_field('cena_i_szczegoly'); ?></p>
                   <div class="w-24 h-px bg-primary my-4"></div>
 
                   <h3 class="text-2xl font-bold text-primary">Możliwość łączenia pakietów</h3>
-                  <p><?php echo get_field('mozliwosc_laczenia_pakietow'); ?></p>
-
+                  <p class="inter-regular"><?php echo get_field('mozliwosc_laczenia_pakietow'); ?></p>
                 </div>
               </div>
               <div class="lg:w-1/2 md:min-w-[450px] mt-8 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
