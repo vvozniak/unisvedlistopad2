@@ -130,8 +130,8 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
   </div>
 </section>
 <!-- New section with rounded top corners that appears after scrolling -->
-<section class="new-background-section slide bg-black  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12" style="background-image: url('https://unisved.nowa.net.pl/wp-content/uploads/2025/06/2039da1d109140349f07fd17a8bf52a6a7e03a52-scaled.jpg')">
-  <div class="absolute inset-0 bg-black opacity-50 rounded-t-[60px]"></div>
+<section class="new-background-section slide bg-[#101820] bg-cover rounded-t-[60px]  -mt-[10vh] relative z-30 py-12" style="background-image: url('https://unisved.nowa.net.pl/wp-content/uploads/2025/06/2039da1d109140349f07fd17a8bf52a6a7e03a52-scaled.jpg')">
+  <div class="absolute inset-0 bg-black opacity-50 rounded-t-[60px] "></div>
   <div class=" flex items-center justify-center h-full w-screen text-center text-white relative z-10 md:pb-10">
     <div class="md:mr-8">
       <img src="https://unisved.nowa.net.pl/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="hidden md:block 2xl:mx-auto lg:ml-10 mb-6 w-80">
@@ -143,7 +143,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
   </div>
 </section>
 
-<section class="py-12 relative z-30 bg-secondary text-white rounded-t-[60px]">
+<section class="py-12 relative z-40 bg-secondary text-white rounded-t-[60px]">
   <div class=" bg-center rounded-t-[40px] min-h-[80vh] px-4 mt-20 ">
     <!-- dlaczego skandywnawia mobile -->
     <div class="w-full items-center flex md:hidden ml-10 ">
