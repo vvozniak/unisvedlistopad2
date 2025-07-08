@@ -63,7 +63,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
   <div class=" ml-0 xl:ml-28 w-screen">
     <!-- dlaczego my mobile -->
     <div class="ml-10 md:ml-0 w-full items-center flex md:hidden">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5 w-6">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
       <h4 class="text-light text-[2rem] libre-baskerville-regular">Dlaczego my?</h4>
     </div>
 
@@ -72,8 +72,8 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
 
       <!-- dlaczego my PC -->
       <div class="fixed-content flex-shrink-0">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
-        <h4 class="text-light text-[3rem] libre-baskerville-regular">Dlaczego my?</h4>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5 md:w-[4vw] 2xl:w-max">
+        <h4 class="text-light md:text-[2.5rem] 2xl:text-[3rem] libre-baskerville-regular">Dlaczego my?</h4>
       </div>
 
       <!-- Increased spacer width -->
