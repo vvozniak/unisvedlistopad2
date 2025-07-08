@@ -110,7 +110,7 @@ $slide_bg = get_field('slide_bg');
                   items[currentIndex].classList.add("hidden");
                   currentIndex = (currentIndex + 1) % items.length;
                   items[currentIndex].classList.remove("hidden");
-                  }, 5000); // Change every 5 seconds
+                  }, 2500); // Change every 2,5 seconds
                 });
                 </script>';
               ?>
@@ -120,7 +120,7 @@ $slide_bg = get_field('slide_bg');
 
           <div class="text-center mb-16">
             <div class="border-t-2 border-primary w-full max-w-[33rem] mx-auto"></div>
-            <h2 class="md:text-[1.9vw] py-14 text-primary libre-baskerville-regular">Efekty mówią same za siebie:</h2>
+            <h2 class="md:text-[2.5vw] 2xl:text-[1.9vw] py-10 text-primary libre-baskerville-regular">Efekty mówią same za siebie:</h2>
             <div class="border-t-2 border-primary w-full max-w-[33rem] mx-auto"></div>
           </div>
 
@@ -128,7 +128,7 @@ $slide_bg = get_field('slide_bg');
             <?php
             text_with_c_pill_small(
               'right',
-              '3 SPÓŁKI ZAREJESTROWANE I ROZWINIĘTE',
+              '3 SPÓŁKI ZAREJESTROWANE<br> I ROZWINIĘTE',
               'w mniej niż 3 lata',
               'assets/small_c.svg',
               'text-light'
@@ -149,7 +149,7 @@ $slide_bg = get_field('slide_bg');
             );
             text_with_c_pill_small(
               'right',
-              'ŚREDNI WZROST PRZYCHODÓW O PONAD 200%',
+              'ŚREDNI WZROST<br> PRZYCHODÓW O PONAD 200%',
               'w ciągu ostatnich kilku lat',
               'assets/small_c.svg',
               'text-light'
@@ -205,7 +205,7 @@ $slide_bg = get_field('slide_bg');
           <div class="flex flex-row md:hidden">
             <div class=" flex flex-row md:flex-row md:justify-end ">
               <div class="flex flex-col items-center md:items-end justify-center text-center md:text-right w-[90vw]">
-                <h4 class="text-[1.2rem] md:text-[2.5rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo get_the_title(); ?></h4>
+                <h4 class="whitespace-wrap 2xl:whitespace-normal text-[1.2rem] md:text-[2.5rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo get_the_title(); ?></h4>
                 <p class="text-[1rem] md:text-[1.8rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo get_field('podtytul'); ?></p>
               </div>
               <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="rotate-180 mt-4 md:mt-0 w-[15vw]">

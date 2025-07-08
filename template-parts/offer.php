@@ -27,14 +27,14 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
             <div class="  md:ml-16 md:mr-64 2xl:gap-130 px-6 flex flex-col lg:flex-row items-center justify-between">
               <div class="lg:w-1/3 text-light p-8 link_li <?php if (strlen(get_the_title()) > 7): echo 'lg:min-w-[430px] 2xl:min-w-[500px] md:mr-30 2xl:mr-0';
                                                           endif; ?>">
-                <div class="flex items-center mb-4">
+                <div class="flex items-center ">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class=" mr-4">
                   <h2 class="text-[1.4rem] md:text-[2.87vw] libre-baskerville-regular text-balance <?php if (strlen(get_the_title()) > 7): echo 'lg:min-w-[430px] 2xl:min-w-[500px] ';
                                                                                                     endif; ?>">UNISVED<br><?php echo get_the_title(); ?></h2>
 
                 </div>
-                <p class="text-xl mb-4 ml-2"><?php echo get_field('podtytul1') ?></p>
-                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary tracking-20 text-[16px] ml-2">( CZYTAJ WIĘCEJ )</a>
+                <p class="text-xl mb-4 ml-23 2xl:text-nowrap"><?php echo get_field('podtytul1') ?></p>
+                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary tracking-20 text-[16px] ml-23">( CZYTAJ WIĘCEJ )</a>
                 <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-4 text-light">
                   <h3 class="text-2xl font-bold text-primary">Dla kogo:</h3>
                   <p class="mb-4"><?php echo get_field('dla_kogo1'); ?></p>
@@ -60,15 +60,15 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
         ?>
           <section class="bg-secondary py-20 pb-[20vh] relative">
             <div class="  px-6 md:ml-16 md:mr-64 2xl:gap-130 flex flex-col lg:flex-row items-center justify-between">
-              <div class="lg:w-1/3 text-light p-8 link_li <?php if (strlen(get_the_title()) > 9): echo 'lg:min-w-[430px] 2xl:min-w-[500px] md:mr-30 2xl:mr-0';
+              <div class="lg:w-1/3 text-light p-8 link_li <?php if (strlen(get_the_title()) > 9): echo 'lg:min-w-[430px] xl:min-w-[450px] 2xl:min-w-[500px] md:mr-30 2xl:mr-0';
                                                           endif; ?>">
                 <div class="flex items-center mb-4 <?php if (strlen(get_the_title()) > 9): echo 'lg:min-w-[430px] 2xl:min-w-[500px] ';
                                                     endif; ?>">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class=" mr-4">
                   <h2 class="text-[1.4rem] md:text-[2.87vw]   libre-baskerville-regular text-pretty">UNISVED<br> <?php echo get_the_title(); ?></h2>
                 </div>
-                <p class="text-xl mb-4 ml-2">Kompleksowy pakiet dla firm, które chcą całościowo i profesjonalnie wejść na rynek szwedzki</p>
-                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary  tracking-20 text-[16px] ml-2">( CZYTAJ WIĘCEJ )</a>
+                <p class="2xl:text-xl text-[1.45vw] mb-4 ml-24 2xl:whitespace-pre whitespace-wrap"><?php echo get_field('podtytul2') ?></p>
+                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary  tracking-20 text-[16px] ml-24">( CZYTAJ WIĘCEJ )</a>
                 <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-4 text-light">
                   <h3 class="text-2xl font-bold text-primary">Dla kogo:</h3>
                   <p class="mb-4"><?php echo get_field('dla_kogo2'); ?></p>
@@ -115,8 +115,8 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
                   <h2 class="text-[1.4rem] md:text-[2.87vw] libre-baskerville-regular text-right text-balance">UNISVED<br><?php echo get_the_title(); ?></h2>
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/small_c.svg" alt="C shape" class="ml-4 flex-shrink-0">
                 </div>
-                <p class="text-xl mb-4 ml-2 text-right"><?php echo get_field('podtytul1') ?></p>
-                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary tracking-20 text-[16px] ml-2 text-right block">( CZYTAJ WIĘCEJ )</a>
+                <p class="text-xl mb-4 mr-23 text-right 2xl:text-nowrap text-wrap"><?php echo get_field('podtytul1') ?></p>
+                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary tracking-20 text-[16px] mr-24 text-right block">( CZYTAJ WIĘCEJ )</a>
                 <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-4 text-light">
                   <h3 class="text-2xl font-bold text-primary">Dla kogo:</h3>
                   <p class="mb-4"><?php echo get_field('dla_kogo1'); ?></p>
@@ -140,13 +140,13 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
             <div class=" 2xl:gap-130 md:mr-16 md:ml-64 px-6 flex flex-col lg:flex-row items-center justify-between">
               <div class="lg:w-1/3 2xl:w-1/2 text-light p-8 lg:pl-0 link_li <?php if (strlen(get_the_title()) > 9): echo 'lg:min-w-[430px] 2xl:min-w-[500px] md:mr-30 2xl:mr-0';
                                                                             endif; ?>">
-                <div class="flex items-center mb-4">
+                <div class="flex items-center">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class=" mr-4">
                   <h2 class="text-[1.4rem] md:text-[2.87vw] libre-baskerville-regular text-balance <?php if (strlen(get_the_title()) > 9): echo 'lg:min-w-[430px] 2xl:min-w-[500px] ';
                                                                                                     endif; ?>">UNISVED<br><?php echo get_the_title(); ?></h2>
                 </div>
-                <p class="text-xl  mb-4 ml-2">Kompleksowy pakiet dla firm, które chcą całościowo i profesjonalnie wejść na rynek szwedzki</p>
-                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary  tracking-20 text-[16px] ml-2">( CZYTAJ WIĘCEJ )</a>
+                <p class="2xl:text-xl text-[1.5vw]  mb-4 mr-23 2xl:whitespace-pre whitespace-wrap"><?php echo get_field('podtytul2') ?></p>
+                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary  tracking-20 text-[16px] mr-23">( CZYTAJ WIĘCEJ )</a>
                 <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-4 text-light">
                   <h3 class="text-2xl font-bold text-primary">Dla kogo:</h3>
                   <p class="mb-4"><?php echo get_field('dla_kogo2'); ?></p>
