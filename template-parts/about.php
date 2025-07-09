@@ -59,7 +59,7 @@ $slide_bg = get_field('slide_bg');
     text-wrap: wrap;
   }
 </style>
-<section class="bg-secondary rounded-t-[60px] -mt-[3vh] relative pt-24 pb-12 z-20">
+<section class="bg-secondary rounded-t-[60px] -mt-[10vh] relative pt-24 pb-12 z-30i">
   <div class=" xl:ml-28 w-screen">
     <!-- jak działamy mobile -->
     <div class="flex items-center justify-start w-full md:hidden ml-8 md:ml-0 ">
@@ -132,7 +132,7 @@ $slide_bg = get_field('slide_bg');
   </div>
 </section>
 
-<section class="new-background-section rounded-t-[60px] slide bg-black bg-cover  -mt-[10vh] relative z-1 py-12" style="background-image: url('<?php echo $slide_bg ?>')">
+<section class="new-background-section rounded-t-[60px] slide bg-black bg-cover  -mt-[10vh] relative z-40i py-12" style="background-image: url('<?php echo $slide_bg ?>')">
   <div class="absolute inset-0 bg-black opacity-50 "></div>
   <div class="  flex  items-center justify-center h-full text-center text-white relative z-10">
     <div class="my-8 hidden md:block">
@@ -144,7 +144,7 @@ $slide_bg = get_field('slide_bg');
   </div>
 </section>
 
-<section class="py-12 relative z-30 bg-secondary text-white rounded-t-[60px] ">
+<section class="py-12 relative z-50i bg-secondary text-white rounded-t-[60px] ">
   <div class=" md:ms-20 2xl:ms-48 md:me-28 bg-center rounded-t-[60px] min-h-[80vh] px-4">
     <div class="w-full items-center flex md:hidden ml-10 ">
       <div class="flex-col">
@@ -205,7 +205,7 @@ $slide_bg = get_field('slide_bg');
   </div>
 </section>
 
-<section class="py-12 -mt-12 relative z-40 bg-secondary text-white" style="isolation: isolate;">
+<section class="py-12 -mt-12 relative z-60i bg-secondary text-white" style="isolation: isolate;">
   <!-- Add this div to ensure complete background coverage -->
   <div class="absolute inset-0 bg-secondary w-full h-full"></div>
   <div class="container mx-auto md:mx-28 bg-center rounded-t-[40px] min-h-[20vh] px-4 relative">
