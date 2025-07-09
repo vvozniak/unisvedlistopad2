@@ -22,7 +22,7 @@ if (!function_exists('text_with_c_pill')) {
       $sizes = 'h-full 2xl:w-auto w-1/2 md:w-2/3 object-cover';
     elseif (is_page(7)):
       $c_position = ($side === 'left') ? '2xl:-right-10 md:-right-5 -right-40 2xl:-top-10 md:top-10' : 'left-0 2xl:-left-10 2xl:-top-10 md:top-10';
-      $text_alignment = ($side === 'left') ? 'text-left md:pr-20 2xl:pr-16' : 'text-left md:pl-16 pl-20';
+      $text_alignment = ($side === 'left') ? 'text-left md:pr-38 2xl:pr-16' : 'text-left md:pl-16 pl-20';
       $text_spaceing = ($side === 'left') ? '2xl:pl-0 md:pl-[5rem]' : '2xl:pr-0 md:pr-20';
       $sizes = 'h-full 2xl:w-auto w-1/2 md:w-2/3 object-cover';
 
