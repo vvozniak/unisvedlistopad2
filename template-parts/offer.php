@@ -28,13 +28,13 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
               <div class="lg:w-1/3 text-light p-8 link_li <?php if (strlen(get_the_title()) > 7): echo 'lg:min-w-[430px] 2xl:min-w-[500px] md:mr-30 2xl:mr-0';
                                                           endif; ?>">
                 <div class="flex items-center ">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class=" mr-4">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class=" mr-4 w-10">
                   <h2 class="text-[1.4rem] md:text-[2.87vw] libre-baskerville-regular text-balance <?php if (strlen(get_the_title()) > 7): echo 'lg:min-w-[430px] 2xl:min-w-[500px] ';
                                                                                                     endif; ?>">UNISVED<br><?php echo get_the_title(); ?></h2>
 
                 </div>
-                <p class="text-xl mb-4 ml-23 2xl:text-nowrap inter-regular"><?php echo get_field('podtytul1') ?></p>
-                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary tracking-20 text-[16px] ml-23">( CZYTAJ WIĘCEJ )</a>
+                <p class="text-[1vw] mb-1 2xl:mb-4 ml-14 2xl:text-nowrap inter-regular"><?php echo get_field('podtytul1') ?></p>
+                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary tracking-20 text-[1vw] ml-14">( CZYTAJ WIĘCEJ )</a>
               </div>
               <div class="lg:w-1/2 md:min-w-[450px] mt-10 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
                 <div class="relative">
@@ -64,13 +64,13 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
             <div class="  px-6 md:ml-16 md:mr-64 2xl:gap-130 flex flex-col lg:flex-row items-center justify-between">
               <div class="lg:w-1/3 text-light p-8 link_li <?php if (strlen(get_the_title()) > 9): echo 'lg:min-w-[430px] xl:min-w-[450px] 2xl:min-w-[500px] md:mr-30 2xl:mr-0';
                                                           endif; ?>">
-                <div class="flex items-center mb-4 <?php if (strlen(get_the_title()) > 9): echo 'lg:min-w-[430px] 2xl:min-w-[500px] ';
+                <div class="flex items-center mb-4 <?php if (strlen(get_the_title()) > 9): echo 'lg:min-w-[50vw] 2xl:min-w-[50vw] ';
                                                     endif; ?>">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class=" mr-4">
-                  <h2 class="text-[1.4rem] md:text-[2.87vw]   libre-baskerville-regular text-pretty">UNISVED<br> <?php echo get_the_title(); ?></h2>
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class=" mr-4 w-10">
+                  <h2 class="text-[1.4rem] md:text-[2.87vw]   libre-baskerville-regular text-pretty">UNISVED EKSPANSJA<br> <?php echo get_the_title(); ?></h2>
                 </div>
-                <p class="2xl:text-xl text-[1.45vw] mb-4 ml-24 2xl:whitespace-pre whitespace-wrap inter-regular"><?php echo get_field('podtytul2') ?></p>
-                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary  tracking-20 text-[16px] ml-24">( CZYTAJ WIĘCEJ )</a>
+                <p class="text-[1vw] mb-1 2xl:mb-4 ml-14 2xl:whitespace-pre whitespace-wrap inter-regular"><?php echo get_field('podtytul2') ?></p>
+                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary  tracking-20 text-[1vw] ml-14">( CZYTAJ WIĘCEJ )</a>
               </div>
               <div class="lg:w-1/2 md:min-w-[450px] mt-8 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
                 <div class="relative">
@@ -114,10 +114,10 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
               <div class="text-light p-8 link_li">
                 <div class="flex items-center mb-4 justify-end">
                   <h2 class="text-[1.4rem] md:text-[2.87vw] libre-baskerville-regular text-right text-balance">UNISVED<br><?php echo get_the_title(); ?></h2>
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/small_c.svg" alt="C shape" class="ml-4 flex-shrink-0">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/small_c.svg" alt="C shape" class="ml-4 flex-shrink-0 w-10">
                 </div>
-                <p class="text-xl mb-4 mr-23 text-right 2xl:text-nowrap text-wrap inter-regular"><?php echo get_field('podtytul1') ?></p>
-                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary tracking-20 text-[16px] mr-24 text-right block">( CZYTAJ WIĘCEJ )</a>
+                <p class="text-[1vw] mb-1 2xl:mb-4 mr-14 text-right 2xl:text-nowrap text-wrap inter-regular"><?php echo get_field('podtytul1') ?></p>
+                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary tracking-20 text-[1vw] mr-14 text-right block">( CZYTAJ WIĘCEJ )</a>
               </div>
             </div>
             <!-- Move the expandable content outside the flex container -->
@@ -139,16 +139,16 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
         } elseif (get_field('szablon_2_wlwyl') == true) {
         ?>
           <section class="bg-secondary py-20 mb-10 relative">
-            <div class=" 2xl:gap-130 md:mr-16 md:ml-64 px-6 flex flex-col lg:flex-row items-center justify-between">
+            <div class=" 2xl:gap-110 md:mr-16 md:ml-64 px-6 flex flex-col lg:flex-row items-center justify-between">
               <div class="lg:w-1/3 2xl:w-1/2 text-light p-8 lg:pl-0 link_li <?php if (strlen(get_the_title()) > 9): echo 'lg:min-w-[430px] 2xl:min-w-[500px] md:mr-30 2xl:mr-0';
                                                                             endif; ?>">
                 <div class="flex items-center">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class=" mr-4">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class=" mr-4 w-10">
                   <h2 class="text-[1.4rem] md:text-[2.87vw] libre-baskerville-regular text-balance <?php if (strlen(get_the_title()) > 9): echo 'lg:min-w-[430px] 2xl:min-w-[500px] ';
                                                                                                     endif; ?>">UNISVED<br><?php echo get_the_title(); ?></h2>
                 </div>
-                <p class="2xl:text-xl text-[1.5vw]  mb-4 mr-23 2xl:whitespace-pre whitespace-wrap inter-regular"><?php echo get_field('podtytul2') ?></p>
-                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary  tracking-20 text-[16px] mr-23">( CZYTAJ WIĘCEJ )</a>
+                <p class="2xl:text-xl text-[1.5vw]  mb-4 mr-14 2xl:whitespace-pre whitespace-wrap inter-regular"><?php echo get_field('podtytul2') ?></p>
+                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary  tracking-20 text-[1vw] mr-14">( CZYTAJ WIĘCEJ )</a>
                 <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-4 text-light">
                   <h3 class="text-2xl font-bold text-primary">Dla kogo:</h3>
                   <p class="mb-4 inter-regular"><?php echo get_field('dla_kogo2'); ?></p>

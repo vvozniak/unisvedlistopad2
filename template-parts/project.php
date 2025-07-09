@@ -38,7 +38,7 @@ $slide_bg = get_field('slide_bg');
     <!-- Hide this entire block on mobile -->
     <div class="hidden md:flex  fixed-side-container  justify-end w-full" data-fixed-side="md:left">
       <div class="fixed-content shrink-0 items-center mb-12 md:mb-24">
-        <div class="md:flex flex-col md:flex-row md:items-start libre-baskerville-regular block">
+        <div class="md:flex flex-col md:flex-row md:items-start libre-baskerville-regular block pt-[19vw]">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="w-[1vw] md:w-12 2xl:w-24 h-auto mr-0 md:mr-8"></img>
           <div>
             <h1 class="text-[3vw] leading-tight text-center md:text-left libre-baskerville-regular">Horisontal <br> Holding AB</h1>

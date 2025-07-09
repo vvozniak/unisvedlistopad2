@@ -71,7 +71,7 @@ $slide_bg = get_field('slide_bg');
     <div class="fixed-side-container ml-15 md:ml-0" data-fixed-side="left">
       <!-- Left side - heading (fixed) -->
       <!-- jak działamy pc -->
-      <div class="fixed-content flex-shrink-0">
+      <div class="fixed-content flex-shrink-0 pt-[30vw]">
         <div class="flex items-center">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5 md:w-[4vw] 2xl:w-max">
           <h4 class="text-light md:text-[2.5rem] 2xl:text-[3rem] libre-baskerville-regular"><?php echo $scrolling_heading1; ?></h4>

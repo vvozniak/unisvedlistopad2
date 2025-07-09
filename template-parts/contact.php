@@ -18,12 +18,12 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
 <section class="bg-secondary relative text-light pb-12 px-4 sm:px-6 lg:px-8 rounded-t-[60px] md:pt-[35vh] -mt-[3vh] z-20">
   <div class=" md:mx-28 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
     <div class="fixed-content space-y-6 md:space-y-8">
-      <div class="flex items-center space-x-3 md:space-x-4 mt-[10vh] md:mt-0">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="w-12 h-12 md:w-auto md:h-auto">
+      <div class="flex items-center space-x-3 md:space-x-4 mt-[10vh] pt-[18vw] md:mt-0">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="w-12 h-12 md:h-auto">
         <div>
-          <h1 class="text-4xl md:text-5xl lg:text-[52px] libre-baskerville-regular">Aleksandra</h1>
-          <h1 class="text-4xl md:text-5xl lg:text-[52px] libre-baskerville-regular">Gierdziejewska</h1>
-          <p class="text-lg md:text-xl">CEO & FOUNDER</p>
+          <h1 class="text-3xl md:text-4xl lg:text-[3vw] libre-baskerville-regular">Aleksandra</h1>
+          <h1 class="text-3xl md:text-4xl lg:text-[3vw] libre-baskerville-regular">Gierdziejewska</h1>
+          <p class="text-lg md:text-xl lg:text-[1.2vw] mt-4 tracking-wider">CEO & FOUNDER</p>
         </div>
       </div>
       <div class=" md:pt-20">
