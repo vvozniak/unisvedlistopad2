@@ -1,5 +1,5 @@
 <header class="relative h-[180vh] md:h-[210vh] overflow-hidden bg-secondary overflow-x-hidden ">
-    <div class="absolute inset-0 custom-overlay z-10"></div>
+    <div class="absolute inset-0 custom-overlay-kontakt z-10"></div>
     <img src="<?php echo get_template_directory_uri(); ?>/assets/header.svg" class=" absolute inset-0 z-10 top-[75vh] right-0 left-auto w-[10vw] h-auto object-cover">
     <?php
     $bg_img = get_field("bg_img", 24);

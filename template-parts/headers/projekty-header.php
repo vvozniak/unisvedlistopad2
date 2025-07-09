@@ -3,14 +3,14 @@
 <header class="relative min-h-[120vh] 2xl:min-h-[100vh] overflow-hidden text-light">
     <div class="absolute inset-0 custom-overlay z-10"></div>
     <?php
-        $other_page_header_bg = get_field("other_page_header_bg_image");
-        $other_page_header_bg_url = '';
-        if (is_array($other_page_header_bg) && isset($other_page_header_bg['url'])) {
-            $other_page_header_bg_url = $other_page_header_bg['url'];
-        } elseif (is_string($other_page_header_bg)) {
-            $other_page_header_bg_url = $other_page_header_bg;
-        }
-        if ($other_page_header_bg_url) : ?>
+    $other_page_header_bg = get_field("other_page_header_bg_image");
+    $other_page_header_bg_url = '';
+    if (is_array($other_page_header_bg) && isset($other_page_header_bg['url'])) {
+        $other_page_header_bg_url = $other_page_header_bg['url'];
+    } elseif (is_string($other_page_header_bg)) {
+        $other_page_header_bg_url = $other_page_header_bg;
+    }
+    if ($other_page_header_bg_url) : ?>
         <div class="fixed inset-0 z-0">
             <img src="<?php echo esc_url($other_page_header_bg_url); ?>" alt="<?php echo esc_attr(is_array($other_page_header_bg) && isset($other_page_header_bg['alt']) ? $other_page_header_bg['alt'] : ''); ?>" class="w-full h-full object-cover ">
         </div>

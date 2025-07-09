@@ -22,7 +22,7 @@ $slide_bg = get_field('slide_bg');
 </style>
 
 <!-- For the main heading section -->
-<section class="bg-secondary text-light py-12 md:py-24 relative rounded-t-[60px] -mt-[10vh] z-20">
+<section class="bg-secondary text-light pt-12 pb-12 md:pb-[10vh] relative rounded-t-[60px] -mt-[10vh] z-20">
   <div class=" md:ml-28 px-4">
     <!-- Mobile-only heading -->
     <div class="block md:hidden text-center mb-4">
