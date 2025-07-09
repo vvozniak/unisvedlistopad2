@@ -8,7 +8,7 @@ get_header();
 require_once get_template_directory() . '/template-parts/pills/photo_oneside.php';
 require_once get_template_directory() . '/template-parts/pills/double_c_pill_horizontal.php';
 ?>
-<div class="bg-secondary relative">
+<div class="bg-secondary relative z-30i rounded-t-[60px] -mt-[10vh] pb-[10vh]">
   <?php
   $offers =  new WP_Query(array(
     'post_type' => 'oferta',
@@ -23,7 +23,7 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
       if ($counter % 2 == 0) {
         if (get_field('szablon_1_wlwyl') == true) {
   ?>
-          <section class="bg-secondary py-20 mb-10 relative ">
+          <section class=" py-20 mb-10 relative ">
             <div class="  md:ml-16 md:mr-64 2xl:gap-130 px-6 flex flex-col lg:flex-row items-center justify-between">
               <div class="lg:w-1/3 text-light p-8 link_li <?php if (strlen(get_the_title()) > 7): echo 'lg:min-w-[430px] 2xl:min-w-[500px] md:mr-30 2xl:mr-0';
                                                           endif; ?>">

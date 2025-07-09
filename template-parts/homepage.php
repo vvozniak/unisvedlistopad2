@@ -130,7 +130,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
   </div>
 </section>
 <!-- New section with rounded top corners that appears after scrolling -->
-<section class="new-background-section slide bg-[#101820] bg-cover rounded-t-[60px]  -mt-[10vh] relative z-30 py-12" style="background-image: url('https://unisved.nowa.net.pl/wp-content/uploads/2025/06/2039da1d109140349f07fd17a8bf52a6a7e03a52-scaled.jpg')">
+<section class="new-background-section slide bg-[#101820] bg-cover rounded-t-[60px]  -mt-[10vh] relative z-30i py-12" style="background-image: url('https://unisved.nowa.net.pl/wp-content/uploads/2025/06/2039da1d109140349f07fd17a8bf52a6a7e03a52-scaled.jpg')">
   <div class="absolute inset-0 bg-black opacity-50 rounded-t-[60px] "></div>
   <div class=" flex items-center justify-center h-full w-screen text-center text-white relative z-10 md:pb-10">
     <div class="md:mr-8">
@@ -143,7 +143,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
   </div>
 </section>
 
-<section class="py-12 relative z-40 bg-secondary text-white rounded-t-[60px]">
+<section class="py-12 relative z-40i bg-secondary text-white rounded-t-[60px]">
   <div class=" bg-center rounded-t-[40px] min-h-[80vh] px-4 mt-20 ">
     <!-- dlaczego skandywnawia mobile -->
     <div class="w-full items-center flex md:hidden ml-10 ">
@@ -195,7 +195,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
     </div>
   </div>
 </section>
-<section class="new-background-section slide bg-black bg-cover rounded-t-[60px] -mt-[10vh] relative z-30 py-12" style="background-image: url('https://unisved.nowa.net.pl/wp-content/uploads/2025/06/ff43581d96bce748ee60811861ca062f1fd29e08.jpg')">
+<section class="new-background-section slide bg-black bg-cover rounded-t-[60px] -mt-[10vh] relative z-50i py-12" style="background-image: url('https://unisved.nowa.net.pl/wp-content/uploads/2025/06/ff43581d96bce748ee60811861ca062f1fd29e08.jpg')">
   <div class="absolute inset-0 bg-black opacity-50 rounded-t-[60px]"></div>
   <div class="container mx-auto flex  items-center justify-center h-full text-center text-white relative z-10">
     <h2 class="md:pl-[20vw] text-[7vw] md:text-[4.167vw] leading-tight mx-auto libre-baskerville-regular text-left mt-16">
@@ -204,7 +204,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
   </div>
 
 </section>
-<section class="py-12 relative z-30 bg-secondary text-white rounded-t-[60px]">
+<section class="py-12 relative z-60i bg-secondary text-white rounded-t-[60px]">
   <div class=" bg-center rounded-[40px] min-h-[100vh] space-y-16 mt-20 xl:ml-28">
     <!-- unisved w pigułce mobile -->
     <div class="w-full items-center flex md:hidden mb-8 ml-10">
@@ -270,7 +270,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
   </div>
 </section>
 
-<section class="pt-12 relative z-30 bg-secondary text-white mt-[-10px]">
+<section class="pt-12 relative z-70i bg-secondary text-white mt-[-10px]">
   <div class="xl:ps-[10vw] xl:pe-[12vw] flex flex-col md:flex-row w-full items-center">
 
     <div class="md:w-1/2">
@@ -290,7 +290,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
   </div>
 </section>
 
-<section class="relative z-30 bg-secondary text-white pt-12 pb-[20vh] md:mt-[-5px]">
+<section class="relative z-80i bg-secondary text-white pt-12 pb-[20vh] md:mt-[-5px]">
   <div class="xl:px-[10vw]">
     <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
       <!-- Left side - Photo -->

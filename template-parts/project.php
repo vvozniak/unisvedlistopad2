@@ -22,7 +22,7 @@ $slide_bg = get_field('slide_bg');
 </style>
 
 <!-- For the main heading section -->
-<section class="bg-secondary text-light py-12 md:py-24 relative rounded-t-[60px] -mt-[3vh] z-20">
+<section class="bg-secondary text-light py-12 md:py-24 relative rounded-t-[60px] -mt-[10vh] z-20">
   <div class=" md:ml-28 px-4">
     <!-- Mobile-only heading -->
     <div class="block md:hidden text-center mb-4">
@@ -174,7 +174,7 @@ $slide_bg = get_field('slide_bg');
     </div>
   </div>
 </section>
-<section class="new-background-section slide  bg-cover rounded-t-[60px] -mt-[10vh] relative z-20 py-12" style="background-image: url('<?php echo $slide_bg ?>')">
+<section class="new-background-section slide  bg-cover rounded-t-[60px] -mt-[10vh] relative z-30i py-12" style="background-image: url('<?php echo $slide_bg ?>')">
   <div class="flex  items-center justify-center h-full w-full text-center text-white relative z-10">
     <div class="hidden md:block my-8">
       <img src="https://unisved.nowa.net.pl/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class="2xl:mx-auto mb-6 w-80">
@@ -186,7 +186,7 @@ $slide_bg = get_field('slide_bg');
     </h2>
   </div>
 </section>
-<section class="py-12 relative z-30 bg-secondary text-white">
+<section class="py-12 relative z-40i bg-secondary text-white">
   <div class=" 2xl:ml-28 lg:ml-20 px-4 md:mr-20">
 
     <?php

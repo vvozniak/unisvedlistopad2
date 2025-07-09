@@ -63,6 +63,13 @@ article > *:not(.entry-content),
   font-weight: 400;
   font-style: normal;
 }
+.inter-thin {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
 
 .link_li a {
   text-decoration: none !important;
@@ -319,3 +326,28 @@ body {
   height: 100%;
   overflow-x: hidden;
 }
+
+.z-30i {
+  z-index: 30 !important;
+}
+
+.z-40i {
+  z-index: 40 !important;
+}
+
+.z-50i {
+  z-index: 50 !important;
+}
+
+.z-60i {
+  z-index: 60 !important;
+}
+
+.z-70i {
+  z-index: 70 !important;
+}
+
+.z-80i {
+  z-index: 80 !important;
+}
+
