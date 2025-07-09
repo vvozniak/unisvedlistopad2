@@ -8,13 +8,6 @@ get_header();
 require_once get_template_directory() . '/template-parts/pills/photo_oneside.php';
 
 ?>
-
-<style>
-  /* .pill-photo-oneside {
-    
-  } */
-</style>
-
 <section class="bg-secondary relative text-light pb-12 px-4 sm:px-6 lg:px-8 rounded-t-[60px] md:pt-[35vh] -mt-[3vh] z-20">
   <div class=" md:mx-28 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
     <div class="fixed-content space-y-6 md:space-y-8">
@@ -33,10 +26,10 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
     <!-- Right Column -->
     <div class="scrollable-content">
       <div class="space-y-6 md:space-y-25 max-w-[460px] md:ml-[10vh]">
-        <div class="text-center md:text-left space-y-2 link_li text-lg md:text-xl">
-          <p><a href="tel:+48602142949" class="">+48 602 142 949</a></p>
-          <p><a href="tel:+46704415690" class="">+46 704 415 690</a></p>
-          <p><a href="mailto:ALEKSANDRA@UNISVED.EU" class="">ALEKSANDRA@UNISVED.EU</a></p>
+        <div class="text-center md:text-left space-y-2 link_li">
+          <p><a href="tel:+48602142949" class="inter-thin">+48 602 142 949</a></p>
+          <p><a href="tel:+46704415690" class="inter-thin">+46 704 415 690</a></p>
+          <p><a href="mailto:ALEKSANDRA@UNISVED.EU" class="inter-thin">ALEKSANDRA@UNISVED.EU</a></p>
         </div>
 
         <div class="flex justify-center  md:space-x-20 py-4 border-t-3 border-b-3 border-primary">
@@ -52,9 +45,9 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
           </a>
         </div>
 
-        <div class="text-center md:text-left space-y-1 text-light text-lg md:text-xl">
-          <p>NIP: 583 244 62 23</p>
-          <p>SARNIA 4, 83-047 PIEKŁO DOLNE</p>
+        <div class="text-center md:text-left space-y-1 text-light">
+          <p class="inter-thin tracking-[.2rem] ">NIP: 583 244 62 23</p>
+          <p class="inter-thin tracking-[.2rem]">SARNIA 4, 83-047 PIEKŁO DOLNE</p>
         </div>
 
 

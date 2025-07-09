@@ -186,7 +186,7 @@ $slide_bg = get_field('slide_bg');
     </h2>
   </div>
 </section>
-<section class="py-12 relative z-40i bg-secondary text-white">
+<section class="py-12 relative z-40i bg-secondary text-white rounded-t-[60px] -mt-[10vh]">
   <div class=" 2xl:ml-28 lg:ml-20 px-4 md:mr-20">
 
     <?php

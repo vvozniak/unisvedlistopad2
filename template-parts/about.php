@@ -133,7 +133,7 @@ $slide_bg = get_field('slide_bg');
 </section>
 
 <section class="new-background-section rounded-t-[60px] slide bg-black bg-cover  -mt-[10vh] relative z-40i py-12" style="background-image: url('<?php echo $slide_bg ?>')">
-  <div class="absolute inset-0 bg-black opacity-50 "></div>
+  <div class="absolute inset-0 bg-secondary opacity-50 "></div>
   <div class="  flex  items-center justify-center h-full text-center text-white relative z-10">
     <div class="my-8 hidden md:block">
       <img src="https://unisved.nowa.net.pl/wp-content/uploads/2025/06/Logo.svg" alt="Logo" class=" mb-6 lg:w-[20vw] md:ml-[10vw] 2xl:w-[30vw] ">
