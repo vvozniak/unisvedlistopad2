@@ -197,7 +197,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
 </section>
 <section class="new-background-section slide bg-black bg-cover rounded-t-[60px] -mt-[10vh] relative z-50i py-12" style="background-image: url('https://unisved.nowa.net.pl/wp-content/uploads/2025/06/ff43581d96bce748ee60811861ca062f1fd29e08.jpg')">
   <div class="absolute inset-0 bg-black opacity-50 rounded-t-[60px]"></div>
-  <div class="container mx-auto flex  items-center justify-center h-full text-center text-white relative z-10">
+  <div class=" mx-auto flex  items-center justify-center h-full text-center text-white relative z-10">
     <h2 class="md:pl-[20vw] text-[7vw] md:text-[4.167vw] leading-tight mx-auto libre-baskerville-regular text-left mt-16">
       Wspólnie<br>przekroczymy granice!
     </h2>

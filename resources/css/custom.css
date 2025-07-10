@@ -57,8 +57,11 @@ article > *:not(.entry-content),
 }
 .libre-baskerville-italic {
   font-family: "Libre Baskerville", serif;
-  font-weight: 400;
+  font-weight: 200;
   font-style: italic;
+  -webkit-font-smoothing: none!important;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: never;
 }
 
 .inter-regular {

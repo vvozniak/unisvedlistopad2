@@ -82,11 +82,11 @@ $slide_bg = get_field('slide_bg');
             </ul>
           </div>
           <div class="flex justify-center items-center">
-            <div class=" rounded-[5rem] md:py-12 md:px-20 inline-block relative">
+            <div class=" rounded-[5rem] md:py-12  inline-block relative">
               <?php
               $photos = [
                 ['image' => get_template_directory_uri() . '/assets/smpbygg.png', 'side' => 'right'],
-                ['image' => get_template_directory_uri() . '/assets/horisontalplan.jpg', 'side' => 'left'],
+                ['image' => get_template_directory_uri() . '/assets/newhor.png', 'side' => 'left'],
                 ['image' => get_template_directory_uri() . '/assets/horisontalab.jpg', 'side' => 'right']
               ];
 

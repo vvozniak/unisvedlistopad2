@@ -25,10 +25,10 @@ function double_c_pill_horizontal($heading = '5 rynków europejskich', $subtext 
 
       <!-- Text content -->
       <div class="w-full md:w-1/2 lg:w-2/5 text-center md:text-left">
-        <h2 class="text-[3vw] md:text-[2.5rem] lg:text-[3.4rem] libre-baskerville-regular leading-tight">' . $heading . '</h2>
+        <h2 class="text-[3vw] md:text-[40px] 2xl:text-[3.4rem] libre-baskerville-regular leading-tight">' . $heading . '</h2>
       </div>
       <div class="w-7/8 md:w-1/2 lg:w-3/5 text-center md:text-left">
-        <p class="text-[2vw] md:text-[20px] inter-regular">' . $subtext . '</p>
+        <p class="text-[2vw] md:text-[20px] 2xl:text-[20px] inter-thin">' . $subtext . '</p>
       </div>
 
       <!-- Right C shape -->

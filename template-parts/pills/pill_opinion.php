@@ -13,7 +13,7 @@ function pill_opinion($quote = '„Aleksandra jest bardzo zaangażowana i oddana
 {
 
   echo '
-  <div class="pill-opinion-container relative overflow-hidden rounded-full border-2 ' . $border_color . ' bg-[#11151c] p-10 md:p-12 lg:p-16 flex flex-col items-center justify-center">
+  <div class="pill-opinion-container relative overflow-hidden rounded-full border-1 ' . $border_color . ' bg-[#11151c] p-10 md:p-12 lg:p-16 flex flex-col items-center justify-center">
     <!-- Text content -->
     <div class="relative z-20 flex flex-col items-center justify-center text-center ' . $text_color . ' max-w-3xl mx-auto">
       <p class="text-[2.2vw] md:text-lg md:mb-6 mb-2 libre-baskerville-italic">' . $quote . '</p>

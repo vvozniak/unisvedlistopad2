@@ -26,7 +26,7 @@
         <h1 class="text-light text-[5.5vw] md:text-[4vw] libre-baskerville-regular mb-[5vh] md:mb-[15vh]">Budujemy mosty biznesowe <br> między Polską a Skandynawią.</h1>
         <div class="flex flex-col md:flex-row w-[80%] items-start justify-start mt-4">
             <div class="w-full md:w-1/2 md:h-[12vh] 2xl:h-[20vh] flex items-start justify-start pt-2">
-                <span class="block w-full h-[0.2rem] md:h-[0.1rem] bg-primary"></span>
+                <span class="block w-full h-[0.2rem] bg-primary"></span>
             </div>
             <div class="w-full md:w-1/2 md:h-[20vh] pt-5 md:pt-0">
                 <p class="text-light md:text-[1.6vw]/10 mt-auto tracking-[0.05em] inter-regular md:ml-[20vh] w-[max-content]">Wprowadzamy firmy na nowe rynki i <br>wspieramy ich rozwój w obu kierunkach.<br><br>Skontaktuj się z nami i razem <br> przekroczmy granice biznesu.</p>

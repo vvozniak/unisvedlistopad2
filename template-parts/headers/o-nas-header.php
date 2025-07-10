@@ -24,12 +24,12 @@
         <h1 class=" md:ps-10 text-light text-[5vw] md:text-[4vw] libre-baskerville-regular md:mb-[15vh]">Hej! Nazywam się Aleksandra<br>i jestem założycielką Unisved</h1>
         <div class="flex flex-col md:flex-row w-[80%] items-start justify-start mt-4 gap-x-[10vh] ">
             <div class=" md:ps-10 w-full md:w-1/2 md:h-[20vh] flex items-start justify-start pt-2">
-                <span class="block w-full h-[0.2rem] md:h-[0.1rem] bg-primary"></span>
+                <span class="block w-full h-[0.2rem]  bg-primary"></span>
             </div>
             <div class="md:w-1/2 md:h-[20vh] pt-15 md:pt-0">
-                <p class="leading-none text-light text-[4.2vw] md:text-[1.8vw] mt-auto inter-regular md:w-auto">Firmy, która powstała, aby wspierać przedsiębiorstwa w rozwoju na rynkach skandynawskich i międzynarodowych.</p>
-                <p class="text-light text-[4vw] md:text-[1vw] mt-8 inter-regular md:w-auto">Moja historia ze Skandynawią rozpoczęła się w 2006 roku, kiedy zamieszkałam w Szwecji. Dzięki wieloletniemu doświadczeniu w różnych branżach poznałam zarówno skandynawską kulturę i społeczeństwo, jak i unikalny sposób prowadzenia biznesu, który stał się fundamentem mojej obecnej pracy.</p>
-                <p class="text-light text-[4vw] md:text-[1vw] mt-4 inter-regular md:w-auto">W 2018 roku postanowiłam wykorzystać tę wiedzę, tworząc Unisved – most łączący międzynarodowe firmy z rynkiem skandynawskim. Moim celem jest wspieranie klientów w czerpaniu korzyści z dynamicznego rozwoju Skandynawii oraz pomaganie im w osiąganiu sukcesów na arenie międzynarodowej.</p>
+                <p class="leading-none text-light text-[4.2vw] md:text-[1.6vw] 2xl:text-[1.850rem] mt-auto inter-thin 2xl:max-w-[616px] tracking-[0.09em]">Firmy, która powstała, aby wspierać przedsiębiorstwa w rozwoju na rynkach skandynawskich i międzynarodowych.</p>
+                <p class="text-light text-[4vw] md:text-[1vw] 2xl:text-[1.250rem] mt-8 inter-thin 2xl:max-w-[600px] md:pr-[5rem] 2xl:pr-[2vw]">Moja historia ze Skandynawią rozpoczęła się w 2006 roku, kiedy zamieszkałam w Szwecji. Dzięki wieloletniemu doświadczeniu w różnych branżach poznałam zarówno skandynawską kulturę i społeczeństwo, jak i unikalny sposób prowadzenia biznesu, który stał się fundamentem mojej obecnej pracy.</p>
+                <p class="text-light text-[4vw] md:text-[1vw] 2xl:text-[1.250rem] mt-4 inter-thin 2xl:max-w-[600px] md:pr-[5rem] 2xl:pr-[2vw]">W 2018 roku postanowiłam wykorzystać tę wiedzę, tworząc Unisved – most łączący międzynarodowe firmy z rynkiem skandynawskim. Moim celem jest wspieranie klientów w czerpaniu korzyści z dynamicznego rozwoju Skandynawii oraz pomaganie im w osiąganiu sukcesów na arenie międzynarodowej.</p>
             </div>
         </div>
     </div>

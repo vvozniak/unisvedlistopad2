@@ -24,16 +24,29 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
         if (get_field('szablon_1_wlwyl') == true) {
   ?>
           <section class=" py-20 mb-10 relative ">
-            <div class="  md:ml-16 md:mr-64 2xl:gap-130 px-6 flex flex-col lg:flex-row items-center justify-between">
-              <div class="lg:w-1/3 text-light p-8 link_li <?php if (strlen(get_the_title()) > 7): echo 'lg:min-w-[430px] 2xl:min-w-[500px] md:mr-30 2xl:mr-0';
-                                                          endif; ?>">
+            <div class=" md:ml-16 fixed-content flex-col  lg:w-1/3 text-light p-8 link_li <?php if (strlen(get_the_title()) > 7): echo 'lg:min-w-[430px] 2xl:min-w-[500px] md:mr-30 2xl:mr-0';
+                                                                                          endif; ?>">
+              <div id="offer-head-dynamic-<?php echo $counter; ?>" class="hidden flex flex-col items-start">
                 <div class="flex items-center ">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class=" mr-4 w-10">
                   <h2 class="text-[1.4rem] md:text-[2.87vw] libre-baskerville-regular text-balance <?php if (strlen(get_the_title()) > 7): echo 'lg:min-w-[430px] 2xl:min-w-[500px] ';
                                                                                                     endif; ?>">UNISVED<br><?php echo get_the_title(); ?></h2>
 
                 </div>
-                <p class="text-[1vw] mb-1 2xl:mb-4 ml-14 2xl:text-nowrap inter-thin"><?php echo get_field('podtytul1') ?></p>
+                <p class="text-[1vw] mb-1 2xl:mb-4 2xl:text-nowrap ml-14 inter-thin"><?php echo get_field('podtytul1') ?></p>
+                <a href="#" id="toggle-offer-dynamic-<?php echo $counter; ?>" class="text-primary tracking-20 text-[1vw] ml-14  transition duration-200 hover:font-bold">( SCHOWAJ )</a>
+              </div>
+            </div>
+            <div class="md:ml-16 md:mr-64 2xl:gap-130 px-6 flex flex-col lg:flex-row items-center justify-between">
+              <div class="lg:w-1/3 text-light p-8 link_li <?php if (strlen(get_the_title()) > 7): echo 'lg:min-w-[430px] 2xl:min-w-[500px] md:mr-30 2xl:mr-0';
+                                                          endif; ?>">
+                <div id="offer-head-static-<?php echo $counter; ?>" class="flex items-center ">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class=" mr-4 w-10">
+                  <h2 class="text-[1.4rem] md:text-[2.87vw] libre-baskerville-regular text-balance <?php if (strlen(get_the_title()) > 7): echo 'lg:min-w-[430px] 2xl:min-w-[500px] ';
+                                                                                                    endif; ?>">UNISVED<br><?php echo get_the_title(); ?></h2>
+
+                </div>
+                <p id="offer-p-static-<?php echo $counter; ?>" class="text-[1vw] mb-1 2xl:mb-4 ml-14 2xl:text-nowrap inter-thin"><?php echo get_field('podtytul1') ?></p>
                 <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary tracking-20 text-[1vw] ml-14 transition duration-200 hover:font-bold">( CZYTAJ WIĘCEJ )</a>
               </div>
               <div class="lg:w-1/2 md:min-w-[450px] mt-10 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
@@ -43,7 +56,7 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
               </div>
             </div>
             <!-- Move the expandable content outside the flex container and position it under the right pill -->
-            <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-10 text-light px-6 md:ml-16 md:mr-32 flex justify-end ">
+            <div id="offer-details-<?php echo $counter; ?>" class="hidden scrollable-content mt-10 text-light px-6 md:ml-16 md:mr-32 flex justify-end ">
               <div class=" w-1/3 md:min-w-[450px]">
                 <h3 class="text-2xl  text-primary mb-10 libre-baskerville-regular">Dla kogo:</h3>
                 <p class="mb-4 text-wrap inter-thin"><?php echo get_field('dla_kogo1'); ?></p>
@@ -196,7 +209,7 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
     </div>
   </section>
   <section class="py-12 relative z-30 bg-secondary overflow-hidden w-full text-white rounded-t-[60px]">
-    <div class="container mx-auto bg-center overflow-hidden rounded-[40px] min-h-[65vh] space-y-16 my-20 pt-5 inter-thin">
+    <div class="2xl:mx-[8vw] contabg-center overflow-hidden rounded-[40px] min-h-[65vh] space-y-16 my-20 pt-5 inter-thin">
       <?php
       double_c_pill_horizontal(
         "Możliwość <br> łączenia  pakietów",
@@ -212,17 +225,43 @@ Dlatego oferujemy możliwość łączenia wybranych pakietów lub stworzenia in
 
   <script>
     for (let i = 0; i <= <?php echo $counter; ?>; i++) {
+      const offerHeadDynamic = document.getElementById(`offer-head-dynamic-${i}`);
+      const offerPStatic = document.getElementById(`offer-p-static-${i}`);
+      const offerHeadStatic = document.getElementById(`offer-head-static-${i}`);
       const toggleLink = document.getElementById(`toggle-offer-${i}`);
+      const toggleLinkDynamic = document.getElementById(`toggle-offer-dynamic-${i}`);
       const detailsDiv = document.getElementById(`offer-details-${i}`);
 
       if (toggleLink && detailsDiv) {
         toggleLink.addEventListener("click", (e) => {
           e.preventDefault();
           const isHidden = detailsDiv.classList.toggle("hidden");
+          offerPStatic.classList.toggle("hidden");
+          offerHeadDynamic.classList.toggle("hidden");
+          offerHeadStatic.classList.toggle("hidden");
+          //toggleLinkDynamic.classList.toggle("hidden");
+          toggleLink.classList.toggle("hidden");
           if (isHidden) {
-            toggleLink.textContent = "( CZYTAJ WIĘCEJ )";
-          } else {
             toggleLink.textContent = "( SCHOWAJ )";
+
+          } else {
+            toggleLink.textContent = "( CZYTAJ WIĘCEJ )";
+          }
+        });
+      }
+      if (toggleLinkDynamic && detailsDiv) {
+        toggleLinkDynamic.addEventListener("click", (e) => {
+          e.preventDefault();
+          const isHidden2 = detailsDiv.classList.toggle("hidden");
+          offerPStatic.classList.toggle("hidden");
+          offerHeadDynamic.classList.toggle("hidden");
+          offerHeadStatic.classList.toggle("hidden");
+          toggleLink.classList.toggle("hidden");
+          if (isHidden2) {
+            toggleLinkDynamic.textContent = "( CZYTAJ WIĘCEJ )";
+
+          } else {
+            toggleLinkDynamic.textContent = "( SCHOWAJ )";
           }
         });
       }
