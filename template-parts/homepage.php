@@ -71,7 +71,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
       <!-- Left side - fixed content -->
 
       <!-- dlaczego my PC -->
-      <div class="fixed-content flex-shrink-0">
+      <div class="fixed-content flex-shrink-0 lg:pt-[25vw] 2xl:pt-[20vw]">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5 md:w-[4vw] 2xl:w-max">
         <h4 class="text-light md:text-[2.5rem] 2xl:text-[3rem] libre-baskerville-regular">Dlaczego my?</h4>
       </div>
@@ -186,8 +186,8 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
         </div>
       </div>
       <!-- dlaczego skandynawia PC -->
-      <div class="fixed-content flex justify-end md:mr-40 2xl:mr-50">
-        <h4 class="text-right text-[3vw] libre-baskerville-regular pe-2 shrink-0">Dlaczego<br>Skandynawia?</h4>
+      <div class="fixed-content flex justify-end md:mr-40 2xl:mr-50 lg:pt-[18vw] 2xl:pt-[17vw]">
+        <h4 class="text-right text-[3vw] libre-baskerville-regular pe-2 shrink-0 ">Dlaczego<br>Skandynawia?</h4>
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180 w-[4vw]">
 
       </div>
@@ -213,7 +213,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
     </div>
     <div class="fixed-side-container md:mr-40 2xl:mr-64 justify-center" data-fixed-side="md:left">
       <!-- unisved w pigułce PC -->
-      <div class="fixed-content shrink-0">
+      <div class="fixed-content shrink-0 lg:pt-[25vw] 2xl:pt-[20vw]">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
         <h4 class="text-light text-[3rem] leading-none libre-baskerville-regular ">Unisved <br> w pigułce</h4>
       </div>

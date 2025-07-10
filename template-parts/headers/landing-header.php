@@ -29,7 +29,7 @@
                 <span class="block w-full h-[0.2rem] bg-primary"></span>
             </div>
             <div class="w-full md:w-1/2 md:h-[20vh] pt-5 md:pt-0">
-                <p class="text-light md:text-[1.6vw]/10 mt-auto tracking-[0.05em] inter-regular md:ml-[20vh] w-[max-content]">Wprowadzamy firmy na nowe rynki i <br>wspieramy ich rozwój w obu kierunkach.<br><br>Skontaktuj się z nami i razem <br> przekroczmy granice biznesu.</p>
+                <p class="text-light md:text-[1.6vw]/10 mt-auto 2xl:tracking-[0.05em] inter-regular md:ml-[20vh] w-[max-content]">Wprowadzamy firmy na nowe rynki i <br>wspieramy ich rozwój w obu kierunkach.<br><br>Skontaktuj się z nami i razem <br> przekroczmy granice biznesu.</p>
             </div>
         </div>
     </div>
