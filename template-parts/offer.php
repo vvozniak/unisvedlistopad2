@@ -209,7 +209,7 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
     </div>
   </section>
   <section class="py-12 relative z-30 bg-secondary overflow-hidden w-full text-white rounded-t-[60px]">
-    <div class="2xl:mx-[8vw] contabg-center overflow-hidden rounded-[40px] min-h-[65vh] space-y-16 my-20 pt-5 inter-thin">
+    <div class="lg:mx-[2rem] 2xl:mx-[8vw] contabg-center overflow-hidden rounded-[40px] min-h-[65vh] space-y-16 my-20 pt-5 inter-thin">
       <?php
       double_c_pill_horizontal(
         "Możliwość <br> łączenia  pakietów",
@@ -258,10 +258,11 @@ Dlatego oferujemy możliwość łączenia wybranych pakietów lub stworzenia in
           offerHeadStatic.classList.toggle("hidden");
           toggleLink.classList.toggle("hidden");
           if (isHidden2) {
-            toggleLinkDynamic.textContent = "( CZYTAJ WIĘCEJ )";
+
+            toggleLinkDynamic.textContent = "( SCHOWAJ )";
 
           } else {
-            toggleLinkDynamic.textContent = "( SCHOWAJ )";
+            toggleLinkDynamic.textContent = "( CZYTAJ WIĘCEJ )";
           }
         });
       }
