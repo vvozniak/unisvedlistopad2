@@ -17,7 +17,7 @@ if (!function_exists('text_with_c_pill')) {
 
     if (is_page(49)):
       $c_position = ($side === 'left') ? '2xl:-right-10 md:-right-5 -right-25 -top-5 2xl:-top-10 md:top-10' : '-top-5 md:left-0 2xl:-left-10 2xl:-top-10 md:top-10';
-      $text_alignment = ($side === 'left') ? 'text-left md:pr-16 pr-35' : 'text-left md:pl-16 pl-20';
+      $text_alignment = ($side === 'left') ? 'text-left md:pr-16 pr-25' : 'text-left md:pl-16 pl-10';
       $text_spaceing = ($side === 'left') ? '2xl:pl-12 md:pl-35 md:mr-[15vw] 2xl:mr-0 md:pr-[2vw]' : '2xl:pr-12 md:pr-35 md:ml-[15vw] 2xl:ml-0';
       $sizes = 'h-full 2xl:w-auto w-[20vw] md:w-2/3 object-cover';
     elseif (is_page(7)):

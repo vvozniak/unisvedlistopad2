@@ -15,9 +15,9 @@ function double_c_pill($heading = '5 rynków europejskich', $subtext = 'NA KTÓR
   $theme_uri = get_template_directory_uri();
 
   echo '
-  <div class="pill-container-with-content relative  rounded-full border border-solid border-[#F2A900] md:border-none" style="margin-bottom: 7rem;">
+  <div class="pill-container-with-content relative  rounded-full" style="margin-bottom: 7rem;">
     <!-- Text content in the middle -->
-    <div class="relative z-20 flex flex-col items-center justify-center text-center' . $text_color . ' h-full md:min-h-[400px]">
+    <div class="relative z-20 flex flex-col items-center justify-center text-center ' . $text_color . ' h-full md:min-h-[400px]">
       <h2 class="text-[5vw] md:text-[3rem]/12 font-bold mb-3  libre-baskerville-regular">' . $heading . '</h2>
       <p class="text-[3vw] 2xl:text-[1rem] md:text-sm tracking-[0.1em] leading-6 uppercase inter-regular ">' . $subtext . '</p>
     </div>
