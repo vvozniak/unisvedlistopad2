@@ -25,6 +25,6 @@ function icon_text_item($icon_path, $title, $subtitle, $icon_alt = '', $classes 
       <p class="icon-text-pill-p text-[0.7rem] md:text-[1.08vw] text-light inter-thin">' . esc_html($subtitle) . '</p>
     </div>
   </div>
-  <div class="h-[12vh]"></div>
+  <div class="md:h-[12vh]"></div>
   ';
 }

@@ -267,7 +267,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
           $image_pill = get_field('pill_image_1', $post_id);
 
           if ($image_pill) {
-            photo_oneside_pill('left', $image_pill);
+            photo_oneside_pill('left', $image_pill, 'assets/big_c.svg', 'max700pxpill');
           }
           ?>
         </div>

@@ -124,7 +124,7 @@ $slide_bg = get_field('slide_bg');
           ?>
           <div class="h-[5vh]"></div>
           <?php
-          photo_oneside_pill('right', $pill_photo);
+          photo_oneside_pill('right', $pill_photo, 'assets/big_c.svg', 'max700pxpill');
           ?>
         </div>
       </div>
@@ -158,7 +158,7 @@ $slide_bg = get_field('slide_bg');
 
 
 
-      <div class="scrollable-wrapper text-wrap ml-10 md:ml-0">
+      <div class="scrollable-wrapper text-wrap  md:ml-0">
         <div class="scrollable-content">
           <div>
             <?php
