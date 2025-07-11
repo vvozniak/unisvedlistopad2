@@ -33,12 +33,12 @@ if (!function_exists('text_with_c_pill_small')) {
     // ';
     echo '
   <div class=" pill_c_con_s relative max-h-[200px]  rounded-full ">
-    <div class="relative overflow-hidden z-20 ' . $text_color . ' flex flex-col justify-center h-full  pl-8">
-      <h2 class="' . $text_alignment . ' tracking-2 md:text-[1.4vw] font-bold mb-1 libre-baskerville-regular uppercase">' . $heading . '</h2>
-      <p class="' . $text_alignment . ' md:text-[1vw] inter-regular">' . esc_html($subtext) . '</p>
+    <div class="relative overflow-hidden z-20 ' . $text_color . ' flex flex-col justify-center h-full pl-16 md:pl-8">
+      <h2 class="' . $text_alignment . 'text-[0.7rem] tracking-2 md:text-[1.4vw]  mb-1 libre-baskerville-regular uppercase">' . $heading . '</h2>
+      <p class="' . $text_alignment . ' text-[0.8rem] md:text-[1vw] inter-thin">' . esc_html($subtext) . '</p>
     </div>
-    <div class="absolute ' . $c_position . ' 2xl:top-5 z-10 md:top-10 top-5">
-      <img src="' . $theme_uri . '/' . $c_image . '" alt="" class="h-full md:w-[4vw] object-cover">
+    <div class="absolute ' . $c_position . ' 2xl:top-5 z-10 md:top-10 top-10">
+      <img src="' . $theme_uri . '/' . $c_image . '" alt="" class="h-full w-[15vw] md:w-[4vw] object-cover">
     </div>
   </div>
   

@@ -27,9 +27,9 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
     <div class="scrollable-content">
       <div class="space-y-6 md:space-y-25 max-w-[460px] md:ml-[10vh]">
         <div class="text-center md:text-left link_li">
-          <p><a href="tel:+48602142949" class="inter-thin tracking-[.2rem] text-[1vw]">+48 602 142 949</a></p>
-          <p><a href="tel:+46704415690" class="inter-thin tracking-[.2rem] text-[1vw]">+46 704 415 690</a></p>
-          <p><a href="mailto:ALEKSANDRA@UNISVED.EU" class="inter-thin tracking-[.2rem] text-[1vw]">ALEKSANDRA@UNISVED.EU</a></p>
+          <p><a href="tel:+48602142949" class="inter-thin tracking-[.2rem] text-[1rem] md:text-[1vw]">+48 602 142 949</a></p>
+          <p><a href="tel:+46704415690" class="inter-thin tracking-[.2rem] text-[1rem] md:text-[1vw]">+46 704 415 690</a></p>
+          <p><a href="mailto:ALEKSANDRA@UNISVED.EU" class="inter-thin tracking-[.2rem] text-[1rem] md:text-[1vw]">ALEKSANDRA@UNISVED.EU</a></p>
         </div>
 
         <div class="flex justify-center  md:space-x-20 py-4 border-t-3 border-b-3 border-primary">
@@ -46,8 +46,8 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
         </div>
 
         <div class="text-center md:text-left space-y-1 text-light">
-          <p class="inter-thin tracking-[.2rem] text-[1vw] ">NIP: 583 244 62 23</p>
-          <p class="inter-thin tracking-[.2rem] text-[1vw]">SARNIA 4, 83 - 047 PIEKŁO DOLNE</p>
+          <p class="inter-thin tracking-[.2rem] text-[1rem] md:text-[1vw] ">NIP: 583 244 62 23</p>
+          <p class="inter-thin tracking-[.2rem] text-[1rem] md:text-[1vw]">SARNIA 4, 83 - 047 PIEKŁO DOLNE</p>
         </div>
 
 
