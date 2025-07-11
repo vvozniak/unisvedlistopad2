@@ -20,20 +20,20 @@ function double_c_pill_horizontal($heading = '5 rynków europejskich', $subtext 
       
       <!-- Left C shape -->
       <div class="absolute -left-4 sm:-left-8 md:-left-24 lg:-left-32 top-1/2 -translate-y-1/2 z-10 h-full">
-        <img src="' . $theme_uri . '/' . $left_c_image . '" alt="" class="h-full w-auto object-contain">
+        <img src="' . $theme_uri . '/' . $left_c_image . '" alt="" class="hidden md:block h-full w-auto object-contain">
       </div>
 
       <!-- Text content -->
       <div class="w-full md:w-1/2 lg:w-2/5 text-center md:text-left">
-        <h2 class="text-[3vw] md:text-[40px] 2xl:text-[3.4rem] libre-baskerville-regular leading-tight">' . $heading . '</h2>
+        <h2 class="text-[1.3rem] md:text-[40px] 2xl:text-[3.4rem] libre-baskerville-regular leading-tight">' . $heading . '</h2>
       </div>
       <div class="w-7/8 md:w-1/2 lg:w-3/5 text-center md:text-left">
-        <p class="text-[2vw] md:text-[20px] 2xl:text-[20px] inter-thin">' . $subtext . '</p>
+        <p class="text-[0.7rem] md:text-[20px] 2xl:text-[20px] inter-thin">' . $subtext . '</p>
       </div>
 
       <!-- Right C shape -->
       <div class="absolute -right-4 sm:-right-8 md:-right-24 lg:-right-32 top-1/2 -translate-y-1/2 z-10 h-full">
-        <img src="' . $theme_uri . '/' . $right_c_image . '" alt="" class="h-full w-auto object-contain">
+        <img src="' . $theme_uri . '/' . $right_c_image . '" alt="" class="hidden md:block h-full w-auto object-contain">
       </div>
     </div>
   </div>';

@@ -47,8 +47,8 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
                                                                                                     endif; ?>">UNISVED<br><?php echo get_the_title(); ?></h2>
 
                 </div>
-                <p class="text-[1vw] mb-1 2xl:mb-4 2xl:text-nowrap ml-14 inter-thin"><?php echo get_field('podtytul1') ?></p>
-                <a href="#" id="toggle-offer-dynamic-<?php echo $counter; ?>" class="text-primary tracking-20 text-[1vw] ml-14  transition duration-200 hover:font-bold">( SCHOWAJ )</a>
+                <p class="md:text-[1vw] mb-1 2xl:mb-4 2xl:text-nowrap ml-14 inter-thin"><?php echo get_field('podtytul1') ?></p>
+                <a href="#" id="toggle-offer-dynamic-<?php echo $counter; ?>" class="text-primary tracking-20 md:text-[1vw] ml-14  transition duration-200 hover:font-bold">( SCHOWAJ )</a>
               </div>
             </div>
             <div class="md:ml-16 md:mr-64 2xl:gap-130 px-6 flex flex-col lg:flex-row items-center justify-between">
@@ -60,18 +60,18 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
                                                                                                     endif; ?>">UNISVED<br><?php echo get_the_title(); ?></h2>
 
                 </div>
-                <p id="offer-p-static-<?php echo $counter; ?>" class="text-[1vw] mb-1 2xl:mb-4 ml-14 2xl:text-nowrap inter-thin"><?php echo get_field('podtytul1') ?></p>
-                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary tracking-20 text-[1vw] ml-14 transition duration-200 hover:font-bold">( CZYTAJ WIĘCEJ )</a>
+                <p id="offer-p-static-<?php echo $counter; ?>" class="md:text-[1vw] mb-1 2xl:mb-4 ml-14 2xl:text-nowrap inter-thin"><?php echo get_field('podtytul1') ?></p>
+                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary tracking-20 md:text-[1vw] ml-14 transition duration-200 hover:font-bold">( CZYTAJ WIĘCEJ )</a>
               </div>
               <div class="lg:w-1/2 md:min-w-[450px] mt-10 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
-                <div class="relative">
+                <div class="relative ">
                   <?php photo_oneside_pill('right', get_the_post_thumbnail_url()); ?>
                 </div>
               </div>
             </div>
             <!-- Move the expandable content outside the flex container and position it under the right pill -->
             <div id="offer-details-<?php echo $counter; ?>" class="hidden scrollable-content mt-10 text-light px-6 md:ml-16 md:mr-32 flex justify-end ">
-              <div class=" w-1/3 md:min-w-[450px]">
+              <div class="mx-5  md:min-w-[450px]">
                 <h3 class="text-2xl  text-primary mb-10 libre-baskerville-regular">Dla kogo:</h3>
                 <p class="mb-4 text-wrap inter-thin"><?php echo get_field('dla_kogo1'); ?></p>
                 <div class="w-[100%] h-px bg-primary my-8"></div>
@@ -101,8 +101,8 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="C shape" class="mr-4 w-10">
                   <h2 class="text-[1.4rem] md:text-[2.87vw] libre-baskerville-regular text-pretty">UNISVED EKSPANSJA<br> <?php echo get_the_title(); ?></h2>
                 </div>
-                <p class="text-[1vw] mb-1 2xl:mb-4 ml-14 2xl:whitespace-pre whitespace-wrap inter-thin"><?php echo get_field('podtytul2') ?></p>
-                <a href="#" id="toggle-offer-dynamic-<?php echo $counter; ?>" class="text-primary tracking-20 text-[1vw] ml-14 transition duration-200 hover:font-bold">( SCHOWAJ )</a>
+                <p class="md:text-[1vw] mb-1 2xl:mb-4 ml-14 2xl:whitespace-pre whitespace-wrap inter-thin"><?php echo get_field('podtytul2') ?></p>
+                <a href="#" id="toggle-offer-dynamic-<?php echo $counter; ?>" class="text-primary tracking-20 md:text-[1vw] ml-14 transition duration-200 hover:font-bold">( SCHOWAJ )</a>
               </div>
             </div>
             <div class="px-6 md:ml-16 md:mr-64 2xl:gap-130 flex flex-col lg:flex-row items-center justify-between">
@@ -114,18 +114,18 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
                                                                                                     endif; ?>">UNISVED EKSPANSJA<br><?php echo get_the_title(); ?></h2>
 
                 </div>
-                <p id="offer-p-static-<?php echo $counter; ?>" class="text-[1vw] mb-1 2xl:mb-4 ml-14 2xl:text-nowrap inter-thin"><?php echo get_field('podtytul1') ?></p>
-                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary tracking-20 text-[1vw] ml-14 transition duration-200 hover:font-bold">( CZYTAJ WIĘCEJ )</a>
+                <p id="offer-p-static-<?php echo $counter; ?>" class="md:text-[1vw] mb-1 2xl:mb-4 ml-14 2xl:text-nowrap inter-thin"><?php echo get_field('podtytul1') ?></p>
+                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary tracking-20 md:text-[1vw] ml-14 transition duration-200 hover:font-bold">( CZYTAJ WIĘCEJ )</a>
               </div>
               <div class="lg:w-1/2 md:min-w-[450px] mt-8 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
-                <div class="relative">
+                <div class="relative ">
                   <?php photo_oneside_pill('right', get_the_post_thumbnail_url()); ?>
                 </div>
               </div>
             </div>
             <!-- Move the expandable content outside the flex container and position it under the right pill -->
             <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-10 text-light px-6 md:ml-16 md:mr-64 flex justify-end">
-              <div class="w-1/3 md:min-w-[450px]">
+              <div class="mx-5 md:min-w-[450px]">
                 <h3 class="text-2xl  text-primary libre-baskerville-regular">Dla kogo:</h3>
                 <p class="mb-4 inter-thin"><?php echo get_field('dla_kogo2'); ?></p>
                 <div class="w-24 h-px bg-primary my-4"></div>
@@ -156,7 +156,7 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
           <section class="bg-secondary py-20 mb-10 relative">
             <div class="    md:mr-16 md:ml-64  px-6 flex flex-col lg:flex-row items-center justify-between">
               <div class="w-1/2 md:min-w-[450px] mt-8 lg:mt-0 2xl:max-w-full 2xl:min-h-full">
-                <div class="relative">
+                <div class="relative md:w-auto w-[90vw] -left-20 md:left-0">
                   <?php
                   photo_oneside_pill('left', get_the_post_thumbnail_url()); ?>
                 </div>
@@ -166,8 +166,8 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
                   <h2 class="text-[1.4rem] md:text-[2.87vw] libre-baskerville-regular text-right text-balance">UNISVED<br><?php echo get_the_title(); ?></h2>
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/small_c.svg" alt="C shape" class="ml-4 flex-shrink-0 w-10">
                 </div>
-                <p id="offer-p-static-<?php echo $counter; ?>" class="text-[1vw] mb-1 2xl:mb-4 mr-14 text-right 2xl:text-nowrap text-wrap inter-thin"><?php echo get_field('podtytul1') ?></p>
-                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary tracking-20 text-[1vw] mr-14 text-right block transition duration-200 hover:font-bold">( CZYTAJ WIĘCEJ )</a>
+                <p id="offer-p-static-<?php echo $counter; ?>" class="md:text-[1vw] mb-1 2xl:mb-4 mr-14 text-right 2xl:text-nowrap text-wrap inter-thin"><?php echo get_field('podtytul1') ?></p>
+                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary tracking-20 md:text-[1vw] mr-14 text-right block transition duration-200 hover:font-bold">( CZYTAJ WIĘCEJ )</a>
               </div>
             </div>
 
@@ -177,27 +177,29 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
                   <h2 class="text-[1.4rem] md:text-[2.87vw] libre-baskerville-regular text-right text-balance">UNISVED<br><?php echo get_the_title(); ?></h2>
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/small_c.svg" alt="C shape" class="ml-4 flex-shrink-0 w-10">
                 </div>
-                <p class="text-[1vw] mb-1 2xl:mb-4 mr-14 text-right 2xl:text-nowrap text-wrap inter-thin"><?php echo get_field('podtytul1') ?></p>
-                <a href="#" id="toggle-offer-dynamic-<?php echo $counter; ?>" class="text-primary tracking-20 text-[1vw] mr-14 text-right block transition duration-200 hover:font-bold">( SCHOWAJ )</a>
+                <p class="md:text-[1vw] mb-1 2xl:mb-4 mr-14 text-right 2xl:text-nowrap text-wrap inter-thin"><?php echo get_field('podtytul1') ?></p>
+                <a href="#" id="toggle-offer-dynamic-<?php echo $counter; ?>" class="text-primary tracking-20 md:text-[1vw] mr-14 text-right block transition duration-200 hover:font-bold">( SCHOWAJ )</a>
               </div>
             </div>
             <!-- Move the expandable content outside the flex container -->
             <div id="offer-details-<?php echo $counter; ?>" class="hidden scrollable-content mt-10 text-light px-6 md:mr-16 md:ml-64 w-1/3">
-              <h3 class="text-2xl  mb-10 text-primary libre-baskerville-regular">Dla kogo:</h3>
-              <p class="mb-4 text-wrap inter-thin"><?php echo get_field('dla_kogo1'); ?></p>
-              <div class="w-[100%] h-px bg-primary my-8"></div>
-              <h3 class="text-2xl  text-primary mb-10 libre-baskerville-regular">Zakres usług:</h3>
-              <?php if (get_field('zakres_uslug2')): ?>
-                <ul class="c-list list-image-[url(<?php echo get_template_directory_uri(); ?>/assets/Ellipse_11.svg)] list-outside mb-4 marker:text-primary  inter-thin space-y-2 " style="   ">
-                  <?php echo get_field('zakres_uslug2'); ?>
+              <div class="mx-5">
+                <h3 class="text-2xl  mb-10 text-primary libre-baskerville-regular">Dla kogo:</h3>
+                <p class="mb-4 text-wrap inter-thin"><?php echo get_field('dla_kogo1'); ?></p>
+                <div class="w-[100%] h-px bg-primary my-8"></div>
+                <h3 class="text-2xl  text-primary mb-10 libre-baskerville-regular">Zakres usług:</h3>
+                <?php if (get_field('zakres_uslug2')): ?>
+                  <ul class="c-list list-image-[url(<?php echo get_template_directory_uri(); ?>/assets/Ellipse_11.svg)] list-outside mb-4 marker:text-primary  inter-thin space-y-2 " style="   ">
+                    <?php echo get_field('zakres_uslug2'); ?>
+                  </ul>
+                <?php endif; ?>
+                <ul class="list-disc list-inside mb-4 marker:text-primary inter-thin">
+                  <?php echo get_field('zakres_uslug1'); ?>
                 </ul>
-              <?php endif; ?>
-              <ul class="list-disc list-inside mb-4 marker:text-primary inter-thin">
-                <?php echo get_field('zakres_uslug1'); ?>
-              </ul>
-              <div class="w-[100%] h-px bg-primary my-8"></div>
-              <h3 class="text-2xl  text-primary mb-10 libre-baskerville-regular">Efekt:</h3>
-              <p class="text-wrap inter-thin"><?php echo get_field('efekt1'); ?></p>
+                <div class="w-[100%] h-px bg-primary my-8"></div>
+                <h3 class="text-2xl  text-primary mb-10 libre-baskerville-regular">Efekt:</h3>
+                <p class="text-wrap inter-thin"><?php echo get_field('efekt1'); ?></p>
+              </div>
             </div>
           </section>
 
@@ -211,8 +213,8 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
                   <h2 class="text-[1.4rem] md:text-[2.87vw] libre-baskerville-regular text-right text-balance">UNISVED<br><?php echo get_the_title(); ?></h2>
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/small_c.svg" alt="C shape" class="ml-4 flex-shrink-0 w-10">
                 </div>
-                <p class="text-[1vw] mb-1 2xl:mb-4 mr-14 text-right 2xl:text-nowrap inter-thin"><?php echo get_field('podtytul2') ?></p>
-                <a href="#" id="toggle-offer-dynamic-<?php echo $counter; ?>" class="text-primary tracking-20 text-[1vw] mr-14 text-right block transition duration-200 hover:font-bold">( SCHOWAJ )</a>
+                <p class="md:text-[1vw] mb-1 2xl:mb-4 mr-14 text-right 2xl:text-nowrap inter-thin"><?php echo get_field('podtytul2') ?></p>
+                <a href="#" id="toggle-offer-dynamic-<?php echo $counter; ?>" class="text-primary tracking-20 md:text-[1vw] mr-14 text-right block transition duration-200 hover:font-bold">( SCHOWAJ )</a>
               </div>
             </div>
             <div class="2xl:gap-110 md:mr-16 md:ml-64 px-6 flex flex-col lg:flex-row items-center justify-between">
@@ -224,7 +226,7 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
                                                                                                     endif; ?>">UNISVED<br><?php echo get_the_title(); ?></h2>
                 </div>
                 <p id="offer-p-static-<?php echo $counter; ?>" class="2xl:text-xl text-[1.5vw] mb-4 mr-14 2xl:whitespace-pre whitespace-wrap inter-thin"><?php echo get_field('podtytul2') ?></p>
-                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary tracking-20 text-[1vw] mr-14 transition duration-200 hover:font-bold">( CZYTAJ WIĘCEJ )</a>
+                <a href="#" id="toggle-offer-<?php echo $counter; ?>" class="text-primary tracking-20 md:text-[1vw] mr-14 transition duration-200 hover:font-bold">( CZYTAJ WIĘCEJ )</a>
                 <div id="offer-details-<?php echo $counter; ?>" class="hidden mt-4 text-light">
                   <h3 class="text-2xl  text-primary libre-baskerville-regular">Dla kogo:</h3>
                   <p class="mb-4 inter-thin"><?php echo get_field('dla_kogo2'); ?></p>
@@ -248,7 +250,7 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
                 </div>
               </div>
               <div class="lg:w-1/2 md:min-w-[450px] mt-8 lg:mt-0 2xl:min-w-full 2xl:min-h-full">
-                <div class="relative">
+                <div class="relative ">
                   <?php
                   photo_oneside_pill('left', get_the_post_thumbnail_url()); ?>
                 </div>
@@ -277,7 +279,7 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
     </div>
   </section>
   <section class="py-12 relative z-30 bg-secondary overflow-hidden w-full text-white rounded-t-[60px]">
-    <div class="lg:mx-[2rem] 2xl:mx-[8vw] contabg-center overflow-hidden rounded-[40px] min-h-[65vh] space-y-16 my-20 pt-5 inter-thin">
+    <div class="lg:mx-[2rem] 2xl:mx-[8vw] contabg-center overflow-hidden rounded-[40px] min-h-[65vh] space-y-16 md:my-20 pt-5 inter-thin">
       <?php
       double_c_pill_horizontal(
         "Możliwość <br> łączenia  pakietów",
@@ -292,47 +294,74 @@ Dlatego oferujemy możliwość łączenia wybranych pakietów lub stworzenia in
   </section>
 
   <script>
-    for (let i = 0; i <= <?php echo $counter; ?>; i++) {
-      const offerHeadDynamic = document.getElementById(`offer-head-dynamic-${i}`);
-      const offerPStatic = document.getElementById(`offer-p-static-${i}`);
-      const offerHeadStatic = document.getElementById(`offer-head-static-${i}`);
-      const toggleLink = document.getElementById(`toggle-offer-${i}`);
-      const toggleLinkDynamic = document.getElementById(`toggle-offer-dynamic-${i}`);
-      const detailsDiv = document.getElementById(`offer-details-${i}`);
+    if (window.innerWidth >= 768) {
+      for (let i = 0; i <= <?php echo $counter; ?>; i++) {
+        const offerHeadDynamic = document.getElementById(`offer-head-dynamic-${i}`);
+        const offerPStatic = document.getElementById(`offer-p-static-${i}`);
+        const offerHeadStatic = document.getElementById(`offer-head-static-${i}`);
+        const toggleLink = document.getElementById(`toggle-offer-${i}`);
+        const toggleLinkDynamic = document.getElementById(`toggle-offer-dynamic-${i}`);
+        const detailsDiv = document.getElementById(`offer-details-${i}`);
 
-      if (toggleLink && detailsDiv) {
-        toggleLink.addEventListener("click", (e) => {
-          e.preventDefault();
-          const isHidden = detailsDiv.classList.toggle("hidden");
-          offerPStatic.classList.toggle("hidden");
-          offerHeadDynamic.classList.toggle("hidden");
-          offerHeadStatic.classList.toggle("hidden");
-          //toggleLinkDynamic.classList.toggle("hidden");
-          toggleLink.classList.toggle("hidden");
-          if (isHidden) {
-            toggleLink.textContent = "( SCHOWAJ )";
+        if (toggleLink && detailsDiv) {
+          toggleLink.addEventListener("click", (e) => {
+            e.preventDefault();
+            const isHidden = detailsDiv.classList.toggle("hidden");
+            offerPStatic.classList.toggle("hidden");
+            offerHeadDynamic.classList.toggle("hidden");
+            offerHeadStatic.classList.toggle("hidden");
+            //toggleLinkDynamic.classList.toggle("hidden");
+            toggleLink.classList.toggle("hidden");
+            if (isHidden) {
+              toggleLink.textContent = "( SCHOWAJ )";
 
-          } else {
-            toggleLink.textContent = "( CZYTAJ WIĘCEJ )";
-          }
-        });
+            } else {
+              toggleLink.textContent = "( CZYTAJ WIĘCEJ )";
+            }
+          });
+        }
+        if (toggleLinkDynamic && detailsDiv) {
+          toggleLinkDynamic.addEventListener("click", (e) => {
+            e.preventDefault();
+            const isHidden2 = detailsDiv.classList.toggle("hidden");
+            offerPStatic.classList.toggle("hidden");
+            offerHeadDynamic.classList.toggle("hidden");
+            offerHeadStatic.classList.toggle("hidden");
+            toggleLink.classList.toggle("hidden");
+            if (isHidden2) {
+
+              toggleLinkDynamic.textContent = "( SCHOWAJ )";
+
+            } else {
+              toggleLinkDynamic.textContent = "( CZYTAJ WIĘCEJ )";
+            }
+          });
+        }
       }
-      if (toggleLinkDynamic && detailsDiv) {
-        toggleLinkDynamic.addEventListener("click", (e) => {
-          e.preventDefault();
-          const isHidden2 = detailsDiv.classList.toggle("hidden");
-          offerPStatic.classList.toggle("hidden");
-          offerHeadDynamic.classList.toggle("hidden");
-          offerHeadStatic.classList.toggle("hidden");
-          toggleLink.classList.toggle("hidden");
-          if (isHidden2) {
+    } else {
+      for (let i = 0; i <= <?php echo $counter; ?>; i++) {
+        const offerHeadDynamic = document.getElementById(`offer-head-dynamic-${i}`);
+        const offerPStatic = document.getElementById(`offer-p-static-${i}`);
+        const offerHeadStatic = document.getElementById(`offer-head-static-${i}`);
+        const toggleLink = document.getElementById(`toggle-offer-${i}`);
+        const toggleLinkDynamic = document.getElementById(`toggle-offer-dynamic-${i}`);
+        const detailsDiv = document.getElementById(`offer-details-${i}`);
 
-            toggleLinkDynamic.textContent = "( SCHOWAJ )";
+        if (toggleLink && detailsDiv) {
+          toggleLink.addEventListener("click", (e) => {
+            e.preventDefault();
+            const isHidden = detailsDiv.classList.toggle("hidden");
 
-          } else {
-            toggleLinkDynamic.textContent = "( CZYTAJ WIĘCEJ )";
-          }
-        });
+            //toggleLinkDynamic.classList.toggle("hidden");
+
+            if (isHidden) {
+
+              toggleLink.textContent = "( CZYTAJ WIĘCEJ )";
+            } else {
+              toggleLink.textContent = "( SCHOWAJ )";
+            }
+          });
+        }
       }
     }
   </script>
