@@ -16,10 +16,10 @@ if (!function_exists('text_with_c_pill')) {
     // C shape should be on the opposite side from the text
 
     if (is_page(49)):
-      $c_position = ($side === 'left') ? '2xl:-right-10 md:-right-5 -right-40 2xl:-top-10 md:top-10' : 'left-0 2xl:-left-10 2xl:-top-10 md:top-10';
-      $text_alignment = ($side === 'left') ? 'text-left md:pr-16 ' : 'text-left md:pl-16 pl-20';
+      $c_position = ($side === 'left') ? '2xl:-right-10 md:-right-5 -right-25 -top-5 2xl:-top-10 md:top-10' : '-top-5 md:left-0 2xl:-left-10 2xl:-top-10 md:top-10';
+      $text_alignment = ($side === 'left') ? 'text-left md:pr-16 pr-35' : 'text-left md:pl-16 pl-20';
       $text_spaceing = ($side === 'left') ? '2xl:pl-12 md:pl-35 md:mr-[15vw] 2xl:mr-0 md:pr-[2vw]' : '2xl:pr-12 md:pr-35 md:ml-[15vw] 2xl:ml-0';
-      $sizes = 'h-full 2xl:w-auto w-1/2 md:w-2/3 object-cover';
+      $sizes = 'h-full 2xl:w-auto w-[20vw] md:w-2/3 object-cover';
     elseif (is_page(7)):
       $c_position = ($side === 'left') ? '2xl:-right-10 md:-right-5 -right-40 2xl:-top-10 md:top-10' : 'left-0 2xl:-left-10 2xl:-top-10 md:top-10';
       $text_alignment = ($side === 'left') ? 'text-left md:pr-38 2xl:pr-16' : 'text-left md:pl-16 pl-20';
@@ -36,7 +36,7 @@ if (!function_exists('text_with_c_pill')) {
     echo '
     <div class="2xl:h-[10vh]"></div>
   <div class="pill_c_con ' . $text_spaceing . ' relative  rounded-full my-4 ">
-    <div class="pill_c_div relative z-20 ' . $text_color . ' flex flex-col justify-center h-full py-6 ">
+    <div class="pill_c_div relative z-20 ' . $text_color . ' flex flex-col justify-center h-full py-6 md:mt-0 mt-[8rem] md:w-auto w-[100vw] ">
       <h2 class="h2pill ' . $text_alignment . ' tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">' . $heading . '</h2>
       <p class="text_c_p ' . $text_alignment . ' text-[2.3vw] md:text-[1.05vw] inter-regular">' . esc_html($subtext) . '</p>
     </div>

@@ -43,6 +43,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
         min-width: 85vw;
         margin-right: 1rem;
         margin-left: 1rem;
+        margin-bottom: 7rem;
       }
     }
 

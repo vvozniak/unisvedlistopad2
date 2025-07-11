@@ -8,6 +8,20 @@ get_header();
 require_once get_template_directory() . '/template-parts/pills/photo_oneside.php';
 require_once get_template_directory() . '/template-parts/pills/double_c_pill_horizontal.php';
 ?>
+<style>
+  .c-list li {
+    list-style: none;
+    background: url('<?php echo get_template_directory_uri(); ?>/assets/Ellipse_11.svg') no-repeat left bottom !important;
+    height: 5rem !important;
+
+    padding-left: 3rem !important;
+    padding-top: 1.6rem !important;
+    /* margin-left: 1.5rem !important; */
+    background-size: contain !important;
+
+
+  }
+</style>
 <div class="bg-secondary relative z-30i rounded-t-[60px] -mt-[10vh] pb-[10vh]">
   <?php
   $offers =  new WP_Query(array(
@@ -62,6 +76,11 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
                 <p class="mb-4 text-wrap inter-thin"><?php echo get_field('dla_kogo1'); ?></p>
                 <div class="w-[100%] h-px bg-primary my-8"></div>
                 <h3 class="text-2xl  text-primary mb-10 libre-baskerville-regular">Zakres usług:</h3>
+                <?php if (get_field('zakres_uslug2')): ?>
+                  <ul class="c-list list-image-[url(<?php echo get_template_directory_uri(); ?>/assets/Ellipse_11.svg)] list-outside mb-4 marker:text-primary  inter-thin space-y-2 " style="   ">
+                    <?php echo get_field('zakres_uslug2'); ?>
+                  </ul>
+                <?php endif; ?>
                 <ul class="list-disc list-inside mb-4 marker:text-primary inter-thin">
                   <?php echo get_field('zakres_uslug1'); ?>
                 </ul>
@@ -111,6 +130,11 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
                 <p class="mb-4 inter-thin"><?php echo get_field('dla_kogo2'); ?></p>
                 <div class="w-24 h-px bg-primary my-4"></div>
                 <h3 class="text-2xl  text-primary libre-baskerville-regular">W skład pakietu wchodzi:</h3>
+                <?php if (get_field('zakres_uslug2')): ?>
+                  <ul class="c-list list-image-[url(<?php echo get_template_directory_uri(); ?>/assets/Ellipse_11.svg)] list-outside mb-4 marker:text-primary  inter-thin space-y-2 " style="   ">
+                    <?php echo get_field('zakres_uslug2'); ?>
+                  </ul>
+                <?php endif; ?>
                 <ul class="list-disc list-inside mb-4 marker:text-primary inter-thin">
                   <?php echo get_field('sklad'); ?>
                 </ul>
@@ -163,6 +187,11 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
               <p class="mb-4 text-wrap inter-thin"><?php echo get_field('dla_kogo1'); ?></p>
               <div class="w-[100%] h-px bg-primary my-8"></div>
               <h3 class="text-2xl  text-primary mb-10 libre-baskerville-regular">Zakres usług:</h3>
+              <?php if (get_field('zakres_uslug2')): ?>
+                <ul class="c-list list-image-[url(<?php echo get_template_directory_uri(); ?>/assets/Ellipse_11.svg)] list-outside mb-4 marker:text-primary  inter-thin space-y-2 " style="   ">
+                  <?php echo get_field('zakres_uslug2'); ?>
+                </ul>
+              <?php endif; ?>
               <ul class="list-disc list-inside mb-4 marker:text-primary inter-thin">
                 <?php echo get_field('zakres_uslug1'); ?>
               </ul>
@@ -201,6 +230,11 @@ require_once get_template_directory() . '/template-parts/pills/double_c_pill_hor
                   <p class="mb-4 inter-thin"><?php echo get_field('dla_kogo2'); ?></p>
                   <div class="w-24 h-px bg-primary my-4"></div>
                   <h3 class="text-2xl  text-primary libre-baskerville-regular">W skład pakietu wchodzi:</h3>
+                  <?php if (get_field('zakres_uslug2')): ?>
+                    <ul class="c-list list-image-[url(<?php echo get_template_directory_uri(); ?>/assets/Ellipse_11.svg)] list-outside mb-4 marker:text-primary  inter-thin space-y-2 " style="   ">
+                      <?php echo get_field('zakres_uslug2'); ?>
+                    </ul>
+                  <?php endif; ?>
                   <ul class="list-disc list-inside mb-4 marker:text-primary inter-thin">
                     <?php echo get_field('sklad'); ?>
                   </ul>
