@@ -52,7 +52,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
     }
 
     .pill-container-with-content {
-      margin-left: 5rem;
+      margin-left: 6rem;
     }
   }
 
@@ -72,7 +72,15 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
       <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5 w-[10vw]">
       <h4 class="text-light text-[2rem] libre-baskerville-regular">Dlaczego my?</h4>
     </div>
+    <div class="md:hidden relative top-[15vh]">
+      <?php
+      $post_id = get_the_ID();
+      $image_url = get_field('pill_image', $post_id);
 
+      if ($image_url) {
+        photo_oneside_pill('right', $image_url);
+      } ?>
+    </div>
     <div class="fixed-side-container" data-fixed-side="left">
       <!-- Left side - fixed content -->
 
@@ -86,17 +94,19 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
       <!-- <div class="spacer flex-grow min-w-[1rem]  mr-auto  2xl:min-w-[30rem]"></div> -->
 
       <!-- Scrollable content with additional left padding -->
+
       <div class="scrollable-wrapper flex-shrink-0 md:mr-64  md:ml-0">
         <div class="scrollable-content">
+          <div class="hidden md:block">
+            <?php
+            $post_id = get_the_ID();
+            $image_url = get_field('pill_image', $post_id);
 
+            if ($image_url) {
+              photo_oneside_pill('right', $image_url);
+            } ?>
+          </div>
           <?php
-          $post_id = get_the_ID();
-          $image_url = get_field('pill_image', $post_id);
-
-          if ($image_url) {
-            photo_oneside_pill('right', $image_url);
-          }
-
           text_with_c_pill(
             'left',
             get_field('pill_1_title', $post_id),
@@ -131,7 +141,9 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
           ?>
         </div>
       </div>
+
     </div>
+
     <div class="min-h-[10vh]"></div>
   </div>
 </section>
@@ -213,7 +225,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
 <section class="py-12 relative z-60i bg-secondary text-white rounded-t-[60px]">
   <div class=" bg-center rounded-[40px] min-h-[100vh] space-y-16 mt-20 xl:ml-28">
     <!-- unisved w pigułce mobile -->
-    <div class="w-full items-center flex md:hidden mb-8 ml-10">
+    <div class="w-full items-center flex md:hidden mb-8 ml-16">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5 h-[20vw] md:h-auto">
       <h4 class="text-light text-[2rem] leading-none libre-baskerville-regular">Unisved <br> w pigułce</h4>
     </div>
@@ -261,17 +273,30 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
             'assets/big_c_right.svg',
             'text-white'
           );
-
-
-          $post_id = get_the_ID();
-          $image_pill = get_field('pill_image_1', $post_id);
-
-          if ($image_pill) {
-            photo_oneside_pill('left', $image_pill, 'assets/big_c.svg', 'max700pxpill');
-          }
           ?>
+          <div class="hidden md:block">
+            <?php
+            $post_id = get_the_ID();
+            $image_pill = get_field('pill_image_1', $post_id);
+
+            if ($image_pill) {
+              photo_oneside_pill('left', $image_pill, 'assets/big_c.svg', 'max700pxpill');
+            }
+            ?>
+          </div>
         </div>
       </div>
+
+    </div>
+    <div class="md:hidden">
+      <?php
+      $post_id = get_the_ID();
+      $image_pill = get_field('pill_image_1', $post_id);
+
+      if ($image_pill) {
+        photo_oneside_pill('left', $image_pill, 'assets/big_c.svg', 'max700pxpill');
+      }
+      ?>
     </div>
   </div>
 </section>
@@ -279,7 +304,7 @@ require_once get_template_directory() . '/template-parts/pills/icon_text_item.ph
 <section class="pt-12 relative z-70i bg-secondary text-white mt-[-10px]">
   <div class="xl:ps-[10vw] xl:pe-[12vw] flex flex-col md:flex-row w-full items-center">
 
-    <div class="md:w-1/2 w-[80vw]">
+    <div class="md:w-1/2 ">
       <?php
       $post_id = get_the_ID();
       $image_pill_2 = get_field('pill_image_2', $post_id);

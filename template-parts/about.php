@@ -123,12 +123,21 @@ $slide_bg = get_field('slide_bg');
           );
           ?>
           <div class="h-[5vh]"></div>
-          <?php
-          photo_oneside_pill('right', $pill_photo, 'assets/big_c.svg', 'max700pxpill');
-          ?>
+          <div class="hidden md:block">
+            <?php
+            photo_oneside_pill('right', $pill_photo, 'assets/big_c.svg', 'max700pxpill');
+            ?>
+          </div>
+          <div class="h-[5vh]"></div>
         </div>
       </div>
     </div>
+    <div class="md:hidden my-6">
+      <?php
+      photo_oneside_pill('right', $pill_photo, 'assets/big_c.svg', 'max700pxpill');
+      ?>
+    </div>
+    <div class="h-[10vh]"></div>
   </div>
 </section>
 

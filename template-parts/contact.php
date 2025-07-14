@@ -8,9 +8,10 @@ get_header();
 require_once get_template_directory() . '/template-parts/pills/photo_oneside.php';
 
 ?>
-<section class="bg-secondary relative text-light pb-12 px-4 sm:px-6 lg:px-8 rounded-t-[60px] md:pt-[35vh] lg:-mt-[6.5vh] 2xl:-mt-[5.2vh] z-20">
+<section class="bg-secondary relative text-light pb-12 px-4 sm:px-6 lg:px-8 rounded-t-[60px] md:pt-[35vh] lg:-mt-[6.5vh] 2xl:-mt-[5.2vh] z-20 mt-[-6vh]">
   <div class=" md:mx-28 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
-    <div class="fixed-content space-y-6 md:space-y-8">
+    <!-- Desktop version - only visible on md screens and up -->
+    <div class="fixed-content space-y-6 md:space-y-8 hidden md:block">
       <div class="flex items-center space-x-3 md:space-x-4 mt-[10vh] pt-[15vw] md:mt-0">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="w-12 h-12 md:h-auto ">
         <div>
@@ -19,13 +20,25 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
           <p class="text-lg md:text-xl lg:text-[1.2vw] mt-4 tracking-wider">CEO & FOUNDER</p>
         </div>
       </div>
-      <div class=" md:pt-20">
+      <div class="md:pt-20">
+      </div>
+    </div>
+
+    <!-- Mobile version - fixed position, only visible on small screens -->
+    <div class="md:hidden absolute top-[10vh] left-0 right-0 bg-secondary px-4 py-5 z-30 text-center">
+      <div class="flex items-center space-x-3">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="w-12 h-12">
+        <div>
+          <h1 class="text-3xl libre-baskerville-regular">Aleksandra</h1>
+          <h1 class="text-3xl libre-baskerville-regular">Gierdziejewska</h1>
+          <p class="text-lg mt-4 tracking-wider">CEO & FOUNDER</p>
+        </div>
       </div>
     </div>
 
     <!-- Right Column -->
     <div class="scrollable-content">
-      <div class="space-y-6 md:space-y-25 max-w-[460px] md:ml-[10vh]">
+      <div class="pt-[35vh] md:pt-0 space-y-6 md:space-y-25 max-w-[460px] md:ml-[10vh]">
         <div class="text-center md:text-left link_li">
           <p><a href="tel:+48602142949" class="inter-thin tracking-[.2rem] text-[1rem] md:text-[1vw]">+48 602 142 949</a></p>
           <p><a href="tel:+46704415690" class="inter-thin tracking-[.2rem] text-[1rem] md:text-[1vw]">+46 704 415 690</a></p>
@@ -54,7 +67,7 @@ require_once get_template_directory() . '/template-parts/pills/photo_oneside.php
 
       </div>
       <div class="space-y-6 md:space-y-8 hidden"></div>
-      <div class="my-12 ml-13 md:my-18 overflow-visible max-w-[700px] min-w-[300px] xl:min-w-[460px] 2xl:min-w-[700px] justify-end">
+      <div class="my-12 md:ml-13 md:my-18 overflow-visible max-w-[700px] min-w-[300px] xl:min-w-[460px] 2xl:min-w-[700px] justify-end">
         <?php
         $post_id = get_the_ID();
         $image_url = get_field('pill_image', $post_id);

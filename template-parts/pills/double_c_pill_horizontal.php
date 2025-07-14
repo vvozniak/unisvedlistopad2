@@ -15,7 +15,7 @@ function double_c_pill_horizontal($heading = '5 rynków europejskich', $subtext 
   $theme_uri = get_template_directory_uri();
 
   echo '
-  <div class="relative w-full my-16 px-12 md:px-24 lg:px-32">
+  <div class="relative w-full my-16  md:px-24 lg:px-32">
     <div class="relative flex flex-col md:flex-row items-center justify-center gap-8 ' . $text_color . ' h-[250px] md:h-[350px] lg:h-[450px]">
       
       <!-- Left C shape -->
@@ -25,10 +25,10 @@ function double_c_pill_horizontal($heading = '5 rynków europejskich', $subtext 
 
       <!-- Text content -->
       <div class="w-full md:w-1/2 lg:w-2/5 text-center md:text-left">
-        <h2 class="text-[1.3rem] md:text-[40px] 2xl:text-[3.4rem] libre-baskerville-regular leading-tight">' . $heading . '</h2>
+        <h2 class="text-[20px] md:text-[40px] 2xl:text-[3.4rem] libre-baskerville-regular leading-tight">' . $heading . '</h2>
       </div>
       <div class="w-7/8 md:w-1/2 lg:w-3/5 text-center md:text-left">
-        <p class="text-[0.7rem] md:text-[20px] 2xl:text-[20px] inter-thin">' . $subtext . '</p>
+        <p class=" md:text-[20px] 2xl:text-[20px] inter-thin">' . $subtext . '</p>
       </div>
 
       <!-- Right C shape -->
