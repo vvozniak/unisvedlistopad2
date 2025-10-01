@@ -59,7 +59,7 @@ article > *:not(.entry-content),
   font-family: "Libre Baskerville", serif;
   font-weight: 200;
   font-style: italic;
-  -webkit-font-smoothing: none!important;
+  -webkit-font-smoothing: none !important;
   -moz-osx-font-smoothing: grayscale;
   font-smooth: never;
 }
@@ -76,7 +76,6 @@ article > *:not(.entry-content),
   font-weight: 300;
   font-style: normal;
 }
-
 
 .link_li a {
   text-decoration: none !important;
@@ -99,6 +98,17 @@ article > *:not(.entry-content),
   );
   mix-blend-mode: multiply;
 }
+.custom-overlay-kontakt-extended {
+  background-image: linear-gradient(
+    0deg,
+    rgba(16, 24, 32, 1),
+    rgba(16, 24, 32, 0.5)
+  );
+  mix-blend-mode: multiply;
+  height: calc(100vh + 80px); /* Extend beyond the rounded corners */
+  top: 0;
+  pointer-events: none;
+}
 
 .tracking-20 {
   letter-spacing: 0.2em;
@@ -113,21 +123,32 @@ article > *:not(.entry-content),
   max-width: 640px !important;
 }
 
-
-
-
 .pill_c_con {
-
   aspect-ratio: 1.8 / 1;
   width: 100%;
   max-width: 600px;
 }
+
+/* Na komputerach (tablet i większe) */
+@media (min-width: 768px) {
+  .pill_c_con {
+    aspect-ratio: 2 / 1;
+    max-width: 700px;
+  }
+}
+
 .pill_c_con_s {
   aspect-ratio: 1.8 / 1;
   width: 100%;
   max-width: 600px;
 }
 
+@media (min-width: 600px) and (max-width: 1441px) {
+  .pill_c_con,
+  .pill_c_con_s {
+    max-width: 500px !important;
+  }
+}
 
 .pill-container-with-content {
   aspect-ratio: 1.8 / 1;
@@ -376,5 +397,730 @@ body {
 }
 
 .max700pxpill > img {
-  width: 700px !important;
+  width: 800px !important;
+}
+@media (min-width: 1600px) {
+  .pill-container,
+  .pill-opinion-container {
+    max-width: 740px !important; /* Pełny rozmiar dla bardzo dużych ekranów */
+  }
+}
+
+/* Jeśli chcesz jeszcze większe obrazki na 4K */
+@media (min-width: 3840px) {
+  .pill-container,
+  .pill-opinion-container,
+  .pill-container-with-content {
+    max-width: 900px !important;
+  }
+}
+
+/* 4K+ safeguards: cap widths, soften vw/vh spacing, clamp headings */
+@media (min-width: 3840px) {
+  /* 4K enhancement without structural changes: scale fonts, images, and spacing only */
+
+  /* Typography scaling */
+  h1 {
+    font-size: clamp(3rem, 3.7vw, 5.5rem) !important;
+    line-height: 1.15 !important;
+  }
+  h2 {
+    font-size: clamp(2.25rem, 3.05vw, 4rem) !important;
+    line-height: 1.2 !important;
+  }
+  h3 {
+    font-size: clamp(1.6rem, 2.3vw, 3.25rem) !important;
+    line-height: 1.25 !important;
+  }
+  p,
+  li {
+    font-size: clamp(1.2rem, 1.5vw, 1.75rem) !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Offer headers and links that use vw */
+  [id^="offer-head-"] h2 {
+    font-size: clamp(1.75rem, 2.35vw, 3.25rem) !important;
+  }
+  [id^="offer-p-static-mobile-"],
+  [id^="offer-p-static-desktop-"] {
+    font-size: clamp(1rem, 1.2vw, 1.35rem) !important;
+  }
+  a[id^="toggle-offer"],
+  a[id^="toggle-offer-dynamic"],
+  a[id^="toggle-offer-desktop"] {
+    font-size: clamp(1rem, 1.2vw, 1.35rem) !important;
+  }
+
+  /* Pill/opinion/media scaling */
+  .pill-container img,
+  .pill-opinion-container img,
+  .pill-container-with-content img {
+    max-width: 110% !important;
+    height: auto !important;
+  }
+  img[class*="w-[10vw]"],
+  img[class*="w-[13vw]"],
+  img[class*="w-[15vw]"],
+  img[class*="w-[20vw]"] {
+    width: clamp(160px, 14vw, 520px) !important;
+    height: auto !important;
+  }
+
+  /* C shapes and decorative icons */
+  img[src*="left_c.svg"],
+  img[src*="big_c.svg"],
+  img[src*="big_c_right.svg"],
+  img[src*="small_c.svg"],
+  img[src*="white_c.svg"] {
+    width: clamp(64px, 4.5vw, 140px) !important;
+    height: auto !important;
+  }
+
+  /* Spacing adjustments (soft only) */
+  .py-20 {
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+  }
+  .my-10 {
+    margin-top: 3.5rem !important;
+    margin-bottom: 3.5rem !important;
+  }
+  .gap-12 {
+    gap: 4rem !important;
+  }
+  .gap-24 {
+    gap: 6rem !important;
+  }
+
+  /* Ensure long text blocks don’t become too narrow */
+  .offer-text-block {
+    min-width: 560px !important;
+  }
+  .offer-image-container {
+    min-width: 560px !important;
+    min-height: 360px !important;
+  }
+
+  /* Details area spacing on offer pages */
+  [id^="offer-details-"] {
+    margin-top: 4rem !important;
+  }
+
+  /* Offer section gap normalization on 4K */
+  .gap-restore-130 {
+    gap: 28rem !important;
+  }
+
+  /* 4K page gutters: keep content away from viewport edges on the Offer page */
+  .desktop-only .offer-section,
+  .desktop-only .new-background-section {
+    padding-left: clamp(32px, 6vw, 240px) !important;
+    padding-right: clamp(32px, 6vw, 240px) !important;
+  }
+
+  /* Projects → "Efekty mówią…" small pill items: prevent overlap and improve legibility */
+  .pill_c_con_s {
+    max-height: none !important;
+    min-height: clamp(200px, 10vw, 360px) !important;
+    margin-bottom: 2.5rem !important;
+  }
+  .pill_c_con_s > .relative {
+    padding-left: clamp(32px, 2.5vw, 96px) !important;
+    padding-right: clamp(32px, 2.5vw, 96px) !important;
+  }
+  .pill_c_con_s > .absolute {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+  .pill_c_con_s > .absolute img {
+    width: clamp(72px, 3.6vw, 160px) !important;
+    height: auto !important;
+  }
+  .pill_c_con_s h2 {
+    font-size: clamp(1.7rem, 2.2vw, 2.9rem) !important;
+  }
+  .pill_c_con_s p {
+    font-size: clamp(1.2rem, 1.45vw, 1.9rem) !important;
+    line-height: 1.5 !important;
+  }
+
+  /* About page (Jak działamy?) – add right gutters and text padding to avoid overlap with crescents */
+  body.page-id-7
+    .fixed-side-container[data-fixed-side="left"]
+    .scrollable-wrapper,
+  body.page-id-7
+    .fixed-side-container[data-fixed-side="left"]
+    .scrollable-content {
+    /* Soften the right gutter at 4K to give the text more width */
+    padding-right: clamp(24px, 4vw, 160px) !important;
+  }
+  body.page-id-7 .pill_c_div {
+    padding-right: clamp(40px, 4vw, 160px) !important;
+    padding-left: clamp(24px, 3vw, 120px) !important;
+  }
+  /* Relax unified wrapper margins on About page to prevent a too narrow column */
+  body.page-id-7 .scrollable-wrapper-unified {
+    margin-right: clamp(24px, 4vw, 96px) !important;
+  }
+
+  /* Global pill text fixes on 4K: allow heading wrapping and add safe padding */
+  .h2pill {
+    white-space: normal !important;
+    text-wrap: balance !important;
+    line-height: 1.15 !important;
+  }
+  .pill_c_div {
+    padding-left: clamp(24px, 3vw, 120px) !important;
+    padding-right: clamp(24px, 3vw, 120px) !important;
+  }
+  .text_c_p {
+    margin-top: 0.25rem !important;
+  }
+  /* Push crescents outward a bit depending on side to avoid collision */
+  .pill_c_img[class*="-right-"] {
+    transform: translateX(12%) !important;
+  }
+  .pill_c_img[class*="-left-"] {
+    transform: translateX(-12%) !important;
+  }
+
+  /* Side-aware spacing and width for crescent/text pills on 4K */
+  /* Widen the pill container itself so text has room */
+  .pill_c_con {
+    max-width: clamp(1100px, 58vw, 1600px) !important;
+  }
+  .pill_c_con_s {
+    max-width: clamp(900px, 48vw, 1400px) !important;
+  }
+  .pill_c_con:has(.pill_c_img[class*="-right-"]) .pill_c_div {
+    padding-right: clamp(96px, 7vw, 420px) !important;
+    max-width: clamp(820px, 62vw, 1500px) !important;
+    min-width: clamp(560px, 45vw, 1200px) !important;
+  }
+  .pill_c_con:has(.pill_c_img[class*="-left-"]) .pill_c_div {
+    padding-left: clamp(96px, 7vw, 420px) !important;
+    max-width: clamp(820px, 62vw, 1500px) !important;
+    min-width: clamp(560px, 45vw, 1200px) !important;
+  }
+  /* Center crescents vertically inside the pill */
+  .pill_c_con .pill_c_img {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+  /* Use explicit side offsets instead of transforms so the C never intrudes */
+  .pill_c_con:has(.pill_c_img[class*="-right-"]) .pill_c_img {
+    left: auto !important;
+    right: clamp(-240px, -4.5vw, -140px) !important;
+    transform: translateY(-50%) !important;
+  }
+  .pill_c_con:has(.pill_c_img[class*="-left-"]) .pill_c_img {
+    right: auto !important;
+    left: clamp(-240px, -4.5vw, -140px) !important;
+    transform: translateY(-50%) !important;
+  }
+
+  /* Constrain crescent size inside pills on 4K to avoid intruding the text */
+  .pill_c_con .pill_c_img img {
+    height: auto !important;
+    width: clamp(110px, 3.8vw, 200px) !important;
+  }
+
+  /* Neutralize huge responsive margins on pill containers that squeeze text on 4K */
+  .pill_c_con[class*="ml-[15vw]"] {
+    margin-left: 0 !important;
+  }
+  .pill_c_con[class*="mr-[15vw]"] {
+    margin-right: 0 !important;
+  }
+
+  /* Offer page fixes (4K): prevent last card overlapping the next section */
+  .desktop-only .offer-section:last-of-type {
+    padding-bottom: clamp(180px, 18vh, 360px) !important;
+  }
+  .desktop-only .new-background-section {
+    margin-top: -4vh !important;
+  }
+
+  /* "Możliwość łączenia pakietów" banner: center vertically and scale height */
+  .contabg-center {
+    display: flex !important;
+    align-items: center !important;
+  }
+  .contabg-center .double-c-pill {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .double-c-row {
+    height: clamp(360px, 24vh, 560px) !important;
+  }
+
+  /* Dlaczego Skandynawia (4K+) – give text more width so it doesn’t wrap too early */
+  body.home section.dlaczego-skandynawia .scrollable-wrapper,
+  body.page-template-template-parts-homepage-php
+    section.dlaczego-skandynawia
+    .scrollable-wrapper {
+    margin-left: clamp(0px, 2vw, 64px) !important; /* ease left margin */
+    margin-right: clamp(24px, 6vw, 220px) !important; /* more right room */
+  }
+  body.home
+    section.dlaczego-skandynawia
+    .scrollable-wrapper
+    .scrollable-content
+    > div
+    > .flex,
+  body.page-template-template-parts-homepage-php
+    section.dlaczego-skandynawia
+    .scrollable-wrapper
+    .scrollable-content
+    > div
+    > .flex {
+    gap: clamp(16px, 2.2vw, 64px) !important;
+  }
+  body.home
+    section.dlaczego-skandynawia
+    .scrollable-wrapper
+    .md\:max-w-\[250px\],
+  body.page-template-template-parts-homepage-php
+    section.dlaczego-skandynawia
+    .scrollable-wrapper
+    .md\:max-w-\[250px\] {
+    max-width: none !important;
+  }
+  body.home
+    section.dlaczego-skandynawia
+    .scrollable-wrapper
+    .xl\:max-w-\[500px\],
+  body.page-template-template-parts-homepage-php
+    section.dlaczego-skandynawia
+    .scrollable-wrapper
+    .xl\:max-w-\[500px\] {
+    max-width: none !important;
+  }
+  /* Specifically widen the text column next to the icon */
+  body.home
+    section.dlaczego-skandynawia
+    .scrollable-wrapper
+    .flex
+    > div:last-child,
+  body.page-template-template-parts-homepage-php
+    section.dlaczego-skandynawia
+    .scrollable-wrapper
+    .flex
+    > div:last-child {
+    flex: 1 1 auto !important;
+    max-width: clamp(760px, 52vw, 1200px) !important;
+    min-width: clamp(560px, 36vw, 980px) !important;
+  }
+  /* Reduce icon width a bit to free space for text */
+  body.home
+    section.dlaczego-skandynawia
+    .scrollable-wrapper
+    .flex
+    > div:first-child
+    img,
+  body.page-template-template-parts-homepage-php
+    section.dlaczego-skandynawia
+    .scrollable-wrapper
+    .flex
+    > div:first-child
+    img {
+    width: clamp(120px, 9vw, 220px) !important;
+    height: auto !important;
+  }
+  /* Balance wrapping in long headings and copy */
+  body.home section.dlaczego-skandynawia .icon-text-pill-h3,
+  body.page-template-template-parts-homepage-php
+    section.dlaczego-skandynawia
+    .icon-text-pill-h3,
+  body.home section.dlaczego-skandynawia .icon-text-pill-p,
+  body.page-template-template-parts-homepage-php
+    section.dlaczego-skandynawia
+    .icon-text-pill-p {
+    text-wrap: balance !important;
+  }
+  /* Slightly reduce tracking to fit better at larger widths */
+  body.home section.dlaczego-skandynawia .icon-text-pill-h3,
+  body.page-template-template-parts-homepage-php
+    section.dlaczego-skandynawia
+    .icon-text-pill-h3 {
+    letter-spacing: clamp(0.04em, 0.08em, 0.1em) !important;
+  }
+
+  /* About → "Nasze wartości" (4K+) – mirror the Dlaczego Skandynawia widening & balance */
+  body.page-id-7 section.nasze-wartosci .scrollable-wrapper,
+  body.page-template-template-parts-about-php
+    section.nasze-wartosci
+    .scrollable-wrapper {
+    margin-left: clamp(0px, 2vw, 64px) !important;
+    margin-right: clamp(24px, 6vw, 220px) !important;
+  }
+  body.page-id-7
+    section.nasze-wartosci
+    .scrollable-wrapper
+    .scrollable-content
+    > div
+    > .flex,
+  body.page-template-template-parts-about-php
+    section.nasze-wartosci
+    .scrollable-wrapper
+    .scrollable-content
+    > div
+    > .flex {
+    gap: clamp(16px, 2.2vw, 64px) !important;
+  }
+  body.page-id-7
+    section.nasze-wartosci
+    .scrollable-wrapper
+    .md\:max-w-\[250px\],
+  body.page-template-template-parts-about-php
+    section.nasze-wartosci
+    .scrollable-wrapper
+    .md\:max-w-\[250px\] {
+    max-width: none !important;
+  }
+  body.page-id-7
+    section.nasze-wartosci
+    .scrollable-wrapper
+    .xl\:max-w-\[500px\],
+  body.page-template-template-parts-about-php
+    section.nasze-wartosci
+    .scrollable-wrapper
+    .xl\:max-w-\[500px\] {
+    max-width: none !important;
+  }
+  body.page-id-7
+    section.nasze-wartosci
+    .scrollable-wrapper
+    .flex
+    > div:last-child,
+  body.page-template-template-parts-about-php
+    section.nasze-wartosci
+    .scrollable-wrapper
+    .flex
+    > div:last-child {
+    flex: 1 1 auto !important;
+    max-width: clamp(760px, 52vw, 1200px) !important;
+    min-width: clamp(560px, 36vw, 980px) !important;
+  }
+  body.page-id-7
+    section.nasze-wartosci
+    .scrollable-wrapper
+    .flex
+    > div:first-child
+    img,
+  body.page-template-template-parts-about-php
+    section.nasze-wartosci
+    .scrollable-wrapper
+    .flex
+    > div:first-child
+    img {
+    width: clamp(120px, 9vw, 220px) !important;
+    height: auto !important;
+  }
+  body.page-id-7 section.nasze-wartosci .icon-text-pill-h3,
+  body.page-id-7 section.nasze-wartosci .icon-text-pill-p,
+  body.page-template-template-parts-about-php
+    section.nasze-wartosci
+    .icon-text-pill-h3,
+  body.page-template-template-parts-about-php
+    section.nasze-wartosci
+    .icon-text-pill-p {
+    text-wrap: balance !important;
+  }
+  body.page-id-7 section.nasze-wartosci .icon-text-pill-h3,
+  body.page-template-template-parts-about-php
+    section.nasze-wartosci
+    .icon-text-pill-h3 {
+    letter-spacing: clamp(0.04em, 0.08em, 0.1em) !important;
+  }
+
+  /* Home → Final contact section (4K+): push only the right column to the far right (don’t move the image) */
+  body.home
+    section[class~="relative"][class~="z-80i"][class~="bg-secondary"][class~="text-white"][class~="pt-12"][class~="pb-[20vh]"][class~="md:mt-[-5px]"]
+    .padding-right-tablet,
+  body.page-template-template-parts-homepage-php
+    section[class~="relative"][class~="z-80i"][class~="bg-secondary"][class~="text-white"][class~="pt-12"][class~="pb-[20vh]"][class~="md:mt-[-5px]"]
+    .padding-right-tablet {
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+    margin-left: auto !important; /* emulate ms-auto */
+    width: auto !important; /* override md:w-1/2 */
+    flex: 0 0 auto !important; /* shrink to content, stay on the far right */
+  }
+
+  /* Also reduce the section container right padding from 10vw → ~4–6vw to actually shift toward the edge */
+  body.home
+    section[class~="relative"][class~="z-80i"][class~="bg-secondary"][class~="text-white"][class~="pt-12"][class~="pb-[20vh]"][class~="md:mt-[-5px]"]
+    > div[class*="xl:px-\[10vw\]"],
+  body.page-template-template-parts-homepage-php
+    section[class~="relative"][class~="z-80i"][class~="bg-secondary"][class~="text-white"][class~="pt-12"][class~="pb-[20vh]"][class~="md:mt-[-5px]"]
+    > div[class*="xl:px-\[10vw\]"] {
+    padding-right: clamp(24px, 4.5vw, 180px) !important; /* less right gutter */
+    padding-left: clamp(24px, 10vw, 240px) !important; /* keep left as 10vw */
+  }
+
+  /* (Reverted) Jesteśmy tu, by pomóc! 4K padding override: restore original gutters */
+}
+
+/* 4K Homepage specific fixes: center/enlarge targeted photos only */
+@media (min-width: 3840px) {
+  /* Dlaczego my? – center/enlarge the first big photo only in this block */
+  body.home .dlaczego-my .pill-photo-oneside,
+  body.page-template-template-parts-homepage-php
+    .dlaczego-my
+    .pill-photo-oneside {
+    width: clamp(860px, 46vw, 1200px) !important;
+    max-width: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* (Reverted) Unisved w pigułce last photo: restore original sizing */
+
+  /* 4K: "Unisved w pigułce" – force absolute vertical centering of text within each pill */
+  body.home .unisved-w-pigulce .scrollable-content .pill-container-with-content,
+  body.page-template-template-parts-homepage-php
+    .unisved-w-pigulce
+    .scrollable-content
+    .pill-container-with-content {
+    position: relative !important;
+    min-height: clamp(360px, 24vh, 560px) !important;
+    margin-bottom: clamp(4rem, 6vh, 7rem) !important;
+  }
+  body.home .unisved-w-pigulce .pill-container-with-content > .relative.z-20,
+  body.home .unisved-w-pigulce .pill-container-with-content > .double-c-text,
+  body.page-template-template-parts-homepage-php
+    .unisved-w-pigulce
+    .pill-container-with-content
+    > .relative.z-20,
+  body.page-template-template-parts-homepage-php
+    .unisved-w-pigulce
+    .pill-container-with-content
+    > .double-c-text {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(
+      -50%,
+      calc(-50% - 10px)
+    ) !important; /* slight upward nudge */
+    width: min(90%, 1100px) !important;
+    padding-top: clamp(12px, 1.2vh, 28px) !important;
+    padding-bottom: clamp(12px, 1.2vh, 28px) !important;
+  }
+  body.home .unisved-w-pigulce .pill-container-with-content h2,
+  body.page-template-template-parts-homepage-php
+    .unisved-w-pigulce
+    .pill-container-with-content
+    h2 {
+    line-height: 1.15 !important;
+    margin-bottom: clamp(10px, 1.2vh, 18px) !important;
+  }
+
+  /* 4K: "Dlaczego my?" – bring crescents slightly closer and enlarge a bit (only this block) */
+  body.home
+    .dlaczego-my
+    .scrollable-content-unified
+    .pill_c_con
+    .pill_c_img
+    img,
+  body.page-template-template-parts-homepage-php
+    .dlaczego-my
+    .scrollable-content-unified
+    .pill_c_con
+    .pill_c_img
+    img {
+    width: clamp(130px, 4.4vw, 220px) !important;
+    height: auto !important;
+  }
+  /* Reduce side offsets so the C sits closer to text but still outside */
+  body.home
+    .dlaczego-my
+    .scrollable-content-unified
+    .pill_c_con:has(.pill_c_img[class*="-right-"])
+    .pill_c_img,
+  body.page-template-template-parts-homepage-php
+    .dlaczego-my
+    .scrollable-content-unified
+    .pill_c_con:has(.pill_c_img[class*="-right-"])
+    .pill_c_img {
+    right: clamp(-200px, -3.8vw, -120px) !important;
+  }
+  body.home
+    .dlaczego-my
+    .scrollable-content-unified
+    .pill_c_con:has(.pill_c_img[class*="-left-"])
+    .pill_c_img,
+  body.page-template-template-parts-homepage-php
+    .dlaczego-my
+    .scrollable-content-unified
+    .pill_c_con:has(.pill_c_img[class*="-left-"])
+    .pill_c_img {
+    left: clamp(-200px, -3.8vw, -120px) !important;
+  }
+  /* Tighten text container padding so the gap feels smaller */
+  body.home
+    .dlaczego-my
+    .scrollable-content-unified
+    .pill_c_con:has(.pill_c_img[class*="-right-"])
+    .pill_c_div,
+  body.page-template-template-parts-homepage-php
+    .dlaczego-my
+    .scrollable-content-unified
+    .pill_c_con:has(.pill_c_img[class*="-right-"])
+    .pill_c_div {
+    padding-right: clamp(80px, 6.2vw, 360px) !important;
+  }
+  body.home
+    .dlaczego-my
+    .scrollable-content-unified
+    .pill_c_con:has(.pill_c_img[class*="-left-"])
+    .pill_c_div,
+  body.page-template-template-parts-homepage-php
+    .dlaczego-my
+    .scrollable-content-unified
+    .pill_c_con:has(.pill_c_img[class*="-left-"])
+    .pill_c_div {
+    padding-left: clamp(80px, 6.2vw, 360px) !important;
+  }
+
+  /* (Reverted) Jesteśmy tu, by pomóc!: restore original image sizing and layout */
+
+  /* (Removed) Minimal nudge for jestesmy-tu section to restore original */
+}
+
+/* (Reverted) About page crescents back to original sizes */
+
+/* (Reverted) Offer page crescents back to original sizes */
+/* Tablety */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .padding-left-tablet {
+    padding-left: 2rem !important;
+  }
+  .padding-right-tablet {
+    padding-right: 2rem !important;
+  }
+}
+
+/* Małe laptopy */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .padding-left-tablet {
+    padding-left: 3rem !important;
+  }
+  .padding-right-tablet {
+    padding-right: 3rem !important;
+  }
+}
+
+@media (min-width: 1680px) {
+  .gap-restore-130 {
+    gap: 25.5rem !important;
+  }
+}
+
+[id^="offer-details-"] .c-list li {
+  background-size: 3rem 3rem !important;
+  padding-left: 4rem !important;
+  padding-top: 1rem !important;
+  height: 5rem !important;
+  background-position: -0.5rem 1rem !important; /* Lekko poza */
+}
+[id^="offer-details-"] .list-disc.list-inside {
+  padding-left: 4rem !important;
+}
+@media (min-width: 1020px) and (max-width: 1280px) {
+  .contact-icon-fix {
+    height: 40px !important;
+    width: 40px !important;
+    display: block !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    max-width: 40px !important;
+    max-height: 40px !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+@media (min-width: 1600px) {
+  .custom-min-w-1600 {
+    min-width: 500px;
+  }
+}
+
+/* ZUNIFIKOWANE STYLE DLA WSZYSTKICH SEKCJI */
+
+/* Unified marginesy dla scrollable-wrapper */
+.scrollable-wrapper-unified {
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .scrollable-wrapper-unified {
+    margin-right: 4rem !important; /* Jednolite dla wszystkich */
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1599px) {
+  .scrollable-wrapper-unified {
+    margin-right: 10rem !important; /* Jednolite dla wszystkich */
+  }
+}
+
+@media (min-width: 1600px) {
+  .scrollable-wrapper-unified {
+    margin-right: 16rem !important; /* Jednolite dla wszystkich */
+  }
+}
+
+/* Unified pozycjonowanie fixed-content */
+.fixed-content-unified {
+  flex-shrink: 0;
+  padding-left: var(--tablet-padding, 0);
+}
+
+@media (min-width: 1024px) {
+  .fixed-content-unified {
+    margin-top: 10vh !important; /* Jednolite dla wszystkich */
+    padding-top: 0 !important;
+  }
+}
+
+/* Unified rozmiary C */
+.c-icon-unified {
+  margin-right: 1.25rem; /* mr-5 */
+}
+
+@media (min-width: 768px) {
+  .c-icon-unified {
+    width: 4vw !important;
+  }
+}
+
+@media (min-width: 1536px) {
+  .c-icon-unified {
+    width: max-content !important;
+  }
+}
+
+/* Unified scrollable-content - usuń dodatkowe marginesy */
+.scrollable-content-unified {
+  margin-top: 0 !important; /* Usuń -mt-[20vw] */
+}
+
+/* Unified typography dla nagłówków */
+.section-heading-unified {
+  color: rgb(var(--color-light));
+}
+
+@media (min-width: 768px) {
+  .section-heading-unified {
+    font-size: 2.5rem !important;
+  }
+}
+
+@media (min-width: 1536px) {
+  .section-heading-unified {
+    font-size: 3rem !important;
+  }
 }

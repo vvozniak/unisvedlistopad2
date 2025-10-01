@@ -1,0 +1,9 @@
+/* To zapobiega nieskończonemu scrollowaniu - NIE TYKAĆ */
+
+.otgs-development-site-front-end {
+  display: none !important;
+}
+
+.wpml-ls-statics-footer {
+  display: none !important;
+}

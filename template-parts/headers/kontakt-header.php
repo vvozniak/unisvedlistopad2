@@ -3,6 +3,9 @@
 <header class="relative min-h-[105vh] overflow-hidden text-light">
     <div class="absolute inset-0 custom-overlay-kontakt z-10"></div>
     <?php
+    // ACF-driven title for Contact header with safe fallbacks
+    $kontakt_title_l1 = trim((string) get_field('kontakt_header_title_line1')) ?: 'Masz pytania?';
+    $kontakt_title_l2 = trim((string) get_field('kontakt_header_title_line2')) ?: 'Jesteśmy tu, by pomóc!';
     $other_page_header_bg = get_field("other_page_header_bg_image");
     $other_page_header_bg_url = '';
     if (is_array($other_page_header_bg) && isset($other_page_header_bg['url'])) {
@@ -12,7 +15,7 @@
     }
     if ($other_page_header_bg_url) : ?>
         <div class="fixed inset-0 z-0">
-            <img src="<?php echo esc_url($other_page_header_bg_url); ?>" alt="<?php echo esc_attr(is_array($other_page_header_bg) && isset($other_page_header_bg['alt']) ? $other_page_header_bg['alt'] : ''); ?>" class="w-full h-screen object-cover ">
+            <img id='background-image' src="<?php echo esc_url($other_page_header_bg_url); ?>" alt="<?php echo esc_attr(is_array($other_page_header_bg) && isset($other_page_header_bg['alt']) ? $other_page_header_bg['alt'] : ''); ?>" class="w-full h-screen object-cover ">
         </div>
     <?php endif; ?>
 
@@ -21,6 +24,6 @@
     <img src="<?php echo get_template_directory_uri(); ?>/assets/o_nas_svg2.svg" alt="brandowy element dekoracyjny 2" class="absolute z-10 top-[20vh] left-0 w-[7vw] h-auto object-cover rotate-180">
 
     <div class="absolute left-0 top-[25vh] md:top-[40vh] md:left-[17vw] inset-0 flex flex-col items-center justify-start z-20 text-center md:text-left px-4 md:w-2/3">
-        <h1 class="px-auto text-light text-[3rem] 2xl:text-[4rem] libre-baskerville-regular mb-[15vh] mt-[10vh] md:mt-0">Masz pytania?<br>Jesteśmy tu, by pomóc!</h1>
+        <h1 class="px-auto text-light text-[3rem] md:text-[4vw] libre-baskerville-regular mb-[15vh] mt-[10vh] md:mt-0"><?php echo esc_html($kontakt_title_l1); ?><br><?php echo esc_html($kontakt_title_l2); ?></h1>
     </div>
 </header>

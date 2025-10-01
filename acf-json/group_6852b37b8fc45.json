@@ -1,0 +1,224 @@
+{
+    "key": "group_6852b37b8fc45",
+    "title": "Sekcja - Dlaczego Skandynawia?",
+    "fields": [
+        {
+            "key": "field_6852b37b25784",
+            "label": "Tytuł 1",
+            "name": "icon_1_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_6852b7bf4c08f",
+            "label": "Treść 1",
+            "name": "icon_1_content",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_6852b7bf4c08e",
+            "label": "Tytuł 2",
+            "name": "icon_2_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_6852b7bf4c08d",
+            "label": "Treść 2",
+            "name": "icon_2_content",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_6852b7bf4c08c",
+            "label": "Tytuł 3",
+            "name": "icon_3_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_6852b7bf4c08b",
+            "label": "Treść 3",
+            "name": "icon_3_content",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_6852b7bf4c08a",
+            "label": "Tytuł 4",
+            "name": "icon_4_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_6852b7be4c089",
+            "label": "Treść 4",
+            "name": "icon_4_content",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_6852b8464c090",
+            "label": "Tekst przy C",
+            "name": "mini_pill_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "wpml_cf_preferences": "2"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "49"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfml_field_group_mode": "translation",
+    "modified": 1754899746
+}

@@ -1,0 +1,229 @@
+{
+    "key": "group_6852a66f80dfe",
+    "title": "Sekcja - Dlaczego my?",
+    "fields": [
+        {
+            "key": "field_6852a66fef5f1",
+            "label": "Zdjęcie w pigułce",
+            "name": "pill_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium",
+            "wpml_cf_preferences": "3"
+        },
+        {
+            "key": "field_6852ae766a863",
+            "label": "Pigułka 1 - Tytuł",
+            "name": "pill_1_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_6852ae7b6a864",
+            "label": "Pigułka 1 - tekst",
+            "name": "pill_1_content",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_6852ae7d6a865",
+            "label": "Pigułka 2 - Tytuł",
+            "name": "pill_2_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_6852ae7f6a866",
+            "label": "Pigułka 2 - tekst",
+            "name": "pill_2_content",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_6852ae816a867",
+            "label": "Pigułka 3 - Tytuł",
+            "name": "pill_3_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_6852ae836a868",
+            "label": "Pigułka 3 - tekst",
+            "name": "pill_3_content",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_6852ae846a869",
+            "label": "Pigułka 4 - Tytuł",
+            "name": "pill_4_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_6852ae866a86a",
+            "label": "Pigułka 4 - tekst",
+            "name": "pill_4_content",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "wpml_cf_preferences": "2"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "49"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfml_field_group_mode": "translation",
+    "modified": 1754899849
+}

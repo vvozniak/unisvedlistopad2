@@ -2,10 +2,13 @@
     <div class="absolute inset-0 custom-overlay-kontakt z-10"></div>
     <img src="<?php echo get_template_directory_uri(); ?>/assets/header.svg" class=" absolute inset-0 z-10 top-[75vh] right-0 left-auto w-[10vw] h-auto object-cover">
     <?php
-    $bg_img = get_field("bg_img", 24);
-    $placeholder = get_field("placeholder", 24);
-    $video = get_field("video", 24);
-    $bool_video = get_field("bool_video", 24);
+    // Map the original page ID to the current language using WPML
+    $landing_page_id = apply_filters( 'wpml_object_id', 24, 'page', true, apply_filters( 'wpml_current_language', null ) );
+
+    $bg_img = get_field("bg_img", $landing_page_id);
+    $placeholder = get_field("placeholder", $landing_page_id);
+    $video = get_field("video", $landing_page_id);
+    $bool_video = get_field("bool_video", $landing_page_id);
     ?>
     <?php if (!$bool_video) { ?>
         <img id="image" src="<?php echo esc_url($bg_img); ?>" class="absolute inset-0 w-full h-full object-cover z-0"></img>
@@ -17,19 +20,19 @@
     <?php } ?>
 
     <?php
-    $image_header = get_field("logo_header", 24);
+    $image_header = get_field("logo_header", $landing_page_id);
     if ($image_header) {
         echo '<img src="' . esc_url($image_header) . '" alt="Header Logo" class="absolute inset-0 z-999 top-[40vh] md:top-[45vh] left-[15vw] md:left-[34vw] lg:w-[30vw] md:w-[45vw] w-[70vw]">';
     }
     ?>
     <div class="absolute top-[100vh]  left-[5vw] md:left-[17vw] inset-0 flex flex-col items-start justify-start z-20 text-left px-4 md:w-2/3">
-        <h1 class="text-light text-[5.5vw] md:text-[4vw] libre-baskerville-regular mb-[5vh] md:mb-[15vh]">Budujemy mosty biznesowe <br> między Polską a Skandynawią.</h1>
+        <h1 class="text-light text-[5.5vw] md:text-[4vw] libre-baskerville-regular mb-[5vh] md:mb-[15vh]"><?php _e('Budujemy mosty biznesowe <br> między Polską a Skandynawią.');?></h1>
         <div class="flex flex-col md:flex-row w-[80%] items-start justify-start mt-4">
             <div class="w-full md:w-1/2 md:h-[12vh] 2xl:h-[20vh] flex items-start justify-start pt-2">
                 <span class="block w-full h-[0.2rem] bg-primary"></span>
             </div>
             <div class="w-full md:w-1/2 md:h-[20vh] pt-5 md:pt-0">
-                <p class="text-light md:text-[1.6vw]/10 mt-auto 2xl:tracking-[0.05em] inter-regular md:ml-[20vh] w-[max-content]">Wprowadzamy firmy na nowe rynki i <br>wspieramy ich rozwój w obu kierunkach.<br><br>Skontaktuj się z nami i razem <br> przekroczmy granice biznesu.</p>
+                <p class="text-light md:text-[1.6vw]/10 mt-auto 2xl:tracking-[0.05em] inter-regular md:ml-[20vh] w-[max-content] leading-tight"><?php _e('Wprowadzamy firmy na nowe rynki i <br>wspieramy ich rozwój w obu kierunkach.<br><br>Skontaktuj się z nami i razem <br> przekroczmy granice biznesu.');?></p>
             </div>
         </div>
     </div>

@@ -17,6 +17,13 @@ if (!function_exists('text_with_c_pill_small')) {
     $c_position = ($side === 'left') ? 'right-0' : 'left-0';
     $text_alignment = ($side === 'left') ? 'text-left pr-16' : 'text-left md:pl-12 2xl:pl-20';
 
+    // Compensation for paragraph alignment based on font differences
+    // Mobile: 0.070rem offset, Desktop: 0.140vw offset, 2XL: 0.120vw offset
+    // This compensates for tracking-2, uppercase, and font-family differences between h2 and p
+    $paragraph_compensation = ($side === 'left') ? 
+      'pl-[0.070rem] md:pl-[0.140vw] 2xl:pl-[0.120vw]' : 
+      'ml-[0.070rem] md:ml-[0.140vw] 2xl:ml-[0.120vw]';
+
     // Get the theme URI for image paths
     $theme_uri = get_template_directory_uri();
 
@@ -34,10 +41,10 @@ if (!function_exists('text_with_c_pill_small')) {
     echo '
   <div class=" pill_c_con_s relative max-h-[200px]  rounded-full ">
     <div class="relative overflow-hidden z-20 ' . $text_color . ' flex flex-col justify-center h-full pl-16 md:pl-8">
-      <h2 class="' . $text_alignment . 'text-[0.7rem] tracking-2 md:text-[1.4vw]  mb-1 libre-baskerville-regular uppercase">' . $heading . '</h2>
-      <p class="' . $text_alignment . ' text-[0.8rem] md:text-[1vw] inter-thin">' . esc_html($subtext) . '</p>
+      <h2 class="' . $text_alignment . ' text-[0.7rem] tracking-2 md:text-[1.4vw]  mb-1 libre-baskerville-regular uppercase">' . $heading . '</h2>
+      <p class="' . $text_alignment . ' ' . $paragraph_compensation . ' text-[0.8rem] md:text-[1vw] inter-thin">' . esc_html($subtext) . '</p>
     </div>
-    <div class="absolute ' . $c_position . ' 2xl:top-5 z-10 md:top-10 top-10">
+    <div class="absolute ' . $c_position . ' 2xl:top-5 z-10 md:top-12.5 top-10">
       <img src="' . $theme_uri . '/' . $c_image . '" alt="" class="h-full w-[15vw] md:w-[4vw] object-cover">
     </div>
   </div>

@@ -7,6 +7,9 @@ function tailpress_setup()
 {
 	add_theme_support('title-tag');
 
+	// Enable translations for theme strings
+	load_theme_textdomain('tailpress', get_template_directory() . '/languages');
+
 	register_nav_menus(
 		array(
 			'primary' => __('Primary Menu', 'tailpress'),
@@ -49,6 +52,8 @@ function tailpress_enqueue_scripts()
 
 	wp_enqueue_style('tailpress', tailpress_asset('css/app.css'), array(), $theme->get('Version'));
 	wp_enqueue_script('tailpress', tailpress_asset('js/app.js'), array(), $theme->get('Version'));
+
+	wp_enqueue_style('custom', get_template_directory_uri() . '/resources/css/custom-new.css', array(), '1.0', 'all');
 }
 
 add_action('wp_enqueue_scripts', 'tailpress_enqueue_scripts');

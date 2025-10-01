@@ -23,16 +23,16 @@
 
 		<?php if (is_front_page()) : ?>
 			<?php get_template_part('template-parts/headers/landing-header'); ?>
+		<?php elseif ( is_page( apply_filters( 'wpml_object_id', 8, 'page', true, apply_filters( 'wpml_current_language', null ) ) ) ) : ?>
+			<?php get_template_part('template-parts/headers/oferta-header'); ?>
+		<?php elseif ( is_page( apply_filters( 'wpml_object_id', 7, 'page', true, apply_filters( 'wpml_current_language', null ) ) ) ) : ?>
+			<?php get_template_part('template-parts/headers/o-nas-header'); ?>
+		<?php elseif ( is_page( apply_filters( 'wpml_object_id', 9, 'page', true, apply_filters( 'wpml_current_language', null ) ) ) ) : ?>
+			<?php get_template_part('template-parts/headers/projekty-header'); ?>
+		<?php elseif ( is_page( apply_filters( 'wpml_object_id', 10, 'page', true, apply_filters( 'wpml_current_language', null ) ) ) ) : ?>
+			<?php get_template_part('template-parts/headers/kontakt-header'); ?>
 		<?php elseif (is_page_template('template-parts/custom-page.php')) : ?>
 			<?php get_template_part('template-parts/headers/menu_not_landing'); ?>
-		<?php elseif (is_page(8)) : ?>
-			<?php get_template_part('template-parts/headers/oferta-header'); ?>
-		<?php elseif (is_page(7)) : ?>
-			<?php get_template_part('template-parts/headers/o-nas-header'); ?>
-		<?php elseif (is_page(9)) : ?>
-			<?php get_template_part('template-parts/headers/projekty-header'); ?>
-		<?php elseif (is_page(10)) : ?>
-			<?php get_template_part('template-parts/headers/kontakt-header'); ?>
 		<?php else : ?>
 			<header class="relative h-[120vh] overflow-hidden text-light">
 				<div class="absolute inset-0 -inset-y-9  custom-overlay z-10"></div>
