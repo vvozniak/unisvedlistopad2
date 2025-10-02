@@ -173,91 +173,90 @@ $pill_image_3 = get_field('pill_image_3', $post_id);
       </div>
 
       <div class="hidden md:block mb-24 md:ml-[8%] 2xl:ml-[15%] dlaczego-my">
-  <div class="hidden md:block mb-24 md:ml-[8%] 2xl:ml-[15%] dlaczego-my">
-  <div class="scrollable-wrapper-unified">
-    <div class="scrollable-content-unified">
-      <div class="block">
-        <!-- PILL DEKORACYJNY -->
-        <div class="pill-wyrownanie pill-photo-oneside relative overflow-hidden rounded-full flex items-center justify-center w-[880px] h-[489px] max-w-full mx-auto">
-          <div class="absolute left-0 top-0 h-full z-10 flex items-center ">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c.svg" alt="" class="h-full w-auto">
+        <div class="scrollable-wrapper-unified">
+          <div class="scrollable-content-unified">
+            <div class="block">
+              <!-- PILL DEKORACYJNY -->
+              <div class="pill-wyrownanie pill-photo-oneside relative overflow-hidden rounded-full flex items-center justify-center w-[880px] h-[489px] max-w-full mx-auto">
+                <div class="absolute left-0 top-0 h-full z-10 flex items-center ">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c.svg" alt="" class="h-full w-auto">
+                </div>
+                <img src="<?php echo esc_url($pill_image); ?>" alt="" class="w-full h-full object-cover object-center">
+              </div>
+            </div>
+
+            <!-- STATYCZNE PILLE -->
+
+            <!-- PILL 1 -->
+            <div class="relative flex items-center my-16 rounded-full overflow-hidden w-[880px] h-[489px] max-w-full mx-auto">
+              <!-- Right C -->
+              <div class="absolute right-0 top-1/2 -translate-y-1/2 h-full z-10 ">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c_right.svg" alt="" class="h-full object-contain">
+              </div>
+              <!-- Text -->
+              <div class="relative z-20 h-full mx-auto flex flex-col justify-center text-white" style="width: calc(100% - 2 * 8rem);">
+                <h2 class="text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
+                  <?php _e( 'DOŚWIADCZENIE', 'unisved-theme' ); ?>
+                </h2>
+                <p class="text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
+                  <?php _e( 'Lata praktyki w międzynarodowej administracji biznesowej', 'unisved-theme' ); ?>
+                </p>
+              </div>
+            </div>
+
+            <!-- PILL 2 -->
+            <div class="relative flex items-center my-16 rounded-full overflow-hidden w-[880px] h-[489px] max-w-full mx-auto">
+              <!-- Left C -->
+              <div class="absolute left-0 top-1/2 -translate-y-1/2 h-full z-10 ">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c.svg" alt="" class="h-full object-contain">
+              </div>
+              <!-- Text -->
+              <div class="relative z-20 h-full mx-auto flex flex-col justify-center text-white" style="width: calc(100% - 2 * 8rem);">
+                <h2 class="text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
+                  <?php _e( 'INDYWIDUALNE PODEJŚCIE', 'unisved-theme' ); ?>
+                </h2>
+                <p class="text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
+                  <?php _e( 'Strategia dopasowana do Twoich potrzeb', 'unisved-theme' ); ?>
+                </p>
+              </div>
+            </div>
+
+            <!-- PILL 3 -->
+            <div class="relative flex items-center my-16 rounded-full overflow-hidden w-[880px] h-[489px] max-w-full mx-auto">
+              <!-- Right C -->
+              <div class="absolute right-0 top-1/2 -translate-y-1/2 h-full z-10 ">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c_right.svg" alt="" class="h-full object-contain">
+              </div>
+              <!-- Text -->
+              <div class="relative z-20 h-full mx-auto flex flex-col justify-center text-white" style="width: calc(100% - 2 * 8rem);">
+                <h2 class="text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
+                  <?php _e( 'SZEROKA SIEĆ KONTAKTÓW', 'unisved-theme' ); ?>
+                </h2>
+                <p class="text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
+                  <?php _e( 'Pomagamy w pozyskiwaniu klientów i nawiązywaniu wartościowych relacji biznesowych', 'unisved-theme' ); ?>
+                </p>
+              </div>
+            </div>
+
+            <!-- PILL 4 -->
+            <div class="relative flex items-center my-16 rounded-full overflow-hidden w-[880px] h-[489px] max-w-full mx-auto">
+              <!-- Left C -->
+              <div class="absolute left-0 top-1/2 -translate-y-1/2 h-full z-10 ">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c.svg" alt="" class="h-full object-contain">
+              </div>
+              <!-- Text -->
+              <div class="relative z-20 h-full mx-auto flex flex-col justify-center text-white" style="width: calc(100% - 2 * 8rem);">
+                <h2 class="text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
+                  <?php _e( 'EKSPERCI OD SKANDYNAWII', 'unisved-theme' ); ?>
+                </h2>
+                <p class="text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
+                  <?php _e( 'Znamy biznes, prawo i kulturę krajów nordyckich', 'unisved-theme' ); ?>
+                </p>
+              </div>
+            </div>
           </div>
-          <img src="<?php echo esc_url($pill_image); ?>" alt="" class="w-full h-full object-cover object-center">
         </div>
       </div>
-
-      <!-- STATYCZNE PILLE -->
-
-      <!-- PILL 1 -->
-      <div class="relative flex items-center my-16 rounded-full overflow-hidden w-[880px] h-[489px] max-w-full mx-auto">
-        <!-- Right C -->
-        <div class="absolute right-0 top-1/2 -translate-y-1/2 h-full z-10 ">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c_right.svg" alt="" class="h-full object-contain">
-        </div>
-        <!-- Text -->
-        <div class="relative z-20 h-full mx-auto flex flex-col justify-center text-white" style="width: calc(100% - 2 * 8rem);">
-          <h2 class="text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
-            <?php _e( 'DOŚWIADCZENIE', 'unisved-theme' ); ?>
-          </h2>
-          <p class="text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
-            <?php _e( 'Lata praktyki w międzynarodowej administracji biznesowej', 'unisved-theme' ); ?>
-          </p>
-        </div>
-      </div>
-
-      <!-- PILL 2 -->
-      <div class="relative flex items-center my-16 rounded-full overflow-hidden w-[880px] h-[489px] max-w-full mx-auto">
-        <!-- Left C -->
-        <div class="absolute left-0 top-1/2 -translate-y-1/2 h-full z-10 ">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c.svg" alt="" class="h-full object-contain">
-        </div>
-        <!-- Text -->
-        <div class="relative z-20 h-full mx-auto flex flex-col justify-center text-white" style="width: calc(100% - 2 * 8rem);">
-          <h2 class="text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
-            <?php _e( 'INDYWIDUALNE PODEJŚCIE', 'unisved-theme' ); ?>
-          </h2>
-          <p class="text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
-            <?php _e( 'Strategia dopasowana do Twoich potrzeb', 'unisved-theme' ); ?>
-          </p>
-        </div>
-      </div>
-
-      <!-- PILL 3 -->
-      <div class="relative flex items-center my-16 rounded-full overflow-hidden w-[880px] h-[489px] max-w-full mx-auto">
-        <!-- Right C -->
-        <div class="absolute right-0 top-1/2 -translate-y-1/2 h-full z-10 ">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c_right.svg" alt="" class="h-full object-contain">
-        </div>
-        <!-- Text -->
-        <div class="relative z-20 h-full mx-auto flex flex-col justify-center text-white" style="width: calc(100% - 2 * 8rem);">
-          <h2 class="text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
-            <?php _e( 'SZEROKA SIEĆ KONTAKTÓW', 'unisved-theme' ); ?>
-          </h2>
-          <p class="text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
-            <?php _e( 'Pomagamy w pozyskiwaniu klientów i nawiązywaniu wartościowych relacji biznesowych', 'unisved-theme' ); ?>
-          </p>
-        </div>
-      </div>
-
-      <!-- PILL 4 -->
-      <div class="relative flex items-center my-16 rounded-full overflow-hidden w-[880px] h-[489px] max-w-full mx-auto">
-        <!-- Left C -->
-        <div class="absolute left-0 top-1/2 -translate-y-1/2 h-full z-10 ">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c.svg" alt="" class="h-full object-contain">
-        </div>
-        <!-- Text -->
-        <div class="relative z-20 h-full mx-auto flex flex-col justify-center text-white" style="width: calc(100% - 2 * 8rem);">
-          <h2 class="text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
-            <?php _e( 'EKSPERCI OD SKANDYNAWII', 'unisved-theme' ); ?>
-          </h2>
-          <p class="text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
-            <?php _e( 'Znamy biznes, prawo i kulturę krajów nordyckich', 'unisved-theme' ); ?>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
