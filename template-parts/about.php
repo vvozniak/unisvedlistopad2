@@ -149,104 +149,111 @@ $slide_bg = get_field('slide_bg');
     </div>
 </div>
 
-<div class="hidden md:block mb-24 md:ml-[8%] 2xl:ml-[15%]">
-    <div class="scrollable-wrapper-unified">
-        <div class="scrollable-content-unified">
-            <div class="block">
-                <!-- Jeśli był obrazek pill_photo -->
-                <?php if ($pill_photo) : ?>
-                    <div class="pill-wyrownanie pill-photo-oneside relative overflow-hidden rounded-full flex items-center justify-center w-full">
-                        <div class="absolute left-0 top-0 h-full z-10 flex items-center">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c.svg" alt="" class="h-full w-auto">
-                        </div>
-                        <img src="<?php echo esc_url($pill_photo); ?>" alt="" class="w-full h-full object-cover object-center">
-                    </div>
-                <?php endif; ?>
-            </div>
-
+<div class="hidden md:block mb-24 md:ml-[8%] 2xl:ml-[15%] dlaczego-my">
+        <div class="scrollable-wrapper-unified">
+          <div class="scrollable-content-unified">
+            
             <!-- STATYCZNE PILLE -->
 
             <!-- PILL 1 -->
-            <div class="2xl:h-[10vh]"></div>
-            <div class="pill_c_con relative rounded-full my-4 mt-[8rem]">
-                <div class="pill_c_div relative z-20 text-white flex flex-col justify-center h-full py-6 w-full max-w-[85%] !pl-0 !pr-0">
-                    <h2 class="h2pill text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
-                        <?php _e( 'Praktyczne wsparcie, realne efekty', 'unisved-theme' ); ?>
-                    </h2>
-                    <p class="text_c_p text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
-                        <?php _e( 'Nasze wsparcie to praktyczne działania, a nie tylko doradztwo. Pomagamy firmom wejść i działać na rynku skandynawskim lub polskim – bez zbędnych komplikacji.', 'unisved-theme' ); ?>
-                    </p>
-                </div>
-                <div class="pill_c_img absolute 2xl:-right-10 md:-right-25 -right-25 -top-5 2xl:-top-10 md:top-0 z-10">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c_right.svg" alt="" class="h-full 2xl:w-auto w-[20vw] md:w-2/3 c-size-md c-size-xl object-cover">
-                </div>
+            <div class="relative flex items-center my-16 rounded-full overflow-hidden w-[880px] h-[489px] max-w-full mx-auto">
+              <!-- Right C -->
+              <div class="absolute right-0 top-1/2 -translate-y-1/2 h-full z-10 ">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c_right.svg" alt="" class="h-full object-contain">
+              </div>
+              <!-- Text -->
+              <div class="relative z-20 h-full mx-auto flex flex-col justify-center text-white" style="width: calc(100% - 2 * 8rem);">
+                <h2 class="text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
+                  <?php _e( 'Praktyczne wsparcie, realne efekty', 'unisved-theme' ); ?>
+                </h2>
+                <p class="text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
+                  <?php _e( 'Nasze wsparcie to praktyczne działania, a nie tylko doradztwo. Pomagamy firmom wejść i działać na rynku skandynawskim lub polskim – bez zbędnych komplikacji.', 'unisved-theme' ); ?>
+                </p>
+              </div>
             </div>
 
             <!-- PILL 2 -->
-            <div class="pill_c_con relative rounded-full my-4 mt-[8rem]">
-                <div class="pill_c_div relative z-20 text-white flex flex-col justify-center h-full py-6 w-full max-w-[85%] !pl-0 !pr-0">
-                    <h2 class="h2pill text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
-                        <?php _e( 'Analiza i dopasowanie strategii', 'unisved-theme' ); ?>
-                    </h2>
-                    <p class="text_c_p text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
-                        <?php _e( 'Rozpoznajemy potrzeby firmy i dostosowujemy działania do konkretnego rynku.', 'unisved-theme' ); ?>
-                    </p>
-                </div>
-                <div class="pill_c_img absolute -top-5 md:-left-16 2xl:-left-20 2xl:-top-10 md:top-0 z-10">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c.svg" alt="" class="h-full 2xl:w-auto w-[20vw] md:w-2/3 c-size-md c-size-xl object-cover">
-                </div>
+            <div class="relative flex items-center my-16 rounded-full overflow-hidden w-[880px] h-[489px] max-w-full mx-auto">
+              <!-- Left C -->
+              <div class="absolute left-0 top-1/2 -translate-y-1/2 h-full z-10 ">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c.svg" alt="" class="h-full object-contain">
+              </div>
+              <!-- Text -->
+              <div class="relative z-20 h-full mx-auto flex flex-col justify-center text-white" style="width: calc(100% - 2 * 8rem);">
+                <h2 class="text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
+                  <?php _e( 'Analiza i dopasowanie strategii', 'unisved-theme' ); ?>
+                </h2>
+                <p class="text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
+                  <?php _e( 'Rozpoznajemy potrzeby firmy i dostosowujemy działania do konkretnego rynku.', 'unisved-theme' ); ?>
+                </p>
+              </div>
             </div>
 
             <!-- PILL 3 -->
-            <div class="pill_c_con relative rounded-full my-4 mt-[8rem]">
-                <div class="pill_c_div relative z-20 text-white flex flex-col justify-center h-full py-6 w-full max-w-[85%] !pl-0 !pr-0">
-                    <h2 class="h2pill text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
-                        <?php _e( 'Obsługa administracyjna i operacyjna', 'unisved-theme' ); ?>
-                    </h2>
-                    <p class="text_c_p text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
-                        <?php _e( 'Przejmujemy formalności, rejestracje i kontakt z urzędami – Ty skupiasz się na biznesie.', 'unisved-theme' ); ?>
-                    </p>
-                </div>
-                <div class="pill_c_img absolute 2xl:-right-10 md:-right-25 -right-25 -top-5 2xl:-top-10 md:top-0 z-10">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c_right.svg" alt="" class="h-full 2xl:w-auto w-[20vw] md:w-2/3 c-size-md c-size-xl object-cover">
-                </div>
+            <div class="relative flex items-center my-16 rounded-full overflow-hidden w-[880px] h-[489px] max-w-full mx-auto">
+              <!-- Right C -->
+              <div class="absolute right-0 top-1/2 -translate-y-1/2 h-full z-10 ">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c_right.svg" alt="" class="h-full object-contain">
+              </div>
+              <!-- Text -->
+              <div class="relative z-20 h-full mx-auto flex flex-col justify-center text-white" style="width: calc(100% - 2 * 8rem);">
+                <h2 class="text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
+                  <?php _e( 'Obsługa administracyjna i operacyjna', 'unisved-theme' ); ?>
+                </h2>
+                <p class="text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
+                  <?php _e( 'Przejmujemy formalności, rejestracje i kontakt z urzędami – Ty skupiasz się na biznesie.', 'unisved-theme' ); ?>
+                </p>
+              </div>
             </div>
-
+            
             <!-- PILL 4 -->
-            <div class="pill_c_con relative rounded-full my-4 mt-[8rem]">
-                <div class="pill_c_div relative z-20 text-white flex flex-col justify-center h-full py-6 w-full max-w-[85%] !pl-0 !pr-0">
-                    <h2 class="h2pill text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
-                        <?php _e( 'Lokalne wsparcie ekspertów', 'unisved-theme' ); ?>
-                    </h2>
-                    <p class="text_c_p text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
-                        <?php _e( 'Zapewniamy dostęp do sprawdzonych doradców prawnych, księgowych i podatkowych.', 'unisved-theme' ); ?>
-                    </p>
-                </div>
-                <div class="pill_c_img absolute -top-5 md:-left-16 2xl:-left-20 2xl:-top-10 md:top-0 z-10">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c.svg" alt="" class="h-full 2xl:w-auto w-[20vw] md:w-2/3 c-size-md c-size-xl object-cover">
-                </div>
+            <div class="relative flex items-center my-16 rounded-full overflow-hidden w-[880px] h-[489px] max-w-full mx-auto">
+              <!-- Left C -->
+              <div class="absolute left-0 top-1/2 -translate-y-1/2 h-full z-10 ">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c.svg" alt="" class="h-full object-contain">
+              </div>
+              <!-- Text -->
+              <div class="relative z-20 h-full mx-auto flex flex-col justify-center text-white" style="width: calc(100% - 2 * 8rem);">
+                <h2 class="text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
+                  <?php _e( 'Lokalne wsparcie ekspertów', 'unisved-theme' ); ?>
+                </h2>
+                <p class="text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
+                  <?php _e( 'Zapewniamy dostęp do sprawdzonych doradców prawnych, księgowych i podatkowych.', 'unisved-theme' ); ?>
+                </p>
+              </div>
             </div>
-
+            
             <!-- PILL 5 -->
-            <div class="pill_c_con relative rounded-full my-4 mt-[8rem]">
-                <div class="pill_c_div relative z-20 text-white flex flex-col justify-center h-full py-6 w-full max-w-[85%] !pl-0 !pr-0">
-                    <h2 class="h2pill text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
-                        <?php _e( 'Koordynacja działań i relacje biznesowe', 'unisved-theme' ); ?>
-                    </h2>
-                    <p class="text_c_p text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
-                        <?php _e( 'Wspieramy Cię w prowadzeniu projektów i pomagamy nawiązać właściwe kontakty.', 'unisved-theme' ); ?>
-                    </p>
-                </div>
-                <div class="pill_c_img absolute 2xl:-right-10 md:-right-25 -right-25 -top-5 2xl:-top-10 md:top-0 z-10">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c_right.svg" alt="" class="h-full 2xl:w-auto w-[20vw] md:w-2/3 c-size-md c-size-xl object-cover">
-                </div>
+            <div class="relative flex items-center my-16 rounded-full overflow-hidden w-[880px] h-[489px] max-w-full mx-auto">
+              <!-- Right C -->
+              <div class="absolute right-0 top-1/2 -translate-y-1/2 h-full z-10 ">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c_right.svg" alt="" class="h-full object-contain">
+              </div>
+              <!-- Text -->
+              <div class="relative z-20 h-full mx-auto flex flex-col justify-center text-white" style="width: calc(100% - 2 * 8rem);">
+                <h2 class="text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
+                  <?php _e( 'Koordynacja działań i relacje biznesowe', 'unisved-theme' ); ?>
+                </h2>
+                <p class="text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
+                  <?php _e( 'Wspieramy Cię w prowadzeniu projektów i pomagamy nawiązać właściwe kontakty.', 'unisved-theme' ); ?>
+                  </p>
+              </div>
             </div>
+            <div class="block">
+              <!-- PILL DEKORACYJNY -->
+              <div class="pill-wyrownanie pill-photo-oneside relative overflow-hidden rounded-full flex items-center justify-center w-[880px] h-[489px] max-w-full mx-auto">
+                <div class="absolute left-0 top-0 h-full z-10 flex items-center ">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c.svg" alt="" class="h-full w-auto">
+                </div>
+                <img src="<?php echo esc_url($pill_photo); ?>" alt="" class="w-full h-full object-cover object-center">
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</div>
-
-
-    
+      </div>
+      
+      
+      
     <!-- OBRAZEK NA MOBILE - POZA SCROLLABLE-WRAPPER (JAK BYŁO WCZEŚNIEJ) -->
     <div class="md:hidden my-6 px-4">
       <?php
