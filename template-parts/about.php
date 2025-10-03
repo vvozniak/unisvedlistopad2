@@ -129,13 +129,119 @@ $slide_bg = get_field('slide_bg');
 }
 </style>
 
+<?php
+$leftPathServer = get_template_directory() . '/assets/big_c.svg';
+$rightPathServer = get_template_directory() . '/assets/big_c_right.svg';
+
+$leftPathURL = get_template_directory_uri() . '/assets/big_c.svg';
+$rightPathURL = get_template_directory_uri() . '/assets/big_c_right.svg';
+
+$usedServer = $leftPathServer;
+$usedURL = $leftPathURL;
+
+$imgWidth = 0;
+if (pathinfo($usedServer, PATHINFO_EXTENSION) === 'svg') {
+    $svg_content = file_get_contents($usedServer);
+    preg_match('/<svg[^>]*width="([\d.]+)"/i', $svg_content, $matches);
+    $imgWidth = $matches[1] ?? 0;
+} else {
+    $size = getimagesize($usedServer);
+    $imgWidth = $size[0] ?? 0;
+}
+$doubleWidth = $imgWidth * 2;
+?>
 <section class="bg-secondary rounded-t-[60px] -mt-[10vh] relative pt-[20vh] pb-12 z-30i">
   <div class=" xl:ml-28 w-screen">
     <!-- jak działamy mobile -->
-    <div class="flex items-center justify-start w-full md:hidden ml-8 md:ml-0 ">
+    <div class="flex items-center justify-start w-full md:hidden flex-col">
       <div class="flex items-center">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5 h-[20vw] md:h-auto">
         <h4 class="text-light text-[6vw] libre-baskerville-regular"><?php echo $scrolling_heading1; ?></h4>
+      </div>
+      <div class="md:hidden mb-8 w-screen max-w-none">
+        <div class="scrollable-wrapper w-screen max-w-none">
+          <div class="scrollable-content w-screen max-w-none">
+  
+            
+            <!-- PILL 1 -->
+            <div class="relative my-12 sm:my-16 w-screen h-[40vh] sm:h-[45vh] rounded-full flex items-center">
+              <img src="<?= esc_url($leftPathURL) ?>" alt="C-left" class="absolute left-0 top-0 z-10 h-full opacity-0">
+              <div class="text-white flex-1 px-[60px] sm:px-[80px]">
+                <h2 class="text-left tracking-[0.1em] text-[3vh] sm:text-[3.5vh] font-bold mb-2 libre-baskerville-regular uppercase">
+                  <?php _e('Praktyczne wsparcie, realne efekty', $text_domain) ?>
+                </h2>
+                <p class="text-left text-[3vw] sm:text-[3.5vw] inter-regular">
+                  <?php _e('Nasze wsparcie to praktyczne działania, a nie tylko doradztwo. Pomagamy firmom wejść i działać na rynku skandynawskim lub polskim – bez zbędnych komplikacji.', $text_domain) ?>
+                </p>
+              </div>
+              <img src="<?= esc_url($rightPathURL) ?>" alt="C-right" class="absolute right-0 top-0 z-10 h-full">
+            </div>
+  
+            <!-- PILL 2 -->
+            <div class="relative my-12 sm:my-16 w-screen h-[40vh] sm:h-[45vh] rounded-full flex items-center">
+              <img src="<?= esc_url($leftPathURL) ?>" alt="C-left" class="absolute left-0 top-0 z-10 h-full">
+              <div class="text-white flex-1 px-[60px] sm:px-[80px]">
+                <h2 class="text-left tracking-[0.1em] text-[3vh] sm:text-[3.5vh] font-bold mb-2 libre-baskerville-regular uppercase">
+                  <?php _e('Analiza i dopasowanie strategii', $text_domain) ?>
+                </h2>
+                <p class="text-left text-[3vw] sm:text-[3.5vw] inter-regular">
+                  <?php _e('Rozpoznajemy potrzeby firmy i dostosowujemy działania do konkretnego rynku.', $text_domain) ?>
+                </p>
+              </div>
+              <img src="<?= esc_url($rightPathURL) ?>" alt="C-right" class="absolute right-0 top-0 z-10 h-full opacity-0">
+            </div>
+  
+            <!-- PILL 3 -->
+            <div class="relative my-12 sm:my-16 w-screen h-[40vh] sm:h-[45vh] rounded-full flex items-center">
+              <img src="<?= esc_url($leftPathURL) ?>" alt="C-left" class="absolute left-0 top-0 z-10 h-full opacity-0">
+              <div class="text-white flex-1 px-[60px] sm:px-[80px]">
+                <h2 class="text-left tracking-[0.1em] text-[3vh] sm:text-[3.5vh] font-bold mb-2 libre-baskerville-regular uppercase">
+                  <?php _e('Obsługa administracyjna i operacyjna', $text_domain) ?>
+                </h2>
+                <p class="text-left text-[3vw] sm:text-[3.5vw] inter-regular">
+                  <?php _e('Przejmujemy formalności, rejestracje i kontakt z urzędami – Ty skupiasz się na biznesie.', $text_domain) ?>
+                </p>
+              </div>
+              <img src="<?= esc_url($rightPathURL) ?>" alt="C-right" class="absolute right-0 top-0 z-10 h-full">
+            </div>
+            
+            <!-- PILL 4 -->
+            <div class="relative my-12 sm:my-16 w-screen h-[40vh] sm:h-[45vh] rounded-full flex items-center">
+              <img src="<?= esc_url($leftPathURL) ?>" alt="C-left" class="absolute left-0 top-0 z-10 h-full">
+              <div class="text-white flex-1 px-[60px] sm:px-[80px]">
+                <h2 class="text-left tracking-[0.1em] text-[3vh] sm:text-[3.5vh] font-bold mb-2 libre-baskerville-regular uppercase">
+                  <?php _e('Lokalne wsparcie ekspertów', $text_domain) ?>
+                </h2>
+                <p class="text-left text-[3vw] sm:text-[3.5vw] inter-regular">
+                  <?php _e('Zapewniamy dostęp do sprawdzonych doradców prawnych, księgowych i podatkowych.', $text_domain) ?>
+                </p>
+              </div>
+              <img src="<?= esc_url($rightPathURL) ?>" alt="C-right" class="absolute right-0 top-0 z-10 h-full opacity-0">
+            </div>
+
+            <!-- PILL 5 -->
+            <div class="relative my-12 sm:my-16 w-screen h-[40vh] sm:h-[45vh] rounded-full flex items-center">
+              <img src="<?= esc_url($leftPathURL) ?>" alt="C-left" class="absolute left-0 top-0 z-10 h-full opacity-0">
+              <div class="text-white flex-1 px-[60px] sm:px-[80px]">
+                <h2 class="text-left tracking-[0.1em] text-[3vh] sm:text-[3.5vh] font-bold mb-2 libre-baskerville-regular uppercase">
+                  <?php _e('Koordynacja działań i relacje biznesowe', $text_domain) ?>
+                </h2>
+                <p class="text-left text-[3vw] sm:text-[3.5vw] inter-regular">
+                  <?php _e('Wspieramy Cię w prowadzeniu projektów i pomagamy nawiązać właściwe kontakty.', $text_domain) ?>
+                </p>
+              </div>
+              <img src="<?= esc_url($rightPathURL) ?>" alt="C-right" class="absolute right-0 top-0 z-10 h-full">
+            </div>
+
+            <!-- PILL DEKORACYJNY -->
+            <div class="block w-screen max-w-none">
+              <div class="relative w-screen h-[40vh] sm:h-[45vh] rounded-full bg-cover bg-center"
+                style="background-image: url(<?= esc_url($pill_photo) ?>);">
+                <img src="<?= esc_url($leftPathURL) ?>" alt="C-left" class="absolute left-0 top-0 z-10 h-full">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     
@@ -143,124 +249,89 @@ $slide_bg = get_field('slide_bg');
       <!-- Left side - heading (fixed) -->
       <!-- jak działamy pc -->
       <div class="fixed-content flex-shrink-0 mt-[10vh] padding-left-tablet">
-    <div class="flex items-center">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5 md:w-[4vw] 2xl:w-max">
-        <h4 class="text-light md:text-[2.5rem] 2xl:text-[3rem] libre-baskerville-regular"><?php echo $scrolling_heading1; ?></h4>
+        <div class="flex items-center">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5 md:w-[4vw] 2xl:w-max">
+          <h4 class="text-light md:text-[2.5rem] 2xl:text-[3rem] libre-baskerville-regular"><?php echo $scrolling_heading1; ?></h4>
+        </div>
     </div>
-</div>
-
-<div class="hidden md:block mb-24 md:ml-[8%] 2xl:ml-[15%] dlaczego-my">
-        <div class="scrollable-wrapper-unified">
-          <div class="scrollable-content-unified">
+    <div class="hidden md:block mb-24 md:ml-[8%] 2xl:ml-[15%] dlaczego-my">
+      <div class="scrollable-wrapper-unified">
+          <div class="scrollable-content-unified w-[45vw]">
             
-            <!-- STATYCZNE PILLE -->
-
             <!-- PILL 1 -->
-            <div class="relative flex items-center my-16 rounded-full overflow-hidden w-[880px] h-[489px] max-w-full mx-auto">
-              <!-- Right C -->
-              <div class="absolute right-0 top-1/2 -translate-y-1/2 h-full z-10 ">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c_right.svg" alt="" class="h-full object-contain">
+            <div class="relative my-16 w-full h-[489px] object-cover object-center rounded-full mx-auto flex justify-center items-center">
+                  <div class="text-white" style="width: calc(100% - <?= $doubleWidth ?>px);">
+                    <h2 class="text-left tracking-[0.1em] text-[4vh] md:text-[2vw] font-bold mb-2 libre-baskerville-regular uppercase">
+                          <?php _e('Praktyczne wsparcie, realne efekty', $text_domain) ?>
+                        </h2>
+                      <p class="text-left text-[4vw] md:text-[1.5vw] inter-regular">
+                        <?php _e('Nasze wsparcie to praktyczne działania, a nie tylko doradztwo. Pomagamy firmom wejść i działać na rynku skandynawskim lub polskim – bez zbędnych komplikacji.', $text_domain) ?>
+                      </p>
+                  </div>
+                  <img src="<?= esc_url($rightPathURL) ?>" alt="C-right" class="absolute right-0 top-0 z-10 h-full">
               </div>
-              <!-- Text -->
-              <div class="relative z-20 h-full mx-auto flex flex-col justify-center text-white" style="width: calc(100% - 2 * 8rem);">
-                <h2 class="text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
-                  <?php _e( 'Praktyczne wsparcie, realne efekty', 'unisved-theme' ); ?>
-                </h2>
-                <p class="text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
-                  <?php _e( 'Nasze wsparcie to praktyczne działania, a nie tylko doradztwo. Pomagamy firmom wejść i działać na rynku skandynawskim lub polskim – bez zbędnych komplikacji.', 'unisved-theme' ); ?>
-                </p>
-              </div>
-            </div>
-
-            <!-- PILL 2 -->
-            <div class="relative flex items-center my-16 rounded-full overflow-hidden w-[880px] h-[489px] max-w-full mx-auto">
-              <!-- Left C -->
-              <div class="absolute left-0 top-1/2 -translate-y-1/2 h-full z-10 ">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c.svg" alt="" class="h-full object-contain">
-              </div>
-              <!-- Text -->
-              <div class="relative z-20 h-full mx-auto flex flex-col justify-center text-white" style="width: calc(100% - 2 * 8rem);">
-                <h2 class="text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
-                  <?php _e( 'Analiza i dopasowanie strategii', 'unisved-theme' ); ?>
-                </h2>
-                <p class="text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
-                  <?php _e( 'Rozpoznajemy potrzeby firmy i dostosowujemy działania do konkretnego rynku.', 'unisved-theme' ); ?>
-                </p>
-              </div>
-            </div>
-
-            <!-- PILL 3 -->
-            <div class="relative flex items-center my-16 rounded-full overflow-hidden w-[880px] h-[489px] max-w-full mx-auto">
-              <!-- Right C -->
-              <div class="absolute right-0 top-1/2 -translate-y-1/2 h-full z-10 ">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c_right.svg" alt="" class="h-full object-contain">
-              </div>
-              <!-- Text -->
-              <div class="relative z-20 h-full mx-auto flex flex-col justify-center text-white" style="width: calc(100% - 2 * 8rem);">
-                <h2 class="text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
-                  <?php _e( 'Obsługa administracyjna i operacyjna', 'unisved-theme' ); ?>
-                </h2>
-                <p class="text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
-                  <?php _e( 'Przejmujemy formalności, rejestracje i kontakt z urzędami – Ty skupiasz się na biznesie.', 'unisved-theme' ); ?>
-                </p>
-              </div>
-            </div>
-            
-            <!-- PILL 4 -->
-            <div class="relative flex items-center my-16 rounded-full overflow-hidden w-[880px] h-[489px] max-w-full mx-auto">
-              <!-- Left C -->
-              <div class="absolute left-0 top-1/2 -translate-y-1/2 h-full z-10 ">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c.svg" alt="" class="h-full object-contain">
-              </div>
-              <!-- Text -->
-              <div class="relative z-20 h-full mx-auto flex flex-col justify-center text-white" style="width: calc(100% - 2 * 8rem);">
-                <h2 class="text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
-                  <?php _e( 'Lokalne wsparcie ekspertów', 'unisved-theme' ); ?>
-                </h2>
-                <p class="text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
-                  <?php _e( 'Zapewniamy dostęp do sprawdzonych doradców prawnych, księgowych i podatkowych.', 'unisved-theme' ); ?>
-                </p>
-              </div>
-            </div>
-            
-            <!-- PILL 5 -->
-            <div class="relative flex items-center my-16 rounded-full overflow-hidden w-[880px] h-[489px] max-w-full mx-auto">
-              <!-- Right C -->
-              <div class="absolute right-0 top-1/2 -translate-y-1/2 h-full z-10 ">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c_right.svg" alt="" class="h-full object-contain">
-              </div>
-              <!-- Text -->
-              <div class="relative z-20 h-full mx-auto flex flex-col justify-center text-white" style="width: calc(100% - 2 * 8rem);">
-                <h2 class="text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
-                  <?php _e( 'Koordynacja działań i relacje biznesowe', 'unisved-theme' ); ?>
-                </h2>
-                <p class="text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
-                  <?php _e( 'Wspieramy Cię w prowadzeniu projektów i pomagamy nawiązać właściwe kontakty.', 'unisved-theme' ); ?>
-                  </p>
-              </div>
-            </div>
-            <div class="block">
-              <!-- PILL DEKORACYJNY -->
-              <div class="pill-wyrownanie pill-photo-oneside relative overflow-hidden rounded-full flex items-center justify-center w-[880px] h-[489px] max-w-full mx-auto">
-                <div class="absolute left-0 top-0 h-full z-10 flex items-center ">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c.svg" alt="" class="h-full w-auto">
+              
+              <!-- PILL 2 -->
+              <div class="relative my-16 w-full h-[489px] object-cover object-center rounded-full mx-auto flex justify-center items-center">
+                  <img src="<?= esc_url($leftPathURL) ?>" alt="C-left" class="absolute left-0 top-0 z-10 h-full">
+                  <div class="text-white" style="width: calc(100% - <?= $doubleWidth ?>px);">
+                      <h2 class="text-left tracking-[0.1em] text-[4vh] md:text-[2vw] font-bold mb-2 libre-baskerville-regular uppercase">
+                        <?php _e('Analiza i dopasowanie strategii', $text_domain) ?>
+                      </h2>
+                      <p class="text-left text-[4vw] md:text-[1.5vw] inter-regular">
+                          <?php _e('Rozpoznajemy potrzeby firmy i dostosowujemy działania do konkretnego rynku.', $text_domain) ?>
+                        </p>
+                  </div>
                 </div>
-                <img src="<?php echo esc_url($pill_photo); ?>" alt="" class="w-full h-full object-cover object-center">
+              <!-- PILL 3 -->
+              <div class="relative my-16 w-full h-[489px] object-cover object-center rounded-full mx-auto flex justify-center items-center">
+                  <div class="text-white" style="width: calc(100% - <?= $doubleWidth ?>px);">
+                      <h2 class="text-left tracking-[0.1em] text-[4vh] md:text-[2vw] font-bold mb-2 libre-baskerville-regular uppercase">
+                        <?php _e('Obsługa administracyjna i operacyjna', $text_domain) ?>
+                      </h2>
+                      <p class="text-left text-[4vw] md:text-[1.5vw] inter-regular">
+                          <?php _e('Przejmujemy formalności, rejestracje i kontakt z urzędami – Ty skupiasz się na biznesie.', $text_domain) ?>
+                        </p>
+                  </div>
+                  <img src="<?= esc_url($rightPathURL) ?>" alt="C-right" class="absolute right-0 top-0 z-10 h-full">
               </div>
-            </div>
+              
+              <!-- PILL 4 -->
+              <div class="relative my-16 w-full h-[489px] object-cover object-center rounded-full mx-auto flex justify-center items-center">
+                <img src="<?= esc_url($leftPathURL) ?>" alt="C-left" class="absolute left-0 top-0 z-10 h-full">
+                <div class="text-white" style="width: calc(100% - <?= $doubleWidth ?>px);">
+                    <h2 class="text-left tracking-[0.1em] text-[4vh] md:text-[2vw] font-bold mb-2 libre-baskerville-regular uppercase">
+                      <?php _e('Lokalne wsparcie ekspertów', $text_domain) ?>
+                    </h2>
+                    <p class="text-left text-[4vw] md:text-[1.5vw] inter-regular">
+                        <?php _e('Zapewniamy dostęp do sprawdzonych doradców prawnych, księgowych i podatkowych.', $text_domain) ?>
+                    </p>
+                  </div>
+              </div>
+
+              <!-- PILL 5 -->
+              <div class="relative my-16 w-full h-[489px] object-cover object-center rounded-full mx-auto flex justify-center items-center">
+                  <div class="text-white" style="width: calc(100% - <?= $doubleWidth ?>px);">
+                      <h2 class="text-left tracking-[0.1em] text-[4vh] md:text-[2vw] font-bold mb-2 libre-baskerville-regular uppercase">
+                        <?php _e('Koordynacja działań i relacje biznesowe', $text_domain) ?>
+                      </h2>
+                      <p class="text-left text-[4vw] md:text-[1.5vw] inter-regular">
+                          <?php _e('Wspieramy Cię w prowadzeniu projektów i pomagamy nawiązać właściwe kontakty.', $text_domain) ?>
+                        </p>
+                  </div>
+                  <img src="<?= esc_url($rightPathURL) ?>" alt="C-right" class="absolute right-0 top-0 z-10 h-full">
+              </div>
+
+              <div class="block">
+                  <!-- PILL DEKORACYJNY -->
+                  <div class="relative w-full h-[489px] object-cover object-center rounded-full mx-auto" 
+                      style="background: url(<?= esc_url($pill_photo) ?>); background-size: cover; background-position: center;">
+                      <img src="<?= esc_url($leftPathURL) ?>" alt="C-left" class="absolute left-0 top-0 z-10 h-full">
+                  </div>
+                </div>
           </div>
         </div>
       </div>
-      
-      
-      
-    <!-- OBRAZEK NA MOBILE - POZA SCROLLABLE-WRAPPER (JAK BYŁO WCZEŚNIEJ) -->
-    <div class="md:hidden my-6 px-4">
-      <?php
-      photo_oneside_pill('right', $pill_photo, 'assets/big_c.svg', 'max700pxpill');
-      ?>
-    </div>
-    
     <div class="h-[10vh]"></div>
   </div>
 </section>

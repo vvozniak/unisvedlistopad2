@@ -55,93 +55,11 @@ $pill_image_2 = get_field('pill_image_2', $post_id);
 $pill_image_3 = get_field('pill_image_3', $post_id);
 
 ?>
-<style>
-  /* Twoje style pozostają bez zmian */
-  @media (min-width:768px) {
-    .h2pill {
-      white-space: nowrap;
-      text-wrap: nowrap;
-    }
-    .icon-text-pill-p {
-      text-wrap: balance;
-    }
-  }
-  @media (max-width:768px) {
-    .h2pill {
-      text-wrap: wrap;
-      font-size: 1.8vh;
-    }
-    .pill-photo-oneside {
-      max-width: 90vw;
-      width: 100%;
-      margin-right: 0.5rem;
-      margin-bottom: 7rem;
-    }
-    .pill_c_con {
-      margin-left: 3rem;
-    }
-    .pill-container-with-content {
-      margin-left: 6rem;
-    }
-  }
-  @media (max-width: 768px) {
-    .pill-photo-oneside {
-      margin-right: 1rem;
-      margin-bottom: 7rem;
-    }
-  }
-  @media (min-width: 768px) and (max-width: 1280px) {
-    .pill-photo-oneside.pill-wyrownanie {
-      aspect-ratio: 1.8 / 1 !important;
-      width: 100% !important;
-      max-width: 520px !important;
-    }
-  }
-  @media (min-width: 1440px) and (max-width: 1536px) {
-    .pill-photo-oneside.pill-wyrownanie {
-      aspect-ratio: 1.8 / 1 !important;
-      width: 100% !important;
-      max-width: 620px !important;
-    }
-  }
-  @media (min-width: 1536px) {
-    .pill-photo-oneside.pill-wyrownanie {
-      aspect-ratio: 1.8 / 1 !important;
-      width: 100% !important;
-      max-width: 740px !important;
-    }
-  }
-  @media (min-width: 768px) {
-    .custom-margin-home-1 {
-      margin-right: 4rem;
-    }
-  }
-  @media (min-width: 1024px) and (max-width: 1599px) {
-    .custom-margin-home-1 {
-      margin-right: 10rem;
-    }
-  }
-  @media (min-width: 1600px) {
-    .custom-margin-home-1 {
-      margin-right: 16rem;
-    }
-  }
-  /* Zwiększa odstępy między pigułkami w sekcji "Unisved w pigułce" */
-.space-pills-y > * + * {
-    margin-top: 10rem; /* Możesz dowolnie zmieniać tę wartość, np. na 3rem */
-}
-</style>
 <section class="bg-secondary py-12 rounded-t-[60px] relative -mt-[10vh] z-20">
   <div class=" ml-0 xl:ml-28 w-screen">
     <div class="ml-10 md:ml-0 w-full items-center flex md:hidden">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5 w-[10vw]">
       <h4 class="text-light text-[2rem] libre-baskerville-regular"><?php _e('Dlaczego my?', $text_domain); ?></h4>
-    </div>
-    <div class="md:hidden relative top-[15vh] px-4">
-      <?php
-      if ($pill_image) {
-        photo_oneside_pill('right', $pill_image);
-      } ?>
     </div>
     <div class="fixed-side-container" data-fixed-side="left">
       <div class="fixed-content flex-shrink-0 lg:pt-[0vw] lg:mt-[10vw] padding-left-tablet">
@@ -149,114 +67,168 @@ $pill_image_3 = get_field('pill_image_3', $post_id);
         <h4 class="text-light md:text-[2.5rem] 2xl:text-[3rem] libre-baskerville-regular "><?php _e('Dlaczego my?', $text_domain); ?></h4>
       </div>
 
-      <div class="md:hidden mb-8">
-        <div class="scrollable-wrapper custom-margin-home-1 flex-shrink-0 md:ml-0">
-          <div class="scrollable-content">
-            <div class="block">
-              <?php if ($pill_image) { ?>
-                <div class="pill-wyrownanie pill-photo-oneside relative overflow-hidden rounded-full flex items-center justify-center mx-auto">
-                  <div class="absolute left-0 top-0 h-full z-10 flex items-center">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c.svg" alt="" class="h-full w-auto">
-                  </div>
-                  <img src="<?php echo esc_url($pill_image); ?>" alt="" class="w-full h-full object-cover object-center hidden md:block">
-                </div>
-              <?php } ?>
-            </div>
-            <?php
-            text_with_c_pill('left', $pill_1_title, $pill_1_content, 'assets/big_c_right.svg', 'text-white');
-            text_with_c_pill('right', $pill_2_title, $pill_2_content, 'assets/big_c.svg', 'text-white');
-            text_with_c_pill('left', $pill_3_title, $pill_3_content, 'assets/big_c_right.svg', 'text-white');
-            text_with_c_pill('right', $pill_4_title, $pill_4_content, 'assets/big_c.svg', 'text-white');
-            ?>
-          </div>
-        </div>
-      </div>
+      <?php
+      $leftPathServer = get_template_directory() . '/assets/big_c.svg';
+      $rightPathServer = get_template_directory() . '/assets/big_c_right.svg';
 
-      <div class="hidden md:block mb-24 md:ml-[8%] 2xl:ml-[15%] dlaczego-my">
-        <div class="scrollable-wrapper-unified">
-          <div class="scrollable-content-unified">
-            <div class="block">
-              <!-- PILL DEKORACYJNY -->
-              <div class="pill-wyrownanie pill-photo-oneside relative overflow-hidden rounded-full flex items-center justify-center w-[880px] h-[489px] max-w-full mx-auto">
-                <div class="absolute left-0 top-0 h-full z-10 flex items-center ">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c.svg" alt="" class="h-full w-auto">
-                </div>
-                <img src="<?php echo esc_url($pill_image); ?>" alt="" class="w-full h-full object-cover object-center">
+      $leftPathURL = get_template_directory_uri() . '/assets/big_c.svg';
+      $rightPathURL = get_template_directory_uri() . '/assets/big_c_right.svg';
+
+      $usedServer = $leftPathServer;
+      $usedURL = $leftPathURL;
+
+      $imgWidth = 0;
+      if (pathinfo($usedServer, PATHINFO_EXTENSION) === 'svg') {
+          $svg_content = file_get_contents($usedServer);
+          preg_match('/<svg[^>]*width="([\d.]+)"/i', $svg_content, $matches);
+          $imgWidth = $matches[1] ?? 0;
+      } else {
+          $size = getimagesize($usedServer);
+          $imgWidth = $size[0] ?? 0;
+      }
+      $doubleWidth = $imgWidth * 2;
+      ?>
+      <div class="md:hidden mb-8 w-screen max-w-none">
+        <div class="scrollable-wrapper w-screen max-w-none">
+          <div class="scrollable-content w-screen max-w-none">
+
+            <!-- PILL DEKORACYJNY -->
+            <div class="block w-screen max-w-none">
+              <div class="relative w-screen h-[40vh] sm:h-[45vh] rounded-full bg-cover bg-center"
+                style="background-image: url(<?= esc_url($pill_image) ?>);">
+                <img src="<?= esc_url($leftPathURL) ?>" alt="C-left" class="absolute left-0 top-0 z-10 h-full">
               </div>
             </div>
-
-            <!-- STATYCZNE PILLE -->
 
             <!-- PILL 1 -->
-            <div class="relative flex items-center my-16 rounded-full overflow-hidden w-[880px] h-[489px] max-w-full mx-auto">
-              <!-- Right C -->
-              <div class="absolute right-0 top-1/2 -translate-y-1/2 h-full z-10 ">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c_right.svg" alt="" class="h-full object-contain">
-              </div>
-              <!-- Text -->
-              <div class="relative z-20 h-full mx-auto flex flex-col justify-center text-white" style="width: calc(100% - 2 * 8rem);">
-                <h2 class="text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
-                  <?php _e( 'DOŚWIADCZENIE', 'unisved-theme' ); ?>
+            <div class="relative my-12 sm:my-16 w-screen h-[40vh] sm:h-[45vh] rounded-full flex items-center">
+              <img src="<?= esc_url($leftPathURL) ?>" alt="C-left" class="absolute left-0 top-0 z-10 h-full opacity-0">
+              <div class="text-white flex-1 px-[60px] sm:px-[80px]">
+                <h2 class="text-left tracking-[0.1em] text-[3vh] sm:text-[3.5vh] font-bold mb-2 libre-baskerville-regular uppercase">
+                  <?php _e('DOŚWIADCZENIE', $text_domain) ?>
                 </h2>
-                <p class="text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
-                  <?php _e( 'Lata praktyki w międzynarodowej administracji biznesowej', 'unisved-theme' ); ?>
+                <p class="text-left text-[3vw] sm:text-[3.5vw] inter-regular">
+                  <?php _e('Lata praktyki w międzynarodowej administracji biznesowej', $text_domain) ?>
                 </p>
               </div>
+              <img src="<?= esc_url($rightPathURL) ?>" alt="C-right" class="absolute right-0 top-0 z-10 h-full">
             </div>
 
             <!-- PILL 2 -->
-            <div class="relative flex items-center my-16 rounded-full overflow-hidden w-[880px] h-[489px] max-w-full mx-auto">
-              <!-- Left C -->
-              <div class="absolute left-0 top-1/2 -translate-y-1/2 h-full z-10 ">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c.svg" alt="" class="h-full object-contain">
-              </div>
-              <!-- Text -->
-              <div class="relative z-20 h-full mx-auto flex flex-col justify-center text-white" style="width: calc(100% - 2 * 8rem);">
-                <h2 class="text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
-                  <?php _e( 'INDYWIDUALNE PODEJŚCIE', 'unisved-theme' ); ?>
+            <div class="relative my-12 sm:my-16 w-screen h-[40vh] sm:h-[45vh] rounded-full flex items-center">
+              <img src="<?= esc_url($leftPathURL) ?>" alt="C-left" class="absolute left-0 top-0 z-10 h-full">
+              <div class="text-white flex-1 px-[60px] sm:px-[80px]">
+                <h2 class="text-left tracking-[0.1em] text-[3vh] sm:text-[3.5vh] font-bold mb-2 libre-baskerville-regular uppercase">
+                  <?php _e('INDYWIDUALNE PODEJŚCIE', $text_domain) ?>
                 </h2>
-                <p class="text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
-                  <?php _e( 'Strategia dopasowana do Twoich potrzeb', 'unisved-theme' ); ?>
+                <p class="text-left text-[3vw] sm:text-[3.5vw] inter-regular">
+                  <?php _e('Strategia dopasowana do Twoich potrzeb', $text_domain) ?>
                 </p>
               </div>
+              <img src="<?= esc_url($rightPathURL) ?>" alt="C-right" class="absolute right-0 top-0 z-10 h-full opacity-0">
             </div>
 
             <!-- PILL 3 -->
-            <div class="relative flex items-center my-16 rounded-full overflow-hidden w-[880px] h-[489px] max-w-full mx-auto">
-              <!-- Right C -->
-              <div class="absolute right-0 top-1/2 -translate-y-1/2 h-full z-10 ">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c_right.svg" alt="" class="h-full object-contain">
-              </div>
-              <!-- Text -->
-              <div class="relative z-20 h-full mx-auto flex flex-col justify-center text-white" style="width: calc(100% - 2 * 8rem);">
-                <h2 class="text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
-                  <?php _e( 'SZEROKA SIEĆ KONTAKTÓW', 'unisved-theme' ); ?>
+            <div class="relative my-12 sm:my-16 w-screen h-[40vh] sm:h-[45vh] rounded-full flex items-center">
+              <img src="<?= esc_url($leftPathURL) ?>" alt="C-left" class="absolute left-0 top-0 z-10 h-full opacity-0">
+              <div class="text-white flex-1 px-[60px] sm:px-[80px]">
+                <h2 class="text-left tracking-[0.1em] text-[3vh] sm:text-[3.5vh] font-bold mb-2 libre-baskerville-regular uppercase">
+                  <?php _e('SZEROKA SIEĆ KONTAKTÓW', $text_domain) ?>
                 </h2>
-                <p class="text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
-                  <?php _e( 'Pomagamy w pozyskiwaniu klientów i nawiązywaniu wartościowych relacji biznesowych', 'unisved-theme' ); ?>
+                <p class="text-left text-[3vw] sm:text-[3.5vw] inter-regular">
+                  <?php _e('Pomagamy w pozyskiwaniu klientów i nawiązywaniu wartościowych relacji biznesowych', $text_domain) ?>
                 </p>
               </div>
+              <img src="<?= esc_url($rightPathURL) ?>" alt="C-right" class="absolute right-0 top-0 z-10 h-full">
             </div>
 
             <!-- PILL 4 -->
-            <div class="relative flex items-center my-16 rounded-full overflow-hidden w-[880px] h-[489px] max-w-full mx-auto">
-              <!-- Left C -->
-              <div class="absolute left-0 top-1/2 -translate-y-1/2 h-full z-10 ">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c.svg" alt="" class="h-full object-contain">
-              </div>
-              <!-- Text -->
-              <div class="relative z-20 h-full mx-auto flex flex-col justify-center text-white" style="width: calc(100% - 2 * 8rem);">
-                <h2 class="text-left tracking-[0.1em] text-[2.3vh] md:text-[1.46vw] font-bold mb-2 libre-baskerville-regular uppercase">
-                  <?php _e( 'EKSPERCI OD SKANDYNAWII', 'unisved-theme' ); ?>
+            <div class="relative my-12 sm:my-16 w-screen h-[40vh] sm:h-[45vh] rounded-full flex items-center">
+              <img src="<?= esc_url($leftPathURL) ?>" alt="C-left" class="absolute left-0 top-0 z-10 h-full">
+              <div class="text-white flex-1 px-[60px] sm:px-[80px]">
+                <h2 class="text-left tracking-[0.1em] text-[3vh] sm:text-[3.5vh] font-bold mb-2 libre-baskerville-regular uppercase">
+                  <?php _e('EKSPERCI OD SKANDYNAWII', $text_domain) ?>
                 </h2>
-                <p class="text-left text-[2.3vw] md:text-[1.05vw] inter-regular">
-                  <?php _e( 'Znamy biznes, prawo i kulturę krajów nordyckich', 'unisved-theme' ); ?>
+                <p class="text-left text-[3vw] sm:text-[3.5vw] inter-regular">
+                  <?php _e('Znamy biznes, prawo i kulturę krajów nordyckich', $text_domain) ?>
                 </p>
               </div>
+              <img src="<?= esc_url($rightPathURL) ?>" alt="C-right" class="absolute right-0 top-0 z-10 h-full opacity-0">
             </div>
+
           </div>
         </div>
       </div>
+
+
+
+      
+
+      <div class="hidden md:block mb-24 md:ml-[8%] 2xl:ml-[15%] dlaczego-my">
+          <div class="scrollable-wrapper-unified">
+              <div class="scrollable-content-unified w-[45vw]">
+                  <div class="block">
+                      <!-- PILL DEKORACYJNY -->
+                      <div class="relative w-full h-[489px] object-cover object-center rounded-full mx-auto" 
+                          style="background: url(<?= esc_url($pill_image) ?>); background-size: cover; background-position: center;">
+                          <img src="<?= esc_url($leftPathURL) ?>" alt="C-left" class="absolute left-0 top-0 z-10 h-full">
+                      </div>
+                  </div>
+
+                  <!-- PILL 1 -->
+                  <div class="relative my-16 w-full h-[489px] object-cover object-center rounded-full mx-auto flex justify-center items-center">
+                      <div class="text-white" style="width: calc(100% - <?= $doubleWidth ?>px);">
+                          <h2 class="text-left tracking-[0.1em] text-[4vh] md:text-[2vw] font-bold mb-2 libre-baskerville-regular uppercase">
+                              <?php _e('DOŚWIADCZENIE', $text_domain) ?>
+                          </h2>
+                          <p class="text-left text-[4vw] md:text-[1.5vw] inter-regular">
+                              <?php _e('Lata praktyki w międzynarodowej administracji biznesowej', $text_domain) ?>
+                          </p>
+                      </div>
+                      <img src="<?= esc_url($rightPathURL) ?>" alt="C-right" class="absolute right-0 top-0 z-10 h-full">
+                  </div>
+
+                  <!-- PILL 2 -->
+                  <div class="relative my-16 w-full h-[489px] object-cover object-center rounded-full mx-auto flex justify-center items-center">
+                      <img src="<?= esc_url($leftPathURL) ?>" alt="C-left" class="absolute left-0 top-0 z-10 h-full">
+                      <div class="text-white" style="width: calc(100% - <?= $doubleWidth ?>px);">
+                          <h2 class="text-left tracking-[0.1em] text-[4vh] md:text-[2vw] font-bold mb-2 libre-baskerville-regular uppercase">
+                              <?php _e('INDYWIDUALNE PODEJŚCIE', $text_domain) ?>
+                          </h2>
+                          <p class="text-left text-[4vw] md:text-[1.5vw] inter-regular">
+                              <?php _e('Strategia dopasowana do Twoich potrzeb', $text_domain) ?>
+                          </p>
+                      </div>
+                  </div>
+                  <!-- PILL 3 -->
+                  <div class="relative my-16 w-full h-[489px] object-cover object-center rounded-full mx-auto flex justify-center items-center">
+                      <div class="text-white" style="width: calc(100% - <?= $doubleWidth ?>px);">
+                          <h2 class="text-left tracking-[0.1em] text-[4vh] md:text-[2vw] font-bold mb-2 libre-baskerville-regular uppercase">
+                              <?php _e('SZEROKA SIEĆ KONTAKTÓW', $text_domain) ?>
+                          </h2>
+                          <p class="text-left text-[4vw] md:text-[1.5vw] inter-regular">
+                              <?php _e('Pomagamy w pozyskiwaniu klientów i nawiązywaniu wartościowych relacji biznesowych', $text_domain) ?>
+                          </p>
+                      </div>
+                      <img src="<?= esc_url($rightPathURL) ?>" alt="C-right" class="absolute right-0 top-0 z-10 h-full">
+                  </div>
+
+                  <!-- PILL 4 -->
+                  <div class="relative my-16 w-full h-[489px] object-cover object-center rounded-full mx-auto flex justify-center items-center">
+                      <img src="<?= esc_url($leftPathURL) ?>" alt="C-left" class="absolute left-0 top-0 z-10 h-full">
+                      <div class="text-white" style="width: calc(100% - <?= $doubleWidth ?>px);">
+                          <h2 class="text-left tracking-[0.1em] text-[4vh] md:text-[2vw] font-bold mb-2 libre-baskerville-regular uppercase">
+                              <?php _e('EKSPERCI OD SKANDYNAWII', $text_domain) ?>
+                          </h2>
+                          <p class="text-left text-[4vw] md:text-[1.5vw] inter-regular">
+                              <?php _e('Znamy biznes, prawo i kulturę krajów nordyckich', $text_domain) ?>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
 
 
 
