@@ -202,6 +202,26 @@ li.kropka {
         $sklad2_field = 'sklad2_sv';
         $cena_szczegoly2_field = 'cena_szczegoly2_sv';
         $mozliwosc_laczenia2_field = 'mozliwosc_laczenia2_sv';
+    } elseif ( defined('ICL_LANGUAGE_CODE') && ICL_LANGUAGE_CODE == 'en' ) {
+        $offer_post_type = 'oferta_en';
+        // ZMIANA: Tłumaczenia dla języka angielskiego, jeśli chcesz je nadpisać w kodzie (choć String Translation jest lepsze)
+        $read_more_text = __( '( LÄS MER )', $text_domain );
+        $hide_text = __( '( DÖLJ )', $text_domain );
+        
+        // Pola dla szablonu 1
+        $szablon1_wlwyl_field = 'szablon_1_wl_wyl_en';
+        $podtytul1_field = 'podtytul1_en';
+        $dla_kogo1_field = 'dla_kogo_en';
+        $zakres_uslug1_field = 'zakres_uslug1_en';
+        $zakres_uslug2_field = 'zakres_uslug2_en';
+        $efekt1_field = 'efekt1_en';
+        // Pola dla szablonu 2
+        $szablon2_wlwyl_field = 'szablon_2_wlwyl_en';
+        $podtytul2_field = 'podtytul2_en';
+        $dla_kogo2_field = 'dla_kogo2_en';
+        $sklad_field = 'sklad_en';
+        $cena_i_szczegoly_field = 'cena_i_szczegoly_en';
+        $mozliwosc_laczenia_pakietow_field = 'mozliwosc_laczenia_pakietow_en';
     }
     // --- KONIEC ZMIENNYCH (MOBILE) ---
 

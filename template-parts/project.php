@@ -186,8 +186,10 @@ $text_domain = 'unisved-theme';
     if ( defined('ICL_LANGUAGE_CODE') && ICL_LANGUAGE_CODE == 'sv' ) {
         $post_type_name = 'projekt_sv';
         $subtitle_field_name = 'podtytul_sv';
+    }elseif ( defined('ICL_LANGUAGE_CODE') && ICL_LANGUAGE_CODE == 'en' ) {
+        $post_type_name = 'projekt_en';
+        $subtitle_field_name = 'podtytul_en';
     }
-
     $projects_args = array(
         'post_type'      => $post_type_name,
         'posts_per_page' => -1,
