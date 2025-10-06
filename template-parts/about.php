@@ -254,84 +254,90 @@ $doubleWidth = $imgWidth * 2;
           <h4 class="text-light md:text-[2.5rem] 2xl:text-[3rem] libre-baskerville-regular"><?php echo $scrolling_heading1; ?></h4>
         </div>
     </div>
+
     <div class="hidden md:block mb-24 md:ml-[8%] 2xl:ml-[15%] dlaczego-my">
-      <div class="scrollable-wrapper-unified">
-          <div class="scrollable-content-unified w-[45vw]">
-            
-            <!-- PILL 1 -->
-            <div class="relative my-16 w-full h-[489px] object-cover object-center rounded-full mx-auto flex justify-center items-center">
-                  <div class="text-white" style="width: calc(100% - <?= $doubleWidth ?>px);">
-                    <h2 class="text-left tracking-[0.1em] text-[4vh] md:text-[2vw] font-bold mb-2 libre-baskerville-regular uppercase">
-                          <?php _e('Praktyczne wsparcie, realne efekty', $text_domain) ?>
-                        </h2>
-                      <p class="text-left text-[4vw] md:text-[1.5vw] inter-regular">
+          <div class="scrollable-wrapper-unified">
+              <div class="scrollable-content-unified w-[50vw] xl:w-[45vw] 2xl:w-[30vw]">
+                
+                <!-- PILL 1 -->
+                  <div class="flex justify-between item-center h-[40vh] xl:h-[35vh]  my-12 w-full text-white">
+                    <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="h-full opacity-0">
+                    <div class="flex flex-col justify-center max-w-[<?= $doubleWidth ?>px] w-full overflow-hidden">
+                      <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly">
+                        <?php _e('Praktyczne wsparcie, realne efekty', $text_domain) ?>
+                      </h2>
+                      <p class="inter-regular text-left justify-evenly text-[1.5vh]">
                         <?php _e('Nasze wsparcie to praktyczne działania, a nie tylko doradztwo. Pomagamy firmom wejść i działać na rynku skandynawskim lub polskim – bez zbędnych komplikacji.', $text_domain) ?>
                       </p>
+                    </div>
+                    <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="h-full">
                   </div>
-                  <img src="<?= esc_url($rightPathURL) ?>" alt="C-right" class="absolute right-0 top-0 z-10 h-full">
-              </div>
-              
-              <!-- PILL 2 -->
-              <div class="relative my-16 w-full h-[489px] object-cover object-center rounded-full mx-auto flex justify-center items-center">
-                  <img src="<?= esc_url($leftPathURL) ?>" alt="C-left" class="absolute left-0 top-0 z-10 h-full">
-                  <div class="text-white" style="width: calc(100% - <?= $doubleWidth ?>px);">
-                      <h2 class="text-left tracking-[0.1em] text-[4vh] md:text-[2vw] font-bold mb-2 libre-baskerville-regular uppercase">
+                  
+                  <!-- PILL 2 -->
+                  <div class="flex justify-between item-center h-[40vh] xl:h-[35vh]  my-12 w-full text-white">
+                    <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="h-full">
+                    <div class="flex flex-col justify-center w-full">
+                      <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly">
                         <?php _e('Analiza i dopasowanie strategii', $text_domain) ?>
                       </h2>
-                      <p class="text-left text-[4vw] md:text-[1.5vw] inter-regular">
-                          <?php _e('Rozpoznajemy potrzeby firmy i dostosowujemy działania do konkretnego rynku.', $text_domain) ?>
-                        </p>
+                      <p class="inter-regular text-left justify-evenly text-[1.5vh]">
+                        <?php _e('Rozpoznajemy potrzeby firmy i dostosowujemy działania do konkretnego rynku.', $text_domain) ?>
+                      </p>
+                    </div>
+                    <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="h-full opacity-0">
                   </div>
-                </div>
-              <!-- PILL 3 -->
-              <div class="relative my-16 w-full h-[489px] object-cover object-center rounded-full mx-auto flex justify-center items-center">
-                  <div class="text-white" style="width: calc(100% - <?= $doubleWidth ?>px);">
-                      <h2 class="text-left tracking-[0.1em] text-[4vh] md:text-[2vw] font-bold mb-2 libre-baskerville-regular uppercase">
+
+                  <!-- PILL 3 -->
+                  <div class="flex justify-between item-center h-[40vh] xl:h-[35vh]  my-12 w-full text-white">
+                    <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="h-full opacity-0">
+                    <div class="flex flex-col justify-center w-full">
+                      <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly">
                         <?php _e('Obsługa administracyjna i operacyjna', $text_domain) ?>
                       </h2>
-                      <p class="text-left text-[4vw] md:text-[1.5vw] inter-regular">
-                          <?php _e('Przejmujemy formalności, rejestracje i kontakt z urzędami – Ty skupiasz się na biznesie.', $text_domain) ?>
-                        </p>
+                      <p class="inter-regular text-left justify-evenly text-[1.5vh]">
+                        <?php _e('Przejmujemy formalności, rejestracje i kontakt z urzędami – Ty skupiasz się na biznesie.', $text_domain) ?>
+                      </p>
+                    </div>
+                    <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="h-full">
                   </div>
-                  <img src="<?= esc_url($rightPathURL) ?>" alt="C-right" class="absolute right-0 top-0 z-10 h-full">
-              </div>
-              
-              <!-- PILL 4 -->
-              <div class="relative my-16 w-full h-[489px] object-cover object-center rounded-full mx-auto flex justify-center items-center">
-                <img src="<?= esc_url($leftPathURL) ?>" alt="C-left" class="absolute left-0 top-0 z-10 h-full">
-                <div class="text-white" style="width: calc(100% - <?= $doubleWidth ?>px);">
-                    <h2 class="text-left tracking-[0.1em] text-[4vh] md:text-[2vw] font-bold mb-2 libre-baskerville-regular uppercase">
-                      <?php _e('Lokalne wsparcie ekspertów', $text_domain) ?>
-                    </h2>
-                    <p class="text-left text-[4vw] md:text-[1.5vw] inter-regular">
-                        <?php _e('Zapewniamy dostęp do sprawdzonych doradców prawnych, księgowych i podatkowych.', $text_domain) ?>
-                    </p>
-                  </div>
-              </div>
 
-              <!-- PILL 5 -->
-              <div class="relative my-16 w-full h-[489px] object-cover object-center rounded-full mx-auto flex justify-center items-center">
-                  <div class="text-white" style="width: calc(100% - <?= $doubleWidth ?>px);">
-                      <h2 class="text-left tracking-[0.1em] text-[4vh] md:text-[2vw] font-bold mb-2 libre-baskerville-regular uppercase">
+                  <!-- PILL 4 -->
+                  <div class="flex justify-between item-center h-[40vh] xl:h-[35vh]  my-12 w-full text-white">
+                    <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="h-full">
+                    <div class="flex flex-col justify-center w-full">
+                      <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly">
+                        <?php _e('Lokalne wsparcie ekspertów', $text_domain) ?>
+                      </h2>
+                      <p class="inter-regular text-left justify-evenly text-[1.5vh]">
+                        <?php _e('Zapewniamy dostęp do sprawdzonych doradców prawnych, księgowych i podatkowych.', $text_domain) ?>
+                      </p>
+                    </div>
+                    <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="h-full opacity-0">
+                  </div>
+
+                  <!-- PILL 5 -->
+                  <div class="flex justify-between item-center h-[40vh] xl:h-[35vh]  my-12 w-full text-white">
+                    <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="h-full opacity-0">
+                    <div class="flex flex-col justify-center w-full">
+                      <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly">
                         <?php _e('Koordynacja działań i relacje biznesowe', $text_domain) ?>
                       </h2>
-                      <p class="text-left text-[4vw] md:text-[1.5vw] inter-regular">
-                          <?php _e('Wspieramy Cię w prowadzeniu projektów i pomagamy nawiązać właściwe kontakty.', $text_domain) ?>
-                        </p>
+                      <p class="inter-regular text-left justify-evenly text-[1.5vh]">
+                        <?php _e('Wspieramy Cię w prowadzeniu projektów i pomagamy nawiązać właściwe kontakty.', $text_domain) ?>
+                      </p>
+                    </div>
+                    <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="h-full">
                   </div>
-                  <img src="<?= esc_url($rightPathURL) ?>" alt="C-right" class="absolute right-0 top-0 z-10 h-full">
-              </div>
-
-              <div class="block">
+                  
                   <!-- PILL DEKORACYJNY -->
-                  <div class="relative w-full h-[489px] object-cover object-center rounded-full mx-auto" 
+                  <div class="relative w-full h-[40vh] xl:h-[35vh] object-cover object-center rounded-full mx-auto" 
                       style="background: url(<?= esc_url($pill_photo) ?>); background-size: cover; background-position: center;">
                       <img src="<?= esc_url($leftPathURL) ?>" alt="C-left" class="absolute left-0 top-0 z-10 h-full">
                   </div>
-                </div>
+              </div>
           </div>
         </div>
-      </div>
+
     <div class="h-[10vh]"></div>
   </div>
 </section>
