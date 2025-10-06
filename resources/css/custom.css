@@ -309,7 +309,7 @@ header .hidden {
 }
 
 /* Mobile styles for project.php */
-@media (max-width: 781px) {
+@media (max-width: 1100px) {
   /* Convert fixed-side containers to full-width on mobile */
   .fixed-side-container {
     display: block;
