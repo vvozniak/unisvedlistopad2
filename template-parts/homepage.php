@@ -68,25 +68,8 @@ $pill_image_3 = get_field('pill_image_3', $post_id);
       </div>
 
       <?php
-      $leftPathServer = get_template_directory() . '/assets/big_c.svg';
-      $rightPathServer = get_template_directory() . '/assets/big_c_right.svg';
-
       $leftPathURL = get_template_directory_uri() . '/assets/big_c.svg';
       $rightPathURL = get_template_directory_uri() . '/assets/big_c_right.svg';
-
-      $usedServer = $leftPathServer;
-      $usedURL = $leftPathURL;
-
-      $imgWidth = 0;
-      if (pathinfo($usedServer, PATHINFO_EXTENSION) === 'svg') {
-          $svg_content = file_get_contents($usedServer);
-          preg_match('/<svg[^>]*width="([\d.]+)"/i', $svg_content, $matches);
-          $imgWidth = $matches[1] ?? 0;
-      } else {
-          $size = getimagesize($usedServer);
-          $imgWidth = $size[0] ?? 0;
-      }
-      $doubleWidth = $imgWidth * 2;
       ?>
       <div class="hidden [@media(width<=1100px)]:flex mb-8 w-screen justify-center items-center flex-col pl-8">
 
@@ -155,7 +138,7 @@ $pill_image_3 = get_field('pill_image_3', $post_id);
 
       <div class="block max-[1101px]:hidden mb-24 min-[1100px]:ml-[8%] 2xl:ml-[15%] dlaczego-my">
           <div class="scrollable-wrapper-unified">
-              <div class="scrollable-content-unified w-[50vw] xl:w-[45vw] 2xl:w-[30vw]">
+              <div class="scrollable-content-unified w-[60vw] xl:w-[55vw] 2xl:w-[40vw]">
                   <!-- PILL DEKORACYJNY -->
                   <div class="relative w-full h-[40vh] xl:h-[35vh] object-cover object-center rounded-full mx-auto" 
                       style="background: url(<?= esc_url($pill_image) ?>); background-size: cover; background-position: center;">
