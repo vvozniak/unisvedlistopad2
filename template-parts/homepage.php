@@ -56,17 +56,39 @@ $pill_image_1 = get_field('pill_image_1', $post_id);
 $pill_image_2 = get_field('pill_image_2', $post_id);
 $pill_image_3 = get_field('pill_image_3', $post_id);
 
+// Nowe dynamiczne pola ACF z fallbackami
+// Nagłówki sekcji
+$section_title_why_us = get_field('section_title_why_us', $post_id) ?: 'Dlaczego my?';
+$section_title_why_scandinavia = get_field('section_title_why_scandinavia', $post_id) ?: 'Dlaczego<br>Skandynawia?';
+$section_title_unisved_pill = get_field('section_title_unisved_pill', $post_id) ?: 'Unisved <br> w pigułce';
+$section_title_we_are_here = get_field('section_title_we_are_here', $post_id) ?: 'Jesteśmy tu, <br> by pomóc!';
+
+// Teksty banerów
+$banner_1_text = get_field('banner_1_text', $post_id) ?: 'Od Skandynawii po rynki<br> międzynarodowe.';
+$banner_2_text = get_field('banner_2_text', $post_id) ?: 'Wspólnie<br>przekroczymy granice!';
+
+// Zdjęcia tła banerów
+$banner_1_bg_image = get_field('banner_1_bg_image', $post_id) ?: get_template_directory_uri() . '/public/pomost-min.jpg';
+$banner_2_bg_image = get_field('banner_2_bg_image', $post_id) ?: get_template_directory_uri() . '/public/flaga_lepsza.jpeg';
+
+// Dane kontaktowe
+$contact_name = get_field('contact_name', $post_id) ?: 'Aleksandra Gierdziejewska';
+$contact_role = get_field('contact_role', $post_id) ?: 'CEO & FOUNDER';
+$contact_phone_1 = get_field('contact_phone_1', $post_id) ?: '+48 602 142 949';
+$contact_phone_2 = get_field('contact_phone_2', $post_id) ?: '+46 704 415 690';
+$contact_email = get_field('contact_email', $post_id) ?: 'ALEKSANDRA@UNISVED.EU';
+
 ?>
 <section class="bg-secondary py-12 rounded-t-[60px] relative -mt-[10vh] z-20">
   <div class=" ml-0 xl:ml-28 w-screen">
     <div class="ml-10 w-full items-center flex min-[1101px]:hidden">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5 w-[10vw]">
-      <h4 class="text-light text-[2rem] libre-baskerville-regular"><?php _e('Dlaczego my?', $text_domain); ?></h4>
+      <h4 class="text-light text-[2rem] libre-baskerville-regular"><?php echo wp_kses_post($section_title_why_us); ?></h4>
     </div>
     <div class="fixed-side-container" data-fixed-side="left">
       <div class="fixed-content flex-shrink-0 lg:pt-[0vw] lg:mt-[10vw] padding-left-tablet">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5 md:w-[4vw] 2xl:w-max">
-        <h4 class="text-light md:text-[2.5rem] 2xl:text-[3rem] libre-baskerville-regular "><?php _e('Dlaczego my?', $text_domain); ?></h4>
+        <h4 class="text-light md:text-[2.5rem] 2xl:text-[3rem] libre-baskerville-regular "><?php echo wp_kses_post($section_title_why_us); ?></h4>
       </div>
 
       <?php
@@ -209,14 +231,14 @@ $pill_image_3 = get_field('pill_image_3', $post_id);
       <div class="min-h-[10vh]"></div>
     </div>
 </section>
-<section id="video-hide-trigger" class="new-background-section slide bg-[#101820] bg-cover rounded-t-[60px] -mt-[10vh] relative z-30i py-12" style="background-image: url('<?php echo get_template_directory_uri(); ?>/public/pomost-min.jpg')">
+<section id="video-hide-trigger" class="new-background-section slide bg-[#101820] bg-cover rounded-t-[60px] -mt-[10vh] relative z-30i py-12" style="background-image: url('<?php echo esc_url($banner_1_bg_image); ?>')">
   <div class="absolute inset-0 bg-black opacity-50 rounded-t-[60px] "></div>
   <div class=" flex items-center justify-center h-full w-screen text-center text-white relative z-10 md:pb-10">
     <div class="md:mr-8">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/logo_biale_unisved.svg" alt="logo" class="hidden md:block 2xl:mx-auto lg:ml-10 mb-6 w-80">
     </div>
     <h2 class="text-[7vw] md:text-[4.167vw] leading-tight px-3 md:px-0 md:pl-2 libre-baskerville-regular text-left text-pretty">
-      <?php _e('Od Skandynawii po rynki<br> międzynarodowe.', $text_domain); ?>
+      <?php echo wp_kses_post($banner_1_text); ?>
     </h2>
   </div>
 </section>
@@ -224,7 +246,7 @@ $pill_image_3 = get_field('pill_image_3', $post_id);
 <section class="py-12 relative z-40i bg-secondary text-white rounded-t-[60px] dlaczego-skandynawia">
   <div class=" bg-center rounded-t-[40px] min-h-[80vh] px-4 mt-20 ">
     <div class="w-full items-center flex md:hidden ml-10 ">
-      <h4 class="text-right text-[2rem] libre-baskerville-regular pe-2"><?php _e('Dlaczego<br>Skandynawia?', $text_domain); ?></h4>
+      <h4 class="text-right text-[2rem] libre-baskerville-regular pe-2"><?php echo wp_kses_post($section_title_why_scandinavia); ?></h4>
       <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180 w-10">
     </div>
 
@@ -242,17 +264,17 @@ $pill_image_3 = get_field('pill_image_3', $post_id);
         </div>
       </div>
       <div class="fixed-content flex justify-end md:mr-20 2xl:mr-50 lg:pt-[0vw] lg:mt-[10vw] ">
-        <h4 class="text-right md:text-[2.5rem] 2xl:text-[3rem] libre-baskerville-regular pe-2 shrink-0 "><?php _e('Dlaczego<br>Skandynawia?', $text_domain); ?></h4>
+        <h4 class="text-right md:text-[2.5rem] 2xl:text-[3rem] libre-baskerville-regular pe-2 shrink-0 "><?php echo wp_kses_post($section_title_why_scandinavia); ?></h4>
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180 w-[4vw]">
       </div>
     </div>
   </div>
 </section>
-<section class="new-background-section slide bg-black bg-cover rounded-t-[60px] -mt-[10vh] relative z-50i py-12" style="background-image: url('<?php echo get_template_directory_uri(); ?>/public/flaga_lepsza.jpeg')">
+<section class="new-background-section slide bg-black bg-cover rounded-t-[60px] -mt-[10vh] relative z-50i py-12" style="background-image: url('<?php echo esc_url($banner_2_bg_image); ?>')">
   <div class="absolute inset-0 bg-black opacity-50 rounded-t-[60px]"></div>
   <div class=" mx-auto flex items-center justify-center h-full text-center text-white relative z-10">
     <h2 class="md:pl-[20vw] text-[7vw] md:text-[4.167vw] leading-tight mx-auto libre-baskerville-regular text-left mt-16">
-      <?php _e('Wspólnie<br>przekroczymy granice!', $text_domain); ?>
+      <?php echo wp_kses_post($banner_2_text); ?>
     </h2>
   </div>
 </section>
@@ -265,7 +287,7 @@ $pill_image_3 = get_field('pill_image_3', $post_id);
       <div class="flex justify-center items-center text-center">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="h-[20vw] mb-4">
         <h4 class="text-light text-[2rem] leading-none libre-baskerville-regular">
-          <?php _e('Unisved <br> w pigułce', $text_domain); ?>
+          <?php echo wp_kses_post($section_title_unisved_pill); ?>
         </h4>
       </div>
     </div>
@@ -278,7 +300,7 @@ $pill_image_3 = get_field('pill_image_3', $post_id);
       <div class="fixed-content shrink-0 lg:mt-[10vw] padding-left-tablet hidden md:flex">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
         <h4 class="text-light md:text-[2.5rem] 2xl:text-[3rem] leading-none libre-baskerville-regular">
-          <?php _e('Unisved <br> w pigułce', $text_domain); ?>
+          <?php echo wp_kses_post($section_title_unisved_pill); ?>
         </h4>
       </div>
 
@@ -313,7 +335,7 @@ $pill_image_3 = get_field('pill_image_3', $post_id);
       ?>
     </div>
     <div class="flex items-center mb-12 mt-12 md:mt-0 md:w-1/2 justify-end padding-right-tablet">
-      <h2 class="text-[2rem] md:text-[2.4rem] lg:text-[3rem] font-['Libre_Baskerville'] leading-tight pe-5"><?php _e('Jesteśmy tu, <br> by pomóc!', $text_domain); ?></h2>
+      <h2 class="text-[2rem] md:text-[2.4rem] lg:text-[3rem] font-['Libre_Baskerville'] leading-tight pe-5"><?php echo wp_kses_post($section_title_we_are_here); ?></h2>
       <img src="<?php echo get_template_directory_uri(); ?>/assets/small_c.svg" alt="C" class="w-10 md:w-12 lg:w-12 xl:w-16">
     </div>
   </div>
@@ -331,13 +353,13 @@ $pill_image_3 = get_field('pill_image_3', $post_id);
       </div>
 
       <div class="md:w-1/2 text-right flex flex-col items-end md:mx-0 pb-10 md:pb-0 padding-right-tablet">
-        <h3 class="text-[6vw] md:text-[2.3vw] libre-baskerville-regular mb-4">Aleksandra Gierdziejewska</h3>
+        <h3 class="text-[6vw] md:text-[2.3vw] libre-baskerville-regular mb-4"><?php echo esc_html($contact_name); ?></h3>
         <hr class=" border-t-2 border-primary my-6 w-2/3">
-        <p class="md:text-[1.3vw] mb-8 tracking-widest"><?php _e('CEO & FOUNDER', $text_domain); ?></p>
+        <p class="md:text-[1.3vw] mb-8 tracking-widest"><?php echo esc_html($contact_role); ?></p>
         <div class="space-y-2">
-          <p class="md:text-[1.3vw] tracking-wider">+48 602 142 949</p>
-          <p class="md:text-[1.3vw] tracking-wider">+46 704 415 690</p>
-          <p class="md:text-[1.3vw] uppercase tracking-wider">ALEKSANDRA@UNISVED.EU</p>
+          <p class="md:text-[1.3vw] tracking-wider"><?php echo esc_html($contact_phone_1); ?></p>
+          <p class="md:text-[1.3vw] tracking-wider"><?php echo esc_html($contact_phone_2); ?></p>
+          <p class="md:text-[1.3vw] uppercase tracking-wider"><?php echo esc_html($contact_email); ?></p>
         </div>
       </div>
     </div>
