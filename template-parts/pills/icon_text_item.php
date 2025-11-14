@@ -21,7 +21,7 @@ function icon_text_item($icon_path, $title, $subtitle, $icon_alt = '', $classes 
       <img src="' . esc_url($full_icon_path) . '" alt="' . esc_attr($alt_text) . '" class="' . esc_attr($classes) . ' w-[13vw] h-auto object-contain me-5">
     </div>
     <div class="md:max-w-[250px] xl:max-w-[500px]">
-      <h3 class="icon-text-pill-h3 break-words tracking-widest text-[0.9rem] md:text-[1.46vw] font-bold text-light libre-baskerville-regular mb-1 min-w-[200px] md:min-w-[350px] xl:min-w-[400px] custom-min-w-1600">' . esc_html($title) . '</h3>
+      <h3 class="icon-text-pill-h3 break-words tracking-widest text-[0.9rem] md:text-[1.46vw] font-bold text-light libre-baskerville-regular mb-1 min-w-[200px] md:min-w-[350px] xl:min-w-[400px] custom-min-w-1600 uppercase">' . esc_html($title) . '</h3>
       <p class="icon-text-pill-p text-[0.7rem] md:text-[1.08vw] text-light inter-thin">' . esc_html($subtitle) . '</p>
     </div>
   </div>

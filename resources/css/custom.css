@@ -1124,3 +1124,12 @@ body {
     font-size: 3rem !important;
   }
 }
+.show-below-1100 {
+  display: none !important; /* hide by default, override Tailwind */
+}
+
+@media (max-width: 1100px) {
+  .show-below-1100 {
+    display: flex !important; /* show under 1101px */
+  }
+}

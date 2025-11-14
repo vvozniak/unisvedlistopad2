@@ -130,29 +130,11 @@ $slide_bg = get_field('slide_bg');
 </style>
 
 <?php
-$leftPathServer = get_template_directory() . '/assets/big_c.svg';
-$rightPathServer = get_template_directory() . '/assets/big_c_right.svg';
-
 $leftPathURL = get_template_directory_uri() . '/assets/big_c.svg';
 $rightPathURL = get_template_directory_uri() . '/assets/big_c_right.svg';
-
-$usedServer = $leftPathServer;
-$usedURL = $leftPathURL;
-
-$imgWidth = 0;
-if (pathinfo($usedServer, PATHINFO_EXTENSION) === 'svg') {
-    $svg_content = file_get_contents($usedServer);
-    preg_match('/<svg[^>]*width="([\d.]+)"/i', $svg_content, $matches);
-    $imgWidth = $matches[1] ?? 0;
-} else {
-    $size = getimagesize($usedServer);
-    $imgWidth = $size[0] ?? 0;
-}
-$doubleWidth = $imgWidth * 2;
 ?>
 <section class="bg-secondary rounded-t-[60px] -mt-[10vh] relative pt-[20vh] pb-12 z-30i">
   <div class=" xl:ml-28 w-screen">
-    <!-- jak działamy mobile -->
     <div class="flex items-center justify-start w-full [@media(width>1100px)]:hidden flex-col">
       <div class="flex items-center">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5 h-[20vw] md:h-auto">
@@ -161,399 +143,238 @@ $doubleWidth = $imgWidth * 2;
       <div class="hidden [@media(width<=1100px)]:flex mb-8 w-screen justify-center items-center flex-col px-4">
 
         
-        <!-- PILL 1 -->
-        <div class="relative flex justify-center items-center h-[25vh] sm:h-[30vh] md:h-[40vh] xl:h-[35vh]  my-12 w-full md:w-[75%] text-white px-[20%]
+        <div class="relative flex justify-center items-center h-[25vh] sm:h-[30vh] md:h-[40vh] xl:h-[35vh] my-12 w-full md:w-[75%] text-white px-[20%]">
         <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full opacity-0">
-              <div class="flex flex-col justify-center w-full">
-                <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly">
-                  <?php _e('Praktyczne wsparcie, realne efekty', $text_domain) ?>
-                </h2>
-                <p class="inter-regular text-left justify-evenly text-[1.5vh]">
-                  <?php _e('Nasze wsparcie to praktyczne działania, a nie tylko doradztwo. Pomagamy firmom wejść i działać na rynku skandynawskim lub polskim – bez zbędnych komplikacji.', $text_domain) ?>
-                </p>
-              </div>
-              <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="absolute top-0 right-0 h-full">
-            </div>
-
-            <!-- PILL 2 -->
-            <div class="relative flex justify-center items-center h-[25vh] sm:h-[30vh] md:h-[40vh] xl:h-[35vh]  my-12 w-full md:w-[75%] text-white px-[20%]">
-              <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full">
-              <div class="flex flex-col justify-center w-full">
-                <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly">
-                  <?php _e('Analiza i dopasowanie strategii', $text_domain) ?>
-                </h2>
-                <p class="inter-regular text-left justify-evenly text-[1.5vh]">
-                  <?php _e('Rozpoznajemy potrzeby firmy i dostosowujemy działania do konkretnego rynku.', $text_domain) ?>
-                </p>
-              </div>
-              <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="absolute top-0 right-0 h-full opacity-0">
-            </div>
-            
-            <!-- PILL 3 -->
-            <div class="relative flex justify-center items-center h-[25vh] sm:h-[30vh] md:h-[40vh] xl:h-[35vh]  my-12 w-full md:w-[75%] text-white px-[20%]">
-              <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full opacity-0">
-              <div class="flex flex-col justify-center w-full">
-                <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly">
-                  <?php _e('Obsługa administracyjna i operacyjna', $text_domain) ?>
-                </h2>
-                <p class="inter-regular text-left justify-evenly text-[1.5vh]">
-                  <?php _e('Przejmujemy formalności, rejestracje i kontakt z urzędami – Ty skupiasz się na biznesie.', $text_domain) ?>
-                </p>
-              </div>
-              <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="absolute top-0 right-0 h-full">
-            </div>
-
-            <!-- PILL 4 -->
-            <div class="relative flex justify-center items-center h-[25vh] sm:h-[30vh] md:h-[40vh] xl:h-[35vh]  my-12 w-full md:w-[75%] text-white px-[20%]">
-              <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full">
-              <div class="flex flex-col justify-center w-full">
-                <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly">
-                  <?php _e('Lokalne wsparcie ekspertów', $text_domain) ?>
-                </h2>
-                <p class="inter-regular text-left justify-evenly text-[1.5vh]">
-                  <?php _e('Zapewniamy dostęp do sprawdzonych doradców prawnych, księgowych i podatkowych.', $text_domain) ?>
-                </p>
-              </div>
-              <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="absolute top-0 right-0 h-full opacity-0">
-            </div>
-
-            <!-- PILL 5 -->
-            <div class="relative flex justify-center items-center h-[25vh] sm:h-[30vh] md:h-[40vh] xl:h-[35vh]  my-12 w-full md:w-[75%] text-white px-[20%]">
-              <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full opacity-0">
-              <div class="flex flex-col justify-center w-full">
-                <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly">
-                  <?php _e('Koordynacja działań i relacje biznesowe', $text_domain) ?>
-                </h2>
-                <p class="inter-regular text-left justify-evenly text-[1.5vh]">
-                  <?php _e('Wspieramy Cię w prowadzeniu projektów i pomagamy nawiązać właściwe kontakty.', $text_domain) ?>
-                </p>
-              </div>
-              <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="absolute top-0 right-0 h-full">
-            </div>
-            <!-- PILL DEKORACYJNY -->
-            <div class="relative w-full md:w-[75%] h-[25vh] sm:h-[30vh] md:h-[40vh] xl:h-[35vh] object-cover object-center rounded-full mx-auto" 
-                style="background: url(<?= esc_url($pill_photo) ?>); background-size: cover; background-position: center;">
-                <img src="<?= esc_url($leftPathURL) ?>" alt="C-left" class="absolute left-0 top-0 z-10 h-full">
-            </div>
-      </div>
-               
-            </div>
+          <div class="flex flex-col justify-center w-full">
+            <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly"><?php _e('Praktyczne wsparcie, realne efekty', $text_domain) ?></h2>
+            <p class="inter-regular text-left justify-evenly text-[1.5vh]"><?php _e('Nasze wsparcie to praktyczne działania, a nie tylko doradztwo. Pomagamy firmom wejść i działać na rynku skandynawskim lub polskim – bez zbędnych komplikacji.', $text_domain) ?></p>
           </div>
+          <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="absolute top-0 right-0 h-full">
+        </div>
+
+        <div class="relative flex justify-center items-center h-[25vh] sm:h-[30vh] md:h-[40vh] xl:h-[35vh] my-12 w-full md:w-[75%] text-white px-[20%]">
+          <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full">
+          <div class="flex flex-col justify-center w-full">
+            <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly"><?php _e('Analiza i dopasowanie strategii', $text_domain) ?></h2>
+            <p class="inter-regular text-left justify-evenly text-[1.5vh]"><?php _e('Rozpoznajemy potrzeby firmy i dostosowujemy działania do konkretnego rynku.', $text_domain) ?></p>
+          </div>
+          <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="absolute top-0 right-0 h-full opacity-0">
+        </div>
+        
+        <div class="relative flex justify-center items-center h-[25vh] sm:h-[30vh] md:h-[40vh] xl:h-[35vh] my-12 w-full md:w-[75%] text-white px-[20%]">
+          <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full opacity-0">
+          <div class="flex flex-col justify-center w-full">
+            <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly"><?php _e('Obsługa administracyjna i operacyjna', $text_domain) ?></h2>
+            <p class="inter-regular text-left justify-evenly text-[1.5vh]"><?php _e('Przejmujemy formalności, rejestracje i kontakt z urzędami – Ty skupiasz się na biznesie.', $text_domain) ?></p>
+          </div>
+          <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="absolute top-0 right-0 h-full">
+        </div>
+
+        <div class="relative flex justify-center items-center h-[25vh] sm:h-[30vh] md:h-[40vh] xl:h-[35vh] my-12 w-full md:w-[75%] text-white px-[20%]">
+          <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full">
+          <div class="flex flex-col justify-center w-full">
+            <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly"><?php _e('Lokalne wsparcie ekspertów', $text_domain) ?></h2>
+            <p class="inter-regular text-left justify-evenly text-[1.5vh]"><?php _e('Zapewniamy dostęp do sprawdzonych doradców prawnych, księgowych i podatkowych.', $text_domain) ?></p>
+          </div>
+          <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="absolute top-0 right-0 h-full opacity-0">
+        </div>
+
+        <div class="relative flex justify-center items-center h-[25vh] sm:h-[30vh] md:h-[40vh] xl:h-[35vh] my-12 w-full md:w-[75%] text-white px-[20%]">
+          <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full opacity-0">
+          <div class="flex flex-col justify-center w-full">
+            <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly"><?php _e('Koordynacja działań i relacje biznesowe', $text_domain) ?></h2>
+            <p class="inter-regular text-left justify-evenly text-[1.5vh]"><?php _e('Wspieramy Cię w prowadzeniu projektów i pomagamy nawiązać właściwe kontakty.', $text_domain) ?></p>
+          </div>
+          <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="absolute top-0 right-0 h-full">
+        </div>
+        <div class="relative w-full md:w-[75%] h-[25vh] sm:h-[30vh] md:h-[40vh] xl:h-[35vh] object-cover object-center rounded-full mx-auto" style="background: url(<?= esc_url($pill_photo) ?>); background-size: cover; background-position: center;">
+            <img src="<?= esc_url($leftPathURL) ?>" alt="C-left" class="absolute left-0 top-0 z-10 h-full">
         </div>
       </div>
     </div>
     
     <div class="fixed-side-container bg-secondary" data-fixed-side="left">
-      <!-- Left side - heading (fixed) -->
-      <!-- jak działamy pc -->
-      <div class="fixed-content flex-shrink-0 mt-[10vh] pl-8">
-        <div class="flex items-center">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5 md:w-[4vw] 2xl:w-max">
-          <h4 class="text-light md:text-[2.5rem] 2xl:text-[3rem] libre-baskerville-regular"><?php echo $scrolling_heading1; ?></h4>
+        <div class="fixed-content flex-shrink-0 mt-[10vh] pl-8">
+            <div class="flex items-center">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5 md:w-[4vw] 2xl:w-max">
+                <h4 class="text-light md:text-[2.5rem] 2xl:text-[3rem] libre-baskerville-regular"><?php echo $scrolling_heading1; ?></h4>
+            </div>
+        </div>
+
+        <div class="block max-[1101px]:hidden mb-24 min-[1100px]:ml-[8%] 2xl:ml-[15%]">
+            <div class="scrollable-wrapper-unified">
+                <div class="scrollable-content-unified w-[60vw] xl:w-[55vw] 2xl:w-[40vw]">
+                
+                    <div class="relative flex justify-center items-center h-[40vh] xl:h-[35vh] my-12 w-full text-white px-[20%]">
+                        <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full opacity-0">
+                        <div class="flex flex-col justify-center w-full">
+                            <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly uppercase"><?php _e('Praktyczne wsparcie, realne efekty', $text_domain) ?></h2>
+                            <p class="inter-regular text-left justify-evenly text-[1.5vh]"><?php _e('Nasze wsparcie to praktyczne działania, a nie tylko doradztwo. Pomagamy firmom wejść i działać na rynku skandynawskim lub polskim – bez zbędnych komplikacji.', $text_domain) ?></p>
+                        </div>
+                        <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="absolute top-0 right-0 h-full">
+                    </div>
+
+                    <div class="relative flex justify-center items-center h-[40vh] xl:h-[35vh] my-12 w-full text-white px-[20%]">
+                        <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full">
+                        <div class="flex flex-col justify-center w-full">
+                            <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly uppercase"><?php _e('Analiza i dopasowanie strategii', $text_domain) ?></h2>
+                            <p class="inter-regular text-left justify-evenly text-[1.5vh]"><?php _e('Rozpoznajemy potrzeby firmy i dostosowujemy działania do konkretnego rynku.', $text_domain) ?></p>
+                        </div>
+                        <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="absolute top-0 right-0 h-full opacity-0">
+                    </div>
+                    
+                    <div class="relative flex justify-center items-center h-[40vh] xl:h-[35vh] my-12 w-full text-white px-[20%]">
+                        <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full opacity-0">
+                        <div class="flex flex-col justify-center w-full">
+                            <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly uppercase"><?php _e('Obsługa administracyjna i operacyjna', $text_domain) ?></h2>
+                            <p class="inter-regular text-left justify-evenly text-[1.5vh]"><?php _e('Przejmujemy formalności, rejestracje i kontakt z urzędami – Ty skupiasz się na biznesie.', $text_domain) ?></p>
+                        </div>
+                        <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="absolute top-0 right-0 h-full">
+                    </div>
+
+                    <div class="relative flex justify-center items-center h-[40vh] xl:h-[35vh] my-12 w-full text-white px-[20%]">
+                        <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full">
+                        <div class="flex flex-col justify-center w-full">
+                            <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly uppercase"><?php _e('Lokalne wsparcie ekspertów', $text_domain) ?></h2>
+                            <p class="inter-regular text-left justify-evenly text-[1.5vh]"><?php _e('Zapewniamy dostęp do sprawdzonych doradców prawnych, księgowych i podatkowych.', $text_domain) ?></p>
+                        </div>
+                        <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="absolute top-0 right-0 h-full opacity-0">
+                    </div>
+
+                    <div class="relative flex justify-center items-center h-[40vh] xl:h-[35vh] my-12 w-full text-white px-[20%]">
+                        <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full opacity-0">
+                        <div class="flex flex-col justify-center w-full">
+                            <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly uppercase"><?php _e('Koordynacja działań i relacje biznesowe', $text_domain) ?></h2>
+                            <p class="inter-regular text-left justify-evenly text-[1.5vh]"><?php _e('Wspieramy Cię w prowadzeniu projektów i pomagamy nawiązać właściwe kontakty.', $text_domain) ?></p>
+                        </div>
+                        <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="absolute top-0 right-0 h-full">
+                    </div>
+
+                    <div class="relative w-full h-[40vh] xl:h-[35vh] object-cover object-center rounded-full mx-auto" style="background: url(<?= esc_url($pill_photo) ?>); background-size: cover; background-position: center;">
+                        <img src="<?= esc_url($leftPathURL) ?>" alt="C-left" class="absolute left-0 top-0 z-10 h-full">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="block max-[1101px]:hidden mb-24 min-[1100px]:ml-[8%] 2xl:ml-[15%]">
-      <div class="scrollable-wrapper-unified">
-        <div class="scrollable-content-unified w-[60vw] xl:w-[55vw] 2xl:w-[40vw]">
-          
-          <!-- PILL 1 -->
-          <div class="relative flex justify-center items-center h-[40vh] xl:h-[35vh]  my-12 w-full text-white px-[20%]
-          <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full opacity-0">
-                    <div class="flex flex-col justify-center w-full">
-                      <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly uppercase">
-                        <?php _e('Praktyczne wsparcie, realne efekty', $text_domain) ?>
-                      </h2>
-                      <p class="inter-regular text-left justify-evenly text-[1.5vh]">
-                        <?php _e('Nasze wsparcie to praktyczne działania, a nie tylko doradztwo. Pomagamy firmom wejść i działać na rynku skandynawskim lub polskim – bez zbędnych komplikacji.', $text_domain) ?>
-                      </p>
-                    </div>
-                    <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="absolute top-0 right-0 h-full">
-                  </div>
-
-                  <!-- PILL 2 -->
-                  <div class="relative flex justify-center items-center h-[40vh] xl:h-[35vh]  my-12 w-full text-white px-[20%]">
-                    <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full">
-                    <div class="flex flex-col justify-center w-full">
-                      <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly uppercase">
-                        <?php _e('Analiza i dopasowanie strategii', $text_domain) ?>
-                      </h2>
-                      <p class="inter-regular text-left justify-evenly text-[1.5vh]">
-                        <?php _e('Rozpoznajemy potrzeby firmy i dostosowujemy działania do konkretnego rynku.', $text_domain) ?>
-                      </p>
-                    </div>
-                    <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="absolute top-0 right-0 h-full opacity-0">
-                  </div>
-                  
-                  <!-- PILL 3 -->
-                  <div class="relative flex justify-center items-center h-[40vh] xl:h-[35vh]  my-12 w-full text-white px-[20%]">
-                    <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full opacity-0">
-                    <div class="flex flex-col justify-center w-full">
-                      <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly uppercase">
-                        <?php _e('Obsługa administracyjna i operacyjna', $text_domain) ?>
-                      </h2>
-                      <p class="inter-regular text-left justify-evenly text-[1.5vh]"> 
-                        <?php _e('Przejmujemy formalności, rejestracje i kontakt z urzędami – Ty skupiasz się na biznesie.', $text_domain) ?>
-                      </p>
-                    </div>
-                    <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="absolute top-0 right-0 h-full">
-                  </div>
-
-                  <!-- PILL 4 -->
-                  <div class="relative flex justify-center items-center h-[40vh] xl:h-[35vh]  my-12 w-full text-white px-[20%]">
-                    <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full">
-                    <div class="flex flex-col justify-center w-full">
-                      <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly uppercase">
-                        <?php _e('Lokalne wsparcie ekspertów', $text_domain) ?>
-                      </h2>
-                      <p class="inter-regular text-left justify-evenly text-[1.5vh]">
-                        <?php _e('Zapewniamy dostęp do sprawdzonych doradców prawnych, księgowych i podatkowych.', $text_domain) ?>
-                      </p>
-                    </div>
-                    <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="absolute top-0 right-0 h-full opacity-0">
-                  </div>
-
-                  <!-- PILL 5 -->
-                  <div class="relative flex justify-center items-center h-[40vh] xl:h-[35vh]  my-12 w-full text-white px-[20%]">
-                    <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full opacity-0">
-                    <div class="flex flex-col justify-center w-full">
-                      <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly uppercase">
-                        <?php _e('Koordynacja działań i relacje biznesowe', $text_domain) ?>
-                      </h2>
-                      <p class="inter-regular text-left justify-evenly text-[1.5vh]">
-                        <?php _e('Wspieramy Cię w prowadzeniu projektów i pomagamy nawiązać właściwe kontakty.', $text_domain) ?>
-                      </p>
-                    </div>
-                    <img src="<?= esc_url($rightPathURL) ?>" alt="c-right" class="absolute top-0 right-0 h-full">
-                  </div>
-
-                  <!-- PILL DEKORACYJNY -->
-                  <div class="relative w-full h-[40vh] xl:h-[35vh] object-cover object-center rounded-full mx-auto" 
-                      style="background: url(<?= esc_url($pill_photo) ?>); background-size: cover; background-position: center;">
-                      <img src="<?= esc_url($leftPathURL) ?>" alt="C-left" class="absolute left-0 top-0 z-10 h-full">
-                  </div>
-              </div>
-          </div>
-      </div>        
-    </div>
-
-    <div class="h-[10vh]"></div>
-  </div>
 </section>
 
-<section class="new-background-section rounded-t-[60px] slide bg-black bg-cover  -mt-[10vh] relative z-40i py-12" style="background-image: url('<?php echo $slide_bg ?>')">
-  <div class="absolute inset-0 bg-secondary opacity-50 "></div>
-  <div class="  flex  items-center justify-center h-full text-center text-white relative z-10">
-    <div class="my-8 hidden md:block">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/logo_biale_unisved.svg" alt="Logo" class=" mb-6 lg:w-[20vw] md:ml-[10vw] 2xl:w-[30vw] ">
+<section class="new-background-section rounded-t-[60px] slide bg-black bg-cover -mt-[10vh] relative z-40i py-12" style="background-image: url('<?php echo $slide_bg ?>')">
+    <div class="absolute inset-0 bg-secondary opacity-50 "></div>
+    <div class=" flex items-center justify-center h-full text-center text-white relative z-10">
+        <div class="my-8 hidden md:block">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/logo_biale_unisved.svg" alt="Logo" class=" mb-6 lg:w-[20vw] md:ml-[10vw] 2xl:w-[30vw] ">
+        </div>
+        <h2 class="md:text-[3vw] text-[8vw] leading-tight mx-8 libre-baskerville-regular text-left ml-[13vw] mr-[5vw] 2xl:ml-[15vw] 2xl:text-[3vw]">
+            <?php echo $text_on_baner; ?>
+        </h2>
     </div>
-    <h2 class="md:text-[3vw] text-[8vw] leading-tight mx-8 libre-baskerville-regular text-left ml-[13vw] mr-[5vw] 2xl:ml-[15vw]  2xl:text-[3vw]">
-      <?php echo $text_on_baner; ?>
-    </h2>
-  </div>
 </section>
 
 <section class="py-12 relative z-50i bg-secondary text-white rounded-t-[60px] nasze-wartosci">
-  <div class=" md:ms-20 2xl:ms-48 md:me-28 bg-center rounded-t-[60px] min-h-[80vh] px-4">
-    <div class="w-full items-center flex md:hidden ml-10 ">
-      <div class="flex-col">
-        <h4 class="text-right text-[2rem] libre-baskerville-regular pe-2"><?php echo $scrolling_heading2; ?></h4>
-        <p class="text-right text-[1.2rem] md:text-[2.1vw] libre-baskerville-regular pe-4"><?php echo $scrolling_heading_sub; ?></p>
-      </div>
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180 w-10 md:w-6">
+    <div class=" md:ms-20 2xl:ms-48 md:me-28 bg-center rounded-t-[60px] min-h-[80vh] px-4">
+        <div class="w-full items-center flex md:hidden ml-10 ">
+            <div class="flex-col">
+                <h4 class="text-right text-[2rem] libre-baskerville-regular pe-2"><?php echo $scrolling_heading2; ?></h4>
+                <p class="text-right text-[1.2rem] md:text-[2.1vw] libre-baskerville-regular pe-4"><?php echo $scrolling_heading_sub; ?></p>
+            </div>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180 w-10 md:w-6">
+        </div>
+        
+        <div class="fixed-side-container" data-fixed-side="md:right">
+            <div class="scrollable-wrapper text-wrap  md:ml-0">
+                <div class="scrollable-content">
+                    <div>
+                        <?php
+                        icon_text_item('partnerstwo.svg', $pill_2_title1, $pill_2_text1);
+                        icon_text_item('przejrzystosc.svg', $pill_2_title2, $pill_2_text2);
+                        icon_text_item('rozwoj.svg', $pill_2_title3, $pill_2_text3);
+                        icon_text_item('zrozumienie.svg', $pill_2_title4, $pill_2_text4);
+                        icon_text_item('skutecznosc.svg', $pill_2_title5, $pill_2_text5);
+                        ?>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fixed-content flex justify-end lg:mt-[15vh]">
+                <div class="flex flex-col items-end justify-center text-right ">
+                    <h4 class="text-right text-[2.88vw] libre-baskerville-regular pe-4"><?php echo $scrolling_heading2; ?></h4>
+                    <p class="text-right text-[1.8rem] md:text-[2.1vw] libre-baskerville-regular pe-4"><?php echo $scrolling_heading_sub; ?></p>
+                </div>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180 w-[4vw]">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pt-12 pb-24 -mt-12 relative z-60i bg-secondary text-white" style="isolation: isolate;">
+    <div class="absolute inset-0 bg-secondary w-full h-full"></div>
+    <div class="container mx-auto md:mx-28 bg-center rounded-t-[40px] min-h-[20vh] px-4 relative">
+        <div class=" flex justify-start">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="w-10 md:w-[4vw] 2xl:w-[5vw] mr-4">
+            <div class="ms-5 flex flex-col items-end justify-center   text-right">
+                <h4 class="text-right text-[2rem] md:text-[3vw] libre-baskerville-regular pe-4"><?php _e('Co mówią o nas:', $text_domain); ?></h4>
+            </div>
+        </div>
     </div>
     
-    <div class="fixed-side-container" data-fixed-side="md:right">
-      <div class="scrollable-wrapper text-wrap  md:ml-0">
-        <div class="scrollable-content">
-          <div>
+    <div class="my-12 pb-12 w-full overflow-x-auto opinions-scroll cursor-grab px-4 md:pl-47">
+        <div class="flex gap-x-4 min-w-max pt-5">
             <?php
-            $post_id = get_the_ID();
-            icon_text_item(
-              'partnerstwo.svg',
-              $pill_2_title1,
-              $pill_2_text1
-            );
-            icon_text_item(
-              'przejrzystosc.svg',
-              $pill_2_title2,
-              $pill_2_text2
-            );
-            icon_text_item(
-              'rozwoj.svg',
-              $pill_2_title3,
-              $pill_2_text3
-            );
-            icon_text_item(
-              'zrozumienie.svg',
-              $pill_2_title4,
-              $pill_2_text4
-            );
-            icon_text_item(
-              'skutecznosc.svg',
-              $pill_2_title5,
-              $pill_2_text5
-            );
+            photo_oneside_pill('right', $opinion_photo_pill, 'assets/big_c.svg', 'pill-opinion-container');
+            pill_opinion($opinion_text1, $opinion_signature1, '', 'text-gray-100', 'border-primary');
+            pill_opinion($opinion_text2, $opinion_signature2, '', 'text-gray-100', 'border-primary');
+            pill_opinion($opinion_text3, $opinion_signature3, '', 'text-gray-100', 'border-primary');
+            pill_opinion($opinion_text4, $opinion_signature4, '', 'text-gray-100', 'border-primary');
             ?>
-          </div>
         </div>
-      </div>
-      
-      <div class="fixed-content flex justify-end lg:mt-[15vh]">
-        <div class="flex flex-col items-end justify-center text-right ">
-          <h4 class="text-right text-[2.88vw] libre-baskerville-regular pe-4"><?php echo $scrolling_heading2; ?></h4>
-          <p class="text-right text-[1.8rem] md:text-[2.1vw] libre-baskerville-regular pe-4"><?php echo $scrolling_heading_sub; ?></p>
-        </div>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class=" rotate-180 w-[4vw]">
-      </div>
     </div>
-  </div>
 </section>
-
-<section class="py-12 -mt-12 relative z-60i bg-secondary text-white" style="isolation: isolate;">
-  <!-- Add this div to ensure complete background coverage -->
-  <div class="absolute inset-0 bg-secondary w-full h-full"></div>
-  <div class="container mx-auto md:mx-28 bg-center rounded-t-[40px] min-h-[20vh] px-4 relative">
-    <div class=" flex justify-start">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="w-10 md:w-[4vw] 2xl:w-[5vw] mr-4">
-      <div class="ms-5 flex flex-col items-end justify-center  text-right">
-        <h4 class="text-right text-[2rem] md:text-[3vw] libre-baskerville-regular pe-4"><?php _e('Co mówią o nas:', $text_domain); ?></h4>
-      </div>
-    </div>
-  </div>
-  
-  <div class="my-12 pb-12 w-full overflow-x-auto opinions-scroll cursor-grab mb-20 px-4 md:pl-47">
-    <div class="flex gap-x-4 min-w-max pt-5">
-      <?php
-      photo_oneside_pill('right', $opinion_photo_pill, 'assets/big_c.svg', 'pill-opinion-container');
-      pill_opinion(
-        $opinion_text1,
-        $opinion_signature1,
-        '',
-        'text-gray-100',
-        'border-primary'
-      );
-      pill_opinion(
-        $opinion_text2,
-        $opinion_signature2,
-        '',
-        'text-gray-100',
-        'border-primary'
-      );
-      pill_opinion(
-        $opinion_text3,
-        $opinion_signature3,
-        '',
-        'text-gray-100',
-        'border-primary'
-      );
-      pill_opinion(
-        $opinion_text4,
-        $opinion_signature4,
-        '',
-        'text-gray-100',
-        'border-primary'
-      );
-      ?>
-    </div>
-  </div>
-</section>
-
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🎯 Section-based video control started');
-    
-    // Znajdź sekcję trigger
     const triggerSection = document.getElementById('video-hide-trigger');
-    
     if (!triggerSection) {
-        console.error('❌ Trigger section not found! Make sure you added id="video-hide-trigger"');
+        console.error('Trigger section #video-hide-trigger not found!');
         return;
     }
-    
-    console.log('✅ Trigger section found:', triggerSection);
-    
-    // Znajdź elementy video (uniwersalny sposób)
+
     const videoElements = [
         document.getElementById('background-video'),
         document.getElementById('placeholder'),
         document.getElementById('background-image'),
-        ...document.querySelectorAll('video[autoplay]'),
-        ...document.querySelectorAll('header video'),
-        ...document.querySelectorAll('header img[id*="background"]')
-    ].filter(el => el !== null && el !== undefined);
+        ...document.querySelectorAll('video[autoplay], header video, header img[id*="background"]')
+    ].filter(el => el);
     
-    // Usuń duplikaty
     const uniqueVideoElements = [...new Set(videoElements)];
-    
-    console.log('🎬 Found video elements:', uniqueVideoElements.length);
-    uniqueVideoElements.forEach((el, i) => {
-        console.log(`   ${i}: ${el.tagName}#${el.id}`);
-    });
-    
     if (uniqueVideoElements.length === 0) {
-        console.error('❌ No video elements found!');
+        console.error('No video elements found to control!');
         return;
     }
     
-    // Dodaj smooth transitions
     uniqueVideoElements.forEach(element => {
         element.style.transition = 'height 0.6s ease-in-out';
     });
     
-    // Funkcje kontroli video
-    function hideVideo() {
+    function setVideoHeight(height) {
         uniqueVideoElements.forEach(element => {
-            element.style.height = '0vh';
+            element.style.height = height;
         });
-        console.log('🙈 Video hidden - trigger section is visible');
     }
     
-    function showVideo() {
-        uniqueVideoElements.forEach(element => {
-            element.style.height = '100vh';
-        });
-        console.log('👁️ Video shown - trigger section is not visible');
-    }
-    
-    // Intersection Observer - wykrywa kiedy sekcja wchodzi w viewport
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            console.log('📊 Trigger section intersection:', {
-                isIntersecting: entry.isIntersecting,
-                intersectionRatio: entry.intersectionRatio,
-                boundingRect: entry.boundingClientRect.top
-            });
-            
             if (entry.isIntersecting) {
-                // Sekcja jest widoczna - ukryj video
-                hideVideo();
+                setVideoHeight('0vh'); // Hide video
             } else {
-                // Sekcja nie jest widoczna - pokaż video
-                showVideo();
+                setVideoHeight('100vh'); // Show video
             }
         });
     }, {
-        // OPCJE INTERSECTION OBSERVER:
-        threshold: 0.1,           // Uruchom gdy 10% sekcji jest widoczne
-        rootMargin: '0px 0px -10% 0px'  // Dodaj margines - uruchom wcześniej
+        threshold: 0.1,
+        rootMargin: '0px 0px -10% 0px'
     });
     
-    // Zacznij obserwować sekcję
     observer.observe(triggerSection);
-    console.log('👀 Started observing trigger section');
-    
-    // Test functions
-    window.testHideVideo = hideVideo;
-    window.testShowVideo = showVideo;
-    
-    window.testTriggerSection = function() {
-        console.log('🧪 Testing trigger section detection...');
-        triggerSection.scrollIntoView({ behavior: 'smooth' });
-    };
-    
-    console.log('✅ Section-based script loaded!');
-    console.log('💡 Commands: testHideVideo(), testShowVideo(), testTriggerSection()');
 });
 </script>
 

@@ -7,9 +7,11 @@ get_header();
 
 // Dołączanie niezbędnych szablonów częściowych
 require_once get_template_directory() . '/template-parts/pills/photo_oneside.php';
+require_once get_template_directory() . '/template-parts/pills/homepage_oneside.php';
 require_once get_template_directory() . '/template-parts/pills/text_with_c.php';
 require_once get_template_directory() . '/template-parts/pills/mini_pill_text.php';
 require_once get_template_directory() . '/template-parts/pills/double_c_pill.php';
+require_once get_template_directory() . '/template-parts/pills/double_c_pill_mobile.php';
 require_once get_template_directory() . '/template-parts/pills/icon_text_item.php';
 
 // Zdefiniowanie domeny tekstowej dla tłumaczeń
@@ -83,10 +85,10 @@ $pill_image_3 = get_field('pill_image_3', $post_id);
             <div class="relative flex justify-center items-center h-[25vh] sm:h-[30vh] md:h-[40vh] xl:h-[35vh]  my-12 w-full md:w-[75%] text-white px-[20%]
               <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full opacity-0">
               <div class="flex flex-col justify-center w-full">
-                <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly">
+                <h2 class="icon-text-pill-h3 break-words tracking-widest text-[0.9rem] md:text-[1.46vw] font-bold text-light libre-baskerville-regular mb-1 min-w-[200px] md:min-w-[350px] xl:min-w-[400px] custom-min-w-1600 uppercase">
                   <?php _e('DOŚWIADCZENIE', $text_domain) ?>
                 </h2>
-                <p class="inter-regular text-left justify-evenly text-[1.5vh]">
+                <p class="icon-text-pill-p text-[0.7rem] md:text-[1.08vw] text-light inter-thin">
                   <?php _e('Lata praktyki w międzynarodowej administracji biznesowej', $text_domain) ?>
                 </p>
               </div>
@@ -97,10 +99,10 @@ $pill_image_3 = get_field('pill_image_3', $post_id);
             <div class="relative flex justify-center items-center h-[25vh] sm:h-[30vh] md:h-[40vh] xl:h-[35vh]  my-12 w-full md:w-[75%] text-white px-[20%]">
               <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full">
               <div class="flex flex-col justify-center w-full">
-                <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly">
+                <h2 class="icon-text-pill-h3 break-words tracking-widest text-[0.9rem] md:text-[1.46vw] font-bold text-light libre-baskerville-regular mb-1 min-w-[200px] md:min-w-[350px] xl:min-w-[400px] custom-min-w-1600 uppercase">
                   <?php _e('INDYWIDUALNE PODEJŚCIE', $text_domain) ?>
                 </h2>
-                <p class="inter-regular text-left justify-evenly text-[1.5vh]">
+                <p class="icon-text-pill-p text-[0.7rem] md:text-[1.08vw] text-light inter-thin">
                   <?php _e('Strategia dopasowana do Twoich potrzeb', $text_domain) ?>
                 </p>
               </div>
@@ -111,10 +113,10 @@ $pill_image_3 = get_field('pill_image_3', $post_id);
             <div class="relative flex justify-center items-center h-[25vh] sm:h-[30vh] md:h-[40vh] xl:h-[35vh]  my-12 w-full md:w-[75%] text-white px-[20%]">
               <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full opacity-0">
               <div class="flex flex-col justify-center w-full">
-                <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly">
+                <h2 class="icon-text-pill-h3 break-words tracking-widest text-[0.9rem] md:text-[1.46vw] font-bold text-light libre-baskerville-regular mb-1 min-w-[200px] md:min-w-[350px] xl:min-w-[400px] custom-min-w-1600 uppercase">
                   <?php _e('SZEROKA SIEĆ KONTAKTÓW', $text_domain) ?>
                 </h2>
-                <p class="inter-regular text-left justify-evenly text-[1.5vh]">
+                <p class="icon-text-pill-p text-[0.7rem] md:text-[1.08vw] text-light inter-thin">
                   <?php _e('Pomagamy w pozyskiwaniu klientów i nawiązywaniu wartościowych relacji biznesowych', $text_domain) ?>
                 </p>
               </div>
@@ -125,10 +127,10 @@ $pill_image_3 = get_field('pill_image_3', $post_id);
             <div class="relative flex justify-center items-center h-[25vh] sm:h-[30vh] md:h-[40vh] xl:h-[35vh]  my-12 w-full md:w-[75%] text-white px-[20%]">
               <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full">
               <div class="flex flex-col justify-center w-full">
-                <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly">
+                <h2 class="icon-text-pill-h3 break-words tracking-widest text-[0.9rem] md:text-[1.46vw] font-bold text-light libre-baskerville-regular mb-1 min-w-[200px] md:min-w-[350px] xl:min-w-[400px] custom-min-w-1600 uppercase">
                   <?php _e('EKSPERCI OD SKANDYNAWII', $text_domain) ?>
                 </h2>
-                <p class="inter-regular text-left justify-evenly text-[1.5vh]">
+                <p class="icon-text-pill-p text-[0.7rem] md:text-[1.08vw] text-light inter-thin">
                   <?php _e('Znamy biznes, prawo i kulturę krajów nordyckich', $text_domain) ?>
                 </p>
               </div>
@@ -149,10 +151,10 @@ $pill_image_3 = get_field('pill_image_3', $post_id);
                   <div class="relative flex justify-center items-center h-[40vh] xl:h-[35vh]  my-12 w-full text-white px-[20%]
                     <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full opacity-0">
                     <div class="flex flex-col justify-center w-full">
-                      <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly">
+                      <h2 class="icon-text-pill-h3 break-words tracking-widest text-[0.9rem] md:text-[1.46vw] font-bold text-light libre-baskerville-regular mb-1 min-w-[200px] md:min-w-[350px] xl:min-w-[400px] custom-min-w-1600 uppercase">
                         <?php _e('DOŚWIADCZENIE', $text_domain) ?>
                       </h2>
-                      <p class="inter-regular text-left justify-evenly text-[1.5vh]">
+                      <p class="icon-text-pill-p text-[0.7rem] md:text-[1.08vw] text-light inter-thin">
                         <?php _e('Lata praktyki w międzynarodowej administracji biznesowej', $text_domain) ?>
                       </p>
                     </div>
@@ -163,10 +165,10 @@ $pill_image_3 = get_field('pill_image_3', $post_id);
                   <div class="relative flex justify-center items-center h-[40vh] xl:h-[35vh]  my-12 w-full text-white px-[20%]">
                     <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full">
                     <div class="flex flex-col justify-center w-full">
-                      <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly">
+                      <h2 class="icon-text-pill-h3 break-words tracking-widest text-[0.9rem] md:text-[1.46vw] font-bold text-light libre-baskerville-regular mb-1 min-w-[200px] md:min-w-[350px] xl:min-w-[400px] custom-min-w-1600 uppercase">
                         <?php _e('INDYWIDUALNE PODEJŚCIE', $text_domain) ?>
                       </h2>
-                      <p class="inter-regular text-left justify-evenly text-[1.5vh]">
+                      <p class="icon-text-pill-p text-[0.7rem] md:text-[1.08vw] text-light inter-thin">
                         <?php _e('Strategia dopasowana do Twoich potrzeb', $text_domain) ?>
                       </p>
                     </div>
@@ -177,10 +179,10 @@ $pill_image_3 = get_field('pill_image_3', $post_id);
                   <div class="relative flex justify-center items-center h-[40vh] xl:h-[35vh]  my-12 w-full text-white px-[20%]">
                     <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full opacity-0">
                     <div class="flex flex-col justify-center w-full">
-                      <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly">
+                      <h2 class="icon-text-pill-h3 break-words tracking-widest text-[0.9rem] md:text-[1.46vw] font-bold text-light libre-baskerville-regular mb-1 min-w-[200px] md:min-w-[350px] xl:min-w-[400px] custom-min-w-1600 uppercase">
                         <?php _e('SZEROKA SIEĆ KONTAKTÓW', $text_domain) ?>
                       </h2>
-                      <p class="inter-regular text-left justify-evenly text-[1.5vh]">
+                      <p class="icon-text-pill-p text-[0.7rem] md:text-[1.08vw] text-light inter-thin">
                         <?php _e('Pomagamy w pozyskiwaniu klientów i nawiązywaniu wartościowych relacji biznesowych', $text_domain) ?>
                       </p>
                     </div>
@@ -191,10 +193,10 @@ $pill_image_3 = get_field('pill_image_3', $post_id);
                   <div class="relative flex justify-center items-center h-[40vh] xl:h-[35vh]  my-12 w-full text-white px-[20%]">
                     <img src="<?= esc_url($leftPathURL) ?>" alt="c-left" class="absolute top-0 left-0 h-full">
                     <div class="flex flex-col justify-center w-full">
-                      <h2 class="libre-baskerville-regular text-left text-[2.5vh] justify-evenly">
+                      <h2 class="icon-text-pill-h3 break-words tracking-widest text-[0.9rem] md:text-[1.46vw] font-bold text-light libre-baskerville-regular mb-1 min-w-[200px] md:min-w-[350px] xl:min-w-[400px] custom-min-w-1600 uppercase">
                         <?php _e('EKSPERCI OD SKANDYNAWII', $text_domain) ?>
                       </h2>
-                      <p class="inter-regular text-left justify-evenly text-[1.5vh]">
+                      <p class="icon-text-pill-p text-[0.7rem] md:text-[1.08vw] text-light inter-thin">
                         <?php _e('Znamy biznes, prawo i kulturę krajów nordyckich', $text_domain) ?>
                       </p>
                     </div>
@@ -255,47 +257,54 @@ $pill_image_3 = get_field('pill_image_3', $post_id);
   </div>
 </section>
 
-<section class="py-12 relative z-60i bg-secondary text-white rounded-t-[60px]">
-  <div class=" bg-center rounded-[40px] min-h-[100vh] space-y-16 mt-20 xl:ml-28">
-    <div class="w-full items-center flex md:hidden mb-8 ml-16">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5 h-[20vw] md:h-auto">
-      <h4 class="text-light text-[2rem] leading-none libre-baskerville-regular"><?php _e('Unisved <br> w pigułce', $text_domain); ?></h4>
-    </div>
-    <div class="fixed-side-container -mb-10 md:mb-0 md:mr-40 2xl:mr-64 justify-center unisved-w-pigulce" data-fixed-side="md:left">
-      <div class="fixed-content shrink-0 lg:mt-[10vw] padding-left-tablet">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
-        <h4 class="text-light md:text-[2.5rem] 2xl:text-[3rem] leading-none libre-baskerville-regular "><?php _e('Unisved <br> w pigułce', $text_domain); ?></h4>
+<section class="py-12 relative z-60 bg-secondary text-white rounded-t-[60px]">
+  <div class="bg-center rounded-[40px] min-h-[100vh] space-y-16 mt-20 xl:ml-28">
+
+    <!-- MOBILE HEADING (centered) -->
+    <div class="show-below-1100 min-[1101px]:hidden w-full mb-8">
+      <div class="flex justify-center items-center text-center">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="h-[20vw] mb-4">
+        <h4 class="text-light text-[2rem] leading-none libre-baskerville-regular">
+          <?php _e('Unisved <br> w pigułce', $text_domain); ?>
+        </h4>
       </div>
-      <div class="scrollable-wrapper shrink-0 md:mx-0">
-        <div class="scrollable-content space-pills-y">
+    </div>
+
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <div class="fixed-side-container -mb-10 md:mb-0 md:mr-40 2xl:mr-64 justify-center unisved-w-pigulce" data-fixed-side="md:left">
+      
+      <!-- DESKTOP FIXED CONTENT -->
+      <div class="fixed-content shrink-0 lg:mt-[10vw] padding-left-tablet hidden md:flex">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mr-5">
+        <h4 class="text-light md:text-[2.5rem] 2xl:text-[3rem] leading-none libre-baskerville-regular">
+          <?php _e('Unisved <br> w pigułce', $text_domain); ?>
+        </h4>
+      </div>
+
+      <!-- SCROLLABLE WRAPPER -->
+      <div class="scrollable-wrapper md:mx-0">
+        <div class="overflow-hidden hidden md:flex flex-col justify-center items-center w-full text-center py-20 space-y-10">
           <?php
           double_c_pill($double_pill_1_title, $double_pill_1_subtitle, 'assets/big_c.svg', 'assets/big_c_right.svg', 'text-white');
           double_c_pill($double_pill_2_title, $double_pill_2_subtitle, 'assets/big_c.svg', 'assets/big_c_right.svg', 'text-white');
           double_c_pill($double_pill_3_title, $double_pill_3_subtitle, 'assets/big_c.svg', 'assets/big_c_right.svg', 'text-white');
           double_c_pill($double_pill_4_title, $double_pill_4_subtitle, 'assets/big_c.svg', 'assets/big_c_right.svg', 'text-white');
           ?>
-          <div class="hidden md:block">
-            <?php
-            if ($pill_image_1) {
-              photo_oneside_pill('left', $pill_image_1, 'assets/big_c.svg', 'max700pxpill');
-            }
-            ?>
-          </div>
+          <?php if ($pill_image_1): ?>
+            <div class="hidden md:block">
+              <?php homepage_oneside_pill('right', $pill_image_1, 'assets/big_c.svg'); ?>
+            </div>
+          <?php endif; ?>
         </div>
       </div>
-    </div>
-    <div class="md:hidden px-4">
-      <?php
-      if ($pill_image_1) {
-        photo_oneside_pill('left', $pill_image_1, 'assets/big_c.svg', 'max700pxpill');
-      }
-      ?>
     </div>
   </div>
 </section>
 
+
 <section class="pt-12 relative z-70i bg-secondary text-white mt-[-10px]">
-  <div class="xl:ps-[10vw] xl:pe-[12vw] flex flex-col md:flex-row w-full items-center">
+  <div class="xl:px-[10vw] flex flex-col md:flex-row w-full items-center">
     <div class="md:w-1/2 padding-left-tablet px-4">
       <?php
       if ($pill_image_2) {
@@ -311,7 +320,7 @@ $pill_image_3 = get_field('pill_image_3', $post_id);
 </section>
 
 <section class="relative z-80i bg-secondary text-white pt-12 pb-[20vh] md:mt-[-5px]">
-  <div class="xl:px-[10vw]">
+  <div class="xl:px-[10vw] md:pr-40 2xl:pr-64">
     <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
       <div class="padding-left-tablet px-4">
         <?php

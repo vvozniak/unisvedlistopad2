@@ -201,107 +201,111 @@ $text_domain = 'unisved-theme';
     
     $projects = new WP_Query($projects_args);
 
-    if ($projects->have_posts()) :
-      $counter = 0;
-      while ($projects->have_posts()) : $projects->the_post();
-        
+if ($projects->have_posts()) :
+    $counter = 0;
+    while ($projects->have_posts()) : $projects->the_post();
+
         $project_title = get_the_title();
         $project_subtitle = get_field($subtitle_field_name) ?: '';
         $project_content = get_the_content() ?: '';
         $project_thumbnail = get_the_post_thumbnail_url() ?: '';
-        
-        if ($counter % 2 == 0) { ?>
-          <section class="py-12 relative z-30 bg-secondary text-white">
-            <div class="px-4 2xl:ml-28 lg:ml-20 md:mr-20">
-              <div class="flex flex-row md:hidden">
-                <div class="flex flex-row md:flex-row md:justify-end">
-                  <div class="flex flex-col items-end pr-2 md:items-end justify-center text-center md:text-right w-[90vw]">
-                    <h4 class="whitespace-wrap text-right 2xl:whitespace-normal text-[1.2rem] md:text-[2.5rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo esc_html($project_title); ?></h4>
-                    <p class="text-[1rem] text-right md:text-[1.8rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo esc_html($project_subtitle); ?></p>
-                  </div>
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="rotate-180 mt-4 md:mt-0 w-[15vw]">
-                </div>
-              </div>
-              <div class="fixed-side-container" data-fixed-side="right">
-                <div class="fixed-content flex flex-col md:flex-row md:justify-end mt-[10vw]">
-                  <div class="flex flex-col items-center md:items-end justify-center text-center md:text-right">
-                    <h4 class="text-[1.2rem] md:text-[2.5rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo esc_html($project_title); ?></h4>
-                    <p class="text-[1rem] md:text-[1.8rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo esc_html($project_subtitle); ?></p>
-                  </div>
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="rotate-180 mt-4 md:mt-0">
-                </div>
-                <div class="scrollable-wraper">
-                  <div class="scrollable-content">
-                    <div class="text-lg" style="margin-bottom: 8rem;">
-                      <div class="hidden md:block">
-                        <?php echo wpautop($project_content); ?>
-                      </div>
-                      <div class="block md:hidden">
-                        <p><?php echo process_content_for_mobile($project_content); ?></p>
-                      </div>
-                    </div>
-                    <?php if ($project_thumbnail) : ?>
-                        <div class="w-full relative rounded-full overflow-hidden" style="aspect-ratio: 1.8 / 1; width: 110%; margin-left: -5%;">
-                            <img src="<?php echo esc_url($project_thumbnail); ?>" alt="" class="w-full h-full object-cover absolute inset-0 z-10">
-                            <div class="absolute left-0 top-0 h-full z-20">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c.svg" alt="" class="h-full w-auto">
-                            </div>
+
+        // Determine side based on counter
+        $is_even = $counter % 2 == 0;
+        $fixed_side = $is_even ? 'right' : 'left';
+        $overlay_position = $is_even ? 'left-0' : 'right-0';
+        $overlay_rotation = $is_even ? '' : 'rotate-y-180';
+        $flex_direction_md = $is_even ? 'md:justify-end md:flex-row-reverse' : 'md:justify-start md:flex-row';
+
+        ?>
+
+        <!-- MOBILE VERSION -->
+        <section class="py-12 relative z-30 bg-secondary text-white md:hidden">
+            <div class="px-4">
+                <!-- Mobile Header -->
+                <div class="flex flex-row <?php echo $is_even ? '' : 'flex-row-reverse'; ?> justify-between items-center mb-4 w-full">
+                    <?php if (!$is_even) : ?>
+                        <div class="flex flex-col items-start justify-center text-left w-[90vw] ml-4">
+                            <h4 class="project-title libre-baskerville-regular text-[1.2rem]"><?php echo esc_html($project_title); ?></h4>
+                            <p class="project-subtitle libre-baskerville-regular"><?php echo esc_html($project_subtitle); ?></p>
                         </div>
                     <?php endif; ?>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        <?php } else { ?>
-          <section class="py-12 relative z-30 bg-secondary text-white">
-            <div class="px-4 2xl:ml-28 lg:ml-20 md:mr-20">
-              <div class="flex flex-row md:hidden">
-                <div class="flex flex-row md:flex-row md:justify-start">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mt-4 md:mt-0 w-[15vw]">
-                  <div class="flex flex-col items-start justify-center text-left w-[90vw] ml-4">
-                    <h4 class="project-title libre-baskerville-regular ps-0 md:ps-4 text-[1.2rem]"><?php echo esc_html($project_title); ?></h4>
-                    <p class="project-subtitle libre-baskerville-regular ps-0 md:ps-4"><?php echo esc_html($project_subtitle); ?></p>
-                  </div>
-                </div>
-              </div>
-              <div class="fixed-side-container" data-fixed-side="left">
-                <div class="fixed-content flex flex-col md:flex-row md:justify-start">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mt-4 md:mt-0">
-                  <div class="flex flex-col items-center md:items-start justify-center text-center md:text-left">
-                    <h4 class="text-[1.2rem] md:text-[2.5rem] libre-baskerville-regular ps-0 md:ps-4"><?php echo esc_html($project_title); ?></h4>
-                    <p class="text-[1rem] md:text-[1.8rem] libre-baskerville-regular ps-0 md:ps-4"><?php echo esc_html($project_subtitle); ?></p>
-                  </div>
-                </div>
-                <div class="scrollable-wraper">
-                  <div class="scrollable-content">
-                    <div class="text-lg" style="margin-bottom: 8rem;">
-                      <div class="hidden md:block">
-                        <?php echo wpautop($project_content); ?>
-                      </div>
-                      <div class="block md:hidden">
-                        <p><?php echo process_content_for_mobile($project_content); ?></p>
-                      </div>
-                    </div>
-                    <?php if ($project_thumbnail) : ?>
-                        <div class="w-full relative rounded-full overflow-hidden" style="aspect-ratio: 1.8 / 1; width: 110%; margin-left: -5%;">
-                            <img src="<?php echo esc_url($project_thumbnail); ?>" alt="" class="w-full h-full object-cover absolute inset-0 z-10">
-                            <div class="absolute right-0 top-0 h-full z-20">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c.svg" alt="" class="h-full w-auto rotate-y-180">
-                            </div>
+
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="<?php echo $is_even ? 'rotate-180 w-[15vw]' : 'w-[15vw]'; ?>">
+
+                    <?php if ($is_even) : ?>
+                        <div class="flex flex-col items-end justify-center text-right w-[90vw]">
+                            <h4 class="whitespace-wrap text-[1.2rem] libre-baskerville-regular"><?php echo esc_html($project_title); ?></h4>
+                            <p class="text-[1rem] libre-baskerville-regular"><?php echo esc_html($project_subtitle); ?></p>
                         </div>
                     <?php endif; ?>
-                  </div>
                 </div>
-              </div>
+
+                <!-- Mobile Description -->
+                <div class="mb-6">
+                    <p><?php echo process_content_for_mobile($project_content); ?></p>
+                </div>
+
+                <!-- Mobile Pill Image -->
+                <?php if ($project_thumbnail) : ?>
+                    <div class="relative w-full max-w-[90vw] mx-auto h-72 overflow-hidden rounded-full">
+                        <img src="<?php echo esc_url($project_thumbnail); ?>" alt="" class="w-full h-full object-cover block">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c.svg" 
+                            alt="" 
+                            class="absolute top-0 h-full w-auto z-20 <?php echo $overlay_rotation; ?> <?php echo $overlay_position; ?>">
+                    </div>
+                <?php endif; ?>
             </div>
-          </section>
-        <?php }
+        </section>
+
+        <!-- DESKTOP VERSION -->
+        <section class="py-12 relative z-30 bg-secondary text-white hidden md:block">
+            <div class="px-4 2xl:ml-28 lg:ml-20 md:mr-20">
+                <div class="fixed-side-container" data-fixed-side="<?php echo $fixed_side; ?>">
+                    <div class="fixed-content flex flex-col md:flex-row <?php echo $flex_direction_md; ?> mt-[10vw]">
+                        <?php if ($is_even) : ?>
+                            <div class="flex flex-col items-center md:items-end justify-center text-center md:text-right">
+                                <h4 class="text-[1.2rem] md:text-[2.5rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo esc_html($project_title); ?></h4>
+                                <p class="text-[1rem] md:text-[1.8rem] libre-baskerville-regular pe-0 md:pe-4"><?php echo esc_html($project_subtitle); ?></p>
+                            </div>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="rotate-180 mt-4 md:mt-0">
+                        <?php else : ?>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/left_c.svg" alt="" class="mt-4 md:mt-0">
+                            <div class="flex flex-col items-center md:items-start justify-center text-center md:text-left">
+                                <h4 class="text-[1.2rem] md:text-[2.5rem] libre-baskerville-regular ps-0 md:ps-4"><?php echo esc_html($project_title); ?></h4>
+                                <p class="text-[1rem] md:text-[1.8rem] libre-baskerville-regular ps-0 md:ps-4"><?php echo esc_html($project_subtitle); ?></p>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+
+                    <div class="scrollable-wrapper">
+                        <div class="scrollable-content">
+                            <div class="text-lg mb-32">
+                                <?php echo wpautop($project_content); ?>
+                            </div>
+
+                            <?php if ($project_thumbnail) : ?>
+                              <div class="relative w-full max-w-[600px] mx-auto h-72 overflow-hidden rounded-full">
+                                <img src="<?php echo esc_url($project_thumbnail); ?>" alt="" class="w-full h-full object-cover block">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/big_c.svg" 
+                                    alt="" 
+                                    class="absolute top-0 h-full w-auto z-20 <?php echo $overlay_rotation; ?> <?php echo $overlay_position; ?>">
+                              </div>
+                            <?php endif; ?>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <?php
         $counter++;
-      endwhile;
-      wp_reset_postdata();
-    endif;
-    ?>
+    endwhile;
+    wp_reset_postdata();
+endif;
+
+?>
   </div>
 </section>
 
