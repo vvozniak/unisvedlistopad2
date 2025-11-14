@@ -1,0 +1,328 @@
+{
+    "key": "group_homepage_dynamic_content",
+    "title": "Strona główna - Dynamiczna treść",
+    "fields": [
+        {
+            "key": "field_section_title_why_us",
+            "label": "Nagłówek sekcji - Dlaczego my?",
+            "name": "section_title_why_us",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Domyślnie: Dlaczego my?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Dlaczego my?",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_section_title_why_scandinavia",
+            "label": "Nagłówek sekcji - Dlaczego Skandynawia?",
+            "name": "section_title_why_scandinavia",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Domyślnie: Dlaczego<br>Skandynawia? (użyj <br> dla łamania linii)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Dlaczego<br>Skandynawia?",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "new_lines": "",
+            "rows": 2,
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_section_title_unisved_pill",
+            "label": "Nagłówek sekcji - Unisved w pigułce",
+            "name": "section_title_unisved_pill",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Domyślnie: Unisved <br> w pigułce (użyj <br> dla łamania linii)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Unisved <br> w pigułce",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "new_lines": "",
+            "rows": 2,
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_section_title_we_are_here",
+            "label": "Nagłówek sekcji - Jesteśmy tu by pomóc",
+            "name": "section_title_we_are_here",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Domyślnie: Jesteśmy tu, <br> by pomóc! (użyj <br> dla łamania linii)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Jesteśmy tu, <br> by pomóc!",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "new_lines": "",
+            "rows": 2,
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_banner_1_text",
+            "label": "Tekst banera 1",
+            "name": "banner_1_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Domyślnie: Od Skandynawii po rynki<br> międzynarodowe. (użyj <br> dla łamania linii)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Od Skandynawii po rynki<br> międzynarodowe.",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "new_lines": "",
+            "rows": 2,
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_banner_1_bg_image",
+            "label": "Zdjęcie tła banera 1",
+            "name": "banner_1_bg_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Domyślnie: /public/pomost-min.jpg",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium",
+            "wpml_cf_preferences": "3"
+        },
+        {
+            "key": "field_banner_2_text",
+            "label": "Tekst banera 2",
+            "name": "banner_2_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Domyślnie: Wspólnie<br>przekroczymy granice! (użyj <br> dla łamania linii)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Wspólnie<br>przekroczymy granice!",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "new_lines": "",
+            "rows": 2,
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_banner_2_bg_image",
+            "label": "Zdjęcie tła banera 2",
+            "name": "banner_2_bg_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Domyślnie: /public/flaga_lepsza.jpeg",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium",
+            "wpml_cf_preferences": "3"
+        },
+        {
+            "key": "field_contact_name",
+            "label": "Imię i nazwisko kontaktu",
+            "name": "contact_name",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Domyślnie: Aleksandra Gierdziejewska",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Aleksandra Gierdziejewska",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_contact_role",
+            "label": "Rola/stanowisko kontaktu",
+            "name": "contact_role",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Domyślnie: CEO & FOUNDER",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "CEO & FOUNDER",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_contact_phone_1",
+            "label": "Telefon kontaktowy 1",
+            "name": "contact_phone_1",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Domyślnie: +48 602 142 949",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "+48 602 142 949",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_contact_phone_2",
+            "label": "Telefon kontaktowy 2",
+            "name": "contact_phone_2",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Domyślnie: +46 704 415 690",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "+46 704 415 690",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "wpml_cf_preferences": "2"
+        },
+        {
+            "key": "field_contact_email",
+            "label": "Email kontaktowy",
+            "name": "contact_email",
+            "aria-label": "",
+            "type": "email",
+            "instructions": "Domyślnie: ALEKSANDRA@UNISVED.EU",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "ALEKSANDRA@UNISVED.EU",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "wpml_cf_preferences": "2"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-parts/homepage.php"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "49"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Pola dla dynamicznej treści strony głównej: nagłówki sekcji, teksty banerów i dane kontaktowe",
+    "show_in_rest": 0,
+    "acfml_field_group_mode": "translation",
+    "modified": 1731576796
+}
